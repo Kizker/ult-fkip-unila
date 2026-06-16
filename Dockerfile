@@ -1,4 +1,4 @@
-FROM php:8.2-fpm
+FROM php:8.4-fpm
 
 # Memasang package yang diperlukan (termasuk LibreOffice untuk export dokumen)
 RUN apt-get update && apt-get install -y \
@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
 
 # Memasang Composer
-COPY --from=composer:2.2 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Menetapkan direktori kerja
 WORKDIR /var/www/html
