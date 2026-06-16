@@ -1,0 +1,31 @@
+{
+  "_index-Bw3-YJgB.js": {
+    "file": "assets/index-Bw3-YJgB.js",
+    "name": "index",
+    "isDynamicEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-Dk2V9wYs.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Bupu-5Zt.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/tiptap-editor.js",
+      "_index-Bw3-YJgB.js"
+    ]
+  },
+  "resources/js/tiptap-editor.js": {
+    "file": "assets/tiptap-editor-BEIQFI6w.js",
+    "name": "tiptap-editor",
+    "src": "resources/js/tiptap-editor.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-Bw3-YJgB.js"
+    ]
+  }
+}
