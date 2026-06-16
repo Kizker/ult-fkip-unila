@@ -16,7 +16,7 @@ services:
       APP_ENV: ${APP_ENV:-production}
       APP_DEBUG: ${APP_DEBUG:-false}
       DB_CONNECTION: mysql
-      DB_HOST: db
+      DB_HOST: ult_fkip_unila_db
       DB_PORT: 3306
       DB_DATABASE: ${DB_DATABASE:-ult_fkip}
       DB_USERNAME: ${DB_USERNAME:-admin_ult}
