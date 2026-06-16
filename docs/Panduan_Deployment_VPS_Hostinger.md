@@ -189,11 +189,11 @@ docker compose up -d --build
 ### 2. Masuk ke dalam Kontena Laravel
 Setelah Docker menyala (`done`), kita harus masuk ke dalam kontena aplikasi PHP:
 ```bash
-docker exec -it laravel_app sh
+docker exec -it ult_fkip_unila_app sh
 ```
 
 ### 3. Eksekusi Arahan Pra-Peluncuran (Composer & Artisan)
-Di dalam layar kontena `laravel_app`, jalankan blok ini berurutan:
+Di dalam layar kontena `ult_fkip_unila_app`, jalankan blok ini berurutan:
 ```bash
 # 1. Unduh library vendor PHP
 composer install --no-dev --optimize-autoloader --no-interaction
