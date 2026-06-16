@@ -1,0 +1,3309 @@
+PENGEMBANGAN SISTEM INFORMASI BERBASIS WEBSITE UNTUK 
+PENGELOLAAN DATA DAN INFORMASI DI PROGRAM STUDI PPG 
+FKIP UNIVERSITAS LAMPUNG 
+ 
+ 
+ 
+ 
+(Seminar Hasil) 
+ 
+ 
+ 
+ 
+Oleh: 
+Ajeng Indar Arsyida 
+2213025034 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN   
+UNIVERSITAS LAMPUNG  
+BANDAR LAMPUNG   
+2026   
+
+ABSTRAK 
+ 
+PENGEMBANGAN SISTEM INFORMASI BERBASIS WEBSITE UNTUK 
+PENGELOLAAN DATA DAN INFORMASI DI PROGRAM STUDI PPG 
+FKIP UNIVERSITAS LAMPUNG 
+ 
+ 
+Oleh 
+ 
+AJENG INDAR ARSYIDA 
+ 
+ 
+ 
+Penelitian ini bertujuan untuk meng embangkan sistem informasi berbasis website 
+untuk pengelolaan data dan informasi di Program Studi Pendidikan P rofesi Guru 
+FKIP Universitas Lampung. Penelitian ini dilaksanakan di PPG FKIP Universitas 
+Lampung, dengan sampel terdiri dari 30 mahasiswa dari 15 program studi yang ada. 
+Model yang digunakan adalah model Four-D (4D) yang dikembangkan oleh 
+Thiagarajan (1974)  dengan empat tahapan, yaitu yaitu Define (Pendefinisian), 
+Design (Perancangan), Develop (Pengembangan), dan Disseminate (Penyebaran). 
+Teknik pengumpulan data dilakukan melalui uji v alidasi ahli untuk mengukur 
+sejauh mana tingkat kelayakan produk  dan uji kepraktisan untuk mengetahu i 
+tingkat kepraktisan p roduk yang dikembangkan.  Hasil uji validasi ahli diperoleh 
+skor sebesar 0,966 pada uji validasi ahli buku panduan, 0,881 pada uji validasi ahli 
+visual, dan  0,942 pada uji validasi ahli sistem . Sedangkan uji kepraktisan 
+memperoleh skor  85,1% pada uji kepraktisan mahasiswa dan 98,12% pada uji 
+kepraktisan admin . Berdasarkan hasil tersebut, dapat disimpulkan bahwa produk 
+yang dikembangkan dapat dikatakan layak dan san gat praktis . Dengan adanya 
+sistem ini, mahasiswa dapat mengakses informasi, memperbaiki kesalahan pada 
+data mereka, dan mengunduh sertifikat pendidik digital secara mandiri melalui 
+website. Selain itu admin juga dapat mengelola data yang diperbaiki dengan lebih 
+efisien. 
+Kata Kunci: sistem informasi, website, pendidikan profesi guru, sertifikat digital. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ABSTRACT 
+ 
+DEVELOPMENT OF A WEBSITE-BASED INFORMATION SYSTEM FOR 
+DATA AND INFORMATION MANAGEMENT IN THE PPG STUDY 
+PROGRAM AT FKIP UNIVERSITAS LAMPUNG 
+ 
+ 
+By 
+ 
+AJENG INDAR ARSYIDA 
+ 
+ 
+ 
+This study aims to develop a website -based information system for data and 
+information management within the Teacher Professional Education (PPG) Study 
+Program at the Faculty of Teacher Training and Education (FKIP), Universitas 
+Lampung. The research was c onducted at PPG FKIP Universitas Lampung, 
+involving a sample of 30 students across 15 study programs. This study employed 
+the Four -D (4D) development model introduced by Thiagarajan (1974), which 
+encompasses four stages: Define, Design, Develop, and Dissem inate. Data 
+collection techniques included expert validation tests to assess the product's 
+feasibility and practicality tests to determine the usability of the developed product. 
+The expert validation results yielded a score of 0.966 from the manual book expert, 
+0.881 from the visual expert, and 0.942 from the system expert. Furthermore, the 
+practicality tests achieved a score of 85.1% from the students and 98.12% from the 
+administrators. These findings conclude that the developed product is deemed 
+feasible and highly practical. The implementation of this system enables students to 
+independently access information, rectify their data errors, and download digital 
+educator certificates via the website. Additionally, administrators can manage the 
+corrected data more efficiently. 
+Keywords: information system, website, teacher professional education, digital 
+certificate. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PENGEMBANGAN SISTEM INFORMASI BERBASIS WEBSITE UNTUK 
+PENGELOLAAN DATA DAN INFORMASI DI PROGRAM STUDI PPG FKIP 
+UNIVERSITAS LAMPUNG 
+ 
+ 
+Oleh 
+ 
+AJENG INDAR ARSYIDA 
+ 
+(Skripsi) 
+sebagai Salah Satu Syarat untuk Mencapai Gelar 
+SARJANA PENDIDIKAN 
+ 
+pada 
+ 
+Program Studi Pendidikan Teknologi Informasi  
+Jurusan Pendidikan Matematika dan Ilmu Pengetahuan Alam 
+ 
+ 
+ 
+ 
+ 
+FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN 
+UNIVERSITAS LAMPUNG 
+BANDAR LAMPUNG 
+2026 
+
+Judul Skripsi : PENGEMBANGAN SISTEM INFORMASI BERBASIS 
+WEBSITE UNTUK PENGELOLAAN DATA DAN 
+INFORMASI DI PROGRAM STUDI PPG FKIP 
+UNIVERSITAS LAMPUNG 
+Nama Mahasiswa : AJENG INDAR ARSYIDA 
+Nomor Pokok Mahasiswa : 2213025034 
+Program Studi : Pendidikan Teknologi Informasi 
+Jurusan : Pendidikan Matematika dan Ilmu Pengetahuan Alam 
+Fakultas : Keguruan dan Ilmu Pendidikan 
+ 
+ 
+ 
+MENYETUJUI 
+1. Komisi Pembimbing 
+ 
+ 
+ 
+ 
+ 
+ 
+Dr. Bayu Saputra, S.Pd., M.Pd. Ghea Chandra Surawan, S.Pd., M.Pd. 
+NIP 198812172024211001 NIP 19907232024061001 
+ 
+2. Ketua Jurusan Pendidikan MIPA 
+ 
+ 
+ 
+ 
+ 
+Dr. Nurhanurawati, M.Pd. 
+NIP 196708081991032001 
+MENGESAHKAN 
+ 
+ 
+ 
+1. Tim Penguji 
+ 
+Ketua : Dr. Bayu Saputra, S.Pd., M.Pd.   
+ 
+ 
+ 
+Sekretaris : Ghea Chandra Surawan, S.Pd., M.Pd.
+   
+ 
+ 
+ 
+Penguji 
+Bukan Pembimbing  : Dr. Afif Rahman Riyanda, M.Pd.T. 
+ 
+ 
+ 
+2. Dekan Fakultas Keguruan dan Ilmu Pendidikan 
+ 
+ 
+ 
+ 
+ 
+Dr. Albet Maydiantoro, M.Pd. 
+NIP 198705042014041001 
+ 
+ 
+ 
+Tanggal Lulus Ujian Skripsi : 
+ 
+ 
+ 
+ 
+PERNYATAAN 
+ 
+Saya yang bertanda tangan di bawah ini: 
+ 
+Nama :   Ajeng Indar Arsyida 
+NPM :  2213025034 
+Fakultas/ Jurusan :  KIP/Pendidikan MIPA 
+Program Studi :  Pendidikan Teknologi Informasi 
+Alamat :  Dusun Kaliasin III  Desa Kalisari Kecamatan 
+Natar K abupaten Lampung Selatan  Provinsi 
+Lampung 
+ 
+Menyatakan bahwa skripsi saya yang berjudul “Pengembangan Sistem Informasi 
+Berbasis Website Untuk Pengelolaan Data dan Informasi di Program Studi PPG 
+FKIP Universitas Lampung” merupakan hasil karya saya sendiri dan bukan 
+merupakan karya orang lain. Seluruh isi dan tulisan yang termuat dalam skripsi ini 
+telah mengikuti pedoman dan  kaidah penulisan karya ilmiah yang berlaku di 
+Universitas Lampung. Apabila di kemudian hari terbukti bahwa skripsi ini 
+merupakan hasil plagiasi atau karya yang telah dibuat oleh pihak lain sebelumnya, 
+saya bersedia menerima konsekuensi, termasuk pencabutan gelar sarjana yang telah 
+saya peroleh. 
+ 
+ 
+Bandarlampung,                      2026 
+ 
+ 
+ 
+ 
+Ajeng Indar Arsyida 
+NPM 2213025034 
+RIWAYAT HIDUP 
+ 
+ 
+Penulis lahir di Kabupaten Lampung Selatan Provinsi Lampung  pada tanggal 8 
+Januari 2005, sebagai anak pertama dari dua bersaudara dari pasangan Bapak 
+Darmanto dan Ibu Putri Baratika Ulfa. Penulis memiliki seorang adik yang bernama 
+Zahra Al Aden Darmanto . Penulis mengawali pendidikan formal di MI 
+Muhammadiyah Tangkit Batu sampai tahun 2016. Kemudian melanjutkan pendidikan 
+menengah pertama di MTs Muhammadiyah 1 Natar sampai tahun 2019. Selanjutnya 
+penulis melanjutkan jenjang pendidikan menengah atas di SMA Plus Muhammadiyah 
+Natar sampai tahun 2022. Pada tahun 2022 pula penulis diterima sebagai mahasiswa 
+Program Studi Teknologi Informasi di Fakultas Keguruan dan Ilmu Pendidikan 
+Universitas Lampung melalui jalur SBMPTN. 
+ 
+Selama masa perkuliahan, penulis aktif mengikuti berbagai kegiatan diantaranya: 
+1. Menjadi Anggota Koperasi Mahasiswa (KOPMA) UNILA pada tahun 2023. 
+2. Menjadi Sekretaris Divisi Pendidikan Forum Mahasiswa Pendidikan 
+Teknologi Informasi (FORMATIF) pada tahun 2024. 
+3. Menjadi Asisten Praktik mata kuliah Perakitan dan Instalasi Komputer di 
+Program Studi Pendidikan Teknologi Informasi pada tahun 2024. 
+4. Melaksanakan program Kuliah Kerja Nyata (KKN) di Desa Pagar Dewa, 
+Kecamatan Pagar Dewa, Kabupaten Tulang Bawang Barat pada tahun 2025. 
+5. Melaksanakan magang di Humas SMA YP UNILA Bandar Lampung pada 
+tahun 2025. 
+MOTTO HIDUP 
+ 
+ 
+“Sesungguhnya bersama kesulitan ada kemudahan” 
+(Q.S. Al-Insyirah : 6) 
+ 
+ 
+ 
+PERSEMBAHAN 
+ 
+ 
+ 
+Puji syukur kehadirat Allah Subhanahu Wa Ta’ala atas segala nikmat dan karunia-
+Nya. Shalawat dan salam senantiasa tercurah kepada Nabi Allah Muhammad 
+Shallallahu ‘Alaihi Wassalam . Dengan tulus penulis persembahkan karya ini  
+kepada:  
+1. Kedua orang tuaku tercinta, Bapak Darmanto dan Ibu Putri Baratika Ulfa, yang 
+tidak pernah berhenti melangitkan doa -doa terbaiknya untukku. Terima kasih 
+untuk setiap perjuangan, doa, teguran, dan dukungan yang diberikan selama 
+ini. Semoga kelak anakmu ini bisa terus menjadi alasan Bapak dan Mamah 
+tersenyum bangga. 
+2. Keluarga besar  kedua orang tuaku , eyang, mbah, tante, om dan seluruh 
+keluarga yang tidak bisa penulis sebut satu persatu . Terima kasih atas segala 
+doa dan dukungan yang telah diberikan sampai titik ini, semoga pencapaian ini 
+bisa membanggakan semuanya. 
+3. Adikku Zahra Al Aden Darmanto , yang telah menjadi warna, p enghibur dan 
+lawan bertengkar dalam kehidupan penulis.  
+4. Sahabat yang tumbuh bersamaku , Riska, Nirmala, Mba k Farah, Mbak May, 
+Mbak Dita, dan Mbak Abel . Terima kasih telah menemani dan mendukung 
+penulis selama dan sejauh ini. Pertemanan yang sudah sangat lama ini, semoga 
+semakin awet dan langgeng till Jannah. 
+5. Sahabat seperjuangan , Upik, Bela, Uni, Putri, Anjani, Bang Riko, dan Alfa, 
+yang telah membantu, membersamai dan menemani saat semua terasa berat, 
+lelah, sedih dan bahagia dari awal semester hingga sekarang . Terima kasih 
+telah menjadi support system terbaik selama menempuh pendidikan ini. 
+ 
+ 
+6. Teman-teman Pendidikan Teknologi Informasi Angkatan 2022 yang telah 
+menjadi bagian dari perjalanan kuliah ini. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+SANWACANA 
+ 
+ 
+Puji syukur kehadirat Allah Subhanahu Wa Ta’ala atas segala nikmat dan karunia-
+Nya sehingga penulis dapat menyelesaikan skripsi ini yang berjudul “Pengembangan 
+Sistem Informasi Berbasis Website Untuk Pengelolaan Data dan Informasi di Program Studi 
+PPG FKIP Universitas Lampung”. Skripsi ini disusun guna memenuhi  syarat untuk 
+memperoleh gelar Sarjana Pendidikan Teknologi Informasi pada Fakultas 
+Keguruan dan Ilmu Pendidikan Universitas Lampung. 
+ 
+Pada kesempatan ini, penulis ingin menyampaikan ucapan terima kasih kepada: 
+1. Prof. Dr. Ir. Lusmeilia Afriani, D.E.A., I.P.M., selaku rektor Universitas 
+Lampung. 
+2. Bapak Dr. Albet Maydiantoro, M.Pd., selaku Dekan Fakultas Keguruan dan Ilmu 
+Pendidikan Universitas Lampung. 
+3. Ibu Dr. Nurhanurawati, M.Pd., selaku Ketua Jurusan Pendidikan MIPA FKIP 
+Universitas Lampung. 
+4. Ibu Dr. Pramudiyanti, M.Si., selaku Koordinator Program Studi Pendidikan 
+Teknologi Informasi. 
+5. Dr. Bayu Saputra, S.Pd., M.Pd.  selaku dosen pembimbing I yang telah 
+meluangkan waktunya untuk memberikan kritik dan saran yang membimbing 
+penulis untuk menyusun penelitan ini. 
+6. Ghea Chandra Surawan, S.Pd., M.Pd.  selaku dosen pembimbing II yang telah 
+meluangkan waktunya dalam membimbing dan  memberikan kritik serta saran 
+dalam menyempurnakan skripsi ini. 
+ 
+ 
+7. Bapak Dr. Afif Rahman Riyanda, M.Pd.T.  selaku Pembahas yang telah 
+memberikan saran dan masukan terhadap skripsi ini. 
+8. Bapak/Ibu Dosen Pendidikan Teknologi Informasi yang telah memberikan ilmu 
+dan pengalaman selama berkuliah di program studi menjadi bekal berharga bagi 
+perkembangan penulis. 
+9. Bapak Ir. Amarulloh, S.Kom., M.Pd. 
+10. Almamater tercinta Universitas Lampung. 
+11. Semua pihak yang telah membantu selama pengerjaan skripsi ini. 
+ 
+Penulis berharap segala kebaikan yang telah diberikan menjadi amal ibadah dan 
+mendapat balasan dari Allah Subhanahu Wa Ta’ala. Penulis menyadari bahwa 
+skripsi ini masih jauh dari kata sempurna, tetapi penulis berharap skripsi ini dapat 
+bermanfaat di masa yang akan datang. 
+ 
+ 
+ 
+ 
+Bandarlampung,                 2026  
+Penulis, 
+ 
+ 
+ 
+Ajeng Indar Arsyida 
+NPM 2213025034 
+ 
+  
+ 
+ 
+DAFTAR ISI 
+Halaman 
+DAFTAR ISI ......................................................................................................... iii 
+DAFTAR GAMBAR ............................................................................................. v 
+DAFTAR TABEL................................................................................................ vii 
+I. PENDAHULUAN .......................................................................................... 1 
+1.1 Latar Belakang .............................................................................................. 1 
+1.2 Rumusan Masalah ......................................................................................... 4 
+1.3 Tujuan Penelitian .......................................................................................... 4 
+1.4 Manfaat Penelitian ........................................................................................ 4 
+1.5 Ruang Lingkup .............................................................................................. 5 
+II. TINJAUAN PUSTAKA ................................................................................ 7 
+2.1 Pendidikan Profesi Guru ............................................................................... 7 
+2.2 Sistem Informasi ........................................................................................... 8 
+2.3 Website .......................................................................................................... 8 
+2.4 Keterkaitan dengan Pendidikan..................................................................... 9 
+2.5 Alat yang digunakan ................................................................................... 10 
+2.5.1 Visual  Studio Code ................................................................................. 10 
+2.5.2 Wordpress ................................................................................................ 10 
+2.5.3 Laravel ..................................................................................................... 11 
+2.5.4 Bootstrap ................................................................................................. 11 
+2.6 Kerangka Berpikir ....................................................................................... 12 
+III. METODOLOGI PENELITIAN ................................................................ 14 
+3.1 Model Pengembangan ................................................................................. 14 
+3.2 Waktu dan Tempat Penelitian ..................................................................... 14 
+3.2.1 Waktu ...................................................................................................... 14 
+3.2.2 Tempat ..................................................................................................... 16 
+3.3 Populasi dan Sampel Penelitian .................................................................. 16 
+3.4 Prosedur Penelitian...................................................................................... 17 
+3.4.1 Define ...................................................................................................... 17 
+3.4.2 Design ...................................................................................................... 19 
+3.4.3 Develop .................................................................................................... 20 
+3.4.4 Disseminate ............................................................................................. 20 
+3.5 Instrumen Penelitian.................................................................................... 21 
+3.6 Teknik Pengumpulan Data .......................................................................... 24 
+3.7 Teknik Analisis Data ................................................................................... 25 
+IV. HASIL DAN PEMBAHASAN ................................................................... 28 
+4.1 Hasil Penelitian Pengembangan .................................................................. 28 
+4.1.1 Define ...................................................................................................... 28
+ 
+iv 
+ 
+4.1.2 Design ...................................................................................................... 31 
+4.1.3 Develop .................................................................................................... 47 
+4.1.4 Disseminate ............................................................................................. 58 
+4.2 Pembahasan ................................................................................................. 59 
+V. KESIMPUAN DAN SARAN ...................................................................... 62 
+5.1 Kesimpulan ................................................................................................. 62 
+5.2 Saran ............................................................................................................ 63 
+DAFTAR PUSTAKA .......................................................................................... 64 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DAFTAR GAMBAR 
+Gambar Halaman 
+1. Diagram persentase  pendapat pengguna terhadap kesulitan dalam melakukan 
+perbaikan data diri ................................................................................................... 2 
+2. Kerangka Berpikir ............................................................................................. 13 
+3. Alur Penelitian dan Pengembangan .................................................................. 17 
+4. Use Case Diagram Cek Kelulusan .................................................................... 35 
+5. Activity diagram login mahasiswa .................................................................... 36 
+6. Activity digaram perbaikan data pada bagian mahasiswa ................................ 37 
+7. Activity diagram melihat info pengiriman ........................................................ 37 
+8. Activity diagram unduh sertifikat ..................................................................... 38 
+9. Activity diagram login admin ........................................................................... 39 
+10. Activity diagram import data .......................................................................... 39 
+11. Activity diagram manajemen pengiriman ....................................................... 40 
+12. Activity diagram pengaturan sertifikat............................................................ 40 
+13. ERD sistem cek kelulusan PPG ...................................................................... 41 
+14. Wireframe halaman login mahasiswa ............................................................. 42 
+15. Wireframe halaman dashboard mahasiswa ..................................................... 42 
+16. Wireframe halaman perbaikan data mahasiswa .............................................. 43 
+17. Wireframe halaman info pengiriman sertifikat ............................................... 43 
+18. Wireframe halaman sertifikat .......................................................................... 44 
+19. Wireframe halaman tidak lulus ....................................................................... 44 
+20. Wireframe halaman login administrator ......................................................... 45 
+21. Wireframe halaman dashboard admin ............................................................ 45 
+22. Wireframe halaman import data...................................................................... 46 
+23. Wireframe halaman manajemen pengiriman .................................................. 46 
+24. Wireframe halaman pengaturan sertifikat ....................................................... 47 
+25. Tampilan halaman beranda website PPG FKIP UNILA................................. 48 
+26. Halaman login mahasiswa............................................................................... 49 
+27. Halaman dashboard mahasiswa ...................................................................... 49 
+28. Halaman perbaikan data .................................................................................. 50 
+29. Halaman info pengiriman ................................................................................ 50 
+30. Halaman sertifikat ........................................................................................... 51 
+31. Halaman pengumuman tidak lulus .................................................................. 51 
+32. Halaman login admin ...................................................................................... 52 
+33. Halaman dashboard admin .............................................................................. 52 
+34. Halaman import data ....................................................................................... 53 
+35. Halaman manajemen pengiriman .................................................................... 53 
+36. Halaman pengaturan sertifikat ........................................................................ 54
+ 
+ 
+37. Halaman detail sertifikat ................................................................................. 54 
+38. Diagram hasil uji validasi ahli......................................................................... 56 
+39. Diagram data hasil uji kepraktisan pada mahasiswa ....................................... 57 
+40. Diagram data hasil uji kepraktisan pada admin .............................................. 58 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DAFTAR TABEL 
+Tabel Halaman 
+1. Waktu Pelaksanaan Penelitian .......................................................................... 14 
+2. Kisi-kisi kuesioner analisis kebutuhan pengguna ............................................. 22 
+3. Kisi-kisi kuesioner uji validasi ahli visual ........................................................ 23 
+4. Kisi-kisi uji validasi ahli buku panduan ............................................................ 23 
+5. Kisi-kisi uji validasi ahli sistem ........................................................................ 23 
+6. Kisi-kisi kuesioner uji kepraktisan .................................................................... 24 
+7. Skala likert untuk kuesioner yang digunakan dalam pengujian ........................ 25 
+8. Kriteria validitas produk ................................................................................... 26 
+9. Kriteria kepraktisan produk............................................................................... 26 
+10. Format antarmuka Sistem Informasi PPG ...................................................... 32 
+11. Halaman website utama PPG FKIP UNILA ................................................... 48 
+12. Masukan dan saran validator ........................................................................... 55 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DAFTAR LAMPIRAN 
+Lampiran Halaman 
+1. Hasil wawancara ............................................................................................... 69 
+2. Rekapitulasi hasil penelitian pendahuluan pada mahasiswa PPG..................... 71 
+3. Angket uji validasi ahli buku panduan .............................................................. 73 
+4. Lembar uji validasi ahli sistem ......................................................................... 82 
+5. Lembar uji validasi ahli visual .......................................................................... 94 
+6. Rekapitulasi hasil uji validasi ahli buku panduan ........................................... 103 
+7. Rekapitulasi hasil uji validasi ahli visual ........................................................ 103 
+8. Rekapitulasi hasil uji validasi ahli sistem ....................................................... 104 
+9. Rekapitulasi hasil uji kepraktisan pada mahasiswa ........................................ 105 
+10. Rekapitulasi hasil uji kepraktisan pada admin .............................................. 106 
+11. Tampilan halaman beranda pada website utama PPG FKIP Universitas 
+Lampung ............................................................................................................. 107 
+12. Tampilan halaman visi, misi, tujuan, dan sasaran pada website utama PPG 
+FKIP Universitas Lampung................................................................................. 108 
+13. Tampilan halaman struktur organisasi pada website utama PPG FKIP 
+Universitas Lampung .......................................................................................... 108 
+14. Tampilan halaman kurikulum PPG Prajabatan pada website utama PPG FKIP 
+Universitas Lampung .......................................................................................... 109 
+15. Tampilan halaman berita pada website utama PPG FKIP Universitas Lampung
+ ............................................................................................................................. 109 
+16. Buku panduan pengguna sistem cek kelulusan untuk mahasiswa ................ 110 
+17. Buku panduan sistem cek kelulusan untuk admin ........................................ 120 
+18. Dokumentasi ................................................................................................. 130 
+ 
+  
+ 
+ 
+ 
+I.  PENDAHULUAN 
+1.1 Latar Belakang 
+ 
+Perkembangan teknologi informasi yang pesat saat ini telah mendorong 
+perubahan besar dalam berbagai sektor, mulai dari bidang ekonomi, sosial, 
+maupun pendidikan. Menurut McAfee & Brynjolfsson (2017), kemajuan 
+teknologi saat ini terus mendorong efisiensi dan inovasi dalam berbagai aspek 
+kehidupan. Transformasi digital ini menandai era baru di mana akses terhadap 
+informasi dan layanan harus menjadi lebih cepat dan terintegrasi. Institusi di 
+berbagai sektor dituntut untuk melakukan adaptasi sistem dan sumber daya 
+manusia agar dapat memanfaatkannya secara maksimal. Oleh karena itu, dampak 
+langsung dari kemajuan teknologi ini adalah meningkatnya kebutuhan akan 
+digitalisasi. 
+ 
+Proses digitalisasi telah mentransformasi berbagai layanan yang sebelumnya 
+manual, menjadi otomatis dan efisien. Digitalisasi membantu mengurangi jumlah 
+waktu dan sumber daya yang diperlukan untuk proses manual, yang pada akhirnya 
+mengarah pada peningkatan produktivitas (Omar et al., 2024). Digitalisasi terbukti 
+dapat menyederhanakan proses operasional, mengurangi waktu yang dibutuhkan 
+dalam pekerjaan, dan mengoptimalkan pemanfaatan sumber daya dalam lembaga 
+organisasi (Chaushi et al., 2024). Dengan berbagai keuntungan tersebut, sektor 
+pendidikan pun tidak dapat lepas dari kebutuhan digitalisasi dalam prosesnya. 
+Salah satu dampak utama digitalisasi dalam sektor pendidikan adalah penggunaan 
+situs web untuk menampilkan informasi penting tentang institusi (Shrivastava & 
+Shrivastava, 2022). Namun, masalah muncul ketika institusi belum sepenuhnya 
+mengoptimalkan teknologi dalam proses administrasinya. Kondisi inilah yang  
+2 
+ 
+ 
+terjadi di Program Studi Pendidikan Profesi Guru (PPG) FKIP Universitas 
+Lampung, di mana proses digitalisasi masih menghadapi beberapa kendala. 
+ 
+Menurut Kepala Divisi Akademik dan Kerja sama FKIP Universitas Lampung, 
+meskipun pada awalnya Program Studi Pendidikan Profesi Guru (PPG) FKIP 
+Universitas Lampung sudah memiliki sebuah sistem informasi berupa website, 
+sistem tersebut masih memiliki beberapa kekurangan, seperti belum adanya sistem 
+pembagian sertifikat pendidik yang memiliki proses login untuk menjaga 
+keamanan data mahasiswa. Selain itu, mahasiswa juga kesulitan mencari 
+informasi terkait lokasi sertifikat yang dikirimkan oleh perguruan tinggi melalui 
+jasa ekspedisi. Hasil kuesioner yang diberikan pada Mahasiswa PPG FKIP 
+Universitas Lampung juga menunjukkan bahwa mahasiswa kesulitan dalam 
+melakukan perbaikan jika terdapat kesalahan pada data mereka. Hal tersebut dapat 
+di lihat pada Gambar 1, di mana 63,6% responden setuju dan 30,3% sangat setuju 
+bahwa prosedur dalam melakukan perbaikan pada data diri mereka cukup sulit.  
+ 
+Gambar 1. Diagram persentase  pendapat pengguna terhadap kesulitan dalam 
+melakukan perbaikan data diri 
+ 
+Berdasarkan berbagai permasalahan yang ada, pengembangan sistem informasi 
+Program Studi PPG menjadi suatu kebutuhan penting guna meningkatkan 
+efektivitas layanan akademik dan administrasi. Menurut Siregar dkk. (2025), 
+
+3 
+ 
+ 
+seiring berjalannya waktu dan bertambahnya harapan pengguna terhadap 
+kemudahan, diperlukan adanya pengembangan dari sistem yang sudah ada untuk 
+memenuhi kebutuhan pengguna. Kepala Divisi Akademik dan Kerja sama serta 
+admin PPG FKIP Universitas Lampung berharap sistem informasi PPG dapat 
+memiliki keamanan yang baik, konten yang informatif, penyebaran informasi 
+yang lebih cepat, serta sistem yang mudah diakses oleh para mahasiswa PPG 
+FKIP Universitas Lampung. Dengan penerapan sistem yang terstruktur dan 
+berbasis pada kebutuhan pengguna, proses administrasi tidak lagi bergantung pada 
+prosedur manual. Sehingga dapat dilakukan secara terpusat dan efisien.  
+ 
+Sebuah penelitian yang dilakukan oleh Dwiyansaputra dkk. (2023) tentang 
+pengembangan dashboard berbasis website untuk pemantauan dan evaluasi di 
+Program Studi Teknik Informatika Universitas Mataram menunjukkan bahwa 
+pengembangan yang dilakukan berhasil mempermudah proses pemantauan dan 
+pelaporan kinerja yang dibutuhkan untuk proses akreditasi program studi. Selain 
+itu, penelitian yang dilakukan oleh Ifadah & Fathoni (2025) tentang redesign 
+website Program Studi Sistem Informasi Telkom Universitas Purwokerto juga 
+terbukti berhasil meningkatkan kualitas dan kegunaan website tersebut. 
+Keberhasilan ini merupakan contoh bahwa teknologi yang sudah ada terkadang 
+memerlukan pengembangan dan peningkatan agar fitur-fitur yang dimiliki tetap 
+relevan dengan kebutuhan yang ada. 
+ 
+Berdasarkan adanya kebutuhan tersebut, pengembangan pada sistem informasi 
+Program Studi PPG FKIP Universitas Lampung merupakan sebuah solusi yang 
+sangat tepat. Penelitian ini bertujuan menyempurnakan dan menambah 
+fungsionalitas sistem informasi yang sudah ada saat ini. Hal tersebut dapat 
+dilakukan dengan mengembangkan fitur baru yang dibutuhkan oleh pengguna, 
+memperbaiki masalah yang ada, serta meningkatkan pengalaman pengguna 
+dengan membuat antarmuka yang intuitif dan responsif. Dengan demikian, sistem 
+informasi tersebut dapat memenuhi kebutuhan pada pelaksanaan PPG di FKIP 
+Universitas Lampung secara maksimal. 
+ 
+ 
+4 
+ 
+ 
+1.2 Rumusan Masalah 
+ 
+Berdasarkan latar belakang yang telah diuraikan di atas, berikut rumusan masalah 
+dalam penelitian ini: 
+1. Bagaimana mengembangkan sistem informasi berbasis website untuk 
+pengelolaan data dan informasi Pendidikan Profesi Guru FKIP Universitas 
+Lampung? 
+2. Bagaimana tingkat kelayakan sistem informasi berbasis website untuk 
+pengelolaan data dan informasi Pendidikan Profesi Guru di FKIP 
+Universitas Lampung? 
+3. Bagaimana tingkat kepraktisan sistem informasi berbasis website untuk 
+pengelolaan data dan informasi Pendidikan Profesi Guru di FKIP 
+Universitas Lampung? 
+ 
+1.3 Tujuan Penelitian 
+ 
+Tujuan dari penelitian ini adalah: 
+1. Mengembangkan sistem informasi berbasis website untuk pengelolaan data 
+dan informasi PPG FKIP Universitas Lampung. 
+2. Mengetahui tingkat kelayakan sistem informasi berbasis website untuk 
+pengelolaan data dan informasi PPG di FKIP Universitas Lampung. 
+3. Mengetahui tingkat kepraktisan sistem informasi berbasis website untuk 
+pengelolaan data dan informasi PPG di FKIP Universitas Lampung. 
+ 
+1.4 Manfaat Penelitian 
+ 
+Hasil dari penelitian pengembangan sistem informasi ini diharapkan dapat 
+memberikan manfaat baik secara praktis maupun teoretis sebagai berikut: 
+1. Manfaat Teoretis 
+Secara teoretis, penelitian ini diharapkan dapat memberikan kontribusi bagi 
+pengembangan ilmu pengetahuan, khususnya dalam bidang rekayasa 
+perangkat lunak dan sistem informasi pendidikan. Hasil penelitian ini dapat 
+menjadi referensi dan bahan kajian bagi penelitian selanjutnya yang terkait 
+5 
+ 
+ 
+dengan pengembangan sistem informasi di lingkungan akademik, terutama 
+yang berfokus pada pengelolaan program spesifik seperti Program 
+Pendidikan Profesi Guru. 
+ 
+2. Manfaat Praktis 
+a. Bagi Peneliti 
+Penelitian ini menjadi sarana untuk menerapkan ilmu pengetahuan 
+dan teori yang telah dipelajari selama masa perkuliahan ke dalam 
+sebuah studi kasus yang nyata. Selain itu, penelitian ini memberikan 
+pengalaman langsung dalam mengembangkan sebuah sistem 
+informasi, sehingga dapat menambah wawasan dan kompetensi 
+peneliti di bidang rekayasa perangkat lunak. 
+b. Bagi Pengguna 
+Sistem ini diharapkan dapat mempermudah pengguna dalam 
+mengakses semua informasi akademik yang relevan secara terpusat. 
+Pengguna dapat dengan mudah mendapatkan sertifikat dan 
+pengumuman penting lainnya melalui satu platform, sehingga 
+mendukung kelancaran studi mereka. 
+c. Bagi FKIP Universitas Lampung 
+Sistem informasi yang dikembangkan diharapkan dapat menjadi alat 
+bantu yang efektif untuk meningkatkan efisiensi pembagian 
+sertifikat dan pengelolaan informasi bagi Program Studi Pendidikan 
+Profesi Guru (PPG) di FKIP Universitas Lampung. 
+ 
+1.5 Ruang Lingkup 
+ 
+Berdasarkan rumusan masalah yang telah ditentukan, berikut adalah ruang 
+lingkup dari penelitian ini: 
+1. Penelitian hanya dilakukan di Fakultas Keguruan dan Ilmu Pendidikan 
+Universitas Lampung. 
+2. Produk yang dihasilkan adalah buku panduan pengguna dan sistem 
+informasi yang dibangun menggunakan framework Laravel dan Bootstrap, 
+serta halaman utama yang menggunakan Wordpress. 
+6 
+ 
+ 
+3. Ada 2 (dua) jenis pengguna pada sistem ini yaitu staf IT FKIP Universitas 
+Lampung sebagai administrator dan mahasiswa PPG FKIP Universitas 
+Lampung sebagai pengguna. 
+4. Sistem ini hanya diperuntukkan untuk mahasiswa PPG di FKIP 
+Universitas Lampung sebagai pendukung dalam pengelolaan data dan 
+informasi. 
+5. Sistem ini dikembangkan menggunakan framework Laravel dan Bootstrap. 
+6. Sistem ini hanya dikembangkan sampai tahapan develop dan dissaminate 
+dalam bentuk publikasi. 
+ 
+ 
+ 
+ 
+II.  TINJAUAN PUSTAKA 
+2.1 Pendidikan Profesi Guru 
+ 
+Menurut Peraturan Menteri Pendidikan, Kebudayaan, Riset dan Teknologi 
+(Permendikbudristek) Nomor 19 Tahun 2024, Pendidikan Profesi Guru (PPG) 
+adalah program pendidikan yang diselenggarakan untuk lulusan S1 dan D4 
+sebagai calon guru atau guru untuk mendapat sertifikat pendidik. Sedangkan 
+menurut Sudrajat dkk. (2023), Pendidikan Profesi Guru (PPG) merupakan jalur 
+pendidikan lanjutan yang dirancang untuk membekali lulusan sarjana, baik dari 
+latar belakang kependidikan maupun non-kependidikan, dengan kompetensi 
+keguruan yang komprehensif sesuai standar nasional pendidikan. Jadi Pendidikan 
+Profesi Guru (PPG) adalah program pendidikan lanjutan bagi para sarjana jurusan 
+kependidikan maupun non-kependidikan yang memiliki minat menjadi seorang 
+guru, guna mendapatkan kompetensi sesuai standar pendidikan. PPG 
+diselenggarakan oleh LPTK melalui program studi PPG.  PPG  terbagi menjadi 
+dua jalur utama  yaitu, PPG Prajabatan dan PPG Dalam Jabatan. PPG Prajabatan 
+ditujukan  untuk  lulusan program sarjana atau sarjana terapan  yang belum aktif 
+mengajar, sedangkan PPG Dalam Jabatan ditujukan khusus untuk guru yang 
+sudah aktif mengajar. PPG dirancang untuk meningkatkan kompetensi pedagogi, 
+kepribadian, sosial, dan profesional Guru sesuai dengan ketentuan peraturan 
+perundang-undangan. PPG FKIP Universitas Lampung dikelola oleh PLT yaitu 
+lembaga praktik lapangan terpadu sebagai penyelenggara PPG. PPG di FKIP 
+Universitas Lampung sendiri memiliki 15 program studi pada program PPG Pra 
+Jabatan (UNILA, 2025). Program PPG di FKIP Universitas Lampung bertujuan 
+menghasilkan guru profesional yang kompeten serta mampu memecahkan 
+permasalahan dan menghasilkan karya yang dapat menjadi rujukan dalam 
+mengatasi masalah pendidikan di ranah nasional maupun internasional.
+8 
+ 
+ 
+2.2 Sistem Informasi 
+ 
+Menurut Tata Sutabri (2012), Sistem adalah sekumpulan unsur yang saling 
+terhubung dan berfungsi bersama untuk mencapai tujuan tertentu. Sedangkan, 
+informasi adalah data yang telah diolah menjadi bentuk yang lebih mudah 
+dipahami oleh penerimanya, sehingga dapat digunakan sebagai dasar pengambilan 
+keputusan (Soufitri, 2023). Sedangkan menurut O’brien & Marakas (2011), sistem 
+informasi dapat didefinisikan sebagai kombinasi terorganisasi dari orang, 
+perangkat keras, perangkat lunak, jaringan komunikasi, sumber daya data, dan 
+kebijakan serta prosedur yang menyimpan, mengambil kembali, mengubah, dan 
+menyebarkan informasi dalam suatu organisasi. Hal ini berarti, sistem informasi 
+adalah sekumpulan unsur yang saling terhubung untuk memproses atau mengolah 
+data menjadi informasi guna mendukung pengambilan keputusan. Dengan 
+kemampuan menyediakan informasi yang relevan, sistem informasi dapat 
+membantu sebuah organisasi membuat keputusan yang lebih baik. 
+ 
+2.3 Website 
+ 
+Menurut Miftahuljannah & Suharso (2023), website bisa dimaknai sebagai 
+sekumpulan halaman yang tergabung dalam satu domain atau sub domain tertentu 
+dan berada dalam jaringan World Wide Web. Sedangkan menurut Avelino dkk. 
+(2022), website, yang juga disebut sebagai situs, merupakan kumpulan halaman 
+berisi teks dan gambar yang dapat diakses melalui jaringan internet. Jadi, website 
+dapat dimaknai sebagai sekumpulan halaman yang memuat teks dan gambar 
+dalam satu domain atau sub domain tertentu yang dapat diakses melalui jaringan 
+internet. Definisi tersebut menekankan peran website sebagai media berbasis 
+internet yang menyajikan berbagai konten mulai dari teks, gambar, suara, hingga 
+video secara interaktif. Berdasarkan struktur dan fungsinya, website dapat 
+dibedakan menjadi dua jenis utama, yaitu statis dan dinamis. Website statis hanya 
+menampilkan informasi tetap dan tidak dapat diubah oleh pengguna, sementara 
+website dinamis memungkinkan interaksi dua arah dan pembaruan konten secara 
+real-time baik oleh pengguna maupun pengelola situs. Website dipilih karena 
+kemudahannya yang dapat diakses oleh pengguna kapan saja dan dari mana saja 
+9 
+ 
+ 
+melalui berbagai perangkat seperti komputer, tablet, maupun ponsel, hanya 
+dengan koneksi internet tanpa perlu melakukan instalasi tertentu. 
+ 
+2.4 Keterkaitan dengan Pendidikan 
+ 
+Menurut Purwani dkk. (2024), integrasi sistem informasi digital dalam institusi 
+pendidikan dapat meningkatkan efisiensi operasional dan kepuasan pengguna 
+karena proses layanan menjadi lebih cepat dan minim kesalahan. Penelitian lain 
+juga menemukan bahwa penggunaan sistem informasi manajemen berbasis digital 
+mampu meminimalkan tugas administratif yang repetitif dan mempercepat alur 
+kerja dalam pengelolaan data pendidikan, sehingga proses layanan akademik 
+menjadi lebih responsif terhadap kebutuhan stakeholder (Sari dkk., 2024). Selain 
+itu, penelitian ini juga memiliki keterkaitan dengan materi pemrograman web 
+pada SMK jurusan Pengembangan Perangkat Lunak dan Gim Fase F. Hal ini 
+mengacu pada capaian pembelajaran materi pemrograman web pada Keputusan 
+Kepala Badan Standar, Kurikulum, dan Asesmen Pendidikan (BSKAP) yang 
+menyatakan bahwa pada akhir fase F peserta didik mampu memahami konsep dan 
+menerapkan perintah  HTML, CSS, pemrograman Javascript, bahasa 
+pemrograman server side serta implementasi framework pada pembuatan web 
+statis dan dinamis untuk berbagai kebutuhan yang kontekstual. Oleh karena itu, 
+pada materi ini peserta didik diajarkan bagaimana caranya membuat sebuah 
+website, setelah itu peserta didik juga diharuskan untuk menerapkan pembuatan 
+aplikasi halaman website sesuai isi capaian pembelajaran materi pemrograman 
+web. Sehingga hasil produk dari penelitian ini dapat dimanfaatkan sebagai model 
+pembelajaran di sekolah. Dengan demikian, pengembangan sistem informasi 
+berbasis web dalam penelitian ini tidak hanya berkontribusi pada peningkatan 
+mutu layanan pendidikan secara administratif, tetapi juga relevan sebagai contoh 
+implementasi nyata materi pemrograman web di SMK. 
+ 
+ 
+ 
+10 
+ 
+ 
+2.5 Alat yang digunakan 
+2.5.1 Visual  Studio Code 
+ 
+VS Code (Visual Studio Code) adalah editor kode sumber dan alat pengembangan 
+lintas platform pertama yang dibuat untuk sistem operasi populer seperti 
+Microsoft Windows, Linux, dan MacOS. Vs Code pertama kali diumumkan pada 
+29 April 2015 di konferensi Microsoft, dilengkapi dengan berbagai fitur seperti 
+debugging, penyelesaian kode cerdas (intelligent code completion), snippets code, 
+refactoring, brackets matching, mendukung berbagai bahasa pemrograman dan 
+Git yang terintegrasi (Kaur dkk., 2023).  VS Code menyediakan lingkungan 
+coding berbasis folder serta copilot yang dapat  membuat atau melengkapi kode 
+pengguna, sehingga pekerjaan menjadi lebih mudah. Menurut Ismail Setiawan 
+(2022),  VS Code memiliki arsitektur berbasis ekstensi, di mana terdapat ribuan 
+ekstensi yang tersedia untuk digunakan, sehingga sangat membantu pekerjaan 
+para penggunanya. 
+ 
+2.5.2 Wordpress 
+ 
+Wordpress adalah sebuah Sistem Manajemen Konten (CMS) open source yang 
+dirancang agar pengguna dapat mengelola website dengan mudah, bahkan tanpa 
+perlu menguasai bahasa pemrograman (Fauziyyah, 2023). Sehingga dapat 
+dikatakan bahwa Wordpress merupakan perangkat lunak gratis yang dapat 
+diunduh dan instal di layanan hosting pilihan sendiri. Wordpress memiliki 
+kemampuan untuk install plugin dan tema sesuai yang diinginkan oleh pengguna. 
+Wordpress menyediakan kerangka kerja dan antarmuka visual untuk membuat, 
+mengedit, dan mempublikasikan konten seperti halaman atau blog, selain itu 
+wordpress juga dapat digunakan untuk mengatur tampilan website serta 
+mengunggah gambar atau media lainnya. Wordpress dipilih karena memiliki 
+banyak keunggulan daripada CMS lainnya. Menurut Khaliq (2023), Wordpress 
+memiliki beberapa keunggulan dibanding CMS lainnya, seperti antarmuka yang 
+mudah dipahami, plugin dan tema yang melimpah, serta komunitas yang besar 
+sehingga sangat membantu developer dalam memecahkan masalah yang dialami. 
+ 
+11 
+ 
+ 
+2.5.3 Laravel 
+ 
+Menurut Ismiyati & Hidayat (2023), Laravel adalah framework PHP (Hypertext 
+Preprocessor) open source berbasis MVC (Model-View-Controller) yang dirilis 
+dibawah lisensi MIT. Sedangkan menurut Riza Noviana dkk. (2024), Laravel 
+merupakan framework berbasis PHP yang dirancang untuk pengembangan 
+website. Sehingga dapat dikatakan bahwa Laravel adalah sebuah framework PHP 
+open source dengan arsitektur MVC untuk mempermudah proses pengembangan 
+website. Laravel menyediakan fitur-fitur seperti fleksibilitas sistem routing, 
+pengelolaan sesi, sistem otentikasi, Eloquent ORM (Object-Relational Mapping) 
+untuk berinteraksi dengan database, serta fitur Blade Templating Engine yang 
+memudahkan pembuatan antarmuka website (Viani dkk., 2024). Fitur dan 
+fungsionalitas tersebut membantu menciptakan platform yang aman, dan ramah 
+pengguna. Laravel berfokus pengembangan cepat, arsitektur modular, dan 
+integrasi dengan berbagai teknologi (Antoro & Wahyuni, 2024). 
+ 
+2.5.4 Bootstrap 
+ 
+Menurut Dirgantara & Andrian (2023), Bootstrap merupakan salah satu 
+framework CSS (Cascading Style Sheet) yang banyak sekali digunakan karena 
+memiliki beragam elemen siap pakai yang dapat memudahkan pengembangan 
+website responsif. Sedangkan menurut Noviantoro dkk. (2022), Bootstrap adalah 
+kerangka kerja berbasis CSS yang digunakan untuk perancangan antarmuka 
+website yang sangat baik. Berdasarkan kedua pernyataan tersebut, dapat 
+disimpulkan bawah Bootstrap adalah framework CSS yang menyediakan beragam 
+elemen antarmuka siap pakai untuk mempermudah dan mempercepat proses 
+perancangan website, khususnya dalam membangun tampilan yang responsif, 
+terstruktur, dan ramah pengguna. Bootstrap menyediakan elemen-elemen seperti 
+typography, grid system, button, form, serta table yang masing-masing telah 
+dirancang supaya responsif dan konsisten sehingga memudahkan perancangan 
+antarmuka. Grid System juga menjadi fitur keunggulan dalam Bootstrap karena 
+membantu pengaturan tata letak halaman secara terstruktur dan fleksibel (Santoso, 
+2025). 
+12 
+ 
+ 
+2.6 Kerangka Berpikir 
+ 
+Penelitian ini didasarkan pada permasalahan yang ditemukan peneliti melalui 
+studi pendahuluan yang dilakukan dengan wawancara dan penyebaran kuesioner. 
+Permasalahan utama terletak pada kondisi tampilan sistem informasi saat ini yang 
+kurang intuitif, informasi yang tidak diperbarui dan fitur baru yang dibutuhkan 
+seiring berjalannya waktu. Oleh karena itu diperlukan adanya pengembangan dari 
+sistem informasi yang sudah ada untuk mengatasi permasalahan tersebut. 
+Penelitian ini dilakukan berdasarkan kerangka berpikir pada Gambar 2. 
+ 
+13 
+ 
+ 
+ 
+Gambar 2. Kerangka Berpikir
+
+ 
+ 
+ 
+III.  METODOLOGI PENELITIAN 
+3.1 Model Pengembangan 
+ 
+Penelitian ini menggunakan metode Research and Development (R&D), yaitu 
+suatu pendekatan penelitian yang berfokus pada proses menghasilkan produk 
+tertentu sekaligus menguji efektivitasnya. Metode ini sangat sesuai untuk 
+pengembangan sistem informasi karena pada dasarnya tujuan metode R&D adalah 
+dihasilkannya produk baru, atau perbaikan dari produk yang sudah ada, yang 
+memerlukan pengembangan untuk penyempurnaan (Winaryati, 2021). Model 
+yang digunakan adalah model Four-D (4D) yang dikembangkan oleh Thiagarajan 
+(1974). Sesuai namanya, model 4D memiliki empat tahapan, yaitu yaitu Define 
+(Pendefinisian), Design (Perancangan), Develop (Pengembangan), dan 
+Disseminate (Penyebaran) (Thiagarajan, 1974). Menurut Rahayu (2025), model 
+4D terfokus pada tahapan pengembangan perangkat, sehingga cocok digunakan 
+dalam penelitian ini karena penelitian ini berfokus pada bagaimana sistem 
+informasinya dapat dikembangkan. 
+ 
+3.2 Waktu dan Tempat Penelitian 
+3.2.1 Waktu 
+ 
+Tabel 1. Waktu Pelaksanaan Penelitian 
+No. Kegiatan Penelitian Sept Oct Nov Dec Jan Feb Mar Apr Mei 
+1 Define          
+2 Design          
+3 Develop          
+4 Disseminate          
+15 
+ 
+ 
+5 Penulisan karya 
+ilmiah 
+         
+16 
+ 
+ 
+Penelitian ini akan dilakukan dengan beberapa tahapan. Tahapan pertama adalah 
+tahapan define yang dilaksanakan pada bulan September. Tahapan kedua, yaitu 
+tahapan design yang dilaksanakan pada bulan Oktober. Tahapan ketiga, yaitu 
+tahapan develop yang dilaksanakan pada bulan Oktober sampai Januari, dan 
+terakhir tahapan disseminate pada bulan Februari. Sedangkan penulisan karya 
+ilmiah akan dilaksanakan dari bulan September sampai Februari tahun 2026. 
+ 
+3.2.2 Tempat 
+ 
+Penelitian ini dilaksanakan di lingkungan Pendidikan Profesi Guru  Fakultas 
+Keguruan dan Ilmu Pendidikan Universitas Lampung yang terletak di Jalur dua 
+Universitas Lampung, Jalan Prof. Dr Jl. Prof. Dr. Ir. Sumantri Brojonegoro No.1, 
+Kota Bandar Lampung, Lampung 35141. 
+ 
+3.3 Populasi dan Sampel Penelitian 
+ 
+Populasi dalam penelitian ini adalah seluruh mahasiswa PPG FKIP Universitas 
+Lampung. Teknik Pengambilan sampel yang digunakan adalah purposive 
+sampling. Purposive sampling adalah cara penentuan sampel dengan  
+pertimbangan tertentu (Sugiyono, 2013). Oleh karena itu, dalam penelitian ini 
+diambil 1 orang laki-laki dan 1 orang perempuan dari 15 program studi yang ada 
+di PPG FKIP Universitas Lampung. Pembagian ini dilakukan untuk memastikan 
+setiap program studi terwakili agar terdapat variasi pengalaman pengguna. 
+Sehingga total sampel adalah 30 orang, yaitu 15 orang laki-laki dan 15 orang 
+perempuan. Metode sampling ini cocok dikarenakan produk yang akan diujikan 
+adalah sebuah sistem, sehingga sampel kecil sudah cukup untuk melakukan 
+pengujian. Menurut Faulkner (2003), 20 pengguna mampu menemukan 95% 
+masalah pada kegunaan suatu sistem. Bahkan dengan jumlah subjek yang sedikit, 
+masalah kegunaan utama akan terungkap (Weinger et al., 2010). 
+ 
+ 
+ 
+17 
+ 
+ 
+3.4 Prosedur Penelitian 
+ 
+Penelitian ini menggunakan model Four-D dengan alur pengembangan sesuai alur 
+pengembangan Thiagarajan (1974) yang ditampilkan pada Gambar 3. 
+ 
+ 
+ 
+Gambar 3. Alur Penelitian dan Pengembangan 
+ 
+3.4.1 Define 
+ 
+Pada tahap ini, terdapat beberapa proses yang dilakukan untuk analisis kebutuhan. 
+Analisis kebutuhan dilakukan dengan melakukan studi pendahuluan dan kajian 
+literatur. Menurut Thiagarajan (1974), tahapan define melibatkan 5 langkah, yaitu: 
+ 
+a. Front-end Analysis 
+Langkah analisis awal bertujuan untuk mengidentifikasi dan memunculkan 
+masalah dasar yang melatarbelakangi perlunya pengembangan  produk. 
+Langkah ini dilakukan dengan mencari justifikasi yang kuat mengapa 
+pengembangan sistem informasi PPG FKIP Universitas Lampung benar-
+benar diperlukan.  
+ 
+ 
+
+18 
+ 
+ 
+b. Learner Analysis 
+Langkah learner analysis  berfokus pada  identifikasi  karakteristik 
+pengguna  yang akan menggunakan produk tersebut. Langkah ini 
+dilakukan dengan menganalisis target pengguna, yaitu mahasiswa PPG 
+dan admin PPG FKIP Universitas Lampung. 
+  
+c. Task Analysis 
+Langkah analisis tugas dilakukan dengan menganalisis tugas yang harus 
+dilakukan pengguna di dalam sistem informasi tersebut. Pada langkah ini 
+akan diidentifikasi bagaimana langkah-langkah pengguna untuk dapat 
+menemukan informasi yang di unggah oleh admin, lalu pengguna 
+melakukan cek kelulusan dan melakukan perbaikan serta pelengkapan data 
+yang kemudian data tersebut dapat diterima dan dikelola oleh admin, serta 
+penyerahan sertifikat pendidik dari admin kepada mahasiswa PPG. 
+Analisis ini bertujuan untuk mengidentifikasi alur kerja untuk melakukan 
+tugas-tugas tersebut, sehingga dapat membantu pengguna untuk 
+memahami caranya melalui pembuatan buku panduan. 
+ 
+d. Concept Analysis 
+Langkah analisis konsep merupakan tahapan di mana dilakukan 
+identifikasi serta perincian komponen utama yang akan disajikan dalam 
+sistem informasi. Analisis konsep bertujuan menyusun konsep-konsep 
+secara sistematis serta menentukan hubungan antar konsep sebelum proses 
+perancangan teknis dilakukan. 
+  
+e. Specifying Instructional Objectives 
+Pada langkah ini, dirumuskan tujuan yang ingin dicapai berdasarkan hasil 
+analisis yang telah dilakukan sebelumnya. Perumusan tujuan berfokus 
+pada kemampuan yang harus dicapai pengguna setelah menggunakan 
+sistem informasi, sehingga sistem tidak hanya berfungsi secara teknis, 
+tetapi juga efektif dalam membantu menyelesaikan tugas pengguna..  
+ 
+ 
+19 
+ 
+ 
+3.4.2 Design 
+ 
+Tahap design bertujuan untuk merancang dan mempersiapkan prototipe dari 
+sistem informasi PPG FKIP Universitas Lampung. Menurut Thiagarajan (1974) 
+pada tahapan ini terdapat empat langkah utama, yaitu: 
+ 
+a. Constructing Criterion-Referenced Tests 
+Penyusunan tes kriteria merupakan langkah awal yang menjadi jembatan 
+antara tahap define dan design. Tahap ini dilakukan dengan menyusun 
+instrumen uji ahli yang berfungsi untuk mengetahui sejauh mana sistem 
+informasi dan buku panduan pengguna yang dikembangkan memenuhi 
+kriteria validitas. 
+ 
+b. Media Selection 
+Pada tahap ini dilakukan pemilihan media yang tepat untuk menyajikan 
+konten atau fungsionalitas sistem. Pemilihan media dilakukan dengan 
+mempertimbangkan karakteristik pengguna, kebutuhan akses, dan jenis 
+layanan yang diberikan. 
+  
+c. Format Selection 
+Langkah pemilihan format sangat erat dengan proses pemilihan media, di 
+mana tahap ini berisi proses pemilihan bagaimana cara informasi akan 
+disajikan kepada pengguna. Dalam pengembangan sistem informasi, 
+langkah ini dilakukan dengan menentukan format antarmuka yang paling 
+cocok untuk tampilan sistem informasi PPG FKIP Universitas Lampung. 
+ 
+d. Initial Design 
+Bagian ini Adalah langkah awal di mana proses desain prototipe mulai 
+dilakukan. Pada tahap ini akan dibuat use case diagram, activity diagram, 
+entitiy relationship diagram (ERD), dan wireframe sebagai rancangan 
+awal tampilan sistem informasi yang akan dibuat.  
+ 
+ 
+20 
+ 
+ 
+3.4.3 Develop 
+ 
+Tahap develop merupakan tahap ketiga dari model Four-D. Tahap ini bertujuan 
+untuk memodifikasi dan menyempurnakan prototipe sistem informasi yang 
+dikembangkan. Menurut Thiagarajan (1974) terdapat 2 langkah utama dari tahap 
+develop, yaitu: 
+ 
+a. Expert Appraisal 
+Pada langkah ini dilakukan penilaian oleh ahli visual, ahli buku panduan 
+dan ahli sistem. Langkah ini bertujuan untuk mendapat umpan balik dari 
+ahli dan mengetahui sejauh mana sistem informasi dan buku panduan 
+pengguna yang dikembangkan memenuhi kriteria validitas, guna 
+memperbaiki dan menyempurnakan prototipe. 
+ 
+b. Developmental Testing 
+Pada langkah uji coba pengembangan, dilakukan uji coba sistem informasi 
+kepada pengguna yang menjadi sasaran sebenarnya untuk menemukan 
+bagian mana yang memerlukan revisi. Uji coba ini dilakukan melalui uji 
+coba terbatas, uji coba terbatas merupakan tahap penting yang dilakukan 
+setelah validasi ahli untuk menguji produk pada kelompok kecil untuk 
+melihat kepraktisan dan respons pengguna. Jadi, setelah melakukan 
+pengujian produk, pengguna akan mengisi kuesioner uji kepraktisan. Hasil 
+pengujian akan digunakan sebagai acuan dalam proses revisi, untuk 
+mendapatkan sistem yang sesuai dengan kebutuhan pengguna.  
+ 
+3.4.4 Disseminate 
+ 
+Tahap disseminate (penyebaran) bertujuan untuk menyebarluaskan hasil produk 
+akhir setelah produk terbukti hasilnya pada tahap develop. Menurut Thiagarajan 
+(1974) pada tahap disseminate terdapat 3 langkah utama, yaitu: 
+ 
+ 
+ 
+ 
+ 
+21 
+ 
+ 
+a. Validation Tasting 
+Langkah validation tasting bertujuan untuk mempersiapkan produk, yang 
+dilakukan dengan pemeriksaan kesiapan setiap produk secara mandiri oleh 
+pengembang. 
+ 
+b. Packaging 
+Pada langkah ini dilakukan pengemasan produk menjadi bentuk yang 
+dapat diterima, yaitu dengan cara yang disesuaikan berdasarkan bentuk 
+dari produk itu sendiri. Apabila produk berbentuk buku maka harus 
+dicetak, diperbanyak dan dipublikasikan. 
+ 
+c. Diffusion and Adoption 
+Langkah terakhir ini berfokus pada penyebaran produk agar produk dapat 
+dimanfaatkan oleh orang lain. Aktivitas spesifik yang harus dilakukan 
+dalam menyebarluaskan produk atau metode pengajaran baru sangat 
+berbeda tergantung pada inovasi, karakteristik pengguna potensial, dan 
+situasinya. 
+ 
+Produk yang telah dikembangkan harus disebarluaskan dan diujikan ke khalayak 
+luas di luar ranah pengembangan itu sendiri. Namun, penelitian ini tidak 
+melakukan sampai tahapan tersebut. Karena pada ruang lingkup telah dijelaskan 
+bahwa produk ini hanya akan dipergunakan oleh PPG FKIP UNILA itu sendiri. 
+Sehingga tahap penyebarluasan hanya dilakukan melalui publikasi artikel. 
+ 
+3.5 Instrumen Penelitian 
+ 
+Penelitian ini menggunakan dua jenis instrumen, yaitu wawancara dan kuesioner. 
+Ada 4 macam kuesioner yang digunakan, yaitu kuesioner analisis kebutuhan, 
+kuesioner uji validitas, kuesioner uji kepraktisan dan kuesioner uji efektivitas. 
+ 
+1. Instrumen Wawancara 
+Instrumen wawancara digunakan untuk mengetahui masalah yang ada 
+sebenarnya. Wawancara dilakukan dengan dua narasumber, yaitu Kepala 
+22 
+ 
+ 
+Divisi Akademik dan Kerja sama FKIP Universitas Lampung serta staf IT 
+yang menjadi admin PPG FKIP Universitas Lampung. 
+ 
+2. Kuesioner Analisis Kebutuhan 
+Kuesioner analisis kebutuhan dibuat untuk mengidentifikasi kebutuhan 
+dari pengguna, yaitu mahasiswa PPG FKIP Universitas Lampung. 
+Kuesioner dibuat menggunakan Google Form untuk mengetahui 
+kekurangan dari sistem informasi sebelumnya, sehingga dapat dijadikan 
+sebagai acuan dalam pengembangan pada penelitian ini. 
+ 
+Tabel 2. Kisi-kisi kuesioner analisis kebutuhan pengguna 
+Aspek Indikator Butir 
+Ketersediaan dan 
+Kualitas Informasi 
+1. Pengetahuan pengguna 
+2. Ketersediaan informasi 
+3. Kualitas dan keandalan 
+Informasi 
+1,2,3,4,5,6,7,8,9,10 
+Tampilan dan 
+Pengalaman Pengguna 
+1. Tata letak dan navigasi 
+2. Preferensi desain 
+3. Aksesibilitas mobile dan 
+dekstop 
+11, 12, 13, 14, 15, 
+16 
+Fungsionalitas dan 
+Kinerja Sistem 
+1. Respons website ketika 
+diklik 
+17 
+Layanan Administrasi 1. Efektivitas komunikasi 
+2. Mekanisme umpan balik 
+18, 19, 20 
+ 
+3. Kuesioner Uji Validitas 
+Kuesioner uji validitas terdapat tiga jenis, yaitu untuk pengujian validasi 
+ahli buku panduan, ahli visual dan ahli sistem. Ahli buku panduan akan 
+melakukan validasi pada isi buku panduan, ahli visual akan melakukan 
+validasi pada tampilan sistem, dan ahli sistem akan melakukan validasi 
+pada fungsionalitas serta kinerja sistem. Validasi dilakukan oleh validator 
+ahli guna  mendapatkan saran dan masukan yang dapat menjadi acuan 
+dalam proses perbaikan (Silmi & Rachmadyanti, 2018). Kisi-kisi 
+kuesioner uji validasi ahli visual, ahli buku panduan dan ahli sistem dapat 
+dilihat pada Tabel 3, Tabel 4 dan Tabel 5. 
+ 
+ 
+ 
+ 
+23 
+ 
+ 
+Tabel 3. Kisi-kisi kuesioner uji validasi ahli visual 
+Aspek Indikator Butir 
+Kemudahan 
+penggunaan 
+1. Kejelasan antarmuka 
+2. Kualitas informasi 
+1, 2, 3, 4, 5 
+6, 7 
+Tampilan 1. Kesesuaian kombinasi 
+warna  
+2. Kesesuaian pemilihan 
+jenis dan ukuran font 
+3. Kerapian dan 
+konsistensi desain 
+8, 9 
+ 
+10, 11 
+ 
+12, 13, 14 
+(Hakky dkk., 2018), (Fikri dkk., 2022) dan (Pratiwi dkk., 2023) 
+ 
+Tabel 4. Kisi-kisi uji validasi ahli buku panduan 
+Aspek Indikator Butir 
+Isi panduan 1. Kelengkapan buku 
+panduan 
+2. Ketepatan isi buku 
+panduan dengan 
+tujuan yang ingin 
+dicapai 
+1, 2 
+ 
+ 
+2, 3, 4 
+Penyajian 1. Kejelasan penyajian 
+contoh/ilustrasi 
+2. Keterbacaan teks 
+5, 6 
+ 
+6, 7 
+Bahasa 1. Kejelasan informasi 
+2. Kejelasan struktur 
+kalimat 
+8, 9 
+10, 11 
+(Kurnia & Sunaryati, 2023), (Rahmad dkk., 2018) dan (Ferisha Paath & 
+Khotimah, 2025) 
+ 
+Tabel 5. Kisi-kisi uji validasi ahli sistem 
+Aspek Indikator Butir 
+Fungsionalitas 1. Kesesuaian proses 
+input dan output 
+2. Fungsionalitas fitur 
+3. Pencegahan dan 
+penanganan eror 
+1, 2, 3 
+ 
+4, 5 
+6, 7, 8 
+ 
+Performa sistem 1. Kecepatan respons 
+sistem 
+2. Kompatibilitas 
+3. Stabilitas sistem 
+9, 10 
+ 
+11, 12 
+13, 14 
+Keamanan 1. Manajemen sesi 
+2. Form validation 
+15, 16, 17 
+18, 19 
+(Aziz Ridwan dkk., 2025), (Nurwicaksono dkk., 2023), (Pratiwi dkk., 2023), dan 
+(Fadilah dkk., 2024) 
+24 
+ 
+ 
+3. Kuesioner Uji Kepraktisan 
+Uji kepraktisan bertujuan untuk menilai apakah sistem informasi yang 
+telah dikembangkan dapat dikatakan praktis berdasarkan standar 
+kepraktisan (Riza & Handayani, 2015). Kisi-kisi kuesioner uji kepraktisan 
+dapat dilihat pada Tabel 6. 
+ 
+Tabel 6. Kisi-kisi kuesioner uji kepraktisan 
+Aspek Indikator Butir 
+Kemudahan 
+Penggunaan 
+1. Kemudahan akses 
+2. Kemudahan 
+pengoprasian 
+3. Kemudahan navigasi 
+4. Ketersediaan informasi 
+5. Kemudahan 
+menghindari kesalahan 
+1, 2  
+3, 4 
+ 
+5, 6 
+7, 8 
+9, 10 
+Manfaat  1. Dampak penggunaan 
+2. Kesesuaian dengan 
+Kebutuhan 
+11, 12, 13 
+14, 15 
+(Fernando & Sarkity, 2023), (Regita & Aini, 2025), (Suyatno, 2020), dan 
+(Sufandi dkk., 2022) 
+ 
+3.6 Teknik Pengumpulan Data 
+ 
+Teknik pengumpulan data dipakai berdasarkan jenis instrumen yang digunakan 
+pada penelitian ini, yaitu: 
+ 
+1. Data Analisis Kebutuhan 
+Pengumpulan data analisis kebutuhan dilakukan dengan menyebarkan 
+kuesioner kepada mahasiswa PPG FKIP Universitas Lampung, selain itu 
+juga dilakukan wawancara dengan Ketua Divisi Akademik dan Kerja sama 
+selaku divisi yang membawahi bagian humas di FKIP Universitas 
+Lampung serta staf IT yang ada di divisi tersebut. 
+ 
+2. Data Validitas Produk 
+Pengumpulan data validitas produk dilakukan dengan melampirkan 
+prototipe sistem kepada validator, yaitu ahli visual dan ahli sistem, serta 
+prototipe buku panduan pengguna kepada ahli buku panduan. Kemudian 
+diperoleh data melalui kuesioner validasi ahli visual dan ahli buku 
+25 
+ 
+ 
+panduan sebagai saran dan masukan yang akan menjadi acuan revisi dan 
+penyempurnaan produk. 
+ 
+3. Data kepraktisan Produk 
+Pengumpulan data kepraktisan produk dilakukan dengan memberikan 
+kuesioner uji kepraktisan kepada pengguna setelah mereka melakukan uji 
+coba pada uji coba terbatas, untuk mendapatkan data tentang tingkat 
+kepraktisan dan kemudahan dalam penggunaan produk sistem informasi 
+tersebut. 
+ 
+3.7 Teknik Analisis Data  
+ 
+Setelah data-data di atas dikumpulkan, langkah selanjutnya adalah melakukan 
+analisis data. Data yang dianalisis adalah data validitas produk dan data 
+kepraktisan produk. 
+ 
+1. Analisis Data Validitas 
+Analisis data validitas bertujuan mengolah data hasil uji validasi ahli 
+visual, ahli buku panduan dan ahli sistem. Analisis ini dilakukan untuk 
+mengubah penilaian kuantitatif dari para ahli menjadi sebuah kesimpulan 
+yang terukur terkait  Tingkat validitas produk sebelum dilakukan uji coba 
+ke pengguna. Kuesioner uji validitas ini menggunakan skala likert yang 
+diadaptasi dari Arikunto (2014). Skala likert dapat dilihat pada Tabel 7. 
+ 
+Tabel 7. Skala likert untuk kuesioner yang digunakan dalam pengujian 
+Jawaban Nilai 
+Sangat Setuju 4 
+Setuju 3 
+Tidak Setuju 2 
+Sangat Tidak Setuju 1 
+(Arikunto, 2014) 
+ 
+Kemudian, hasil uji validitas ahli visual, ahli buku panduan dan ahli sistem 
+yang telah dikumpulkan, kemudian diolah menggunakan rumus Aiken’s. 
+ 
+26 
+ 
+ 
+𝑉 = 
+∑ s 
+[n(c − 1)] 
+ 
+Berdasarkan hasil tersebut, dapat diambil kesimpulan dengan acuan 
+tingkat validitas produk yang ditampilkan pada Tabel 8. 
+ 
+Tabel 8. Kriteria validitas produk 
+Kategori Skor  
+Valid ≥ 0.667 
+Tidak Valid ≤ 0.667 
+ (Mailando dkk., 2023) 
+ 
+Berdasarkan kriteria validitas di atas, dapat diketahui bahwa suatu produk 
+dikatakan valid apabila skor validitasnya minimal mencapai lebih dari atau 
+sama dengan 0.667. 
+ 
+2. Analisis Data Kepraktisan 
+Pengumpulan data kepraktisan produk bertujuan untuk mengukur sejauh 
+mana sistem informasi yang dikembangkan mudah dan efisien untuk 
+digunakan oleh pengguna dalam kondisi nyata. Kuesioner uji kepraktisan 
+produk menggunakan skala likert seperti pada Tabel 7. Kemudian hasilnya 
+dihitung menggunakan rumus yang diadaptasi dari Sugiyono (2013) di 
+bawah ini. 
+ 
+Rata-rata hasil =  
+𝑇𝑜𝑡𝑎𝑙 𝑠𝑘𝑜𝑟 𝑦𝑎𝑛𝑔 𝑑𝑖𝑝𝑒𝑟𝑜𝑙𝑒ℎ
+𝑆𝑘𝑜𝑟 𝑚𝑎𝑘𝑠𝑖𝑚𝑢𝑚  × 100% 
+ 
+Hasil rata-rata dari uji kepraktisan tersebut kemudian diambil kesimpulan 
+hasil akhirnya berdasarkan kriteria kepraktisan produk yang dapat dilihat 
+pada Tabel 9. 
+ 
+Tabel 9. Kriteria kepraktisan produk 
+Kategori Skor dalam persen (%) 
+Sangat Praktis 81%-100% 
+Praktis 61%-80% 
+Cukup Praktis 41%-60% 
+Kurang Praktis 21%-40% 
+27 
+ 
+ 
+Tidak Praktis 0%-20% 
+(Riduwan & Akdon, 2015) 
+ 
+Dari Tabel 9 dapat disimpulkan bahwa suatu produk dapat dikatakan 
+praktis apabila skor rata-rata hasil uji kepraktisan produk mencapai 
+minimal 41% dengan kategori cukup praktis. 
+ 
+ 
+ 
+IV.  HASIL DAN PEMBAHASAN 
+4.1 Hasil Penelitian Pengembangan 
+ 
+Hasil penelitian pengembangan ini berupa pembaruan sistem informasi 
+Pendidikan Profesi Guru FKIP Universitas Lampung dengan penambahan fitur 
+baru yang digunakan untuk cek kelulusan PPG. Pengembangan ini dilakukan 
+menggunakan model Four-D (4D) yang dikembangkan oleh Thiagarajan (1974) 
+dengan empat tahapan, yaitu yaitu Define (Pendefinisian), Design (Perancangan), 
+Develop (Pengembangan), dan Disseminate (Penyebaran). Hasil pelaksanaan 
+tahapan-tahapan pengembangan sistem informasi PPG FKIP UNILA adalah 
+sebagai berikut. 
+ 
+4.1.1 Define 
+ 
+Pada tahap define terdapat 5 langkah yang dilakukan untuk menganalisis 
+kebutuhan pengguna, serta merumuskan tujuan yang ingin dicapai dari 
+pengembangan sistem informasi ini. 
+ 
+a. Front-end Analysis 
+Pada langkah ini penulis mengidentifikasi masalah yang melatarbelakangi 
+perlunya pengembangan ini melalui data kuesioner studi pendahuluan dan  
+hasil wawancara dengan Ketua Divisi Akademik dan Kerja sama serta staf 
+IT yang menjadi admin PPG FKIP Universitas Lampung. Berdasarkan 
+hasil dari studi pendahuluan yang telah dilakukan, peneliti menemukan 
+bahwa pengguna merasa cukup kesulitan dalam memahami menu yang ada 
+pada sistem informasi saat ini, selain itu pengguna juga kesulitan dalam 
+mencari informasi pengiriman sertifikat pendidik serta dalam melakukan 
+29 
+ 
+ 
+perbaikan data diri. Ketua Divisi Akademik dan Kerja sama serta staf juga 
+menjelaskan bahwa belum adanya sistem pembagian sertifikat dan cek 
+kelulusan mahasiswa yang memiliki fitur login, sehingga kurang aman 
+untuk data-data pribadi. 
+ 
+b. Learner Analysis 
+Pada langkah learner analysis dilakukan identifikasi karakteristik 
+pengguna sistem informasi PPG FKIP UNILA, yaitu mahasiswa PPG dan 
+staf IT sebagai administrator. Pengumpulan data pada langkah ini 
+dilakukan melalui penyebaran angket analisis kebutuhan kepada 
+mahasiswa PPG serta wawancara bersama Kepala Divisi Akademik dan 
+Kerja sama FKIP Universitas Lampung dan admin PPG. Menurut Kepala 
+Divisi Akademik dan Kerja sama FKIP Universitas Lampung, mahasiswa 
+PPG memerlukan sistem informasi berupa website yang dapat diakses 24 
+jam. Sedangkan admin PPG sendiri berharap sistem yang dikembangkan 
+mudah dikelola dan stabil. Admin juga menekankan pentingnya 
+pencegahan kesalahan input data serta panduan teknis yang jelas agar 
+proses operasional dapat dilakukan secara efisien. Sementara itu, hasil 
+kuesioner menunjukkan bahwa sebagian besar mahasiswa telah terbiasa 
+dalam penggunaan perangkat digital dan sistem berbasis website dalam 
+kehidupan sehari-hari. Namun, mahasiswa mengharapkan menu yang 
+ringkas dan langkah penggunaan yang mudah dipahami tanpa perlu 
+pelatihan khusus. Selain itu mahasiswa juga membutuhkan sistem yang 
+informatif serta panduan penggunaan yang lengkap dan runtut untuk 
+meminimalisir kesalahan dalam penggunaan sistem. 
+ 
+c. Task Analysis 
+Task analysis menunjukkan bahwa kedua pengguna memiliki serangkaian 
+tugas yang saling berkaitan dalam proses pengelolaan data diri, pembagian 
+sertifikat, serta pengelolaan informasi pengiriman sertifikat. Pada sisi 
+mahasiswa PPG, tugas utama yang teridentifikasi meliputi: (1) membuka 
+website PPG FKIP UNILA, (2) melihat informasi pada halaman berita, (3) 
+30 
+ 
+ 
+masuk ke fitur cek kelulusan, (4) melakukan login ke sistem, (5) melihat 
+pengumuman kelulusan, (6) memeriksa kesesuaian data diri, (7) perbaikan 
+atau pelengkapan data, (8) mengunduh sertifikat digital, (9) memantau 
+status pemrosesan sertifikat fisik.  
+ 
+Sementara itu, pada sisi admin, tugas-tugas yang teridentifikasi meliputi: 
+(1) mengelola dan mengunggah informasi atau berita terbaru pada website 
+utama, (2) mengelola fitur cek kelulusan dan login ke dalam sistem, (3) 
+mengimpor data mahasiswa yang dinyatakan lulus dari program PPG, (4) 
+memeriksa dan memperbaiki atau menghapus data yang tidak sesuai, (5) 
+mengelola pengaturan sertifikat digital, (6) memperbarui status 
+pemrosesan sertifikat fisik, (7) mengimpor nomor resi pengiriman 
+sertifikat fisik. Berdasarkan hasil identifikasi tersebut, diperoleh alur kerja 
+yang jelas, mulai dari pengelolaan oleh admin sampai penerimaan 
+informasi oleh mahasiswa PPG. Hasil task analysis ini kemudian 
+digunakan sebagai dasar dalam perancangan struktur menu, fitur-fitur 
+dalam sistem, serta penyusunan buku panduan agar langkah-langkah 
+operasionalnya dapat dipahami dengan mudah oleh pengguna. 
+ 
+d. Concept Analysis 
+Berdasarkan hasil analisis kebutuhan dan analisis tugas, diperoleh 
+beberapa komponen yang akan menjadi dasar pengembangan sistem 
+informasi, yaitu pengelolaan informasi pada website, manajemen data 
+mahasiswa yang lulus, autentikasi dan dashboard pengguna, perbaikan 
+data mahasiswa, pengaturan sertifikat, pembagian sertifikat digital, 
+manajemen status pemrosesan sertifikat fisik. Setiap komponen memiliki 
+keterkaitan proses yang membentuk struktur layanan yang terkontrol. 
+ 
+e. Specifying Instructional Objectives 
+Pada pengembangan sistem informasi PPG FKIP UNILA, tujuan 
+pembelajaran diarahkan pada dua pengguna, yaitu mahasiswa PPG dan 
+admin. Bagi mahasiswa, sistem diharapkan mampu memfasilitasi 
+31 
+ 
+ 
+pengguna untuk mendapatkan informasi kelulusan, memeriksa dan 
+memperbarui data diri, mengunduh sertifikat digital, serta memantau status 
+pemrosesan sertifikat fisik. Sementara itu bagi admin, sistem diharapkan 
+mampu mengelola data mahasiswa yang lulus, pembaruan informasi, 
+pengaturan sertifikat, serta pengelolaan status pemrosesan sertifikat 
+dengan efisien. Secara umum, tujuan pengembangan sistem informasi ini 
+adalah: (1) meningkatkan efisiensi proses pemberian sertifikat pendidik, 
+(2) meningkatkan efisiensi perbaikan data, (3) menyediakan tampilan 
+antarmuka yang mudah dipahami dan ramah pengguna, (4) serta 
+memastikan ketersediaan informasi. Pencapaian tujuan tersebut 
+diharapkan mampu mendukung layanan administrasi PPG menjadi lebih 
+efektif dan mudah diakses oleh seluruh pengguna. 
+ 
+4.1.2 Design 
+ 
+Pada tahap design terdapat 4 langkah yang dilakukan untuk merancang dan 
+mempersiapkan prototipe dari sistem informasi PPG FKIP Universitas Lampung. 
+ 
+a. Constructing Criterion-Referenced Tests 
+Pada langkah ini dilakukan penyusunan instrumen uji ahli berdasarkan 
+kisi-kisi yang telah dibuat sebelumnya pada Tabel 3 untuk uji ahli visual, 
+Tabel 4 untuk uji ahli buku panduan, dan Tabel 5 untuk uji ahli sistem. 
+Penyusunan instrumen dilakukan guna mengetahui sejauh mana sistem 
+informasi dan buku panduan pengguna yang dikembangkan memenuhi 
+kriteria validitas. Hasil penyusunan instrumen uji dapat dilihat pada 
+Lampiran. 
+ 
+b. Media Selection 
+Hasil analisis kebutuhan menunjukkan pengguna memerlukan sistem yang 
+fleksibel dan dapat digunakan kapan saja serta kompatibel dengan 
+berbagai perangkat tanpa instalasi tambahan. Maka media yang dipilih 
+adalah sistem informasi berbasis website. Melalui media berupa website, 
+pengguna dapat mengakses layanan dari berbagai perangkat seperti 
+32 
+ 
+ 
+komputer, handphone, tablet, dan lain-lain tanpa instalasi terlebih dahulu. 
+Selain itu, untuk mendukung pemahaman pengguna terhadap fitur-fitur 
+sistem, dipilih media pendukung berupa buku panduan pengguna dalam 
+format digital. Media ini berfungsi memberikan petunjuk operasional 
+sehingga pengguna dapat mempelajari cara penggunaan sistem secara 
+mandiri. Dalam penelitian ini, media akan dikembangkan menggunakan 
+wordpress untuk membuat sistem informasi utama PPG, Laravel serta 
+Bootstrap untuk membuat fitur cek kelulusan, dan Canva untuk membuat 
+panduan pengguna.  
+ 
+c. Format Selection 
+Berdasarkan concept analysis, sistem terdiri atas beberapa modul utama 
+seperti pengelolaan informasi website utama PPG, manajemen data 
+mahasiswa yang lulus, autentikasi dan dashboard pengguna, perbaikan 
+data mahasiswa, pengaturan sertifikat, pembagian sertifikat digital, 
+manajemen status pemrosesan sertifikat fisik. Setiap modul kemudian 
+disusun ke dalam format antarmuka berupa pembagian halaman dan menu 
+terpisah, sehingga pengguna dapat mengakses fungsi tertentu tanpa 
+kebingungan. Format antarmuka dapat dilihat pada Tabel 10. 
+ 
+Tabel 10. Format antarmuka Sistem Informasi PPG 
+No. Halaman Format Antarmuka 
+Website Utama PPG 
+1. Beranda • Header: kontak dan sosial media, 
+logo institusi, menu navigasi 
+(sama di semua halaman website 
+utama PPG) 
+• Konten: ringkasan visi, misi, dan 
+tujuan program studi, berita 
+terbaru 
+33 
+ 
+ 
+• Footer: alamat program studi, 
+kontak, sosial media, maps (sama 
+di semua halaman website) 
+2.  Visi, Misi, Tujuan dan 
+Sasaran 
+Visi, misi, tujuan, dan sasaran lengkap 
+3. Struktur organisasi Foto dan nama pimpinan PPG FKIP 
+UNILA 
+4.  Kurikulum List file kurikulum PPG prajabatan dan 
+dalam jabatan 
+5. Berita Semua berita PPG 
+Cek kelulusan (admin) 
+1. Login Kotak di tengah halaman dengan form 
+username dan password, serta tombol 
+menuju buku panduan pada pojok kanan 
+atas. 
+2. Beranda • Header: teks ‘Data Mahasiswa 
+PPG Lulus’, tombol hapus dan 
+export data, search bar, 
+pagination, tombol edit dan hapus 
+perbaris data 
+• Konten: list data -data mahasiswa 
+yang lulus 
+3. Import data • Header: teks ‘Import Data 
+Mahasiswa 
+• Konten: form untuk unggah data-
+data mahasiswa yang lulus di 
+sebelah kiri, form unggah nomor 
+resi di sebelah kanan, di 
+bawahnya terdapat format data 
+yang di unggah 
+3. Manajemen Pengiriman • Header: teks ‘Manajemen 
+Pengiriman’  
+34 
+ 
+ 
+• Konten: form tambah status baru 
+di sebelah kanan, status yang 
+telah di update di sebelah kiri 
+4. Pengaturan Sertifikat • Header: teks ‘Pengaturan 
+Template Sertifikat’  
+• Konten: form konfigurasi 
+sertifikat dan tombol simpan 
+perubahan 
+Cek Kelulusan (Mahasiswa PPG) 
+1. Login Kotak di tengah halaman dengan form 
+username dan password di sebelah kanan 
+dan gambar ilustrasi di sebelah kiri, serta 
+tombol menuju buku panduan di pojok 
+kanan atas. 
+2. Beranda • Sidebar: logo institusi, menu 
+• Konten: pengumuman kelulusan, 
+data dan pas foto pengguna 
+3. Perbaikan Data • Header: teks ‘perbaikan data’ 
+• Konten: form untuk mengubah 
+data-data dan pas foto pengguna, 
+tombol simpan perubahan 
+4. Info Pengiriman • Header: teks ‘Status Pengiriman 
+Sertifikat’ 
+• Konten: status terkini pemrosesan 
+sertifikat di sebelah kiri, 
+informasi di sebelah kanan, dan 
+detail penerima di bawah 
+5.  Sertifikat • Header: teks ‘Sertifikat Pendidik 
+Digital’ 
+• Konten: tombol download 
+sertifikat 
+ 
+d. Initial Design 
+35 
+ 
+ 
+Pada tahap ini mulai dilakukan penerapan dari analisis yang sudah 
+dilakukan sebelumnya. Rancangan yang di susun dalam penelitian ini 
+mencakup use case diagram, activity diagram, entitiy relationship 
+diagram (ERD), dan wireframe. Hasil perancangan dapat dilihat pada 
+gambar-gambar di bawah ini. 
+ 
+ 
+ 
+1. Use Case Diagram 
+ 
+Gambar 4. Use Case Diagram Cek Kelulusan 
+ 
+Gambar 4 menyajikan Use Case Diagram Sistem Cek Kelulusan yang 
+memodelkan interaksi antara User (mahasiswa) dan Admin. User memiliki 
+hak akses untuk melakukan cek kelulusan, mengajukan perbaikan data, 
+melihat informasi pengiriman sertifikat fisik, serta mengunduh sertifikat 
+digital. Sementara itu, Admin memiliki hak untuk mengatur isi sertifikat, 
+memperbarui status pengiriman, melakukan import data mahasiswa yang 
+lulus, serta meninjau data kelulusan. Khusus pada aktivitas "Lihat data", 
+Admin diberikan fungsionalitas tambahan opsional yang memperbolehkan 
+Admin untuk melakukan pencarian (search), pengubahan (edit), 
+penghapusan (hapus), maupun export data mahasiswa sesuai kebutuhan. 
+ 
+
+36 
+ 
+ 
+2. Activity Diagram 
+Terdapat 4 activity diagram untuk sistem cek kelulusan pada bagian 
+mahasiswa dan 4 activity diagram untuk bagian admin. Activity diagram 
+yang pertama pada bagian mahasiswa adalah activity login yang dapat 
+dilihat pada Gambar 5. Pada saat mahasiswa mengakses website cek 
+kelulusan, mahasiswa akan diarahkan ke halaman login apabila belum 
+melakukan login. Untuk dapat login, mahasiswa perlu memasukkan nomor 
+UKG dan tanggal lahir masing masing. Kemudian, sistem akan 
+memvalidasi apakah data tersebut cocok dengan salah satu data mahasiswa 
+PPG yang dinyatakan lulus.  Apabila mahasiswa tersebut lulus, maka 
+mahasiswa akan diarahkan ke halaman dashboard yang terdapat data diri 
+dan ucapan selamat atas kelulusan mahasiswa tersebut. Sedangkan, apabila 
+mahasiswa tersebut tidak lulus, maka mahasiswa tidak dapat login dan 
+diarahkan ke halaman pengumuman tidak lulus. 
+ 
+ 
+Gambar 5. Activity diagram login mahasiswa 
+ 
+Selanjutnya pada Gambar 6, terdapat activity diagram yang kedua yaitu 
+activity perbaikan data. Setelah mahasiswa dapat melakukan login, 
+mahasiswa diminta untuk mengecek kelengkapan dan kebenaran data 
+mereka pada halaman perbaikan data. Jika ada data yang salah dan belum 
+
+37 
+ 
+ 
+lengkap, mahasiswa dapat mengisi form perbaikan pada halaman tersebut. 
+Setelah seluruh data sudah lengkap, sistem akan menyimpan data ke dalam 
+database. 
+ 
+ 
+Gambar 6. Activity digaram perbaikan data pada bagian mahasiswa 
+ 
+Pada Gambar 7 terdapat activity diagram untuk melihat informasi 
+pengiriman sertifikat fisik. Pada halaman info pengiriman, mahasiswa 
+dapat memantau status terbaru dari pengiriman sertifikat mereka. 
+Mahasiswa juga dapat menemukan nomor resi pada halaman ini yang 
+dapat digunakan untuk mengecek detail informasi pengiriman pada 
+website jasa kirim terkait. 
+ 
+ 
+Gambar 7. Activity diagram melihat info pengiriman 
+ 
+
+38 
+ 
+ 
+Activity diagram yang terakhir untuk bagian mahasiswa adalah activity 
+diagram mengunduh sertifikat digital yang dapat dilihat pada Gambar 8. 
+Mahasiswa dapat mengunduh sertifikat versi digital pada halaman 
+sertifikat.   
+ 
+Gambar 8. Activity diagram unduh sertifikat 
+ 
+Pada bagian admin terdapat 4 activity diagram yang telah dirancang. 
+Activity diagram yang pertama yaitu activity diagram login untuk bagian 
+admin yang dapat dilihat pada Gambar 9. Admin dapat melakukan login 
+menggunakan username dan password yang telah dibuat. Sistem akan 
+memvalidasi apakah username dan password yang dimasukkan, jika 
+username atau password salah maka admin tidak dapat login. Sedangkan 
+jika username dan password sudah sesuai, admin akan diarahkan ke 
+halaman dashboard. 
+ 
+ 
+
+39 
+ 
+ 
+Gambar 9. Activity diagram login admin 
+ 
+Activity diagram yang selanjutnya adalah activity diagram import data 
+yang dapat dilihat pada Gambar 10. Agar peserta dapat melakukan login, 
+admin perlu memasukkan data mahasiswa yang dinyatakan lulus ke dalam 
+database. Hal tersebut dapat dilakukan melalui halaman import data. 
+Setelah data di unggah, sistem akan menyimpan data tersebut ke dalam 
+database yang telah dibuat dan admin dapat mengelola datanya melalui 
+halaman dashboard. 
+ 
+ 
+Gambar 10. Activity diagram import data 
+ 
+Selanjutnya pada Gambar 11 terdapat activity diagram manajemen 
+pengiriman. Admin dapat memperbarui status pengiriman sertifikat fisik 
+mahasiswa melalui halaman manajemen pengiriman. Pada halaman 
+manajemen pengiriman terdapat form yang dapat di isi dengan status dan 
+keterangan tambahan jika diperlukan. Setelah form di isi dan di simpan, 
+sistem akan menyimpan dan menambahkannya pada record status terkini. 
+ 
+
+40 
+ 
+ 
+ 
+Gambar 11. Activity diagram manajemen pengiriman  
+Activity diagram yang terakhir adalah activity diagram pengaturan 
+sertifikat yang dapat dilihat pada Gambar 12. Sebelum peserta dapat 
+mengakses website cek kelulusan, admin perlu mengisi form sertifikat 
+yang dapat diakses pada halaman pengaturan sertifikat. Form tersebut 
+harus di isi dengan template dan data-data yang diperlukan untuk isi 
+sertifikat digital yang dapat diunduh mahasiswa. Kemudian sistem akan 
+menyimpan data-data tersebut dan sertifikat digital akan terisi otomatis 
+pada saat diunduh oleh mahasiswa. 
+ 
+ 
+Gambar 12. Activity diagram pengaturan sertifikat 
+ 
+3. Entity Relationship Diagram (ERD) 
+Gambar 13 merupakan  entity relationship diagram (ERD) yang digunakan 
+untuk merancang struktur database dari sistem cek kelulusan PPG. Pada 
+diagram terdapat 4 tabel, mulai dari tabel utama yang menyimpan data diri 
+peserta yang lulus yaitu tabel peserta_lulus_ppg, tabel delivery_status 
+
+41 
+ 
+ 
+yang digunakan untuk menyimpan opsi status pengiriman sertifikat, tabel 
+nomor_resi yang menyimpan nomor resi untuk masing-masing mahasiswa 
+yang lulus, serta tabel certificate_settings yang menyimpan pengaturan 
+sertifikat digital. Dapat diliat bahwa tabel delivery_status memiliki relasi 
+one to many dengan tabel peserta_lulus_ppg, yang artinya satu status 
+pengiriman diterapkan untuk semua mahasiswa yang lulus. Sedangkan 
+tabel nomor_resi memiliki relasi one to one dengan tabel 
+peserta_lulus_ppg yang menunjukkan bahwa satu mahasiswa yang lulus 
+hanya memiliki satu nomor resi. Jadi, setiap mahasiswa dapat  memiliki 
+nomor resinya masing-masing. 
+ 
+ 
+Gambar 13. ERD sistem cek kelulusan PPG 
+  
+4. Wireframe 
+Wireframe yang dirancang merupakan representasi awal dari tampilan 
+website yang akan dibuat. Perancangan berfokus pada tata letak dan alur 
+interaksi pengguna. Terdapat sebelas tampilan yang telah dirancang 
+dengan wireframe, yaitu enam untuk tampilan mahasiswa dan lima untuk 
+tampilan admin. Gambar 14 menunjukkan wireframe untuk halaman login 
+
+42 
+ 
+ 
+peserta, halaman ini berisi form dengan kolom input nomor UKG dan 
+tanggal lahir serta tombol login. 
+ 
+Gambar 14. Wireframe halaman login mahasiswa 
+ 
+Gambar 15 merupakan wireframe halaman dashboard mahasiswa yang 
+berisi pengumuman kelulusan dan data diri mahasiswa tersebut. 
+ 
+ 
+Gambar 15. Wireframe halaman dashboard mahasiswa 
+ 
+Gambar 16 merupakan wireframe halaman perbaikan data mahasiswa 
+yang berisi form pengisian data diri mahasiswa yang harus di lengkapi. 
+ 
+
+43 
+ 
+ 
+ 
+ Gambar 16. Wireframe halaman perbaikan data mahasiswa 
+ 
+Gambar 17 merupakan wireframe halaman info pengiriman sertifikat 
+mahasiswa, pada halaman ini terdapat informasi pengiriman dan nomor 
+resi paket sertifikat fisik yang dapat dicek melalui website ekspedisi 
+terkait. 
+ 
+ 
+Gambar 17. Wireframe halaman info pengiriman sertifikat 
+ 
+Gambar 18 merupakan wireframe halaman sertifikat. Mahasiswa dapat 
+mengunduh sertifikat pendidik versi digital milik mereka melalui halaman 
+ini. 
+
+44 
+ 
+ 
+ 
+Gambar 18. Wireframe halaman sertifikat 
+ 
+Gambar 19 merupakan wireframe halaman yang muncul ketika mahasiswa 
+dinyatakan tidak lulus. Saat mahasiswa yang tidak lulus memasukkan 
+nomor UKG dan tanggal lahirnya untuk login, maka mahasiswa tersebut 
+akan otomatis diarahkan ke halaman tidak lulus. 
+ 
+ 
+Gambar 19. Wireframe halaman tidak lulus 
+ 
+Selanjutnya adalah wireframe untuk tampilan administrator, yang terdiri 
+dari lima tampilan. Gambar 20 merupakan wireframe halaman login 
+
+45 
+ 
+ 
+administrator. Halaman tersebut berisi form login dengan kolom input 
+username dan password. 
+ 
+ 
+Gambar 20. Wireframe halaman login administrator 
+ 
+Gambar 21 merupakan wireframe halaman dashboard admin. Halaman ini 
+berisi list data mahasiswa PPG yang sudah diimpor, pada halaman ini 
+admin dapat menyunting, mengekspor, menghapus, dan mencari data 
+mahasiswa yang PPG yang dinyatakan lulus. 
+ 
+ 
+Gambar 21. Wireframe halaman dashboard admin 
+ 
+
+46 
+ 
+ 
+Gambar 22 merupakan wireframe halaman import data di mana pada 
+halaman ini admin dapat mengimpor data mahasiswa PPG yang 
+dinyatakan lulus dan data nomor resi pengiriman sertifikat. 
+ 
+ 
+Gambar 22. Wireframe halaman import data 
+ 
+Gambar 23 merupakan wireframe halaman manajemen pengiriman di 
+mana pada halaman ini admin dapat memperbarui status pengiriman 
+sertifikat yang tampil pada halaman info pengiriman mahasiswa. 
+ 
+ 
+Gambar 23. Wireframe halaman manajemen pengiriman 
+ 
+
+47 
+ 
+ 
+Gambar 24 merupakan wireframe halaman pengaturan sertifikat. Pada 
+halaman ini terdapat form dengan kolom input template sertifikat, tanda 
+tangan dan beberapa informasi yang diperlukan di dalam sertifikat 
+pendidik digital. 
+ 
+ 
+Gambar 24. Wireframe halaman pengaturan sertifikat 
+ 
+4.1.3 Develop 
+Pada tahap ini mulai dilakukan pengkodean berdasarkan rancangan yang sudah 
+dilakukan pada tahap sebelumnya. Selain itu pada tahap ini juga dilakukan 
+modifikasi dan penyempurnaan prototipe sistem informasi yang dikembangkan. 
+ 
+a. Hasil Pengembangan 
+Wireframe yang telah dirancang kemudian diimplementasikan menjadi 
+sebuah sistem berbasis website. Terdapat sebelas tampilan dari sistem 
+yang telah dikembangkan, dengan enam tampilan mahasiswa dan lima 
+tampilan administrator serta dua buku panduan. Selain itu tampilan dari 
+halaman utama website PPG FKIP Universitas Lampung juga telah 
+diperbarui.  
+ 
+ 
+ 
+
+48 
+ 
+ 
+ 
+1) Website Utama PPG FKIP Universitas Lampung 
+ 
+ 
+Gambar 25. Tampilan halaman beranda website PPG FKIP UNILA 
+ 
+Pada website ini terdapat beberapa hal yang diperbarui seperti warna, 
+penambahan logo, penambahan beberapa gambar, menu yang lebih 
+ringkas, penambahan maps pada footer, dan memperbarui struktur 
+organisasi yang belum diperbarui pada website sebelumnya. Berikut 
+beberapa halaman lain yang telah diperbarui: 
+ 
+Tabel 11. Halaman website utama PPG FKIP UNILA 
+Halaman Tampilan 
+Beranda Lampiran 11 
+Visi, Misi, Tujuan, dan Sasaran Lampiran 12 
+Struktur Organisasi Lampiran 13 
+Kurikulum PPG Prajabatan Lampiran 14 
+Berita Lampiran 15 
+ 
+2) Sistem Cek Kelulusan PPG FKIP Universitas Lampung  
+Tampilan yang pertama adalah tampilan dari halaman login mahasiswa 
+yang dapat dilihat pada Gambar 26. Mahasiswa harus memasukkan nomor 
+UKG dan tanggal lahir masing-masing untuk mengecek kelulusan dan 
+login ke dalam sistem. Selain itu terdapat buku panduan penggunaan yang 
+dapat diakses melalui tombol pada pojok kanan atas halaman. 
+
+49 
+ 
+ 
+ 
+ 
+Gambar 26. Halaman login mahasiswa 
+ 
+Gambar 27 merupakan tampilan halaman dashboard mahasiswa. Halaman 
+ini berisi pengumuman kelulusan dan data mahasiswa. 
+ 
+ 
+Gambar 27. Halaman dashboard mahasiswa 
+ 
+Gambar 28 merupakan tampilan halaman perbaikan data. Mahasiswa harus 
+memeriksa apakah data diri mereka pada halaman perbaikan data sudah 
+benar dan lengkap. Jika data telah dilengkapi, mahasiswa harus melakukan 
+simpan permanen agar sertifikat pendidik digital dapat diunduh. 
+ 
+
+50 
+ 
+ 
+ 
+Gambar 28. Halaman perbaikan data 
+ 
+Gambar 29 merupakan tampilan halaman info pengiriman. Mahasiswa 
+dapat melihat status pengiriman sertifikat mereka pada halaman ini. Selain 
+status pengiriman sertifikat, pada halaman ini juga terdapat nomor resi 
+yang dapat digunakan untuk mengecek detail pengiriman pada website 
+ekspedisi terkait. 
+ 
+ 
+Gambar 29. Halaman info pengiriman 
+ 
+Gambar 30 merupakan tampilan halaman sertifikat. Mahasiswa dapat 
+mengunduh sertifikat pendidik digital melalui halaman ini apabila 
+
+51 
+ 
+ 
+mahasiswa telah melakukan simpan permanen pada halaman perbaikan 
+data. 
+ 
+ 
+Gambar 30. Halaman sertifikat 
+ 
+Gambar 31 merupakan tampilan halaman ketika mahasiswa dinyatakan 
+tidak lulus. Apabila nomor UKG tidak terdapat pada database, mahasiswa 
+akan diarahkan ke halaman tidak lulus.  
+ 
+ 
+Gambar 31. Halaman pengumuman tidak lulus 
+ 
+Selanjutnya adalah tampilan login admin yang dapat dilihat pada Gambar 
+32. Halaman ini berisi form login dengan kolom input username dan 
+
+52 
+ 
+ 
+password serta buku panduan penggunaan yang dapat diakses melalui 
+tombol pada pojok kanan atas halaman. 
+ 
+ 
+Gambar 32. Halaman login admin 
+ 
+Gambar 33 merupakan tampilan halaman dashboard admin. Pada halaman 
+dashboard admin terdapat data mahasiswa yang telah diimpor. Data tersebut 
+dapat diedit, dihapus, dan di ekspor. Selain itu terdapat fitur pencarian serta 
+pagination yang dapat dimanfaatkan oleh admin untuk mengelola data 
+mahasiswa. 
+ 
+ 
+Gambar 33. Halaman dashboard admin 
+ 
+
+53 
+ 
+ 
+Gambar 34 merupakan tampilan halaman import data. Halaman ini berisi 
+form import data mahasiswa dan nomor resi pengiriman sertifikat fisik. 
+ 
+ 
+Gambar 34. Halaman import data 
+ 
+Gambar 35 merupakan tampilan halaman manajemen pengiriman. 
+Halaman ini berisi form untuk memperbarui status pengiriman sertifikat 
+fisik. 
+ 
+ 
+Gambar 35. Halaman manajemen pengiriman 
+ 
+
+54 
+ 
+ 
+Gambar 36 merupakan tampilan halaman pengaturan sertifikat. Halaman 
+ini berisi form untuk memasukkan template sertifikat, tanda tangan, dan 
+nama orang yang bertanda tangan. 
+ 
+ 
+Gambar 36. Halaman pengaturan sertifikat 
+ 
+Halaman yang terakhir pada Gambar 37 adalah halaman detail sertifikat, 
+halaman ini merupakan halaman yang berisi data-data pemilik sertifikat 
+pendidik. Halaman ini dapat diakses secara publik melalui link yang 
+didapatkan dari qr code pada sertifikat pendidik masing-masing 
+mahasiswa. Halaman ini berfungsi sebagai bukti bahwa mahasiswa 
+tersebut merupakan pemilik asli sertifikat pendidiknya. 
+ 
+ 
+Gambar 37. Halaman detail sertifikat 
+
+55 
+ 
+ 
+3) Buku Panduan Penggunaan Sistem Cek Kelulusan PPG 
+Buku panduan penggunaan dibuat untuk membantu pengguna dalam 
+pengoperasian sistem ini. Terdapat dua jenis pengguna pada sistem cek 
+kelulusan ini, yaitu mahasiswa dan admin PPG FKIP Universitas 
+Lampung, maka dibuat diperlukan dua jenis buku panduan untuk 
+memenuhi kebutuhan pengguna. Buku panduan dibuat menggunakan 
+warna ungu dan putih yang senada dengan warna pada tampilan sistem. 
+Buku panduan pengguna dapat dilihat pada Lampiran 16 untuk panduan 
+mahasiswa dan Lampiran 17 untuk panduan admin. 
+ 
+b. Expert Appraisal 
+Pada tahap expert appraisal dilakukan uji validasi ahli pada draft awal 
+produk oleh tiga ahli, yaitu ahli buku panduan, ahli visual, dan ahli sistem. 
+Validasi dilakukan oleh enam dosen dari Program Studi Pendidikan 
+Teknologi Informasi untuk uji ahli visual dan sistem. Sedangkan untuk uji 
+validasi ahli buku panduan dilakukan oleh kepala bidang akademik FKIP 
+Universitas Lampung dan dua admin PPG FKIP Universitas Lampung. 
+Validator memberikan masukan dan saran yang kemudian digunakan 
+sebagai dasar perbaikan terhadap draft awal produk. Masukan dan saran 
+dari validator dapat dilihat pada tabel 12. 
+ 
+Tabel 12. Masukan dan saran validator 
+Jenis Validasi Saran dan Masukan Perbaikan 
+Buku Panduan 
+Selain manual pdf, buat 
+dalam bentuk video 
+Telah dibuat panduan dalam 
+bentuk video 
+Visual 
+Ukuran font dan 
+tampilan disesuaikan, 
+jangan terlalu besar 
+Tampilan dan font telah 
+disesuaikan ukurannya 
+Sistem 
+1. Bisa dilengkapi 
+beberapa bagian form 
+yang terlewat untuk 
+informasi validasinya 
+1. Validasi form telah dicek 
+ulang kembali dan 
+ditambahkan untuk yang 
+terlewat. 
+56 
+ 
+ 
+2. Session 30 menit 
+terlalu lama 
+3. Tambahkan fitur 
+verifikasi sertifikat 
+2. Session diubah menjadi 10 
+menit 
+3. Fitur verifikasi sertifikat 
+telah dibuat dengan 
+menambahkan halaman detail 
+sertifikat 
+ 
+Data hasil uji validitas kemudian diolah dan disajikan dalam bentuk 
+diagram batang. Berdasarkan diagram pada Gambar 38, dapat dilihat 
+bahwa hasil uji validasi ahli buku panduan memperoleh skor sebesar 
+0,966, ahli visual sebesar 0,881, dan ahli sistem sebesar 0,942. 
+Berdasarkan pada kriteria validitas produk yang telah dijelaskan 
+sebelumnya, yaitu suatu produk dikatakan valid apabila skor validitasnya 
+minimal mencapai lebih dari atau sama dengan 0.667. Maka hasil uji 
+validitas ahli buku panduan, ahli visual, dan ahli sistem pada produk ini 
+dapat dikatakan valid. 
+ 
+ 
+Gambar 38. Diagram hasil uji validasi ahli 
+ 
+c. Developmental Testing 
+Setelah melakukan uji validasi ahli dan memperbaiki produk sesuai saran, 
+produk kemudian di uji kembali melalui uji kepraktisan. Uji ini dilakukan 
+0,82
+0,84
+0,86
+0,88
+0,9
+0,92
+0,94
+0,96
+0,98
+Buku Panduan Visual Sistem
+Hasil Uji Validasi Ahli
+57 
+ 
+ 
+oleh 30 mahasiswa PPG dengan satu mahasiswa laki-laki dan satu 
+mahasiswa perempuan dari masing-masing program studi yang ada di PPG 
+FKIP Universitas Lampung serta dua admin PPG yang nantinya akan 
+menjadi administrator pada sistem tersebut. Data hasil uji kepraktisan 
+mahasiswa dan admin kemudian diolah dan disajikan dalam bentuk 
+diagram sebagai berikut. 
+ 
+ 
+Gambar 39. Diagram data hasil uji kepraktisan pada mahasiswa 
+ 
+Berdasarkan diagram hasil uji kepraktisan mahasiswa pada Gambar 39, 
+dapat dilihat bahwa aspek kemudahan penggunaan pada mahasiswa 
+mendapat skor sebesar 86,30% dan aspek manfaat sebesar 83,83%. 
+Sehingga secara keseluruhan, hasil uji kepraktisan pada mahasiswa 
+mendapatkan skor sebesar 85,1% yang masuk dalam kategori sangat 
+praktis.  
+ 
+82,50%
+83,00%
+83,50%
+84,00%
+84,50%
+85,00%
+85,50%
+86,00%
+86,50%
+Kemudahan Penggunaan Manfaat
+Hasil Uji Kepraktisan Mahasiwa 
+58 
+ 
+ 
+ 
+Gambar 40. Diagram data hasil uji kepraktisan pada admin 
+ 
+Sedangkan dapat dilihat pada Gambar 30, aspek kemudahan penggunaan 
+pada admin mendapat skor sebesar 96,25% dan aspek manfaat sebesar 
+100%. Sehingga secara keseluruhan, hasil uji kepraktisan pada admin 
+mendapatkan skor sebesar 98,12% yang masuk dalam kategori sangat 
+praktis juga. 
+ 
+4.1.4 Disseminate 
+ 
+Tahap disseminate merupakan tahap terakhir dari rangkaian tahapan pada model 
+4D. Seperti yang telah dijelaskan sebelumnya, produk yang telah dikembangkan 
+harus disebarluaskan dan diujikan ke khalayak luas di luar ranah pengembangan 
+itu sendiri. Namun, penelitian ini tidak melakukan sampai tahapan tersebut. Selain 
+karena keterbatasan sarana, waktu dan biaya, pada ruang lingkup telah dijelaskan 
+bahwa produk ini hanya akan dipergunakan oleh PPG FKIP UNILA itu sendiri 
+(Zamsiswaya dkk., 2024). Sehingga tahap penyebarluasan hanya dilakukan 
+melalui publikasi artikel. 
+ 
+ 
+ 
+ 
+94,00%
+95,00%
+96,00%
+97,00%
+98,00%
+99,00%
+100,00%
+101,00%
+Kemudahan Penggunaan Manfaat
+Hasil Uji Kepraktisan Admin 
+59 
+ 
+ 
+4.2 Pembahasan 
+ 
+Penelitian ini menghasilkan sebuah sistem cek kelulusan PPG, pembaruan 
+tampilan pada website utama PPG FKIP Universitas Lampung serta dua buah 
+buku panduan pengguna. Sistem cek kelulusan ini dapat digunakan untuk 
+mengecek kelulusan mahasiswa PPG FKIP Universitas Lampung, memperbaiki 
+data diri mahasiswa, mendapatkan informasi pengiriman sertifikat fisik, dan 
+mendapatkan sertifikat pendidik versi digital beserta dengan fitur verifikasi 
+keaslian sertifikat melalui QR code. Pengembangan sistem dilakukan 
+menggunakan model 4D yang terdiri dari tahap define, design, develop, dan 
+disseminate. Teknologi yang digunakan untuk pengembangan ini adalah 
+wordpress untuk website utama PPG FKIP Universitas Lampung, sedangkan 
+untuk sistem cek kelulusan menggunakan Laravel dan Bootstrap.  
+ 
+Hasil penelitian ini menunjukkan bahwa produk dapat dikatakan valid 
+berdasarkan uji validitas yang telah dilakukan. Skor uji validasi ahli buku panduan 
+memperoleh skor sebesar 0,966, ahli visual sebesar 0,881, dan ahli sistem sebesar 
+0,942. Hal tersebut menunjukkan bahwa sistem informasi cek kelulusan berbasis 
+website yang dikembangkan telah memenuhi berbagai aspek pada buku panduan, 
+visual dan sistem sehingga layak digunakan dalam pengelolaan data dan informasi 
+di Program Studi PPG FKIP Universitas Lampung. Hasil uji kepraktisan juga 
+mendapatkan skor yang tinggi yaitu 85,1% pada uji kepraktisan mahasiswa dan 
+98,12% pada uji kepraktisan admin. Hasil tersebut menunjukkan bahwa sistem 
+cek kelulusan yang dikembangkan dapat membantu mengelola perbaikan data 
+mahasiswa PPG serta membuat penyampaian informasi menjadi lebih mudah dan 
+efisien. Sebelumnya, perbaikan data dan penyampaian informasi serta pemberian 
+sertifikat pendidik digital masih dilakukan secara manual melalui komunikasi 
+personal, sehingga memakan waktu yang lebih banyak.  
+ 
+Hasil penelitian ini sejalan dengan penelitian yang dilakukan oleh Halim dkk. 
+(2023), di mana pada penelitian tersebut peneliti membuat sistem pengumuman 
+kelulusan siswa berbasis website. Penelitian tersebut menjelaskan bahwa 
+pemberian informasi kelulusan siswa melalui website membuat pengumuman 
+60 
+ 
+ 
+menjadi lebih mudah dan menghemat lebih banyak waktu dibandingkan dengan 
+pengumuman secara manual. Hakim dkk. (2025) juga mengatakan bahwa sistem 
+informasi berbasis website berperan signifikan dalam meningkatkan kualitas 
+layanan akademik pada perguruan tinggi. Namun, penelitian yang dilakukan oleh 
+Gubali dkk. (2026) menunjukkan hasil yang berbeda. Pada penelitian tersebut, 
+pengalaman pengguna yang dirasakan masih belum memenuhi harapan dan 
+kebutuhan pengguna. Hal tersebut disebabkan karena terdapat beberapa aspek 
+yang masih perlu diperbaiki lagi mulai dari kualitas tampilan, alur penggunaan 
+serta fitur-fitur pada sistem tersebut. 
+ 
+Penelitian ini memiliki keterbatasan yang terletak pada ruang lingkup 
+implementasi sistem yang hanya diterapkan pada PPG FKIP Universitas 
+Lampung, sehingga produk tidak dapat diujikan pada institusi lain. Selain itu, 
+pengujian yang dilakukan pada penelitian ini hanya mencakup uji validitas dan uji 
+kepraktisan, sehingga tidak mencakup pengujian sistem yang lebih kompleks 
+dikarenakan keterbatasan waktu dan model pengembangan yang digunakan. 
+Menurut Lamada dkk. (2020), menjamin tingkat kualitas sistem dan kualitas 
+fungsi serta fungsionalitasnya, diperlukan pengujian menggunakan standar ISO 
+25010. Oleh karena itu, penelitian selanjutnya dapat melakukan pengujian yang 
+lebih kompleks sehingga mendapatkan hasil evaluasi sistem yang lebih 
+komprehensif. 
+ 
+Kendala yang dihadapi selama proses pengembangan adalah penyesuaian 
+kebutuhan pengguna dengan fitur-fitur yang dikembangkan. Beberapa fitur 
+memerlukan perbaikan setelah dilakukan uji validasi ahli, seperti penambahan 
+validasi form, pengurangan waktu session login, penambahan fitur verifikasi 
+sertifikat, dan sedikit perbaikan pada tampilan. Meskipun demikian, perbaikan 
+yang dilakukan berdasarkan saran validator mampu meningkatkan kualitas sistem 
+yang dikembangkan. 
+ 
+Validitas sistem yang tinggi dan tingkat kepraktisan yang baik menunjukkan 
+bahwa sistem layak digunakan sebagai media layanan akademik di PPG FKIP 
+61 
+ 
+ 
+Universitas lampung. Dengan adanya sistem ini, mahasiswa dapat mengakses 
+informasi, memperbaiki kesalahan pada data mereka, dan mengunduh sertifikat 
+pendidik digital secara mandiri melalui website, sedangkan admin dapat 
+mengelola data yang diperbaiki dengan lebih efisien. 
+ 
+ 
+ 
+V.  KESIMPUAN DAN SARAN 
+5.1 Kesimpulan 
+ 
+Berdasarkan hasil penelitian ini, dapat disimpulkan bahwa: 
+1. Penelitian ini berhasil mengembangakan sistem informasi berbasis website 
+untuk pengelolaan data dan informasi PPG FKIP Universitas Lampung 
+menggunakan model 4D yang terdiri dari empat tahapan yaitu define, 
+design, develop, dan disseminate. Tetapi penelitian hanya dilakukan sampai 
+tahap develop. Sistem yang dikembangkan memiliki fitur pengumuman 
+kelulusan, perbaikan data, pemantauan status pengiriman sertifikat serta 
+pembagian nomor resi, pengunduhan sertifikat pendidik digital, dan 
+verifikasi sertifikat pada bagian tampilan untuk mahasiswa. Sedangkan pada 
+bagian tampilan admin terdapat fitur pengelolaan data mahasiswa, import 
+data mahasiswa dan nomor resi, pembaruan status pengiriman sertifikat, dan 
+pengaturan sertifikat. 
+2. Sistem informasi yang dikembangkan dapat dikatakan layak untuk 
+digunakan. Berdasarkan hasil uji validitas ahli, buku panduan memperoleh 
+skor sebesar 0,966, ahli visual sebesar 0,881, dan ahli sistem sebesar 0,942. 
+Hasil tersebut telah melebihi skor minimum sebesar 0.667 untuk dapat 
+dikatakan valid, sehingga menunjukkan bahwa sistem telah memenuhi 
+berbagai aspek yang diujikan dan dapat dikatakan layak digunakan di PPG 
+FKIP Universitas Lampung. 
+3. Sistem informasi yang dikembangkan dapat dikatakan praktis berdasarkan 
+pada hasil uji kepraktisan pada mahasiswa dan admin PPG FKIP 
+Universitas Lampung yang nantinya akan menjadi pengguna pada sistem 
+ini. Skor rata-rata hasil uji kepraktisan pada mahasiswa mencapai 85,1% 
+63 
+ 
+ 
+4. dan skor rata-rata pada admin mencapai 98,12%, sehingga keduanya masuk 
+dalam kategori sangat praktis. 
+ 
+5.2 Saran 
+ 
+Berdasarkan kesimpulan pada penelitian ini, terdapat beberapa saran sebagai 
+berikut. 
+1. Bagi PPG FKIP Universitas Lampung, Sistem informasi yang telah 
+dikembangkan ini dapat dimanfaatkan sebagai media layanan administrasi 
+akademik untuk membantu meningkatkan efisiensi waktu dan memberikan 
+kemudahan bagi mahasiswa PPG. 
+2. Bagi administrator sistem, diperlukan pengelolaan dan pemeliharaan sistem 
+secara rutin, seperti pembaruan data, pengecekan fungsi sistem, serta 
+pengawasan keamanan data agar sistem dapat digunakan secara optimal. 
+3. Bagi penelitian selanjutnya, penelitian ini dapat diteruskan dengan 
+melanjutkan sampai ke tahap disseminate dan melakukan pengujian sistem 
+yang lebih kompleks untuk mendapatkan hasil evaluasi yang lebih 
+komprehensif. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DAFTAR PUSTAKA 
+ 
+ 
+Antoro, D., & Wahyuni, S. (2024). Design and Development of an E-learning 
+Information System Using the Laravel Framework at SMA Negeri 3 Medan. 
+Journal of Information Technology, computer science and Electrical 
+Engineering (JITCSE), 1(3), 142–151. https://doi.org/10.30596/jitcse 
+Arikunto, S. (2014). Dasar-dasar Evaluasi Pendidikan (edisi kedua). In Bumi 
+Aksara. 
+Avelino, D., Cancerlon, L., Ryanta, M. K., Christianto, Y. H., & Wangnardy, W. 
+(2022). Penggunaan Bahasa Pemrograman Python dalam Menganalisis 
+Perbedaan DesainWebsite Tren di Negara Jepang dan Dunia. Journal of 
+Student Development Information System (JoSDIS), 2(2), 109–119. 
+Aziz Ridwan, M., Nur Rizqi, R., Zainal, M. A., Sulton Khozainul, M. A., Yusron 
+Kafabi, A., Nadiatur Rodiyah, W., Thoib, I., & Penulis Korespondensi, E. 
+(2025). Uji Fungsionalitas Website Dafid POS Menggunakan Metode 
+Blackbox Testing. Jurnal Media Informatika [Jumin], 6(6), 3101–3112. 
+Chaushi, B. A., Veseli-Kurtishi, T., & Chaushi, A. (2024). Digitalization of 
+Organizations: Literature Review. Development, 23, 25. 
+Dirgantara, D. A., & Andrian, R. (2023). Pengembangan Responsif Website 
+Untuk Semarang Heritage Run 2022 dengan Framework Bootstrap. Jurnal 
+Media Infotama, 19(2), 433–438. https://doi.org/10.37676/jmi.v19i2.4346 
+Dwiyansaputra, R., Wijaya, I. G. P. S., Bimantoro, F., Agitha, N., & Mardiansyah, 
+A. Z. (2023). Pengembangan Dashboard Berbasis Website Untuk Monitoring 
+dan Evaluasi Di Program Studi Teknik Informatika Universitas Mataram. 
+Jurnal Begawe Teknologi Informasi (JBegaTI), 4(1). 
+https://doi.org/10.29303/jbegati.v4i1.844 
+Fadilah, F. D., Putra, E. L., Purbaningtyas, R., & Wulandari, S. A. (2024). 
+Manajemen Kualitas Website SMPN 2 Tulangan Menggunakan ISO 25010. 
+STRING (Satuan Tulisan Riset dan Inovasi Teknologi), 9(2), 156. 
+https://doi.org/10.30998/string.v9i2.23104 
+Faulkner, L. (2003). Beyond the five-user assumption : Benefits of increased 
+sample sizes in usability testing. 35(3), 379–383. 
+Fauziyyah, D. (2023). Pembuatan Website Company Profile pada Konoba Coffee 
+Menggunakan CMS Wordpress. Applied Business and Administration 
+Journal, 2(3). https://doi.org/10.62201/abaj.v2i3.67 
+Ferisha Paath, A., & Khotimah, K. (2025). Integrasi Budaya Lokal dan Literasi 
+Numerasi Melalui Pengembangan Media Berbasis Cerita Rakyat. Jurnal 
+Karya Pendidikan Matematika, 12(2), 51–65. 
+http://jurnal.unimus.ac.id/index.php/JPMat/index 
+Fernando, A., & Sarkity, D. (2023). Pengembangan Instrumen Uji Validitas dan 
+Praktikalitas Media Pembelajaran IPA. Pedagogi Hayati, 6(2), 67–77. 
+65 
+ 
+ 
+https://doi.org/10.31629/ph.v6i2.5212 
+Fikri, M. F. P., Ardiansyah, M. Y., Rozi, M. R. A., Zulmi, M. N., & Nouvanty, V. 
+(2022). Analisis Kualitas Sistem Informasi Akademik Menggunakan 
+Pendekatan Model WebQual 4.0 Pada Universitas Pembangunan Nasional 
+“Veteran” Jawa Timur. Journal Of Information System And Artificial 
+Intelligence, 3(1), 39–46. https://doi.org/10.26486/jisai.v3i1.91 
+Gubali, J. F., Utina, S. R., Alhabsy, N., & Landung, A. M. (2026). Evaluasi 
+Usability Sistem Informasi Akademik Universitas Negeri Gorontalo 
+Menggunakan Metode System Usability Scale ( SUS ). 5. 
+Hakim, H. Q. I., Bilqis, S. S., Ramadhani, R., & Vindua, R. (2025). TINJAUAN 
+LITERATUR : EFEKTIVITAS SISTEM INFORMASI AKADEMIK. 6, 74–86. 
+Hakky, M. K., Wirasasmita, R. H., & Uska, M. Z. (2018). Pengembangan media 
+pembelajaran berbasis android untuk siswa kelas x pada mata pelajaran 
+sistem operasi. EDUMATIC: Jurnal Pendidikan Informatika, 2(1), 24–33. 
+Halim, F. R., Al-kiramy, R., Oktoriani, D., Vernia, S., & Hamzah, M. L. (2023). 
+Jurnal Testing dan Implementasi Sistem Informasi KELULUSAN SISWA 
+BERBASIS WEB MENGGUNAKAN METODE WEB-BASED STUDENT 
+GRADUATION ANNOUNCEMENT. 1(2), 67–81. 
+Ifadah, I., & Yoka Fathoni, M. (2025). Redesign Website Program Studi Sistem 
+Informasi Telkom University Purwokerto Menggunakan Metode User 
+Centered Design (Ucd). JATI (Jurnal Mahasiswa Teknik Informatika), 9(3), 
+4089–4097. https://doi.org/10.36040/jati.v9i3.13421 
+Ismail Setiawan. (2022). Komparasi Kinerja Integrated Development 
+Environment (IDE) Dalam Mengeksekusi Perintah Python. SATESI: Jurnal 
+Sains Teknologi dan Sistem Informasi, 2(1). 
+https://doi.org/10.54259/satesi.v2i1.784 
+Ismiyati, H., & Hidayat, A. (2023). Sistem Informasi Bursa Kerja Khusus (BKK) 
+UNWAHAS Berbasis Web Menggunakan Framework Laravel. Prosiding 
+Sains Nasional dan Teknologi, 13(1), 271–279. 
+https://doi.org/10.36499/psnst.v13i1.9512 
+Kaur, J., Nikitenko, D., & Rooney, M. (2023). Mastering Visual Studio Code a 
+Beginner’s Guide. In Mastering Visual Studio Code. 
+Khaliq, A. (2023). Perancangan Website Profil Program Studi Menggunakan 
+Content Management System Wordpress. Jurnal Nasional Teknologi 
+Komputer, 3(3). https://doi.org/10.61306/jnastek.v3i3.93 
+Lamada, M. S., Sa, A., Amalia, R., Teknik, P., & Makassar, U. N. (2020). 
+Pengujian Aplikasi Sistem Monitoring Perkuliahan Menggunakan Standar 
+ISO 25010. 3(3). 
+Mailando, S. A., Dewi, I. P., Hanesman, & Samala, A. D. (2023). Interactive 
+Multimedia Using Canva Application in Basic Electronics Subject for Grade 
+X at SMK Negeri 1 Batipuh: A Development Study. Journal of Hypermedia 
+& Technology-Enhanced Learning, 1(3), 136–149. 
+https://doi.org/10.58536/j-hytel.v1i3.91 
+McAfee, A., & Brynjolfsson, E. (2017). Machine, platform, crowd: Harnessing 
+our digital future. WW Norton & Company. 
+Miftahuljannah, V., & Suharso, A. (2023). Pengimplementasian Berbagai Web 
+Berdasarkan Kebutuhan Pengguna Dengan Menggunakan Metode 
+Systematic Literature Review. INFOTECH journal, 9(2), 401–405. 
+66 
+ 
+ 
+https://doi.org/10.31949/infotech.v9i2.6341 
+Noviantoro, A., Silviana, A. B., Fitriani, R. R., & Permatasari, H. P. (2022). 
+Rancangan Dan Implementasi Aplikasi Sewa Lapangan Badminton Wilayah 
+Depok Berbasis Web. Jurnal Teknik dan Science, 1(2), 88–103. 
+https://doi.org/10.56127/jts.v1i2.108 
+Nurwicaksono, M. A., Lisa, I. N., Tiara, A. R., & Sidik, R. (2023). Optimasi 
+Sistem Informasi Konsultasi Hukum melalui Pendekatan Pengujian 
+Kombinasi White-box dan Black-box. Jurnal Manajemen Informatika 
+(JAMIKA), 14(1), 1–15. https://doi.org/10.34010/jamika.v14i1.10110 
+O’brien, J. A., & Marakas, G. M. (2011). Management information systems. 
+McGraw-Hill/Irwin,. 
+Omar, S. S., Nayef, J. M., Qasim, N. H., Kawad, R. T., & Kalenychenko, R. 
+(2024). the Role of Digitalization in Improving Accountability and 
+Efficiency in Public Services. Investigacion Operacional, 45(2), 203–223. 
+Pratiwi, W. K. D., Putra, I. G. L., & Saskara, G. A. J. (2023). Evaluasi User 
+Interface Design Menggunakan Metode Heuristic Evaluation (Studi Kasus: 
+Pada Aplikasi Bank Pembangunan Daerah Bali Mobile). Jurnal Informatika 
+dan Teknik Elektro Terapan, 13(3), 2830–7062. 
+http://dx.doi.org/10.23960/jitet.v13i3S1.8028 
+Purwani, R., Fathoni, A., Sarilan, S., & Siswanto, H. (2024). Transformasi 
+Administrasi Pendidikan untuk Mengoptimalkan Efisiensi dan Kualitas 
+Layanan Pendidikan pada Era Digital. Jurnal Keilmuan dan Keislaman, 53–
+58. https://doi.org/10.23917/jkk.v4i1.261 
+Rahayu, A. (2025). Metode penelitian dan pengembangan (R&D): Pengertian, 
+jenis dan tahapan. DIAJAR: Jurnal Pendidikan dan Pembelajaran, 4(3), 
+459–470. 
+Rahmad, R., Yuniastuti, E., & Wirda, M. A. (2018). Pengembangan media 
+pembelajaran video tutorial menggunakan camtasia studio 8.5 pada 
+matakuliah sistem informasi geografi (sig). Jurnal Ilmiah Pendidikan Dan 
+Pembelajaran, 2(1). 
+Regita, Z. A., & Aini, N. (2025). Pengembangan Website Sekolah Dengan Fitur 
+Ekstrakurikuler Pada SDN Tegalrejo Tuban. 6(1), 40–48. 
+Restu Kurnia, I., & Titin Sunaryati. (2023). Media Pembelajaran Video Berbasis 
+Aplikasi Canva Untuk Meningkatkan Minat Belajar Siswa. Jurnal Educatio 
+FKIP UNMA, 9(3). https://doi.org/10.31949/educatio.v9i3.5579 
+Riduwan, & Akdon. (2015). Rumus dan Data dalam Analisis Data Statistika. 
+Bandung: Alfabeta. 
+Riza, A., & Handayani, H. (2015). Pengembangan Handout Pengajaran Writing Ii 
+Berbasis Process Genre-Based Approach Untuk Meningkatkan Kemampuan 
+Menulis Teks Dalam Penulisan Tugas Akhir. Jurnal Pelangi, 6(2). 
+https://doi.org/10.22202/jp.v6i2.296 
+Riza Noviana, Rahayu Isti Woro, Farhan Fachriza M, & Fitri Kartini Ayuni 
+Rania. (2024). Sistem Informasi Kewirausahaan Mahasiswa Wau ( 
+Wirausaha Anak Ulbi ) Menggunakan Laravel. Jurnal Teknik Informatika, 
+16(2), 34–40. 
+Santoso, M. F. (2025). Implementasi Teknologi Frontend Modern pada Website 
+Yellowweb: Kolaborasi Booostrap 5 Framework dan jQuery. Jurnal Media 
+Informatika (JUMIN), 6(2), 873–883. 
+67 
+ 
+ 
+http://ejournal.sisfokomtek.org/index.php/jumin 
+Sari, R. Y., Subandi, A., & Irsyad, I. (2024). Pengaruh Penggunaan Sistem 
+Informasi Manajemen Berbasis Digital Terhadap Efisiensi Administrasi 
+Pendidikan. Academy of Social Science and Global Citizenship Journal, 4(1), 
+21–29. https://doi.org/10.47200/aossagcj.v4i1.2389 
+Shrivastava, S. K., & Shrivastava, C. (2022). The Impact of Digitalization in 
+Higher Educational Institutions. International Journal of Soft Computing and 
+Engineering, 11(2). https://doi.org/10.35940/ijsce.b3536.0111222 
+Siregar, S. T. P., Ramadani, B. M. P., & Sakinah, F. (2025). Perubahan Aplikasi 
+Shopee: Pengembangan Fitur Dan Dampaknya Terhadap Customer. Aliansi: 
+Jurnal Manajemen dan Bisnis, 20(1), 187–204. 
+Soufitri, F. (2023). Konsep sistem informasi. PT Inovasi Pratama Internasional. 
+Sudrajat, D. R., Dahlan, D., & Budiwati, N. (2023). Refleksi mata kuliah 
+pendidikan profesi guru prajabatan model baru bidang studi ekonomi lptk 
+universitas pendidikan indonesia tahun 2022. Seminar Nasional Pariwisata 
+Dan Kewirausahaan (SNPK), 2, 716–725. 
+Sufandi, U. U., Priono, M., & Aprijani, D. A. (2022). UJI USABILITY FUNGSI 
+APLIKASI WEB SISTEM INFORMASI DENGAN USE QUESTIONNAIRE ( 
+STUDI KASUS : APLIKASI WEB SISTEM INFORMASI TIRAS DAN 
+TRANSAKSI BAHAN AJAR ). 19(1), 24–34. 
+Sugiyono. (2013). Metode Penelitan Pendidikan Pendekatan Kuantitatif, Kualitatif 
+dan R & D. In Alfabeta. 
+Suyatno, D. F. (2020). Pengukuran Kepuasan Pengguna Website dengan 
+Menggunakan Usability Testing. 04, 67–74. 
+Tata Sutabri. (2012). Analisis Sistem Informasi - Google Books. Cv Andi Offset. 
+Thiagarajan, S. (1974). Instructional development for training teachers of 
+exceptional children: A sourcebook. 
+UNILA, P. F. (2025). No Title. https://ppg.fkip.unila.ac.id/kurikulum-ppg-
+prajabatan/ 
+Viani, D. O., No, S., & Prasetyo, J. A. (2024). Pengembangan Backend 
+Menggunakan Metode Extreme Programming (Xp) Pada Aplikasi Reservasi 
+Pesona Java Ijen Homestay. Jurnal Informatika dan Teknik Elektro Terapan, 
+12(3), 2799–2808. https://doi.org/10.23960/jitet.v12i3.4913 
+Weinger, M. B., Wiklund, M. E., & Gardner-Bonneau, D. J. (2010). Handbook of 
+Human Factors in Medical Device Design. In Handbook of Human Factors 
+in Medical Device Design. https://doi.org/10.1201/b10439 
+Winaryati, E. (2021). E-Book Cercular Model RD&D (RD&D Pendidikan dan 
+Sosial). 
+Zamsiswaya, Sawaluddin, & Sihombing, B. (2024). Model Pengembangan 4D ( 
+Define , Design , Develop , dan Disseminate ) dalam Pembelajaran 
+Pendidikan Islam. 4, 11–19. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LAMPIRAN 
+ 
+ 
+ 
+ 
+Lampiran 1. Hasil wawancara 
+ 
+LEMBAR WAWANCARA 
+ 
+Hari/tanggal  : Selasa, 23 September 2025 
+Narasumber  : Ir. Amarulloh, M.Kom., M.Pd. 
+Jabatan/Peran  : Kepala Divisi Akademik FKIP Universitas Lampung 
+Pewawancara  : Ajeng Indar Arsyida 
+ 
+A. Tujuan Wawancara 
+Tujuan dilaksanakan wawancara adalah untuk mengetahui proses kebutuhan pada 
+sistem yang dikembangkan dalam melakukan penelitian Pengembangan Sistem 
+Informasi Berbasis Website untuk Pengelolaan Data dan Informasi di Program 
+Studi PPG FKIP Universitas Lampung. 
+ 
+B. Isi Wawancara 
+ 
+No. Pertanyaan Jawaban 
+1. Menurut Anda, apakah diperlukan 
+web PPG yang informatif? Jika 
+iya, jelaskan alasannya. 
+Diperlukan, karena peserta PPG Unila 
+terdapat dari Sabang sampai Merauke, 
+jadi diperlukan web yang dapat diakses 
+24 jam. Karena pada kegiatan PPG 
+terdapat timeline yang tetap, jadi perlu 
+dipantau setiap saat. 
+2. Fitur apa yang sangat diperlukan 
+pada website ini untuk membantu 
+digitalisasi pelayanan? 
+Fitur kelulusan, yang digunakan untuk 
+pembagian sertifikat pendidik digital. 
+3. Apakah ada keluhan, kesan atau 
+pesan, dan saran tentang website 
+PPG yang ingin disampaikan? 
+Tampilan dibuat yang menarik dan 
+mudah diakses serta memiliki keamanan 
+yang baik supaya data pribadi pengguna 
+aman. 
+70 
+ 
+ 
+LEMBAR WAWANCARA 
+ 
+Hari/tanggal  : Jumat, 03 Oktober 2025 
+Narasumber  : Rahmat Wahyudi 
+Jabatan/Peran  : Admin PPG 
+Pewawancara  : Ajeng Indar Arsyida 
+ 
+A. Tujuan Wawancara 
+Tujuan dilaksanakan wawancara adalah untuk mengetahui proses kebutuhan pada 
+sistem yang dikembangkan dalam melakukan penelitian Pengembangan Sistem 
+Informasi Berbasis Website untuk Pengelolaan Data dan Informasi di Program 
+Studi PPG FKIP Universitas Lampung. 
+ 
+B. Isi Wawancara 
+ 
+No. Pertanyaan Jawaban 
+1. Menurut Anda, apakah diperlukan 
+web PPG yang informatif? Jika 
+iya, jelaskan alasannya. 
+Diperlukan, karena peserta PPG banyak 
+yang berasal dari luar provinsi 
+Lampung, jadi butuh informasi yang 
+cepat dan mudah diakses. 
+2. Fitur apa yang sangat diperlukan 
+pada website ini untuk membantu 
+digitalisasi pelayanan? 
+Penyampaian informasi yang cepat dan 
+akurat. 
+3. Apakah ada keluhan, kesan atau 
+pesan, dan saran tentang website 
+PPG yang ingin disampaikan? 
+Harapannya sistem yang dikembangkan 
+mudah dikelola dan stabil. Perhatikan 
+juga pencegahan kesalahan input data 
+serta panduan teknis yang jelas agar 
+proses operasional dapat dilakukan 
+dengan mudah. 
+ 
+ 
+ 
+ 
+Lampiran 2. Rekapitulasi hasil penelitian pendahuluan pada mahasiswa PPG 
+ 
+Pernyataan Skala 
+Saya belum mengetahui bahwa PPG FKIP Unila memiliki website 
+resmi. 
+1 3 2 2 1 2 3 1 2 3 3 2 3 1 1 1 1 2 2 2 1 
+Saya mengetahui Ketua Program Studi PPG FKIP Unila saat ini 
+melalui website PPG FKIP Unila. 
+1 1 2 1 1 2 1 1 2 2 2 1 2 1 1 2 1 1 2 1 1 
+Saya merasa kesulitan dalam meminta perbaikan jika terdapat 
+kesalahan pada data saya. 
+3 4 4 4 3 3 2 3 3 3 3 4 3 3 2 4 3 3 3 3 3 
+Informasi mengenai prosedur  perbaikan data diri masih kurang jelas. 3 3 2 2 3 4 2 3 3 2 3 2 3 3 2 3 3 3 3 3 3 
+Saya sering menerima informasi yang berbeda-beda antara satu 
+sumber dengan sumber lainnya. 
+3 4 3 1 2 4 4 2 3 3 3 2 3 3 3 1 2 3 2 2 2 
+Saya kesulitan/bingung mencari tempat  mengakses sertifikat 
+pendidik saya nantinya. 
+3 3 4 3 4 4 3 3 3 4 3 4 3 3 4 3 3 3 3 3 3 
+Informasi yang disediakan oleh website PPG saat ini kurang update, 
+terutama dalam informasi pembagian sertifikat. 
+3 4 4 4 3 4 4 3 3 3 3 3 3 3 3 4 3 3 3 3 3 
+Saya lebih memilih sistem dengan fitur login, untuk keamanan data 
+pribadi saya. 
+3 4 3 4 3 4 3 3 4 3 3 3 4 3 4 4 4 3 3 4 4 
+72 
+ 
+ 
+Saya membutuhkan fitur untuk mengunduh sertifikat pendidik dengan 
+tampilan yang mudah dipahami dan digunakan meski tanpa pelatihan 
+khusus. 
+4 3 3 3 4 4 3 3 3 3 3 4 3 3 3 4 3 4 4 4 3 
+Saya sering mendapatkan informasi yang keliru atau usang dari 
+website, yang kemudian direvisi melalui media lain seperti grup 
+WhatsApp. 
+4 4 3 3 4 4 3 4 3 3 3 4 3 4 4 4 4 4 4 4 4 
+Saya akan lebih memilih menggunakan satu website resmi yang ada 
+saat ini dibandingkan beberapa grup WhatsApp untuk mendapatkan 
+informasi. 
+3 4 4 4 3 3 2 3 3 3 3 4 3 3 2 4 3 3 3 3 3 
+Adanya sebuah portal website terpusat untuk informasi dan kegiatan 
+PPG akan sangat membantu studi saya. 
+3 4 3 3 3 3 3 4 4 3 3 3 3 3 4 3 3 3 3 3 3 
+Saya lebih suka tampilan yang berwarna dan menu yang ringkas agar 
+lebih terstruktur dan mudah dipahami 
+4 4 4 4 4 3 3 4 3 2 3 4 3 4 4 4 4 4 4 4 4 
+Website PPG FKIP Unila yang ada saat ini nyaman digunakan melalui 
+perangkat mobile (HP/Tablet). 
+3 3 2 3 2 3 3 3 3 3 3 2 3 3 2 4 2 3 3 3 3 
+Menurut saya, panduan dalam bentuk dokumen sudah cukup untuk 
+membantu saya memahami cara penggunaan sistem. 
+3 4 4 3 4 3 3 4 3 3 2 4 2 4 4 4 4 4 4 4 4 
+ 
+ 
+ 
+ 
+Lampiran 3. Angket uji validasi ahli buku panduan 
+ 
+ 
+ 
+
+74 
+ 
+ 
+ 
+ 
+
+75 
+ 
+ 
+ 
+ 
+
+76 
+ 
+ 
+ 
+ 
+
+77 
+ 
+ 
+ 
+ 
+
+78 
+ 
+ 
+ 
+ 
+
+79 
+ 
+ 
+ 
+ 
+
+80 
+ 
+ 
+ 
+ 
+
+81 
+ 
+ 
+ 
+ 
+ 
+ 
+
+82 
+ 
+ 
+Lampiran 4. Lembar uji validasi ahli sistem 
+ 
+ 
+ 
+
+83 
+ 
+ 
+ 
+ 
+
+84 
+ 
+ 
+ 
+ 
+
+85 
+ 
+ 
+ 
+ 
+
+86 
+ 
+ 
+ 
+ 
+
+87 
+ 
+ 
+ 
+ 
+
+88 
+ 
+ 
+ 
+ 
+
+89 
+ 
+ 
+ 
+ 
+
+90 
+ 
+ 
+ 
+ 
+
+91 
+ 
+ 
+ 
+ 
+
+92 
+ 
+ 
+ 
+ 
+
+93 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+94 
+ 
+ 
+Lampiran 5. Lembar uji validasi ahli visual 
+ 
+ 
+ 
+
+95 
+ 
+ 
+ 
+ 
+
+96 
+ 
+ 
+ 
+ 
+
+97 
+ 
+ 
+
+98 
+ 
+ 
+ 
+ 
+
+99 
+ 
+ 
+ 
+ 
+
+100 
+ 
+ 
+ 
+ 
+
+101 
+ 
+ 
+ 
+ 
+
+102 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+103 
+ 
+ 
+Lampiran 6. Rekapitulasi hasil uji validasi ahli buku panduan 
+ 
+Skor dari Ahli S ΣS n(c-1) V I II III S1 S2 S3 
+4 4 4 3 3 3 9 9 1 
+4 3 4 3 2 3 8 9 0,888889 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+3 4 4 2 3 3 8 9 0,888889 
+3 4 4 2 3 3 8 9 0,888889 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+3 4 4 2 3 3 8 9 0,888889 
+Total Skor 
+49 51 52 36 38 39 113 Rata-rata nilai V = 0,966 
+ 
+Lampiran 7. Rekapitulasi hasil uji validasi ahli visual 
+ 
+Skor dari Ahli S ΣS n(c-1) V I II III S1 S2 S3 
+4 4 3 3 3 2 8 9 0,888888889 
+4 3 3 3 2 2 7 9 0,777777778 
+4 4 4 3 3 3 9 9 1 
+4 3 3 3 2 2 7 9 0,777777778 
+4 4 3 3 3 2 8 9 0,888888889 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+4 4 3 3 3 2 8 9 0,888888889 
+3 4 3 2 3 2 7 9 0,777777778 
+3 4 3 2 3 2 7 9 0,777777778 
+4 4 3 3 3 2 8 9 0,888888889 
+4 4 3 3 3 2 8 9 0,888888889 
+3 4 3 2 3 2 7 9 0,777777778 
+4 4 4 3 3 3 9 9 1 
+Total Skor 
+53 54 46 39 40 32 111 Rata-rata nilai V = 0,881 
+ 
+ 
+ 
+104 
+ 
+ 
+Lampiran 8. Rekapitulasi hasil uji validasi ahli sistem 
+ 
+Skor dari Ahli S ΣS n(c-1) V I II III S1 S2 S3 
+4 4 3 3 3 2 8 9 0,888888889 
+4 4 3 3 3 2 8 9 0,888888889 
+4 4 4 3 3 3 9 9 1 
+4 4 3 3 3 2 8 9 0,888888889 
+4 4 4 3 3 3 9 9 1 
+4 4 3 3 3 2 8 9 0,888888889 
+4 4 3 3 3 2 8 9 0,888888889 
+4 3 4 3 2 3 8 9 0,888888889 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+4 3 4 3 2 3 8 9 0,888888889 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+4 4 4 3 3 3 9 9 1 
+4 4 3 3 3 2 8 9 0,888888889 
+4 4 3 3 3 2 8 9 0,888888889 
+3 4 4 2 3 3 8 9 0,888888889 
+4 4 4 3 3 3 9 9 1 
+Total Skor 
+75 74 69 56 55 50 161 Rata-rata nilai V = 0,942 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+105 
+ 
+ 
+Lampiran 9. Rekapitulasi hasil uji kepraktisan pada mahasiswa 
+ 
+No. Aspek Penilaian Total skor Persentase 
+Aspek Kemudahan Penggunaan 
+1. Sistem ini mudah diakses melalui komputer atau 
+smartphone 
+104 86,67% 
+2. Sistem ini dapat diakses di browser yang berbeda 103 85,83% 
+3. Sistem ini mudah digunakan 104 86,67% 
+4. Sistem ini memiliki langkah-langkah pengoperasian 
+yang mudah dipahami meski tanpa pelatihan khusus 
+107 89,17% 
+5. Navigasi menu pada versi desktop mudah 
+digunakan 
+103 85,83% 
+6. Navigasi menu pada versi mobile mudah digunakan 102 85% 
+7. Informasi status pengiriman sertifikat mudah 
+ditemukan 
+101 84,16% 
+8. Informasi cara penggunaan sistem dapat diakses 
+dengan mudah 
+106 88,3% 
+9. Pengguna dapat dengan mudah menghindari 
+kesalahan dalam melakukan input data 
+103 85,83% 
+10. Pengguna dapat dengan mudah menghindari 
+kesalahan dalam menyimpan data yang belum terisi 
+103 85,83% 
+Aspek Manfaat 
+11. Sistem ini membuat akses informasi dan perbaikan 
+data menjadi lebih mudah 
+100 83,3% 
+12. Sistem membantu menghemat waktu dalam 
+mengakses informasi dan perbaikan data 
+103 85,83% 
+13. Sistem ini membantu saya mendapatkan Informasi 
+yang akurat dan relevan 
+100 83,3% 
+14. Sistem ini sudah memenuhi kebutuhan pengguna 100 83,3% 
+15. Sistem ini membuat hal yang ingin dicapai 
+pengguna lebih mudah dilakukan 
+100 83,3% 
+Rata-rata seluruh aspek 85,1% 
+Kategori Sangat Praktis 
+ 
+ 
+106 
+ 
+ 
+Lampiran 10. Rekapitulasi hasil uji kepraktisan pada admin 
+ 
+No. Aspek Penilaian Total skor Persentase 
+Aspek Kemudahan Penggunaan 
+1. Sistem ini mudah diakses melalui komputer atau 
+smartphone 
+8 100% 
+2. Sistem ini dapat diakses di browser yang berbeda 8 100% 
+3. Sistem ini mudah digunakan 8 100% 
+4. Sistem ini memiliki langkah-langkah pengoperasian 
+yang mudah dipahami meski tanpa pelatihan khusus 
+7 87,5% 
+5. Navigasi menu pada versi desktop mudah digunakan 8 100% 
+6. Navigasi menu pada versi mobile mudah digunakan 7 87,5% 
+7. Informasi data peserta mudah ditemukan 8 100% 
+8. Informasi cara pemakaian sistem dapat diakses 
+dengan mudah 
+8 100% 
+9. Pengguna dapat dengan mudah menghindari 
+kesalahan dalam melakukan input data  
+7 87,5% 
+10. Pengguna dapat dengan mudah menghindari 
+kesalahan dalam menyimpan data yang belum terisi 
+8 100% 
+Aspek Manfaat 
+11. Sistem ini membuat pemberian informasi dan 
+koordinasi perbaikan data peserta menjadi lebih 
+mudah 
+8 100% 
+12. Sistem membantu menghemat waktu dalam 
+pemberian informasi dan koordinasi perbaikan data 
+8 100% 
+13. Sistem ini membantu dalam mengumpulkan data 
+yang akurat dan relevan 
+8 100% 
+14. Sistem ini sudah memenuhi kebutuhan pengguna 8 100% 
+15. Sistem ini membuat hal yang ingin dicapai pengguna 
+lebih mudah dilakukan 
+8 100% 
+Rata-rata seluruh aspek 98,12% 
+Kategori Sangat Praktis 
+ 
+107 
+ 
+ 
+Lampiran 11. Tampilan halaman beranda pada website utama PPG FKIP 
+Universitas Lampung 
+ 
+ 
+
+108 
+ 
+ 
+Lampiran 12. Tampilan halaman visi, misi, tujuan, dan sasaran pada website 
+utama PPG FKIP Universitas Lampung 
+ 
+ 
+ 
+Lampiran 13. Tampilan halaman struktur organisasi pada website utama PPG 
+FKIP Universitas Lampung 
+ 
+ 
+ 
+ 
+
+109 
+ 
+ 
+Lampiran 14. Tampilan halaman kurikulum PPG Prajabatan pada website utama 
+PPG FKIP Universitas Lampung 
+ 
+ 
+ 
+Lampiran 15. Tampilan halaman berita pada website utama PPG FKIP 
+Universitas Lampung 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+110 
+ 
+ 
+Lampiran 16. Buku panduan pengguna sistem cek kelulusan untuk mahasiswa 
+ 
+ 
+
+111 
+ 
+ 
+ 
+
+112 
+ 
+ 
+ 
+
+113 
+ 
+ 
+ 
+
+114 
+ 
+ 
+ 
+
+115 
+ 
+ 
+ 
+
+116 
+ 
+ 
+ 
+
+117 
+ 
+ 
+ 
+
+118 
+ 
+ 
+ 
+
+119 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+120 
+ 
+ 
+Lampiran 17. Buku panduan sistem cek kelulusan untuk admin 
+ 
+ 
+
+121 
+ 
+ 
+ 
+
+122 
+ 
+ 
+ 
+
+123 
+ 
+ 
+ 
+
+124 
+ 
+ 
+ 
+
+125 
+ 
+ 
+ 
+
+126 
+ 
+ 
+ 
+
+127 
+ 
+ 
+ 
+
+128 
+ 
+ 
+
+129 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+130 
+ 
+ 
+Lampiran 18. Dokumentasi 
+ 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+   
+ 
+ 
+ 
+   
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+

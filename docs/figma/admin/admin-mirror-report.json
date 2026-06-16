@@ -1,0 +1,199 @@
+{
+  "generated_at": "2026-03-05T03:00:33.484Z",
+  "base_url": "http://127.0.0.1:8099",
+  "out_root": "C:\\laragon\\www\\ult-fkip-unila\\docs\\figma\\admin",
+  "total_targets": 47,
+  "generated": [],
+  "skipped_existing": [
+    {
+      "route": "admin.audit.index",
+      "file": "docs/figma/admin/audit-index-mirror.html"
+    },
+    {
+      "route": "admin.cms.index",
+      "file": "docs/figma/admin/cms-index-mirror.html"
+    },
+    {
+      "route": "admin.cms.announcements.index",
+      "file": "docs/figma/admin/cms/announcements-index-mirror.html"
+    },
+    {
+      "route": "admin.cms.announcements.create",
+      "file": "docs/figma/admin/cms/announcements-create-mirror.html"
+    },
+    {
+      "route": "admin.cms.announcements.edit",
+      "file": "docs/figma/admin/cms/announcements-edit-mirror.html"
+    },
+    {
+      "route": "admin.cms.blogs.index",
+      "file": "docs/figma/admin/cms/blogs-index-mirror.html"
+    },
+    {
+      "route": "admin.cms.blogs.create",
+      "file": "docs/figma/admin/cms/blogs-create-mirror.html"
+    },
+    {
+      "route": "admin.cms.blogs.edit",
+      "file": "docs/figma/admin/cms/blogs-edit-mirror.html"
+    },
+    {
+      "route": "admin.cms.categories.index",
+      "file": "docs/figma/admin/cms/categories-index-mirror.html"
+    },
+    {
+      "route": "admin.cms.categories.create",
+      "file": "docs/figma/admin/cms/categories-create-mirror.html"
+    },
+    {
+      "route": "admin.cms.categories.edit",
+      "file": "docs/figma/admin/cms/categories-edit-mirror.html"
+    },
+    {
+      "route": "admin.cms.hero.edit",
+      "file": "docs/figma/admin/cms/hero-edit-mirror.html"
+    },
+    {
+      "route": "admin.cms.settings.edit",
+      "file": "docs/figma/admin/cms/settings-edit-mirror.html"
+    },
+    {
+      "route": "admin.dashboard",
+      "file": "docs/figma/admin/dashboard-mirror.html"
+    },
+    {
+      "route": "admin.doc_formats.index",
+      "file": "docs/figma/admin/doc-formats-index-mirror.html"
+    },
+    {
+      "route": "admin.doc_formats.create",
+      "file": "docs/figma/admin/doc-formats-create-mirror.html"
+    },
+    {
+      "route": "admin.doc_formats.show",
+      "file": "docs/figma/admin/doc-formats-show-mirror.html"
+    },
+    {
+      "route": "admin.doc_formats.edit",
+      "file": "docs/figma/admin/doc-formats-edit-mirror.html"
+    },
+    {
+      "route": "admin.jurusan.index",
+      "file": "docs/figma/admin/jurusan-index-mirror.html"
+    },
+    {
+      "route": "admin.jurusan.create",
+      "file": "docs/figma/admin/jurusan-create-mirror.html"
+    },
+    {
+      "route": "admin.jurusan.edit",
+      "file": "docs/figma/admin/jurusan-edit-mirror.html"
+    },
+    {
+      "route": "admin.feedback.index",
+      "file": "docs/figma/admin/feedback-index-mirror.html"
+    },
+    {
+      "route": "admin.feedback.show",
+      "file": "docs/figma/admin/feedback-show-mirror.html"
+    },
+    {
+      "route": "admin.layanan.index",
+      "file": "docs/figma/admin/layanan-index-mirror.html"
+    },
+    {
+      "route": "admin.layanan.create",
+      "file": "docs/figma/admin/layanan-create-mirror.html"
+    },
+    {
+      "route": "admin.layanan.placeholder_guide",
+      "file": "docs/figma/admin/layanan-placeholder-guide-mirror.html"
+    },
+    {
+      "route": "admin.layanan.show",
+      "file": "docs/figma/admin/layanan-show-mirror.html"
+    },
+    {
+      "route": "admin.layanan.edit",
+      "file": "docs/figma/admin/layanan-edit-mirror.html"
+    },
+    {
+      "route": "admin.legalization.index",
+      "file": "docs/figma/admin/legalization-index-mirror.html"
+    },
+    {
+      "route": "admin.user_guides.index",
+      "file": "docs/figma/admin/user-guides-index-mirror.html"
+    },
+    {
+      "route": "admin.user_guides.create",
+      "file": "docs/figma/admin/user-guides-create-mirror.html"
+    },
+    {
+      "route": "admin.user_guides.edit",
+      "file": "docs/figma/admin/user-guides-edit-mirror.html"
+    },
+    {
+      "route": "admin.requests.index",
+      "file": "docs/figma/admin/requests-index-mirror.html"
+    },
+    {
+      "route": "admin.requests.show",
+      "file": "docs/figma/admin/requests-show-mirror.html"
+    },
+    {
+      "route": "admin.prodi.index",
+      "file": "docs/figma/admin/prodi-index-mirror.html"
+    },
+    {
+      "route": "admin.prodi.create",
+      "file": "docs/figma/admin/prodi-create-mirror.html"
+    },
+    {
+      "route": "admin.prodi.edit",
+      "file": "docs/figma/admin/prodi-edit-mirror.html"
+    },
+    {
+      "route": "admin.roles.index",
+      "file": "docs/figma/admin/roles-index-mirror.html"
+    },
+    {
+      "route": "admin.roles.create",
+      "file": "docs/figma/admin/roles-create-mirror.html"
+    },
+    {
+      "route": "admin.roles.edit",
+      "file": "docs/figma/admin/roles-edit-mirror.html"
+    },
+    {
+      "route": "admin.letter_formats.index",
+      "file": "docs/figma/admin/letter-formats-index-mirror.html"
+    },
+    {
+      "route": "admin.letter_formats.create",
+      "file": "docs/figma/admin/letter-formats-create-mirror.html"
+    },
+    {
+      "route": "admin.letter_formats.show",
+      "file": "docs/figma/admin/letter-formats-show-mirror.html"
+    },
+    {
+      "route": "admin.letter_formats.edit",
+      "file": "docs/figma/admin/letter-formats-edit-mirror.html"
+    },
+    {
+      "route": "admin.users.index",
+      "file": "docs/figma/admin/users-index-mirror.html"
+    },
+    {
+      "route": "admin.users.create",
+      "file": "docs/figma/admin/users-create-mirror.html"
+    },
+    {
+      "route": "admin.users.edit",
+      "file": "docs/figma/admin/users-edit-mirror.html"
+    }
+  ],
+  "skipped": [],
+  "errors": []
+}

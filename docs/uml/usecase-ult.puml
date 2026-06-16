@@ -1,0 +1,67 @@
+﻿@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam usecase {
+  BackgroundColor #F8FBFF
+  BorderColor #2B4C7E
+  ArrowColor #2B4C7E
+}
+
+actor "Mahasiswa" as M
+actor "Admin Jurusan" as AJ
+actor "Staf ULT" as ULT
+actor "Signer\n(Dekan/WD/Kaprodi/Kajur)" as SG
+actor "Staff Final" as SF
+actor "Superadmin" as SA
+
+rectangle "Web ULT FKIP Unila" {
+  usecase "Registrasi/Login" as UC1
+  usecase "Ajukan Permohonan" as UC2
+  usecase "Upload Lampiran" as UC3
+  usecase "Pantau Status & Notifikasi" as UC4
+  usecase "Unduh Output Dokumen" as UC5
+  usecase "Ajukan Legalisir" as UC6
+
+  usecase "Verifikasi/Gate Request" as UC7
+  usecase "Review ULT" as UC8
+  usecase "Input/Terbitkan Nomor" as UC9
+  usecase "Keputusan Signoff\n(Approve/Revisi/Tolak)" as UC10
+  usecase "Assembly & Finalisasi Output" as UC11
+
+  usecase "Kelola Layanan & Workflow" as UC12
+  usecase "Kelola CMS Publik" as UC13
+  usecase "Kelola User/Role/Permission" as UC14
+  usecase "Lihat Audit Log" as UC15
+}
+
+M --> UC1
+M --> UC2
+M --> UC3
+M --> UC4
+M --> UC5
+M --> UC6
+
+AJ --> UC7
+AJ --> UC9
+AJ --> UC15
+
+ULT --> UC8
+ULT --> UC9
+ULT --> UC15
+
+SG --> UC10
+SF --> UC11
+
+SA --> UC12
+SA --> UC13
+SA --> UC14
+SA --> UC15
+
+UC2 ..> UC3 : <<include>>
+UC2 ..> UC7 : <<include>>
+UC7 ..> UC8 : <<include>>
+UC8 ..> UC10 : <<include>>
+UC10 ..> UC11 : <<include>>
+UC11 ..> UC5 : <<include>>
+UC5 ..> UC6 : <<extend>>
+@enduml

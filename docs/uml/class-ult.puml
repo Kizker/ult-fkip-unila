@@ -1,0 +1,105 @@
+﻿@startuml
+skinparam class {
+  BackgroundColor #F8FBFF
+  BorderColor #2B4C7E
+  ArrowColor #2B4C7E
+}
+
+class User {
+  +id: bigint
+  +name: string
+  +email: string
+}
+
+class Role {
+  +id: bigint
+  +name: string
+}
+
+class Unit {
+  +id: bigint
+  +name: string
+  +type: enum(fakultas,jurusan,prodi)
+  +parent_id: bigint
+}
+
+class Service {
+  +id: bigint
+  +slug: string
+  +title_id: string
+  +is_active: bool
+  +status: enum
+}
+
+class ServiceWorkflow {
+  +service_id: bigint
+  +gate_role: string
+  +steps_json: json
+  +require_legalization: bool
+}
+
+class ServiceField {
+  +service_id: bigint
+  +key: string
+  +type: enum
+  +required: bool
+}
+
+class Request {
+  +id: bigint
+  +service_id: bigint
+  +student_id: bigint
+  +current_status: enum
+  +current_step_key: string
+  +nomor_surat: string
+}
+
+class RequestFieldValue {
+  +request_id: bigint
+  +service_field_id: bigint
+  +value: text/json
+}
+
+class Attachment {
+  +id: bigint
+  +request_id: bigint
+  +type: enum(input,output,signature)
+  +file_path: string
+}
+
+class RequestSignoff {
+  +id: bigint
+  +request_id: bigint
+  +signer_role: string
+  +decision: enum
+  +order_index: int
+}
+
+class RequestOutput {
+  +id: bigint
+  +request_id: bigint
+  +disk: string
+  +file_path: string
+}
+
+class AuditLog {
+  +id: bigint
+  +actor_id: bigint
+  +event: string
+  +subject_type: string
+  +subject_id: string
+}
+
+User "*" -- "*" Role : has
+User "*" --> "1" Unit : belongs_to
+Service "1" --> "1" ServiceWorkflow
+Service "1" --> "*" ServiceField
+Request "*" --> "1" Service
+Request "*" --> "1" User : student
+Request "1" --> "*" RequestFieldValue
+Request "1" --> "*" Attachment
+Request "1" --> "*" RequestSignoff
+Request "1" --> "*" RequestOutput
+AuditLog "*" --> "1" User : actor
+AuditLog "*" --> "0..1" Request : subject
+@enduml

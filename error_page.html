@@ -1,0 +1,522 @@
+<!DOCTYPE html><html lang="id"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#7c3aed">
+    <link rel="icon" href="http://ult-fkip-unila.test/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="http://ult-fkip-unila.test/icons/icon-192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="http://ult-fkip-unila.test/icons/icon-192.png">
+    <title>Web ULT FKIP Unila</title>
+    <link rel="preload" as="style" href="http://ult-fkip-unila.test/build/assets/app-Dk2V9wYs.css"><link rel="modulepreload" as="script" href="http://ult-fkip-unila.test/build/assets/app-Bupu-5Zt.js"><link rel="stylesheet" href="http://ult-fkip-unila.test/build/assets/app-Dk2V9wYs.css"><script type="module" src="http://ult-fkip-unila.test/build/assets/app-Bupu-5Zt.js"></script>    <style>
+        @media (min-width: 1280px) {
+            .page-app-shell.is-admin .app-shell-main {
+                padding-left: 18rem;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white dark:bg-zinc-950">
+    <div class="page-app-shell " data-app-shell="" x-data="">
+                    <main class="app-shell-main has-public-footer">
+                <header class="app-topbar" aria-label="Topbar">
+    <div class="app-shell__container app-topbar__inner " x-data="{ profileOpen: false }" x-on:keydown.escape.window="profileOpen = false">
+        <div class="app-topbar__left">
+            
+            <a href="http://ult-fkip-unila.test" class="app-topbar__brand">
+                <span class="app-topbar__logos" style="display:inline-flex;align-items:center;flex-direction:row;flex-wrap:nowrap;gap:.42rem;white-space:nowrap;line-height:0;">
+                    <img src="http://ult-fkip-unila.test/icons/unila.png" alt="Logo Universitas Lampung" class="app-topbar__logo app-topbar__logo--unila" style="display:block;" loading="lazy" decoding="async">
+                    <img src="http://ult-fkip-unila.test/icons/logo.png" alt="Logo FKIP Unila" class="app-topbar__logo app-topbar__logo--fkip" style="display:block;" loading="lazy" decoding="async">
+                </span>
+                <span class="app-topbar__mark">ULT</span>
+                <span class="app-topbar__brandtext app-topbar__brand-desktop">
+                    <span class="app-topbar__name">FKIP Unila</span>
+                </span>
+            </a>
+        </div>
+
+        <div class="app-topbar__right">
+                            <!-- Mobile: compact actions -->
+                <div class="app-topbar__mobile xl:hidden">
+                    <div class="app-topbar__profile">
+                        <button type="button" class="app-topbar__profile-trigger inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-[rgb(var(--c-border))] bg-white/80 px-2.5 py-1.5 text-[rgb(var(--c-fg))] shadow-sm dark:bg-zinc-900/75" x-on:click="profileOpen = !profileOpen" x-bind:aria-expanded="profileOpen ? 'true' : 'false'" aria-haspopup="menu" aria-expanded="false">
+                            <span class="app-topbar__profile-avatarwrap inline-flex items-center justify-center relative shrink-0">
+                                <span class="relative inline-flex shrink-0" style="width: 28px; height: 28px; line-height: 1;" data-avatar-root="">
+    <img src="/storage/avatars/WCdxYPXtLipa3ZVvz3yslKxDkdYgBUWJUyixeNH2.png" alt="Foto profil Mahasiswa Demo" class="object-cover border border-[rgb(var(--c-border))] bg-white relative z-10 app-topbar__profile-avatar block rounded-full" style="width: 28px; height: 28px;" loading="lazy" decoding="async" data-avatar-image="data-avatar-image" onerror="this.hidden=true;this.nextElementSibling.hidden=false;">
+    <span hidden="" aria-hidden="true" data-avatar-fallback="" class="inline-flex items-center justify-center text-center leading-none text-xs font-semibold bg-zinc-100 dark:bg-zinc-900 border border-[rgb(var(--c-border))] text-zinc-700 dark:text-zinc-200 select-none shrink-0 absolute inset-0 app-topbar__profile-avatar block rounded-full" style="width: 28px; height: 28px; line-height: 1;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:100%;height:100%;line-height:1;transform:translateY(-0.02em);">MD</span>
+    </span>
+  </span>
+                                                                    <span class="app-topbar__profile-dot" aria-hidden="true"></span>
+                                                            </span>
+                            <span class="app-topbar__profile-arrow inline-flex h-[18px] w-[18px] items-center justify-center shrink-0 transition-transform duration-200" aria-hidden="true" x-bind:class="profileOpen ? 'is-open rotate-180' : ''">
+                                <svg viewBox="0 0 20 20" fill="none" class="block h-[18px] w-[18px]">
+                                    <path d="M5 7.5 10 12.5 15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            
+            <!-- Desktop: full actions -->
+            <div class="app-topbar__desktop hidden xl:flex items-center gap-2 justify-end">
+                <div class="app-topbar__profile" x-on:click.outside="profileOpen = false">
+                    <button type="button" class="app-topbar__profile-trigger inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-[rgb(var(--c-border))] bg-white/80 px-2.5 py-1.5 text-[rgb(var(--c-fg))] shadow-sm dark:bg-zinc-900/75" x-on:click="profileOpen = !profileOpen" x-bind:aria-expanded="profileOpen ? 'true' : 'false'" aria-haspopup="menu" aria-expanded="false">
+                        <span class="app-topbar__profile-avatarwrap inline-flex items-center justify-center relative shrink-0">
+                            <span class="relative inline-flex shrink-0" style="width: 26px; height: 26px; line-height: 1;" data-avatar-root="">
+    <img src="/storage/avatars/WCdxYPXtLipa3ZVvz3yslKxDkdYgBUWJUyixeNH2.png" alt="Foto profil Mahasiswa Demo" class="object-cover border border-[rgb(var(--c-border))] bg-white relative z-10 app-topbar__profile-avatar block rounded-full" style="width: 26px; height: 26px;" loading="lazy" decoding="async" data-avatar-image="data-avatar-image" onerror="this.hidden=true;this.nextElementSibling.hidden=false;">
+    <span hidden="" aria-hidden="true" data-avatar-fallback="" class="inline-flex items-center justify-center text-center leading-none text-xs font-semibold bg-zinc-100 dark:bg-zinc-900 border border-[rgb(var(--c-border))] text-zinc-700 dark:text-zinc-200 select-none shrink-0 absolute inset-0 app-topbar__profile-avatar block rounded-full" style="width: 26px; height: 26px; line-height: 1;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:100%;height:100%;line-height:1;transform:translateY(-0.02em);">MD</span>
+    </span>
+  </span>
+                                                            <span class="app-topbar__profile-dot" aria-hidden="true"></span>
+                                                    </span>
+                        <span class="app-topbar__profile-arrow inline-flex h-[18px] w-[18px] items-center justify-center shrink-0 transition-transform duration-200" aria-hidden="true" x-bind:class="profileOpen ? 'is-open rotate-180' : ''">
+                            <svg viewBox="0 0 20 20" fill="none" class="block h-[18px] w-[18px]">
+                                <path d="M5 7.5 10 12.5 15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="app-topbar__menu app-topbar__menu--profile" x-show="profileOpen" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 scale-95 -translate-y-1" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95 -translate-y-1" aria-label="Menu akun" style="display: none;">
+                        <div class="app-topbar__menu-card">
+                            <div class="app-topbar__profile-summary flex items-center justify-between gap-3 border-b border-[rgb(var(--c-border))/0.75] px-3 py-3">
+                                <div class="app-topbar__profile-copy min-w-0 flex-1">
+                                    <div class="app-topbar__profile-summary-name truncate text-sm font-semibold">Mahasiswa Demo</div>
+                                    <div class="app-topbar__profile-summary-email truncate text-xs text-muted">mahasiswa@demo.test</div>
+                                </div>
+                                <span class="relative inline-flex shrink-0" style="width: 40px; height: 40px; line-height: 1;" data-avatar-root="">
+    <img src="/storage/avatars/WCdxYPXtLipa3ZVvz3yslKxDkdYgBUWJUyixeNH2.png" alt="Foto profil Mahasiswa Demo" class="object-cover border border-[rgb(var(--c-border))] bg-white relative z-10 app-topbar__profile-avatar block rounded-full" style="width: 40px; height: 40px;" loading="lazy" decoding="async" data-avatar-image="data-avatar-image" onerror="this.hidden=true;this.nextElementSibling.hidden=false;">
+    <span hidden="" aria-hidden="true" data-avatar-fallback="" class="inline-flex items-center justify-center text-center leading-none text-xs font-semibold bg-zinc-100 dark:bg-zinc-900 border border-[rgb(var(--c-border))] text-zinc-700 dark:text-zinc-200 select-none shrink-0 absolute inset-0 app-topbar__profile-avatar block rounded-full" style="width: 40px; height: 40px; line-height: 1;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:100%;height:100%;line-height:1;transform:translateY(-0.02em);">MD</span>
+    </span>
+  </span>
+                            </div>
+
+                            <div class="app-topbar__menu-group app-topbar__menu-group--split" aria-label="Preferensi">
+                                <div class="app-topbar__menu-stack">
+                                    <div class="app-topbar__menu-label">Bahasa</div>
+                                    <div class="app-topbar__menu-group app-topbar__menu-group--language" aria-label="Bahasa">
+                                        <a class="app-topbar__menu-item is-active" href="http://ult-fkip-unila.test/locale/id">ID</a>
+                                        <a class="app-topbar__menu-item " href="http://ult-fkip-unila.test/locale/en">EN</a>
+                                    </div>
+                                </div>
+                                <div class="app-topbar__menu-stack app-topbar__menu-stack--theme">
+                                    <div class="app-topbar__menu-label">Mode</div>
+                                    <button type="button" class="pbtn public-theme-toggle app-topbar__menu-themebtn" x-on:click="$store.ui.toggleDark()" aria-label="Toggle theme">
+                                        <span class="public-theme-toggle__icon" aria-hidden="true">
+                                            <svg class="public-icon public-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
+                                                    <path d="M12 2v2"></path><path d="M12 20v2"></path>
+                                                    <path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path>
+                                                    <path d="M2 12h2"></path><path d="M20 12h2"></path>
+                                                    <path d="M6.34 17.66l-1.41 1.41"></path><path d="M19.07 4.93l-1.41 1.41"></path>
+                                            </svg>
+                                            <svg class="public-icon public-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+                                            </svg>
+                                        </span>
+                                        <span class="sr-only" data-theme-label="">Toggle theme</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                                                            <a class="app-topbar__menu-link " href="http://ult-fkip-unila.test/mahasiswa/dashboard" x-on:click="profileOpen = false">
+                                    <span>Dashboard</span>
+                                                                    </a>
+                                                            <a class="app-topbar__menu-link " href="http://ult-fkip-unila.test/notifikasi" x-on:click="profileOpen = false">
+                                    <span>Notifikasi</span>
+                                                                            <span class="app-notif-dot" aria-hidden="true"></span>
+                                                                    </a>
+                                                            <a class="app-topbar__menu-link " href="http://ult-fkip-unila.test/profil" x-on:click="profileOpen = false">
+                                    <span>Pengaturan</span>
+                                                                    </a>
+                            
+                            <form action="http://ult-fkip-unila.test/logout" method="POST" class="app-topbar__menu-form">
+                                <input type="hidden" name="_token" value="Z2UGnnD6PdlNQnRoLsh3GTfZLb8lHBJk87AUGYlS" autocomplete="off">                                <button type="submit" class="app-topbar__menu-link app-topbar__menu-link--danger">Keluar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                    <div class="app-topbar__mobile-sheet xl:hidden" x-show="profileOpen" x-transition.opacity.duration.120ms="" style="display: none;">
+                <button type="button" class="app-topbar__mobile-backdrop" x-on:click="profileOpen = false" aria-label="Tutup menu akun"></button>
+                <div class="app-topbar__mobile-panel" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 scale-95 -translate-y-1" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95 -translate-y-1" aria-label="Menu akun">
+                    <div class="app-topbar__menu-card">
+                        <div class="app-topbar__profile-summary flex items-center justify-between gap-3 border-b border-[rgb(var(--c-border))/0.75] px-3 py-3">
+                            <div class="app-topbar__profile-copy min-w-0 flex-1">
+                                <div class="app-topbar__profile-summary-name truncate text-sm font-semibold">Mahasiswa Demo</div>
+                                <div class="app-topbar__profile-summary-email truncate text-xs text-muted">mahasiswa@demo.test</div>
+                            </div>
+                            <span class="relative inline-flex shrink-0" style="width: 38px; height: 38px; line-height: 1;" data-avatar-root="">
+    <img src="/storage/avatars/WCdxYPXtLipa3ZVvz3yslKxDkdYgBUWJUyixeNH2.png" alt="Foto profil Mahasiswa Demo" class="object-cover border border-[rgb(var(--c-border))] bg-white relative z-10 app-topbar__profile-avatar block rounded-full" style="width: 38px; height: 38px;" loading="lazy" decoding="async" data-avatar-image="data-avatar-image" onerror="this.hidden=true;this.nextElementSibling.hidden=false;">
+    <span hidden="" aria-hidden="true" data-avatar-fallback="" class="inline-flex items-center justify-center text-center leading-none text-xs font-semibold bg-zinc-100 dark:bg-zinc-900 border border-[rgb(var(--c-border))] text-zinc-700 dark:text-zinc-200 select-none shrink-0 absolute inset-0 app-topbar__profile-avatar block rounded-full" style="width: 38px; height: 38px; line-height: 1;">
+      <span style="display:inline-flex;align-items:center;justify-content:center;width:100%;height:100%;line-height:1;transform:translateY(-0.02em);">MD</span>
+    </span>
+  </span>
+                        </div>
+
+                        <div class="app-topbar__menu-group app-topbar__menu-group--split" aria-label="Preferensi">
+                            <div class="app-topbar__menu-stack">
+                                <div class="app-topbar__menu-label">Bahasa</div>
+                                <div class="app-topbar__menu-group app-topbar__menu-group--language" aria-label="Bahasa">
+                                    <a class="app-topbar__menu-item is-active" href="http://ult-fkip-unila.test/locale/id">ID</a>
+                                    <a class="app-topbar__menu-item " href="http://ult-fkip-unila.test/locale/en">EN</a>
+                                </div>
+                            </div>
+                            <div class="app-topbar__menu-stack app-topbar__menu-stack--theme">
+                                <div class="app-topbar__menu-label">Mode</div>
+                                <button type="button" class="pbtn public-theme-toggle app-topbar__menu-themebtn" x-on:click="$store.ui.toggleDark()" aria-label="Toggle theme">
+                                    <span class="public-theme-toggle__icon" aria-hidden="true">
+                                        <svg class="public-icon public-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"></path>
+                                                <path d="M12 2v2"></path><path d="M12 20v2"></path>
+                                                <path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path>
+                                                <path d="M2 12h2"></path><path d="M20 12h2"></path>
+                                                <path d="M6.34 17.66l-1.41 1.41"></path><path d="M19.07 4.93l-1.41 1.41"></path>
+                                        </svg>
+                                        <svg class="public-icon public-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="sr-only" data-theme-label="">Toggle theme</span>
+                                </button>
+                            </div>
+                        </div>
+
+                                                    <a class="app-topbar__menu-link " href="http://ult-fkip-unila.test/mahasiswa/dashboard" x-on:click="profileOpen = false">
+                                <span>Dashboard</span>
+                                                            </a>
+                                                    <a class="app-topbar__menu-link " href="http://ult-fkip-unila.test/notifikasi" x-on:click="profileOpen = false">
+                                <span>Notifikasi</span>
+                                                                    <span class="app-notif-dot" aria-hidden="true"></span>
+                                                            </a>
+                                                    <a class="app-topbar__menu-link " href="http://ult-fkip-unila.test/profil" x-on:click="profileOpen = false">
+                                <span>Pengaturan</span>
+                                                            </a>
+                        
+                        <form action="http://ult-fkip-unila.test/logout" method="POST" class="app-topbar__menu-form">
+                            <input type="hidden" name="_token" value="Z2UGnnD6PdlNQnRoLsh3GTfZLb8lHBJk87AUGYlS" autocomplete="off">                            <button type="submit" class="app-topbar__menu-link app-topbar__menu-link--danger">Keluar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+</header>
+                <div class="app-shell__container app-shell__content ">
+                    <div x-data="{ open: true }" x-show="open" x-transition.opacity.duration.150ms="" role="alert" aria-live="polite" class="alert rounded-2xl border p-4 mb-4 border-green-200 bg-green-50 text-green-900 dark:border-green-900/40 dark:bg-green-900/20 dark:text-green-100">
+  <div class="flex items-start gap-3">
+    <div class="mt-0.5 shrink-0">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M20 6 9 17l-5-5"></path>
+      </svg>
+    </div>
+
+    <div class="min-w-0 flex-1">
+              <div class="text-sm font-semibold">Berhasil</div>
+            <div class="text-sm leading-relaxed">
+        Permohonan berhasil dibuat.
+      </div>
+    </div>
+
+          <button type="button" class="shrink-0 rounded-lg p-1 -m-1 opacity-70 hover:opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-current/30" @click="open = false" aria-label="Tutup">
+        <span aria-hidden="true">×</span>
+      </button>
+      </div>
+</div>
+        
+
+                            <div class="page-student-requests-show" data-student-requests-show-page="">
+        <header class="student-page-header">
+            <div class="student-page-heading">
+                <p class="student-page-kicker">Permohonan 080626-13</p>
+                <h2 class="student-page-title">Surat Keterangan Lulus</h2>
+                <p class="student-page-subtitle">Detail permohonan, lampiran, catatan, dan riwayat status.</p>
+            </div>
+            <div class="student-page-actions">
+                <a href="http://ult-fkip-unila.test/mahasiswa/permohonan" class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--focus-ring))] focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed border border-[rgb(var(--c-border))] bg-white/70 text-[rgb(var(--c-fg))] hover:bg-[rgb(var(--c-primary))] hover:text-white hover:border-[rgb(var(--c-primary))] dark:bg-zinc-900/70 dark:text-[rgb(var(--c-fg))] dark:hover:bg-[rgb(var(--c-primary))] dark:hover:text-white dark:hover:border-[rgb(var(--c-primary))] student-page-back-btn !border-[rgb(var(--c-primary))] !bg-[rgb(var(--c-primary))] !text-white hover:!border-[rgb(var(--c-primary))] hover:!bg-transparent hover:!text-[rgb(var(--c-primary))] dark:hover:!border-white dark:hover:!bg-transparent dark:hover:!text-white">
+    Kembali
+  </a>
+            </div>
+        </header>
+
+        <div class="student-show-layout">
+            <div class="student-show-main">
+                <div class="rounded-2xl bg-[rgb(var(--c-card))] border border-[rgb(var(--c-border))] shadow-sm p-5 student-show-card student-show-card--overview">
+  <div class="student-request-hero">
+                        <div class="student-request-hero__left">
+                            <div class="student-request-hero__kicker">Status saat ini</div>
+                            <div class="student-request-hero__badge">
+                                <span class="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-violet-100 text-violet-900 dark:bg-violet-900/30 dark:text-violet-100">
+  Diajukan
+</span>
+                            </div>
+                        </div>
+                        <div class="student-request-hero__right">
+                            <div class="student-request-hero__label">Diajukan</div>
+                            <div class="student-request-hero__time">08 Jun 2026 03:50</div>
+                        </div>
+                    </div>
+
+                    <div class="student-overview-grid">
+                        
+                        <div class="student-docnum student-docnum--action">
+                            <div class="student-docnum__header">
+                                <div class="student-docnum__label">Aksi</div>
+                            </div>
+                            <div class="student-docnum__body">
+                                                            <div class="student-action-empty">
+                                    <div class="student-action-empty__text">Tidak ada aksi saat ini.</div>
+                                </div>
+                                                        </div>
+                        </div>
+                    </div>
+</div>
+
+                <div class="rounded-2xl bg-[rgb(var(--c-card))] border border-[rgb(var(--c-border))] shadow-sm p-5 student-show-card">
+  <div class="student-card-header">
+                        <div class="student-card-title">Data permohonan</div>
+                        <div class="student-card-subtitle">
+                            Data yang Anda kirim saat pengajuan.
+                        </div>
+                    </div>
+
+                                            <div class="student-kv-list">
+                                                                                                                                                                                                                    <div class="student-kv">
+                                    <div class="student-kv__label">Alamat</div>
+                                    <div class="student-kv__value">
+                                                                                    Jl. Mahasiswa No 1
+                                                                            </div>
+                                </div>
+                                                                                                                            <div class="student-kv">
+                                    <div class="student-kv__label">Ipk Angka</div>
+                                    <div class="student-kv__value">
+                                                                                    3.80
+                                                                            </div>
+                                </div>
+                                                                                                                            <div class="student-kv">
+                                    <div class="student-kv__label">Ipk Terbilang</div>
+                                    <div class="student-kv__value">
+                                                                                    Tiga koma delapan nol
+                                                                            </div>
+                                </div>
+                                                                                                                            <div class="student-kv">
+                                    <div class="student-kv__label">Judul Skripsi</div>
+                                    <div class="student-kv__value">
+                                                                                    <div class="content-prose"><p>Pengembangan Sistem Web ULT</p></div>
+                                                                            </div>
+                                </div>
+                                                                                                                            <div class="student-kv">
+                                    <div class="student-kv__label">Predikat Kelulusan</div>
+                                    <div class="student-kv__value">
+                                                                                    Dengan Pujian
+                                                                            </div>
+                                </div>
+                                                                                                                            <div class="student-kv">
+                                    <div class="student-kv__label">Tanggal Lulus</div>
+                                    <div class="student-kv__value">
+                                                                                    01 Januari 2026
+                                                                            </div>
+                                </div>
+                                                                                                                            <div class="student-kv">
+                                    <div class="student-kv__label">Tempat Tanggal Lahir</div>
+                                    <div class="student-kv__value">
+                                                                                    Bandar Lampung, 1 Januari 2000
+                                                                            </div>
+                                </div>
+                                                    </div>
+                    
+                                            <div class="student-data-actions">
+                            <div class="student-data-actions__left">
+                                                            </div>
+                            <div class="student-data-actions__right">
+                                                                    <a href="http://ult-fkip-unila.test/permohonan/54/preview" class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--focus-ring))] focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed border border-[rgb(var(--c-border))] bg-white/70 text-[rgb(var(--c-fg))] hover:bg-[rgb(var(--c-primary))] hover:text-white hover:border-[rgb(var(--c-primary))] dark:bg-zinc-900/70 dark:text-[rgb(var(--c-fg))] dark:hover:bg-[rgb(var(--c-primary))] dark:hover:text-white dark:hover:border-[rgb(var(--c-primary))] !border-[rgb(var(--c-primary))] !bg-transparent !text-[rgb(var(--c-primary))] hover:!border-[rgb(var(--c-primary))] hover:!bg-[rgb(var(--c-primary))] hover:!text-white dark:!border-[rgb(var(--c-primary))] dark:!bg-transparent dark:!text-[rgb(var(--c-primary))] dark:hover:!border-[rgb(var(--c-primary))] dark:hover:!bg-[rgb(var(--c-primary))] dark:hover:!text-white" target="_blank">
+    Buka preview
+  </a>
+                                                            </div>
+                        </div>
+</div>
+
+                
+                <div class="rounded-2xl bg-[rgb(var(--c-card))] border border-[rgb(var(--c-border))] shadow-sm p-5 student-show-card">
+  <div class="student-card-header">
+                        <div class="student-card-title">Catatan</div>
+                        <div class="student-card-subtitle">Catatan terlihat oleh Anda dan petugas (kecuali catatan
+                            internal).</div>
+                    </div>
+                    <form class="student-note-form" method="POST" action="http://ult-fkip-unila.test/mahasiswa/permohonan/54/catatan">
+                        <input type="hidden" name="_token" value="Z2UGnnD6PdlNQnRoLsh3GTfZLb8lHBJk87AUGYlS" autocomplete="off">                        <div class="space-y-1">
+      <label class="text-sm font-medium" for="body">Tulis catatan (opsional)</label>
+    <textarea rows="3" class="w-full rounded-xl border bg-white/70 dark:bg-zinc-900 px-3 py-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--focus-ring))] border-[rgb(var(--c-border))]" name="body" id="body"></textarea>
+  </div>
+                        <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--focus-ring))] focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed border border-transparent bg-[rgb(var(--c-primary))] text-white hover:bg-white hover:text-[rgb(var(--c-primary))] hover:border-[rgb(var(--c-primary))] student-note-submit">
+    Kirim Catatan
+  </button>
+                    </form>
+                    <div class="student-note-list">
+                                            </div>
+</div>
+            </div>
+
+            <div class="student-show-side">
+                <div class="rounded-2xl bg-[rgb(var(--c-card))] border border-[rgb(var(--c-border))] shadow-sm p-5 student-show-card">
+  <div class="student-card-header">
+                        <div class="student-card-title">Riwayat Status</div>
+                    </div>
+                    <div class="student-history-list">
+                                                    <div class="student-history">
+                                <div class="student-history__meta">
+                                    08 Jun 2026 03:50 •
+                                    Mahasiswa Demo</div>
+                                <div class="student-history__body">
+                                    <div class="student-history__line">DIAJUKAN → <span class="student-history__to">DIAJUKAN</span></div>
+                                                                            <div class="student-history__note">Permohonan diajukan</div>
+                                                                    </div>
+                            </div>
+                                            </div>
+</div>
+            </div>
+        </div>
+    </div>
+                </div>
+                <style>
+  @media (max-width: 639px) {
+    .page-public-footer .public-footer__bottom {
+      gap: 1rem;
+    }
+
+    .page-public-footer .public-footer__copyright {
+      max-width: 24rem;
+      line-height: 1.6;
+    }
+
+    .page-public-footer .public-footer__meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .55rem .9rem;
+      width: 100%;
+    }
+
+    .page-public-footer .public-footer__meta .public-footer__link {
+      display: block;
+      width: 100%;
+      padding-top: .15rem;
+      padding-bottom: .15rem;
+      line-height: 1.45;
+    }
+  }
+</style>
+
+<div class="page-public-footer">
+  <footer class="public-footer" aria-label="Footer">
+    <div class="public-footer__mesh" aria-hidden="true">
+      <span class="public-footer__mesh-blob public-footer__mesh-blob--a"></span>
+      <span class="public-footer__mesh-blob public-footer__mesh-blob--d"></span>
+      <span class="public-footer__mesh-blob public-footer__mesh-blob--b"></span>
+      <span class="public-footer__mesh-blob public-footer__mesh-blob--c"></span>
+    </div>
+
+    <div class="public-container public-footer__inner">
+      <div class="public-footer__top">
+        <div class="public-footer__brand">
+          <a href="http://ult-fkip-unila.test" class="public-footer__logo">
+            <span class="public-footer__logos" style="display:inline-flex;align-items:center;flex-direction:row;flex-wrap:nowrap;gap:.42rem;white-space:nowrap;line-height:0;">
+              <img src="http://ult-fkip-unila.test/icons/unila.png" alt="Logo Universitas Lampung" class="public-footer__logoimg public-footer__logoimg--unila" style="display:block;" loading="lazy" decoding="async">
+              <img src="http://ult-fkip-unila.test/icons/logo.png" alt="Logo FKIP Unila" class="public-footer__logoimg public-footer__logoimg--fkip" style="display:block;" loading="lazy" decoding="async">
+            </span>
+            <span>ULT FKIP Unila</span>
+          </a>
+          <div class="public-footer__tagline">Transparan • Cepat • Terlacak</div>
+        </div>
+
+        <div class="public-footer__cols" aria-label="Tautan">
+          <div class="public-footer__col" style="display:flex;flex-direction:column;align-items:flex-start;padding:1rem 1.1rem;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));box-shadow:0 18px 40px rgba(44,7,73,.18);backdrop-filter:blur(10px);">
+            <div class="public-footer__title" style="display:flex;align-items:center;gap:.55rem;margin-bottom:.65rem;">
+              <span style="display:inline-block;width:.6rem;height:.6rem;border-radius:999px;background:linear-gradient(135deg,#f9a8d4,#c4b5fd);box-shadow:0 0 0 4px rgba(255,255,255,.08);"></span>
+              <span>Layanan</span>
+            </div>
+                          <a class="public-footer__link" href="http://ult-fkip-unila.test/layanan?category=13" style="display:flex;align-items:center;gap:.65rem;width:100%;padding:.65rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);font-size:.78rem;line-height:1;">+</span>
+                <span>Akademik dan Kerja Sama</span>
+              </a>
+                          <a class="public-footer__link" href="http://ult-fkip-unila.test/layanan?category=14" style="display:flex;align-items:center;gap:.65rem;width:100%;padding:.65rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);font-size:.78rem;line-height:1;">+</span>
+                <span>Umum dan Keuangan</span>
+              </a>
+                          <a class="public-footer__link" href="http://ult-fkip-unila.test/layanan?category=15" style="display:flex;align-items:center;gap:.65rem;width:100%;padding:.65rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);font-size:.78rem;line-height:1;">+</span>
+                <span>Kemahasiswaan dan Alumni</span>
+              </a>
+                          <a class="public-footer__link" href="http://ult-fkip-unila.test/layanan?category=16" style="display:flex;align-items:center;gap:.65rem;width:100%;padding:.65rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);font-size:.78rem;line-height:1;">+</span>
+                <span>Lainnya</span>
+              </a>
+                      </div>
+
+          <div class="public-footer__col" style="display:flex;flex-direction:column;align-items:flex-start;padding:1rem 1.1rem;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));box-shadow:0 18px 40px rgba(44,7,73,.18);backdrop-filter:blur(10px);">
+            <div class="public-footer__title" style="display:flex;align-items:center;gap:.55rem;margin-bottom:.65rem;">
+              <span style="display:inline-block;width:.6rem;height:.6rem;border-radius:999px;background:linear-gradient(135deg,#fde68a,#c4b5fd);box-shadow:0 0 0 4px rgba(255,255,255,.08);"></span>
+              <span>Tautan Terkait</span>
+            </div>
+                          <a class="public-footer__link" href="https://fkip.unila.ac.id/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.65rem;width:100%;padding:.65rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);font-size:.78rem;line-height:1;">↗</span>
+                <span>FKIP Unila</span>
+              </a>
+                          <a class="public-footer__link" href="https://www.unila.ac.id/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.65rem;width:100%;padding:.65rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);font-size:.78rem;line-height:1;">↗</span>
+                <span>Universitas Lampung</span>
+              </a>
+                          <a class="public-footer__link" href="https://plt.fkip.unila.ac.id/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.65rem;width:100%;padding:.65rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);font-size:.78rem;line-height:1;">↗</span>
+                <span>PLT Unila</span>
+              </a>
+                          <a class="public-footer__link" href="https://akdfkip.blogspot.com/p/legalisir-online.html" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.65rem;width:100%;padding:.65rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);font-size:.78rem;line-height:1;">↗</span>
+                <span>Legalisir Online</span>
+              </a>
+                          <a class="public-footer__link" href="https://akademik.fkip.unila.ac.id/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.65rem;width:100%;padding:.65rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);font-size:.78rem;line-height:1;">↗</span>
+                <span>Portal Akademik</span>
+              </a>
+                          <a class="public-footer__link" href="https://library.unila.ac.id/" target="_blank" rel="noopener noreferrer" style="display:flex;align-items:center;gap:.65rem;width:100%;padding:.65rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);">
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:1.45rem;height:1.45rem;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.92);font-size:.78rem;line-height:1;">↗</span>
+                <span>Perpustakaan Unila</span>
+              </a>
+                      </div>
+        </div>
+      </div>
+
+      <div class="public-footer__bottom">
+        <div class="public-footer__copyright">
+          © 2026 Andricha Dea Mitra. All rights reserved.
+        </div>
+        <div class="public-footer__meta">
+                      <a class="public-footer__link" href="http://ult-fkip-unila.test/pengumuman">Pengumuman</a>
+                      <a class="public-footer__link" href="http://ult-fkip-unila.test/blog">Blog</a>
+                      <a class="public-footer__link" href="http://ult-fkip-unila.test/panduan-pengguna">Panduan</a>
+                      <a class="public-footer__link" href="http://ult-fkip-unila.test/kritik-saran">Kritik &amp; Saran</a>
+                      <a class="public-footer__link" href="http://ult-fkip-unila.test/tentang-ult">Tentang ULT</a>
+                  </div>
+      </div>
+    </div>
+  </footer>
+</div>
+            </main>
+        
+        <div x-data="" class="fixed bottom-4 right-4 z-50 space-y-2">
+  <template x-for="t in $store.toast.toasts" :key="t.id">
+    <div class="w-80 rounded-2xl border border-[rgb(var(--c-border))] bg-[rgb(var(--c-card))] shadow-lg p-4">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <div class="text-sm font-semibold" x-text="t.title || 'Info'"></div>
+          <div class="text-sm text-muted mt-1" x-text="t.message"></div>
+        </div>
+        <button class="text-muted hover:opacity-80" @click="$store.toast.dismiss(t.id)">×</button>
+      </div>
+    </div>
+  </template>
+</div>
+    </div>
+
+
+</body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Screenshot Web Asli - ULT FKIP Unila</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        body { background-color: #e5e5e5; color: #374151; font-family: system-ui, -apple-system, sans-serif; }
+        .wf-border { border: 2px solid #4b5563; }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #9ca3af; border: 2px solid #e5e5e5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+        
+        .browser-window {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 3px solid #374151;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body class="h-screen w-full flex overflow-hidden" x-data="{ currentTab: '1_beranda' }">
+
+    <!-- Navigator Sidebar -->
+    <aside class="w-64 bg-gray-200 border-r-3 border-gray-700 flex flex-col shrink-0 z-50 wf-border">
+        <div class="p-5 border-b-2 border-gray-600 bg-white">
+            <h1 class="font-bold text-xl">Screenshot Asli</h1>
+            <p class="text-sm font-bold text-gray-500 mt-1">Tahap Pengembangan</p>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto py-4 px-3 space-y-1">
+            <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 px-3 mt-2">1. Public Portal</div>
+            <button @click="currentTab = '1_beranda'" :class="{'bg-gray-700 text-white': currentTab === '1_beranda', 'hover:bg-gray-300': currentTab !== '1_beranda'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors">
+                Beranda Utama
+            </button>
+            <button @click="currentTab = '2_katalog'" :class="{'bg-gray-700 text-white': currentTab === '2_katalog', 'hover:bg-gray-300': currentTab !== '2_katalog'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors">
+                Katalog Layanan
+            </button>
+            <button @click="currentTab = '3_berita'" :class="{'bg-gray-700 text-white': currentTab === '3_berita', 'hover:bg-gray-300': currentTab !== '3_berita'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors">
+                Berita & Info
+            </button>
+            
+            <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 px-3 mt-6">2. Authentication</div>
+            <button @click="currentTab = '4_login'" :class="{'bg-gray-700 text-white': currentTab === '4_login', 'hover:bg-gray-300': currentTab !== '4_login'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors">
+                Login & Register
+            </button>
+
+            <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 px-3 mt-6">3. Student Portal</div>
+            <button @click="currentTab = '5_student_dash'" :class="{'bg-gray-700 text-white': currentTab === '5_student_dash', 'hover:bg-gray-300': currentTab !== '5_student_dash'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors">
+                Dasbor Mahasiswa
+            </button>
+            <button @click="currentTab = '6_student_form'" :class="{'bg-gray-700 text-white': currentTab === '6_student_form', 'hover:bg-gray-300': currentTab !== '6_student_form'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors">
+                Form Pengajuan
+            </button>
+            <button @click="currentTab = '7_student_timeline'" :class="{'bg-gray-700 text-white': currentTab === '7_student_timeline', 'hover:bg-gray-300': currentTab !== '7_student_timeline'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors">
+                Riwayat & Timeline
+            </button>
+
+            <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 px-3 mt-6">4. Admin Portal</div>
+            <button @click="currentTab = '8_admin_dash'" :class="{'bg-gray-700 text-white': currentTab === '8_admin_dash', 'hover:bg-gray-300': currentTab !== '8_admin_dash'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors">
+                Dasbor Staff
+            </button>
+            <button @click="currentTab = '9_admin_review'" :class="{'bg-gray-700 text-white': currentTab === '9_admin_review', 'hover:bg-gray-300': currentTab !== '9_admin_review'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors">
+                Detail Review
+            </button>
+            <button @click="currentTab = '10_admin_template'" :class="{'bg-gray-700 text-white': currentTab === '10_admin_template', 'hover:bg-gray-300': currentTab !== '10_admin_template'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors">
+                Manajemen Template
+            </button>
+
+            <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 px-3 mt-6">5. Signer Portal</div>
+            <button @click="currentTab = '11_signer'" :class="{'bg-gray-700 text-white': currentTab === '11_signer', 'hover:bg-gray-300': currentTab !== '11_signer'}" class="w-full text-left px-3 py-2 rounded text-md font-bold transition-colors mb-8">
+                Verifikasi Pejabat
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Viewport -->
+    <main class="flex-1 relative flex flex-col p-4 md:p-8 overflow-hidden bg-gray-400">
+        <!-- Browser Window Frame -->
+        <div class="w-full h-full mx-auto browser-window flex flex-col relative" style="max-width: 1366px;">
+            <!-- Browser Header -->
+            <div class="h-12 bg-gray-200 border-b-2 border-gray-600 flex items-center shrink-0 px-4 relative">
+                <div class="flex gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                </div>
+                <div class="absolute left-1/2 -translate-x-1/2 font-bold text-gray-600 text-sm">Preview Halaman Asli Sistem</div>
+            </div>
+            
+            <!-- Content Area (Scrollable within the browser frame) -->
+            <div class="flex-1 overflow-y-auto bg-gray-100 relative text-center">
+                <template x-if="currentTab === '1_beranda'"><img src="screenshots/01-beranda-sistem.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Beranda"></template>
+                <template x-if="currentTab === '2_katalog'"><img src="screenshots/02-daftar-layanan.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Katalog"></template>
+                <template x-if="currentTab === '3_berita'"><img src="screenshots/004-blog-index.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Berita"></template>
+                <template x-if="currentTab === '4_login'"><img src="screenshots/05-login.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Login"></template>
+                <template x-if="currentTab === '5_student_dash'"><img src="screenshots/06-dashboard-pemohon.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Dasbor Mahasiswa"></template>
+                <template x-if="currentTab === '6_student_form'"><img src="screenshots/08-form-pengajuan.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Form Pengajuan"></template>
+                <template x-if="currentTab === '7_student_timeline'"><img src="screenshots/09-riwayat-permohonan.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Riwayat"></template>
+                <template x-if="currentTab === '8_admin_dash'"><img src="screenshots/admin_dashboard__desktop-1366.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Dasbor Staff"></template>
+                <template x-if="currentTab === '9_admin_review'"><img src="screenshots/admin_requests_show__desktop-1366.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Detail Review"></template>
+                <template x-if="currentTab === '10_admin_template'"><img src="screenshots/admin_doc_formats_show__desktop-1366.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Template"></template>
+                <template x-if="currentTab === '11_signer'"><img src="screenshots/07-detail-penandatanganan.jpg" class="w-full h-auto block mx-auto shadow-sm" alt="Signer"></template>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

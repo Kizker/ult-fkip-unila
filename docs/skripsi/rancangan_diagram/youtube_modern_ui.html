@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern YouTube UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af; 
+        }
+        .placeholder-img {
+            background-color: #e5e7eb;
+            background-image: linear-gradient(45deg, #f3f4f6 25%, transparent 25%, transparent 75%, #f3f4f6 75%, #f3f4f6),
+                              linear-gradient(45deg, #f3f4f6 25%, transparent 25%, transparent 75%, #f3f4f6 75%, #f3f4f6);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+        }
+        .gradient-ad {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+    </style>
+</head>
+<body class="text-gray-900 antialiased h-screen flex flex-col overflow-hidden">
+
+    <!-- Top Navigation -->
+    <header class="bg-white h-16 flex items-center justify-between px-6 border-b border-gray-200 shrink-0 z-10">
+        <!-- Logo Area -->
+        <div class="flex items-center gap-4 w-1/4">
+            <button class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+            <div class="flex items-center gap-1 cursor-pointer">
+                <i class="fa-brands fa-youtube text-red-600 text-3xl"></i>
+                <span class="text-xl font-bold tracking-tight">YouTube</span>
+            </div>
+        </div>
+
+        <!-- Center: Search and Tabs -->
+        <div class="flex-1 flex flex-col items-center justify-center gap-2 max-w-2xl">
+            <!-- Search Bar -->
+            <div class="flex w-full mt-2">
+                <div class="flex items-center w-full bg-white border border-gray-300 rounded-l-full px-4 py-2 focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500 shadow-inner">
+                    <i class="fa-solid fa-magnifying-glass text-gray-400 mr-3"></i>
+                    <input type="text" placeholder="Search..." class="w-full bg-transparent focus:outline-none text-sm font-medium text-gray-700">
+                </div>
+                <button class="bg-gray-100 border border-l-0 border-gray-300 rounded-r-full px-6 hover:bg-gray-200 transition-colors">
+                    <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+                </button>
+                <button class="ml-4 bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-200 border border-transparent">
+                    <i class="fa-solid fa-microphone text-gray-700"></i>
+                </button>
+            </div>
+            <!-- Tabs (As per wireframe) -->
+            <div class="flex gap-2">
+                <button class="px-4 py-1.5 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors">Home</button>
+                <button class="px-4 py-1.5 bg-gray-100 text-gray-700 text-sm font-medium rounded-lg border border-gray-200 hover:bg-gray-200 transition-colors">Trending</button>
+                <button class="px-4 py-1.5 bg-gray-100 text-gray-700 text-sm font-medium rounded-lg border border-gray-200 hover:bg-gray-200 transition-colors">Subscription</button>
+            </div>
+        </div>
+
+        <!-- Right: Actions -->
+        <div class="flex items-center justify-end gap-5 w-1/4">
+            <button class="text-gray-600 hover:text-gray-900 transition-colors relative" title="Create">
+                <i class="fa-solid fa-arrow-up-from-bracket text-lg"></i>
+            </button>
+            <button class="text-gray-600 hover:text-gray-900 transition-colors relative" title="Notifications">
+                <i class="fa-regular fa-bell text-xl"></i>
+                <span class="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center border-2 border-white">3</span>
+            </button>
+            <button class="text-gray-600 hover:text-gray-900 transition-colors" title="Settings">
+                <i class="fa-solid fa-gear text-xl"></i>
+            </button>
+            <!-- User Profile placeholder (header) -->
+            <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm cursor-pointer border border-blue-700 shadow-sm ml-2">
+                A
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="flex flex-1 overflow-hidden">
+        
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-gray-200 overflow-y-auto shrink-0 hidden md:block pb-8">
+            <!-- Profile Info (from wireframe) -->
+            <div class="p-6 flex flex-col items-center border-b border-gray-100">
+                <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mb-3 overflow-hidden shadow-sm border border-gray-200">
+                    <img src="https://ui-avatars.com/api/?name=User+Name&background=random&size=128" alt="Profile" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-semibold text-gray-800">My Channel Name</h3>
+                <p class="text-xs text-gray-500 mt-1">10.5K subscribers</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="py-3 border-b border-gray-100">
+                <a href="#" class="flex items-center gap-4 px-6 py-2.5 bg-gray-100 text-gray-900 font-medium hover:bg-gray-100">
+                    <i class="fa-solid fa-house w-5 text-center text-gray-800"></i>
+                    <span class="text-sm">Home</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 px-6 py-2.5 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+                    <i class="fa-regular fa-circle-user w-5 text-center text-gray-500"></i>
+                    <span class="text-sm">My Channel</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 px-6 py-2.5 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+                    <i class="fa-solid fa-fire-flame-curved w-5 text-center text-gray-500"></i>
+                    <span class="text-sm">Trending</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 px-6 py-2.5 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+                    <i class="fa-brands fa-youtube w-5 text-center text-gray-500"></i>
+                    <span class="text-sm">Subscription</span>
+                </a>
+            </nav>
+
+            <nav class="py-3 border-b border-gray-100">
+                <a href="#" class="flex items-center gap-4 px-6 py-2.5 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+                    <i class="fa-solid fa-clock-rotate-left w-5 text-center text-gray-500"></i>
+                    <span class="text-sm">History</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 px-6 py-2.5 text-gray-700 font-medium hover:bg-gray-50 transition-colors">
+                    <i class="fa-regular fa-clock w-5 text-center text-gray-500"></i>
+                    <span class="text-sm">Watch Later</span>
+                </a>
+            </nav>
+
+            <!-- Subscriptions -->
+            <div class="py-4">
+                <h4 class="px-6 text-sm font-bold text-gray-800 mb-3 uppercase tracking-wider">Subscriptions</h4>
+                
+                <a href="#" class="flex items-center gap-3 px-6 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                    <img src="https://ui-avatars.com/api/?name=Tech+Channel&background=ff4757&color=fff&size=32" class="w-6 h-6 rounded-full" alt="Tech Channel">
+                    <span class="text-sm font-medium truncate">Tech Channel</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-6 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                    <img src="https://ui-avatars.com/api/?name=Music+Vevo&background=2ed573&color=fff&size=32" class="w-6 h-6 rounded-full" alt="Music Vevo">
+                    <span class="text-sm font-medium truncate">Music Vevo</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-6 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                    <img src="https://ui-avatars.com/api/?name=Gaming+Pro&background=1e90ff&color=fff&size=32" class="w-6 h-6 rounded-full" alt="Gaming Pro">
+                    <span class="text-sm font-medium truncate">Gaming Pro</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-6 py-2 text-gray-700 hover:bg-gray-50 transition-colors">
+                    <img src="https://ui-avatars.com/api/?name=Daily+Vlog&background=ffa502&color=fff&size=32" class="w-6 h-6 rounded-full" alt="Daily Vlog">
+                    <span class="text-sm font-medium truncate">Daily Vlog</span>
+                </a>
+                <a href="#" class="flex items-center gap-4 px-6 py-2.5 text-blue-600 font-medium hover:bg-gray-50 transition-colors mt-1">
+                    <i class="fa-solid fa-chevron-down w-5 text-center"></i>
+                    <span class="text-sm">Show 12 more</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto p-6 lg:p-8 bg-gray-50">
+            <div class="max-w-7xl mx-auto">
+                
+                <!-- Ad Banner -->
+                <div class="w-full h-40 md:h-56 gradient-ad rounded-2xl mb-10 relative overflow-hidden shadow-lg flex items-center justify-center group cursor-pointer">
+                    <!-- Overlay graphic elements -->
+                    <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                    <div class="z-10 text-center text-white px-4">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-2 shadow-sm">Premium Content Promotion</h2>
+                        <p class="text-lg opacity-90 max-w-xl mx-auto">Discover high-quality videos, ad-free experience, and exclusive creator content.</p>
+                        <button class="mt-4 px-6 py-2 bg-white text-purple-700 font-bold rounded-full hover:bg-gray-100 transition-transform transform group-hover:scale-105">Learn More</button>
+                    </div>
+                    <!-- Ad Badge -->
+                    <div class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded shadow-sm">
+                        Ad
+                    </div>
+                </div>
+
+                <!-- Recommended Section -->
+                <div class="mb-10">
+                    <h2 class="text-xl font-bold text-gray-900 mb-5">Recommended</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-8">
+                        
+                        <!-- Video Card 1 -->
+                        <div class="group cursor-pointer">
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute bottom-1.5 right-1.5 bg-black bg-opacity-80 text-white text-xs font-medium px-1.5 py-0.5 rounded">12:34</span>
+                            </div>
+                            <div class="flex gap-3 pr-2">
+                                <img src="https://ui-avatars.com/api/?name=Educator&background=random&size=40" class="w-9 h-9 rounded-full shrink-0 mt-0.5" alt="Avatar">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 leading-tight mb-1 group-hover:text-blue-600">The Complete Web Development Bootcamp 2026</h3>
+                                    <p class="text-xs text-gray-500 hover:text-gray-800 transition-colors">CodeMaster Academy</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">1.2M views &bull; 2 weeks ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 2 -->
+                        <div class="group cursor-pointer">
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute bottom-1.5 right-1.5 bg-black bg-opacity-80 text-white text-xs font-medium px-1.5 py-0.5 rounded">08:15</span>
+                            </div>
+                            <div class="flex gap-3 pr-2">
+                                <img src="https://ui-avatars.com/api/?name=Tech+Guru&background=random&size=40" class="w-9 h-9 rounded-full shrink-0 mt-0.5" alt="Avatar">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 leading-tight mb-1 group-hover:text-blue-600">Top 10 Tech Gadgets You Must See</h3>
+                                    <p class="text-xs text-gray-500 hover:text-gray-800 transition-colors">Tech Insider</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">850K views &bull; 5 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 3 -->
+                        <div class="group cursor-pointer">
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute bottom-1.5 right-1.5 bg-black bg-opacity-80 text-white text-xs font-medium px-1.5 py-0.5 rounded">24:50</span>
+                            </div>
+                            <div class="flex gap-3 pr-2">
+                                <img src="https://ui-avatars.com/api/?name=Data+Science&background=random&size=40" class="w-9 h-9 rounded-full shrink-0 mt-0.5" alt="Avatar">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 leading-tight mb-1 group-hover:text-blue-600">Machine Learning Basics Explained</h3>
+                                    <p class="text-xs text-gray-500 hover:text-gray-800 transition-colors">AI Explained</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">340K views &bull; 1 month ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 4 -->
+                        <div class="group cursor-pointer">
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute bottom-1.5 right-1.5 bg-black bg-opacity-80 text-white text-xs font-medium px-1.5 py-0.5 rounded">15:20</span>
+                            </div>
+                            <div class="flex gap-3 pr-2">
+                                <img src="https://ui-avatars.com/api/?name=Photography&background=random&size=40" class="w-9 h-9 rounded-full shrink-0 mt-0.5" alt="Avatar">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 leading-tight mb-1 group-hover:text-blue-600">Cinematic Lighting Techniques</h3>
+                                    <p class="text-xs text-gray-500 hover:text-gray-800 transition-colors">Filmmaker Pro</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">2.1M views &bull; 1 year ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 5 -->
+                        <div class="group cursor-pointer">
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute bottom-1.5 right-1.5 bg-black bg-opacity-80 text-white text-xs font-medium px-1.5 py-0.5 rounded">10:05</span>
+                            </div>
+                            <div class="flex gap-3 pr-2">
+                                <img src="https://ui-avatars.com/api/?name=Gaming&background=random&size=40" class="w-9 h-9 rounded-full shrink-0 mt-0.5" alt="Avatar">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 leading-tight mb-1 group-hover:text-blue-600">Next-Gen Console Review</h3>
+                                    <p class="text-xs text-gray-500 hover:text-gray-800 transition-colors">GamerZ</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">500K views &bull; 2 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <hr class="border-gray-200 mb-8">
+
+                <!-- Recently Uploaded Section -->
+                <div class="mb-10">
+                    <h2 class="text-xl font-bold text-gray-900 mb-5">Recently Uploaded</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-8">
+                        
+                        <!-- Video Card 6 -->
+                        <div class="group cursor-pointer">
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute bottom-1.5 right-1.5 bg-black bg-opacity-80 text-white text-xs font-medium px-1.5 py-0.5 rounded">05:42</span>
+                            </div>
+                            <div class="flex gap-3 pr-2">
+                                <img src="https://ui-avatars.com/api/?name=Design&background=random&size=40" class="w-9 h-9 rounded-full shrink-0 mt-0.5" alt="Avatar">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 leading-tight mb-1 group-hover:text-blue-600">UI/UX Design Trends 2026</h3>
+                                    <p class="text-xs text-gray-500 hover:text-gray-800 transition-colors">Design Daily</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">12K views &bull; 4 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 7 -->
+                        <div class="group cursor-pointer">
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute bottom-1.5 right-1.5 bg-black bg-opacity-80 text-white text-xs font-medium px-1.5 py-0.5 rounded">22:15</span>
+                            </div>
+                            <div class="flex gap-3 pr-2">
+                                <img src="https://ui-avatars.com/api/?name=Hardware&background=random&size=40" class="w-9 h-9 rounded-full shrink-0 mt-0.5" alt="Avatar">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 leading-tight mb-1 group-hover:text-blue-600">Building a Custom PC from Scratch</h3>
+                                    <p class="text-xs text-gray-500 hover:text-gray-800 transition-colors">PC Builder</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">45K views &bull; 10 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 8 -->
+                        <div class="group cursor-pointer">
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute bottom-1.5 right-1.5 bg-black bg-opacity-80 text-white text-xs font-medium px-1.5 py-0.5 rounded">03:30</span>
+                            </div>
+                            <div class="flex gap-3 pr-2">
+                                <img src="https://ui-avatars.com/api/?name=Music&background=random&size=40" class="w-9 h-9 rounded-full shrink-0 mt-0.5" alt="Avatar">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 leading-tight mb-1 group-hover:text-blue-600">Lo-Fi Beats to Relax/Study to</h3>
+                                    <p class="text-xs text-gray-500 hover:text-gray-800 transition-colors">Chill Radio</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">2.5K views &bull; 1 day ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 9 -->
+                        <div class="group cursor-pointer">
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute bottom-1.5 right-1.5 bg-black bg-opacity-80 text-white text-xs font-medium px-1.5 py-0.5 rounded">18:45</span>
+                            </div>
+                            <div class="flex gap-3 pr-2">
+                                <img src="https://ui-avatars.com/api/?name=Career&background=random&size=40" class="w-9 h-9 rounded-full shrink-0 mt-0.5" alt="Avatar">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 leading-tight mb-1 group-hover:text-blue-600">How to Prepare for Coding Interviews</h3>
+                                    <p class="text-xs text-gray-500 hover:text-gray-800 transition-colors">Career Path</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">89K views &bull; 2 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Card 10 -->
+                        <div class="group cursor-pointer">
+                            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-3 bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                                <span class="absolute bottom-1.5 right-1.5 bg-black bg-opacity-80 text-white text-xs font-medium px-1.5 py-0.5 rounded">09:12</span>
+                            </div>
+                            <div class="flex gap-3 pr-2">
+                                <img src="https://ui-avatars.com/api/?name=Minimal&background=random&size=40" class="w-9 h-9 rounded-full shrink-0 mt-0.5" alt="Avatar">
+                                <div>
+                                    <h3 class="text-sm font-semibold text-gray-900 line-clamp-2 leading-tight mb-1 group-hover:text-blue-600">Minimalist Workspace Setup Tour</h3>
+                                    <p class="text-xs text-gray-500 hover:text-gray-800 transition-colors">Desk Setup</p>
+                                    <p class="text-xs text-gray-500 mt-0.5">150K views &bull; 3 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

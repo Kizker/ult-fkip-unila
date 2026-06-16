@@ -1,0 +1,316 @@
+=== EXTRACTING ALL PARAGRAPHS FROM P 625 TO THE END ===
+P 625 (Heading 1): IV. HASIL DAN PEMBAHASAN
+P 626 (Paragraph): 
+P 627 (Heading 2): A. Hasil Pengembangan Produk Website ULT FKIP Unila
+P 628 (Paragraph): Pengembangan Website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung dilakukan dengan menerapkan model pengembangan ADDIE (Analysis, Design, Development, Implementation, dan Evaluation). Produk akhir yang dihasilkan berupa aplikasi web monolitik yang dibangun menggunakan framework Laravel 12 dengan runtime PHP 8.4+, database MySQL, dan antarmuka dinamis berbasis TailwindCSS dan Alpine.js. Website ini dirancang untuk mendigitalisasi dan mengotomatisasi seluruh alur pengajuan dokumen dan surat-menyurat mahasiswa yang sebelumnya dilakukan secara manual dan terdistribusi.
+P 629 (Paragraph): Website ULT FKIP Unila yang dikembangkan terbagi atas empat portal utama yang saling terintegrasi dengan peran pengguna yang spesifik, yaitu:
+P 630 (Paragraph): 1. Public Portal: Portal utama yang dapat diakses oleh publik tanpa memerlukan proses login. Portal ini berfungsi sebagai landing page yang menyajikan katalog seluruh layanan akademik dan kemahasiswaan beserta syarat-syarat administrasinya, papan pengumuman resmi, artikel blog, dan CMS pengelola konten halaman publik.
+P 631 (Paragraph): 2. Student Portal: Dasbor khusus mahasiswa untuk mengajukan permohonan layanan administrasi secara mandiri. Mahasiswa dapat mengisi field dinamis sesuai jenis layanan, mengunggah berkas persyaratan secara privat ke private disk Laravel, melacak status pengajuan secara langsung melalui linimasa (timeline) yang auditable, menerima notifikasi revisi, dan mengunduh dokumen hasil layanan yang bersifat privat.
+P 632 (Paragraph): 3. Admin/Staff Portal: Dasbor operasional staf ULT FKIP yang berfungsi sebagai gatekeeper alur kerja. Staf dapat memverifikasi berkas mahasiswa, meneruskan pengajuan kepada pejabat yang berwenang, menginput nomor surat resmi, dan mengelola template dokumen dinamis berbasis PHPWord.
+P 633 (Paragraph): 4. Signer Portal: Portal khusus untuk pimpinan fakultas, ketua jurusan, atau ketua program studi untuk memverifikasi dan menandatangani permohonan surat secara elektronik/digital sebelum dokumen dirakit (assemble) secara otomatis oleh sistem.
+P 634 (Paragraph): Seluruh file dokumen administrasi yang diunggah oleh mahasiswa maupun dokumen hasil rakitan sistem disimpan secara aman pada private storage disk. Dokumen ini dilindungi oleh middleware otorisasi yang ketat untuk mencegah kebocoran data dan serangan IDOR (Insecure Direct Object Reference). Selain itu, sistem ini dilengkapi dengan mekanisme audit trail yang merekam setiap jejak transaksi secara detail, serta Progressive Web App (PWA) untuk aksesibilitas mobile.
+P 635 (Heading 2): B. Hasil Uji Kelayakan (Validasi Ahli)
+P 636 (Paragraph): Uji kelayakan atau validasi produk dilakukan oleh sembilan validator ahli yang terbagi ke dalam tiga kelompok keahlian, yaitu tiga ahli materi (menilai isi buku panduan), tiga ahli media (menilai tampilan visual dan antarmuka website), dan tiga ahli sistem (menilai fungsionalitas, keamanan, dan kinerja sistem). Data penilaian dari para ahli dikumpulkan melalui instrumen kuesioner skala Likert 1–5 dan dianalisis menggunakan dua metode, yaitu analisis persentase kelayakan (kriteria Arikunto) dan koefisien validitas isi Aiken's V.
+P 637 (Paragraph): Ringkasan hasil penilaian validasi dari ketiga kelompok ahli tersebut disajikan pada Tabel 4.1 sebagai berikut.
+P 638 (Caption): Tabel 4.1. Rekapitulasi Hasil Validasi Ahli (Materi, Media, Sistem)
+P 639 (Paragraph): Sumber: Data primer olahan peneliti (2026)
+P 640 (Paragraph): Berdasarkan Tabel 4.1, hasil validasi ahli secara keseluruhan menunjukkan rata-rata persentase kelayakan sebesar 91,95% yang berada pada rentang 80,1% – 100% dengan kriteria 'Sangat Valid' menurut kriteria Arikunto. Rerata koefisien Aiken's V keseluruhan adalah 0,90 (V ≥ 0,80) yang menunjukkan tingkat validitas isi yang tinggi. Temuan ini menegaskan bahwa website ULT FKIP Unila beserta dokumen panduannya telah memenuhi standar kualitas substansi materi, desain komunikasi visual, dan keandalan rekayasa perangkat lunak.
+P 641 (Heading 3): 1. Validasi Ahli Materi
+P 642 (Paragraph): Validasi ahli materi difokuskan pada penilaian kesesuaian isi dan kelayakan akademis buku panduan penggunaan Website ULT FKIP Unila yang ditujukan kepada tiga validator ahli materi: Margaretha Karolina S., Eko Indra Pangestu, dan Putut Aji Nalendro. Instrumen penilaian terdiri dari 22 butir yang dikelompokkan ke dalam empat aspek utama. Rekapitulasi nilai kelayakan per aspek materi disajikan pada Tabel 4.2.
+P 643 (Caption): Tabel 4.2. Hasil Validasi Ahli Materi per Aspek
+P 644 (Paragraph): Sumber: Data primer olahan peneliti (2026)
+P 645 (Paragraph): Berdasarkan Tabel 4.2, aspek Kesesuaian Tujuan dan Ruang Lingkup memperoleh persentase tertinggi sebesar 98,33% dengan koefisien Aiken's V = 0,98. Hal ini menunjukkan bahwa buku panduan telah merumuskan arah penggunaan dokumen secara sangat jelas sesuai peran pemohon dan pengelola. Secara keseluruhan, validasi materi memperoleh nilai 95,45% (Sangat Valid) dan rerata Aiken's V = 0,94 (Validitas Tinggi).
+P 646 (Paragraph): Meskipun memperoleh nilai sangat tinggi, terdapat satu butir dengan nilai sedang yaitu Butir 10 mengenai kelengkapan kondisi khusus (seperti penjelasan status revisi atau feedback penolakan layanan) yang memperoleh skor 4 dari semua validator (V = 0,75). Berdasarkan saran Margaretha Karolina S. ('Tambah penjelasan, cek kalimat, pastikan screenshot jelas') dan Putut Aji Nalendro ('Beri pembatas header/content/footer & gambar'), peneliti melakukan revisi pada buku panduan dengan menambahkan halaman visual khusus untuk alur tindak lanjut revisi berkas mahasiswa dan menambahkan garis pembatas visual pada tangkapan layar antarmuka.
+P 647 (Heading 3): 2. Validasi Ahli Media
+P 648 (Paragraph): Validasi ahli media bertujuan untuk menguji kelayakan aspek visual, tata letak antarmuka, ergonomi, dan navigasi Website ULT FKIP Unila. Validasi dilakukan oleh tiga ahli media: Rafiqa Rizalita, Daniel Rinaldi, dan Dwi Wahyudi. Instrumen terdiri atas 14 butir penilaian yang mencakup aspek Tampilan Visual Website dan UI/UX Website. Rekapitulasi hasil validasi ahli media disajikan pada Tabel 4.3.
+P 649 (Caption): Tabel 4.3. Hasil Validasi Ahli Media per Aspek
+P 650 (Paragraph): Sumber: Data primer olahan peneliti (2026)
+P 651 (Paragraph): Berdasarkan Tabel 4.3, hasil validasi aspek Tampilan Visual memperoleh nilai 94,44% (Aiken's V = 0,93) dan aspek UI/UX Website memperoleh 92,50% (Aiken's V = 0,91). Rerata total kelayakan media mencapai 93,33% dengan kriteria 'Sangat Valid'. Hal ini mengindikasikan bahwa tata letak antarmuka, konsistensi ikon, pemilihan tipografi (font), dan kontras warna pada website dinilai sangat baik dan ergonomis.
+P 652 (Paragraph): Beberapa catatan perbaikan kualitatif diberikan oleh validator media. Daniel Rinaldi memberikan saran agar warna latar belakang pada halaman utama tidak menggunakan gradasi warna yang terlalu kontras ('Warna sebaiknya jangan gradasi') demi kenyamanan mata pengguna dalam jangka panjang. Dwi Wahyudi memberikan masukan agar ditambahkan ikon visual pada setiap tile atau kartu layanan akademik ('Beri icon pada setiap tile layanan') untuk mempermudah identifikasi layanan secara instan. Tindak lanjut revisi yang dilakukan peneliti adalah mengubah gradasi latar belakang menjadi warna solid teal netral (clean UI style) serta mengintegrasikan pustaka SVG icons pada setiap daftar layanan di portal mahasiswa.
+P 653 (Heading 3): 3. Validasi Ahli Sistem
+P 654 (Paragraph): Validasi ahli sistem difokuskan pada pengujian aspek fungsionalitas (correctness), keandalan (reliability/error handling), keamanan akses data (security), dan kinerja teknis sistem (performance). Validasi ini dilakukan oleh tiga praktisi dan akademisi rekayasa perangkat lunak: Ghea Chandra S., Radinal Fadli, dan Rahmad Wahyudi. Penilaian mencakup 22 butir kuesioner yang disajikan pada Tabel 4.4.
+P 655 (Caption): Tabel 4.4. Hasil Validasi Ahli Sistem per Aspek
+P 656 (Paragraph): Sumber: Data primer olahan peneliti (2026)
+P 657 (Paragraph): Berdasarkan Tabel 4.4, validasi sistem memperoleh persentase rata-rata 87,58% (Sangat Valid) dengan rerata Aiken's V sebesar 0,84. Nilai tertinggi berada pada aspek fungsionalitas dan keandalan sistem (masing-masing 88,89%), membuktikan alur autentikasi peran, validasi input form, serta upload berkas telah berjalan stabil tanpa adanya malfungsi kode.
+P 658 (Paragraph): Aspek Keamanan Akses dan Data memperoleh skor paling rendah yaitu 84,00% (V = 0,80) karena adanya beberapa butir dengan nilai validitas sedang (V = 0,75), seperti keamanan proteksi endpoint dan stabilitas akses data (Butir 13, 14, dan 20). Radinal Fadli memberikan catatan perbaikan krusial terkait aspek keamanan web ('Login SSO, perhatikan CSP (unsafe-eval/inline), atur CSP default'). Tindak lanjut revisi yang dikerjakan oleh peneliti adalah memperketat middleware HTTP Header Content Security Policy (CSP) pada Laravel untuk memblokir script injeksi luar (XSS), membatasi hak akses file direktori upload menggunakan enkripsi path, dan menyusun blueprint integrasi database dengan Single Sign-On (SSO) Universitas Lampung untuk pengembangan fase berikutnya.
+P 659 (Heading 2): C. Hasil Uji Kepraktisan
+P 660 (Paragraph): Uji kepraktisan bertujuan untuk mengukur tingkat kemudahan penggunaan, kejelasan informasi, efisiensi langkah, keterlaksanaan tugas, dan kenyamanan antarmuka Website ULT FKIP Unila saat digunakan oleh pengguna sasaran. Pengujian dilakukan melalui uji coba terbatas yang melibatkan 18 responden yang terbagi rata ke dalam 6 kelompok pengguna civitas akademika FKIP Unila: 3 orang Admin Program Studi, 3 orang mahasiswa perwakilan jurusan Pendidikan Bahasa dan Sastra (PBS), 3 orang mahasiswa Pendidikan Ilmu Pengetahuan (PIP), 3 orang mahasiswa Pendidikan Ilmu Pengetahuan Sosial (PIPS), 3 orang mahasiswa Pendidikan Matematika dan IPA (PMIPA), serta 3 orang staf Unit Layanan Terpadu (ULT).
+P 661 (Paragraph): Setiap responden diminta untuk menjalankan skenario penggunaan utama (pengajuan, verifikasi, penomoran, penandatanganan elektronik, dan unduh dokumen hasil). Responden kemudian mengisi kuesioner uji kepraktisan berisi 12 butir (A1 s.d. E2) skala Likert 1-5 dan memberikan kesimpulan kelayakan subjektif akhir pada Bagian F. Data skor kuantitatif dari ke-18 responden disajikan pada Tabel 4.5.
+P 662 (Caption): Tabel 4.5. Matriks Hasil Skor Kuesioner Uji Kepraktisan Responden
+P 663 (Paragraph): Sumber: Data primer olahan peneliti (2026)
+P 664 (Paragraph): Berdasarkan data kuantitatif pada Tabel 4.5, nilai rata-rata skor total responden adalah 55,28 (dari skor maksimal 60,00) dengan persentase kepraktisan rata-rata mencapai 92,13%. Menurut kriteria Arikunto, hasil persentase 92,13% ini menempatkan Website ULT FKIP Unila dalam kategori 'Sangat Praktis' untuk digunakan. Ke-12 butir kuesioner secara konsisten mendapat nilai di atas 4,40, dengan nilai tertinggi pada butir A3 (Kemudahan belajar penggunaan) dengan skor 4,83, membuktikan pengguna dapat beradaptasi menggunakan sistem secara mandiri dengan sangat cepat.
+P 665 (Paragraph): Selain data kuantitatif kuesioner, pada lembar angket Bagian F (Kesimpulan Responden), responden diminta memberikan pendapat kelayakan subjektif akhir produk secara langsung. Rekapitulasi distribusi pilihan kesimpulan akhir tersebut disajikan pada Tabel 4.6.
+P 666 (Caption): Tabel 4.6. Ringkasan Distribusi Kategori Uji Kepraktisan (Pilihan Bagian F)
+P 667 (Paragraph): Sumber: Data primer olahan peneliti (2026)
+P 668 (Paragraph): Tabel 4.6 memperlihatkan bahwa mayoritas responden (94,44% atau 17 orang) menyimpulkan bahwa sistem ini berkategori 'Sangat Praktis' (8 orang) dan 'Praktis' (9 orang) untuk langsung digunakan dalam kegiatan operasional sehari-hari. Hanya 1 responden (5,56% yaitu Riswan - Admin Prodi) yang memberikan kesimpulan 'Cukup Praktis'.
+P 669 (Paragraph): Dari hasil kuesioner tersebut, terdapat 6 responden yang menuliskan saran atau kendala kualitatif pada kolom komentar kuesioner. Komentar-komentar tersebut disinkronkan peneliti untuk dianalisis dan ditindaklanjuti demi penyempurnaan website ULT. Rekapitulasi tanggapan kualitatif dan tindak lanjut perbaikannya disajikan pada Tabel 4.7.
+P 670 (Caption): Tabel 4.7. Tanggapan Kualitatif Responden dan Tindak Lanjut Revisi Produk
+P 671 (Paragraph): Sumber: Data primer olahan peneliti (2026)
+P 672 (Paragraph): Tindak lanjut revisi produk pada Tabel 4.7 dilakukan sepenuhnya oleh peneliti pada fase Development akhir dan Implementation terbatas. Hasil perbaikan ini divalidasi kembali kepada validator ahli sebelum produk dinyatakan final dan siap pakai.
+P 673 (Heading 2): D. Pembahasan
+P 674 (Paragraph): Hasil pengembangan Website ULT FKIP Unila ini membuktikan bahwa penerapan model R&D dengan sintaks ADDIE mampu menghasilkan produk teknologi pembelajaran dan manajemen sekolah yang terarah, berdaya guna tinggi, dan sesuai kebutuhan pengguna riil. Melalui analisis kebutuhan awal pada tahap Analysis, ditemukan bahwa kendala utama layanan administrasi di FKIP Unila adalah tidak adanya transparansi status dokumen, waktu tunggu yang tidak terukur, serta berkas fisik yang rentan hilang atau rusak. Sistem yang dikembangkan ini secara terarah menutup pain point tersebut dengan memindahkan seluruh proses fisik ke dalam sistem berbasis web yang dinamis.
+P 675 (Paragraph): Tingginya hasil penilaian uji kelayakan dari para ahli (91,95% - Sangat Valid) dan uji kepraktisan oleh pengguna (92,13% - Sangat Praktis) mengindikasikan bahwa perancangan antarmuka yang clean, alur navigasi yang konsisten, rekayasa keamanan database, dan penyusunan buku panduan operasional telah diselesaikan dengan standar rekayasa perangkat lunak yang baik. Aspek keamanan yang diperketat (menggunakan Content Security Policy dan restriksi directory access) berhasil menjawab kekhawatiran validator sistem (Radinal Fadli) mengenai kerentanan XSS dan kebocoran otorisasi dokumen.
+P 676 (Paragraph): Transformasi digital ini juga memberikan efisiensi yang signifikan bagi pengguna internal (staf ULT dan admin prodi) serta pimpinan jurusan/fakultas selaku penandatangan. Penomoran otomatis dan fitur tanda tangan elektronik mempersingkat siklus perakitan dokumen menjadi hanya beberapa menit dari yang sebelumnya membutuhkan waktu beberapa hari kerja. Hasil pengujian kepraktisan secara kualitatif memperlihatkan antusiasme civitas akademika yang tinggi terhadap sistem ini, dengan beberapa masukan pengembangan lanjutan seperti visualisasi grafik data pelaporan (ChartJS) dan integrasi sistem repositori kampus di masa depan.
+P 677 (Paragraph): 
+P 678 (Heading 1): V. KESIMPULAN DAN SARAN
+P 679 (Paragraph): 
+P 680 (Heading 2): A. Kesimpulan
+P 681 (Paragraph): Berdasarkan hasil analisis, pengembangan, dan pengujian Website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung, diperoleh beberapa kesimpulan sebagai berikut:
+P 682 (Paragraph): 1. Website ULT FKIP Unila telah berhasil dikembangkan dengan menerapkan model pengembangan ADDIE (Analysis, Design, Development, Implementation, dan Evaluation). Produk akhir berupa aplikasi web monolitik berbasis Laravel 12, PHP 8.4, TailwindCSS, dan Alpine.js yang memiliki 4 portal terintegrasi (Public, Student, Admin/Staff, dan Signer portal) dan fitur-fitur pendukung rekayasa seperti private storage, audit trail, PWA, dan penandatanganan dokumen elektronik.
+P 683 (Paragraph): 2. Berdasarkan hasil validasi oleh sembilan validator ahli (ahli materi, ahli media, dan ahli sistem), Website ULT FKIP Unila dinyatakan 'Sangat Valid' dan layak digunakan dengan persentase kelayakan rata-rata sebesar 91,95% and rerata koefisien validitas isi Aiken's V sebesar 0,90 (Validitas Tinggi).
+P 684 (Paragraph): 3. Berdasarkan hasil uji coba terbatas kepada 18 responden civitas akademika FKIP Unila (admin prodi, mahasiswa dari rumpun jurusan PBS, PIP, PIPS, PMIPA, dan staf ULT), website dinyatakan 'Sangat Praktis' untuk digunakan dengan rata-rata persentase kepraktisan kuesioner sebesar 92,13%. Hal ini diperkuat dengan kesimpulan subjektif akhir pada Bagian F kuesioner di mana 94,44% responden menyatakan sistem ini berada dalam kategori 'Sangat Praktis' dan 'Praktis' untuk digunakan operasional.
+P 685 (Heading 2): B. Saran
+P 686 (Paragraph): Beberapa saran yang dapat diajukan untuk operasional dan pengembangan Website ULT FKIP Unila lebih lanjut adalah sebagai berikut:
+P 687 (Paragraph): 1. Integrasi Single Sign-On (SSO): Untuk mempermudah aksesibilitas dan meningkatkan keamanan kredensial, disarankan agar sistem autentikasi website ULT FKIP Unila diintegrasikan dengan database Single Sign-On (SSO) resmi Universitas Lampung, sehingga pengguna tidak perlu membuat akun baru.
+P 688 (Paragraph): 2. Penambahan Modul Layanan Kepegawaian: Pengembangan modul kepegawaian (staf dan dosen) disarankan untuk ditambahkan pada fase berikutnya agar layanan administrasi yang disediakan tidak hanya terbatas pada mahasiswa, melainkan mencakup seluruh civitas akademika FKIP.
+P 689 (Paragraph): 3. Pengujian Keamanan Tingkat Lanjut: Perlu dilakukan pengujian keamanan web secara rutin (seperti Vulnerability Assessment dan Penetration Testing) secara berkala untuk mengevaluasi efektivitas header Content Security Policy (CSP) dan meminimalkan risiko serangan injeksi data di masa mendatang.
+P 690 (Normal): 
+P 691 (Normal): 
+P 692 (Normal): 
+P 693 (Normal): 
+P 694 (Normal): 
+P 695 (Normal): 
+P 696 (Normal): DAFTAR PUSTAKA
+P 697 (Normal): 
+P 698 (Normal): 
+P 699 (Normal): 
+P 700 (Normal): 
+P 701 (Normal): Ahmad, Z., Casarin, S., & Calzavara, S. (2023). What Storage? An Empirical Analysis of Web Storage in the Wild. April, 1–8. https://doi.org/10.14722/madweb.2022.23005
+P 702 (Normal): Akbari, T. T., & Pratomo, R. R. (2022). Higher education digital transformation implementation in Indonesia during the COVID-19 pandemic. Jurnal Kajian Komunikasi, 10(1), 52. https://doi.org/10.24198/jkk.v10i1.38052
+P 703 (Normal): Al Salmi, H. (2023). Comparative CSS frameworks. Umm Al-Qura University, 1(66), 1–35. https://mecsj.com/uplode/images/photo/hat4_.pdf
+P 704 (Normal): Alisa, N., Umam, F. C., Ivana, L., Adha, N. S., & Nugraha, J. T. (2024). Analisis Kualitas Pelayanan ULT (Unit Layanan Terpadu) Universitas dalam Menciptakan Pengalaman yang Memuaskan. Urnal of Governance and Public Administration (JoGaPA), 1(3), 322–333.
+P 705 (Normal): Andi Kambau, R. (2024). Proses Transformasi Digital pada Perguruan Tinggi di Indonesia. Jurnal Rekayasa Sistem Informasi Dan Teknologi, 1(3), 126–136. https://doi.org/10.59407/jrsit.v1i3.481
+P 706 (Normal): Anggraini, P. A. D., & Putra, D. B. K. N. S. (2021). Developing Learning Video with Addie Model on Science Class For 4 th Grade Elementary School Students. Proceedings of the 2nd International Conference on Technology and Educational Science (ICTES 2020), 540(Ictes 2020), 413–421. https://doi.org/10.2991/assehr.k.210407.273
+P 707 (Normal): Ardiansyah, D. (2023). Transformasi Digital Perguruan Tinggi Menggunakan Prinsip Smart Education. Jurnal Informatika Komputer, Bisnis Dan Manajemen, 20(1), 42–55. https://doi.org/10.61805/fahma.v20i1.43
+P 708 (Normal): Ardianti, R. (2022). Pengembangan Website Berbasis Model Addie Sebagai Media E-Learning Pada Pembelajaran Apresiasi Seni Lukis Di Sma. Jurnal Teknologi Pendidikan, 11(1), 11–20. https://doi.org/10.32832/tek.pend.v11i1.6022
+P 709 (Normal): Arikunto, S. (2009). Dasar-dasar Evaluasi Pendidikan. https://www.scribd.com/document/740858744/Dasar-dasar-Evaluasi-Pendidikan
+P 710 (Normal): Arikunto, S. (2013). Prosedur Penelitian: Suatu Pendekatan Praktik.
+P 711 (Normal): Ariyanto, Y., Farhan, M., Rachmad, F., & Puspitasari, D. (2024). Laravel framework and native PHP: Comparison in the creationof rest API. Matrix: Jurnal Manajemen Teknologi Dan Informatika, 14(2), 66–73. https://doi.org/10.31940/matrix.v14i2.66-73
+P 712 (Normal): Arsenieva, N., Putyatina, L., & Uglova, L. (2021). Development of digital educational environment in higher education. SHS Web of Conferences, 106, 03002. https://doi.org/10.1051/shsconf/202110603002
+P 713 (Normal): Baijun, H. (2024). Impact of Digital Transformation on Higher Education Management: A Theoretical Analysis. Journal of Industry and Engineering Management, 2(3), 35–39. https://doi.org/10.62517/jiem.202403307
+P 714 (Normal): Banu, A. N. (2023). The Impact of Technology Integration in Educational Management and Administration. International Journal For Multidisciplinary Research, 5(6), 1–6. https://doi.org/10.36948/ijfmr.2023.v05i06.10858
+P 715 (Normal): Bashar, U., Akindeji Ibrahim, M., Adedeji, A., & Dauda, A. (2023). Optimizing the Student Application Process with a Laravel-based System of Waziri Umaru Federal Polytechnic Birnin Kebbi: A Case Study. International Journal of Innovative Science and Research Technology, 8(10). www.ijisrt.com
+P 716 (Normal): Bhagaskara, D. N., & Udariansyah, D. (2024). Implementation of Web Engineering in the Design and Development of the Website Portal for SMA Negeri 1 Martapura. International Journal Software Engineering and Computer Science (IJSECS), 4(1), 49–57. https://doi.org/10.35870/ijsecs.v4i1.2220
+P 717 (Normal): Biradar, V. M. (2020). Tailwind CSS. International Journal of Advance and Applied Research, 12(2), 45–52. www.tailwindcss.com
+P 718 (Normal): Bitchikashvili, T., Petriashvili, L., & Jang, L. K. (2023). Digitalization of Management of A Higher Educational Institution, National Aandnd International Challenges and Ways of Solution. World Science, 3(March), 31–34. https://doi.org/10.31435/rsglobal
+P 719 (Normal): Branch, R. M. (2009). Instructional Design: The ADDIE Approach.
+P 720 (Normal): Brooke, J. (2020). SUS: A “Quick and Dirty” Usability Scale. Usability Evaluation In Industry, July, 207–212. https://doi.org/10.1201/9781498710411-35
+P 721 (Normal): Deshpande, Y., Murugesan, S., Ginige, A., Hansen, S., Schwabe, D., Gaedke, M., & White, B. (2002). Web engineering. Web Engineering, 1(1), 1–438. https://doi.org/10.1007/3-540-28218-1
+P 722 (Normal): Dixit, N., Shrivastava, V., Pandey, A., & Sharma, E. R. (2024). Revolutionizing Web Design with Tailwind CSS: A Comprehensive Exploration. International Journal of Research Publication and Reviews, 5(5), 4198–4204. www.ijrpr.com
+P 723 (Normal): Febriani, S., Sutabri, T., & Abdillah, L. A. (2023). Perancangan UI / UX Aplikasi Sistem Informasi Layanan Administrasi dalam Perspektif Psikologi Menggunakan Metode Prototype Mahasiswa Universitas Bina Darma dalam melaksanakan kegiatan akademik kebutuhan pengguna hingga pengguna dapat merasa senang dan pua. Jurnal Teknlogi Informatika Dan Komputer MH. Thamrin, 9(2), 1088–1103.
+P 724 (Normal): Ferdiansyah, F., Heyana, N., & Solehudin, A. (2022). Analisis User Experience (Ux) Pada Website Universitas Singaperbangsa Karawang Menggunakan Metode System Usability Scale (SUS). Jurnal Pendidikan Dan Konseling, 105(2), 79. https://core.ac.uk/download/pdf/322599509.pdf
+P 725 (Normal): Fernández, A., Gómez, B., Binjaku, K., & Meçe, E. K. (2023). Digital transformation initiatives in higher education institutions: A multivocal literature review. In Education and Information Technologies (Vol. 28, Issue 10). Springer US. https://doi.org/10.1007/s10639-022-11544-0
+P 726 (Normal): Gote, A., & Solutions, I. (2024). Real-Time Interactivity in Hybrid Applications With Web Sockets. International Research Journal of Modernization in Engineering Technology and Science, 6(1). https://doi.org/10.56726/irjmets48494
+P 727 (Normal): Gustiani, S. (2019). Research and Development (R&D) Method as a Model Design in Educational Research and Its Alternatives. Holistics Journal, 11(2), 12–22. https://jurnal.polsri.ac.id/index.php/holistic/article/view/1849
+P 728 (Normal): Haryanto, D., & Hadilinatih, B. (2022). Analisis Kualitas Pelayanan Publik Unit Layanan Terpadu (Ult) Satu Pintu Kementerian Pendidikan Kebudayaan Riset Dan Teknologi Di D.I. Yogyakarta. Jurnal Enersia Publika, 6(2), 95–108.
+P 729 (Normal): Henim, S. R., & Sari, R. P. (2020). Evaluasi User Experience Sistem Informasi Akademik Mahasiswa pada Perguruan Tinggi Menggunakan User Experience Questionnaire. 6(1), 69–78.
+P 730 (Normal): Huynh, T. S., Tran, D. T., Vu, Q. H., & Nguyen, L. A. T. N. (2022). Design and Implementation of Web Application Based on MVC Laravel Architecture. European Journal of Electrical Engineering and Computer Science, 6(4), 23–29.
+P 731 (Normal): Johns, K., Lundkvist, P., Rusu, C., Menon, V., Gupta, N., Kim, Y., & Vasconcelos, J. R. (2022). Service Upgrade: The GovTech Approach to Citizen Centered Services. www.worldbank.org/govtech
+P 732 (Normal): Joseph, O. B., Onwuzulike, O. C., & Shitu, K. (2024). Digital transformation in education: Strategies for effective implementation. World Journal of Advanced Research and Reviews, 23(2), 2785–2799. https://doi.org/10.30574/wjarr.2024.23.2.2668
+P 733 (Normal): Kancherla, G. P., Goel, D., & Bichhawat, A. (2025). Least Privilege Access for Persistent Storage Mechanisms in Web Browsers. WWW 2025 - Proceedings of the ACM Web Conference, 4832–4840. https://doi.org/10.1145/3696410.3714887
+P 734 (Normal): Karya, M. A., Haryono, B. S., & Sujarwoto, S. (2024). Digitalization and Innovation of the Service Process: The Efforts to Improve the Quality of Higher Education Services in Kalimantan Island. Jurnal Bina Praja, 16(1), 69–81. https://doi.org/10.21787/jbp.16.2024.69-81
+P 735 (Normal): Khotimah, K., & Wahyu, A. A. A. (2020). Reading in The Digital Age: Electronic Storybook as a Teaching Tool for Beginning Readers. Atlantis Press, 387(January). https://doi.org/10.2991/icei-19.2019.47
+P 736 (Normal): Kodali, N. (2024). Tailwind CSS Integration in Angular: A Technical Overview. International Journal of Innovative Research in Science,Engineering and Technology, 13(09), 1–14. https://doi.org/10.15680/ijirset.2024.1309092
+P 737 (Normal): Kryszak, Ł. (2020). Income Convergence in the Agricultural Sector in the Context of the European Union’S Common Agricultural Policy. Annals of the Polish Association of Agricultural and Agribusiness Economists, XXII(3), 140–152. https://doi.org/10.5604/01.3001.0014.3625
+P 738 (Normal): Latif, E. Y., Wardiman, A., Nur, A. M., Perdana, C. A., & Idrus, R. (2024). Tren Modern dalam Digitalisasi Pendidikan. Jurnal Literasi Digital, 4(1), 41–50. https://doi.org/10.54065/jld.4.1.2024.439
+P 739 (Normal): Machmudi, M. A., Wahyudiono, S., & Susilo, G. (2023). Analisis dan Rancang Bangun E-Learning dengan Metode ADDIE Model. JURNAL GO INFOTECH, 29(2), 226–232. https://doi.org/10.36309/go.v29i2.218
+P 740 (Normal): MacKlon, F., Viggiato, M., Romanova, N., Buzon, C., Paas, D., & Bezemer, C. P. (2023). A Taxonomy of Testable HTML5 Canvas Issues. IEEE Transactions on Software Engineering, 49(6), 3647–3659. https://doi.org/10.1109/TSE.2023.3270740
+P 741 (Normal): Martantoh, E., & Aripudin, M. (2023). Sistem Informasi Penjualan Berbasis Web Dengan Metode Addie Pada Kedai Kopi Karawang. Journal of Innovation And Future Technology (IFTECH), 5(2), 92–101. https://doi.org/10.47080/iftech.v5i2.2721
+P 742 (Normal): Maulana, M. R., Utama, M. R. P. A., & Nurdiana, D. (2023). Uji Usability dan User Experience Website Sistem Informasi Akademik Universitas Terbuka (SIA UT) Berdasarkan Perspektif Mahasiswa Menggunakan Metode USE Questionnaire dan Cognitive Walkthrough. Jurnal Teknologi Sistem Informasi Dan Aplikasi, 6(4), 713–729. https://doi.org/10.32493/jtsi.v6i4.34189
+P 743 (Normal): Mundzir, M., & Laventia, F. (2025). Transformasi Administrasi Pendidikan di Era Digital: Tantangan dan Peluang. Jurnal Manajemen Dan Ilmu Administrasi, 1(1), 56–62.
+P 744 (Normal): Mustopa, A., Agustiani, S., Wildah, S. K., & Maysaroh. (2020). Analisa Kepuasan Pengguna Website Layanan Akademik Kemahasiswaan (LYKAN) Menggunakan Metode Webqual 4.0. 18(1), 75–81.
+P 745 (Normal): Musyary, Kurniati, A., & Damarjati, C. (2023). Laravel Framework-Based Information System of the Department of Information Technology of Universitas Muhammadiyah Yogyakarta. Emerging Information Science and Technology, 4(2), 48–57. https://doi.org/10.18196/eist.v4i2.20736
+P 746 (Normal): Naidu, V. R., Singh, B., Agarwal, A., Farei, K. Al, Ismaily, K. Al, Harrasi, R. Al, & Vaidhyanathan, N. (2021). Html5 Based E-Learning Authoring To Facilitate Interactive Learning During Covid-19 Pandemic: a Review. IJAEDU- International E-Journal of Advances in Education, 122–130. https://doi.org/10.18768/ijaedu.964863
+P 747 (Normal): Nandan, Sree R., U., & Mohan, P. (2024). Comparison of Utility-First CSS Framework. Journal of Innovation and Technology, 2024(1). https://doi.org/10.61453/joit.v2024no32
+P 748 (Normal): Nugroho, Y. A., Widodo, A., Pebrina, E. T., Iskandar, J., & Nadeak, M. (2025). Digitalization in Higher Education: How Information Systems Improve Operational and Strategic Performance. Indonesian Journal of Management and Economic Research (IJOMER), 2(01), 90–98. https://doi.org/10.70508/dyrdm592
+P 749 (Normal): Oracle. (2025). MySQL Replication. 1–36. http://scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:MySQL+Replication#3
+P 750 (Normal): Poernamawatie, F., Kurniawan, P. A., Hermanto, S., Susipta, I. N., & Hertanto, R. H. (2023). Implementasi Transformasi Digital Layanan Keuangan Mahasiswa Pasca Pandemi Covid-19 di Universitas Negeri Malang. Jurnal Pengabdian Kepada Masyarakat Nusantara, 4(3), 2123–2133. https://doi.org/10.55338/jpkmn.v4i3.1370
+P 751 (Normal): Purwani, R., Fathoni, A., Sarilan, S., & Siswanto, H. (2024). Transformasi Administrasi Pendidikan untuk Mengoptimalkan Efisiensi dan Kualitas Layanan Pendidikan pada Era Digital. Jurnal Keilmuan Dan Keislaman, 53–58. https://doi.org/10.23917/jkk.v4i1.261
+P 752 (Normal): Qurrata A’yun, D. U., Wicaksana, D. Y., Ulya, S., Zie, R. J. S., & Fazlurrahman, H. (2023). Website quality and user satisfaction: A higher education perspective. Sebelas Maret Business Review, 8(2), 109. https://doi.org/10.20961/smbr.v8i2.81364
+P 753 (Normal): Ridwan, M. Y., Maulana, M. R., & Nurdiana, D. (2024). Usability Testing Website My UT Menggunakan Metode Post-Study System Usability Questionnaire Berdasarkan Pandangan Mahasiswa Universitas Terbuka. 7(2), 207–222.
+P 754 (Normal): Rifandi, F., Tri Viqi Adriansyah, & Rina Kurniawati. (2022). Website Gallery Development Using Tailwind CSS Framework. Jurnal E-Komtek (Elektro-Komputer-Teknik), 6(2), 205–214. https://doi.org/10.37339/e-komtek.v6i2.937
+P 755 (Normal): Riyadi, S., & Chuluq, M. K. (2021). Implementasi Metode Addie Pada Sistem Informasi Pembuatan Rpp 1 Lembar Di Smk Pgri 4 Pasuruan. Spirit, 13(2), 66–70. https://doi.org/10.53567/spirit.v13i2.224
+P 756 (Normal): Safrizal, & Afkar, M. A. (2023). SIAKAD Revitalization: The Latest Solution in Answering the Challenges of Digitizing Education. International Journal Software Engineering and Computer Science (IJSECS), 3(1), 40–49. https://doi.org/10.35870/ijsecs.v3i1.1160
+P 757 (Normal): Sasmoko, Indrianti, Y., Manalu, S. R., & Danaristo, J. (2024). Analyzing Database Optimization Strategies in Laravel for an Enhanced Learning Management. Procedia Computer Science, 245(C), 799–804. https://doi.org/10.1016/j.procs.2024.10.306
+P 758 (Normal): Sastranegara, A., Triayudi, A., & Hayati, N. (2023). Implementasi User Center Design dan System Usability Scale Pada Website Sekolah Menengah Atas. KLIK: Kajian Ilmiah Informatika Dan Komputer, 3(6), 1320–1325. https://doi.org/10.30865/klik.v3i6.941
+P 759 (Normal): Serhiyovych, B. O. (2024). Asynchronous Programming in Javascript: Modern Approaches and Practice. American Research Journal of Computer Science and Information Technology, 7(1), 28–32. www.arjonline.org28
+P 760 (Normal): Setiawan, H. (2022). Peran software, hardware dan brainware dalam sistem informasi manajemen sekolah. Jurnal Oase Nusantara, 1(1), 51–58.
+P 761 (Normal): Setyaningsih, K., Sari, H. R. U., & Ibrahim, I. (2024). Pelaksanaan Layanan Administrasi Kesiswaan di MAN 2 Palembang. Jurnal Visionary : Penelitian Dan Pengembangan Dibidang Administrasi Pendidikan, 12(2), 15. https://doi.org/10.33394/vis.v12i2.11023
+P 762 (Normal): Shah, H. (2023). Harnessing Customized Built-in Elements: Empowering Component-Based Software Engineering and Design Systems with HTML5 Web Components. 247–259. https://doi.org/10.5121/csit.2023.132219
+P 763 (Normal): Sinaga, L. B., Ritonga, N. S., & Muda, I. (2021). The role of database system on secondary education. International Journal of Multidisciplinary Research and Growth Evaluation, 2(4), 1–4.
+P 764 (Normal): Singun, A. J. (2025). Unveiling the barriers to digital transformation in higher education institutions: a systematic literature review. In Discover Education (Vol. 4, Issue 1). Springer International Publishing. https://doi.org/10.1007/s44217-025-00430-9
+P 765 (Normal): Sudjana. (2005). Metode Statistika.
+P 766 (Normal): Sugiyono. (2013). Metodologi Penelitian Kuantitatif, Kualitatif dan R & D.
+P 767 (Normal): Suhartoyo. (2019). Implementasi Fungsi Pelayanan Publik dalam Pelayanan Terpadu Satu Pintu (PTSP). Administrative Law and Governance Journal, 2(1), 143–154. https://doi.org/10.14710/alj.v2i1.143-154
+P 768 (Normal): Sukorini, R. S., Marini, A., & Aulia, R. N. (2024). NEW ERA OF HIGHER EDUCATION: DIGITAL TRANSFORMATION AND INFORMATION SYSTEM MANAGEMENT. IMProvement Jurnal, 11(2), 154–166.
+P 769 (Normal): Šušter, I., & Ranisavljević, T. (2023). Optimization of Mysql Database. Journal of Process Management and New Technologies, 11(1–2), 141–151. https://doi.org/10.5937/jpmnt11-44471
+P 770 (Normal): Taqwa, & Raupu, S. (2022). Website-Based Academic Service Development with ADDIE Design in Higher Education. AL-ISHLAH: Jurnal Pendidikan, 14(2), 1511–1526. https://doi.org/10.35445/alishlah.v14i2.1323
+P 771 (Normal): Tumilantouw, A., Mokat, J. E. H., & Langkai, J. E. (2024). Strategi Pelayanan Publik Pada Unit Layanan Terpadu Universitas Negeri Manado. Jurnal Administro, 1(1), 05–09.
+P 772 (Normal): Wan Ali, W. N. A., & Wan Yahaya, W. A. J. (2023). Waterfall-Addie Model: an Integration of Software Development Model and Instructional Systems Design in Developing a Digital Video Learning Application. Asean Journal of Teaching and Learning in Higher Education, 15(1), 1–28. https://doi.org/10.17576/ajtlhe.1501.2023.01
+P 773 (Normal): Widiawati, M., Muawwal, A., Pontoh, Z., & Informasi, S. (2023). ANALISIS USABILITY WEBSITE SISTEM INFORMASI AKADEMIK STMIK usability , USE Questionnaire , Website Sistem Informasi Akademik STMIK Kharisma Makassar. 02, 95–109.
+P 774 (Normal): Zapata, J. (2024). MySQL VS PostgreSQL: A Comparative Analysis of Relational Database Management Systems (RDBMS) Technologies Response Time in Web-based E-commerce. March 2024, 6–11. https://doi.org/10.13140/RG.2.2.24791.69288
+P 775 (Normal): 
+P 776 (Normal): 
+P 777 (Caption): Lampiran  . Surat Balasan Izin Penelitian Sekolah
+P 778 (Normal): 
+P 779 (Normal): 
+P 780 (Caption): Lampiran  . Hasil Wawancara Penelitian Pendahuluan Staff ULT FKIP Universitas Lampung
+P 781 (Normal): 
+P 782 (Normal): 
+P 783 (Normal): 
+P 784 (Normal): Lampiran  . Hasil Wawancara Penelitian Pendahuluan Administrator Jurusan FKIP Universitas Lampung
+P 785 (Caption): Lampiran  . Hasil Wawancara Penelitian Pendahuluan Administrator Jurusan Staff Bagian Beberapa Program Studi ULT FKIP Universitas Lampung
+P 786 (Normal): 
+P 787 (Normal): 
+P 788 (Caption): Lampiran  . Hasil Wawancara Penelitian Pendahuluan Guru SIJA SMK N 9 Bandar Lampung
+P 789 (Normal): 
+P 790 (Normal): 
+P 791 (Caption): Lampiran  . Angket Analisis Kebutuhan Mahasiswa
+P 792 (Normal): 
+P 793 (Normal): 
+P 794 (Normal): 
+P 795 (Normal): 
+P 796 (Normal): 
+P 797 (Normal): 
+P 798 (Normal): 
+P 799 (Normal): 
+P 800 (Normal): 
+P 801 (Normal): 
+P 802 (Normal): 
+P 803 (Normal): 
+P 804 (Normal): 
+P 805 (Normal): 
+P 806 (Normal): 
+P 807 (Normal): 
+P 808 (Normal): 
+P 809 (Normal): 
+P 810 (Normal): 
+P 811 (Normal): 
+P 812 (Normal): 
+P 813 (Normal): 
+P 814 (Caption): Lampiran  . Hasil Uji Validitas Ahli Materi
+P 815 (Normal): Validator 1: Ibu Etha (Ahli Materi)
+P 816 (Normal): 
+P 817 (Normal): 
+P 818 (Normal): 
+P 819 (Normal): Validator 2: Bapak Eko (Ahli Materi)
+P 820 (Normal): 
+P 821 (Normal): 
+P 822 (Normal): 
+P 823 (Normal): Validator 3: Bapak Putut (Ahli Materi)
+P 824 (Normal): 
+P 825 (Normal): 
+P 826 (Normal): 
+P 827 (Caption): Lampiran  . Hasil Uji Validitas Ahli Media
+P 828 (Normal): Validator 1: Ibu Rafiqa (Ahli Media)
+P 829 (Normal): 
+P 830 (Normal): 
+P 831 (Normal): 
+P 832 (Normal): Validator 2: Bapak Daniel (Ahli Media)
+P 833 (Normal): 
+P 834 (Normal): 
+P 835 (Normal): 
+P 836 (Normal): Validator 3: Bapak Dwi (Ahli Media)
+P 837 (Normal): 
+P 838 (Normal): 
+P 839 (Normal): 
+P 840 (Caption): Lampiran  . Hasil Uji Validitas Ahli Sistem
+P 841 (Normal): Validator 1: Bapak Ghea (Ahli Sistem)
+P 842 (Normal): 
+P 843 (Normal): 
+P 844 (Normal): 
+P 845 (Normal): Validator 2: Bapak Radinal (Ahli Sistem)
+P 846 (Normal): 
+P 847 (Normal): 
+P 848 (Normal): 
+P 849 (Normal): Validator 3: Bapak Rahmad (Ahli Sistem)
+P 850 (Normal): 
+P 851 (Normal): 
+P 852 (Normal): 
+P 853 (Caption): Lampiran  . Hasil Uji Kepraktisan Pengguna
+P 854 (Normal): Responden 1: Admin Anisa
+P 855 (Normal): 
+P 856 (Normal): 
+P 857 (Normal): 
+P 858 (Normal): Responden 2: Admin Lisa
+P 859 (Normal): 
+P 860 (Normal): 
+P 861 (Normal): 
+P 862 (Normal): Responden 3: Admin Riswan
+P 863 (Normal): 
+P 864 (Normal): 
+P 865 (Normal): 
+P 866 (Normal): Responden 4: PBS Khaerul
+P 867 (Normal): 
+P 868 (Normal): 
+P 869 (Normal): 
+P 870 (Normal): Responden 5: PBS Martin
+P 871 (Normal): 
+P 872 (Normal): 
+P 873 (Normal): 
+P 874 (Normal): Responden 6: PBS Nurani
+P 875 (Normal): 
+P 876 (Normal): 
+P 877 (Normal): 
+P 878 (Normal): Responden 7: PIP Aulia
+P 879 (Normal): 
+P 880 (Normal): 
+P 881 (Normal): 
+P 882 (Normal): Responden 8: PIP Nazwa
+P 883 (Normal): 
+P 884 (Normal): 
+P 885 (Normal): 
+P 886 (Normal): Responden 9: PIP Salsa
+P 887 (Normal): 
+P 888 (Normal): 
+P 889 (Normal): 
+P 890 (Normal): Responden 10: PIPS Andhini
+P 891 (Normal): 
+P 892 (Normal): 
+P 893 (Normal): 
+P 894 (Normal): Responden 11: PIPS Arya
+P 895 (Normal): 
+P 896 (Normal): 
+P 897 (Normal): 
+P 898 (Normal): Responden 12: PIPS Mita
+P 899 (Normal): 
+P 900 (Normal): 
+P 901 (Normal): 
+P 902 (Normal): Responden 13: PMIPA Nabila
+P 903 (Normal): 
+P 904 (Normal): 
+P 905 (Normal): 
+P 906 (Normal): Responden 14: PMIPA Nur
+P 907 (Normal): 
+P 908 (Normal): 
+P 909 (Normal): 
+P 910 (Normal): Responden 15: PMIPA Rizky
+P 911 (Normal): 
+P 912 (Normal): 
+P 913 (Normal): 
+P 914 (Normal): Responden 16: ULT Agus
+P 915 (Normal): 
+P 916 (Normal): 
+P 917 (Normal): 
+P 918 (Normal): Responden 17: ULT Amrul
+P 919 (Normal): 
+P 920 (Normal): 
+P 921 (Normal): 
+P 922 (Normal): Responden 18: ULT Tri
+P 923 (Normal): 
+P 924 (Normal): 
+P 925 (Normal): 
+P 926 (Caption): Lampiran  . Dokumentasi
+P 927 (Normal): Dokumentasi Uji Validitas Ahli
+P 928 (Normal): 
+P 929 (Normal): Dokumentasi Uji Kepraktisan Pengguna
+P 930 (Normal): 
+P 931 (Normal): 
+P 932 (Normal): 
+P 933 (Normal): 
+P 934 (Normal): 
+P 935 (Normal): 
+P 936 (Normal): 
+P 937 (Normal): 
+P 938 (Normal): 
+P 939 (Normal): 

@@ -1,0 +1,551 @@
+import os
+
+html_content = """<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Fidelity UI - ULT FKIP Unila</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f1f5f9; }
+        .unila-blue { background-color: #1e3a8a; } /* Tailwind blue-900 */
+        .unila-blue-text { color: #1e3a8a; }
+        .unila-yellow { background-color: #fbbf24; } /* Tailwind amber-400 */
+        .unila-yellow-text { color: #fbbf24; }
+        
+        /* Modern UI Tweaks */
+        .glass-header { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .soft-shadow { box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+        .card-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.06); transition: all 0.3s ease; }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        .mockup-window {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(226, 232, 240, 1);
+        }
+    </style>
+</head>
+<body class="h-screen w-full flex overflow-hidden" x-data="{ currentTab: '1_beranda' }">
+
+    <!-- Navigator Sidebar -->
+    <aside class="w-64 bg-slate-900 text-slate-300 flex flex-col shrink-0 z-50">
+        <div class="p-5 border-b border-slate-800">
+            <h1 class="text-white font-bold text-lg tracking-tight">Interactive UI Showcase</h1>
+            <p class="text-xs text-slate-500 mt-1">ULT FKIP Universitas Lampung</p>
+        </div>
+        
+        <div class="flex-1 overflow-y-auto py-4 px-3 space-y-1">
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 px-3 mt-2">1. Public Portal</div>
+            <button @click="currentTab = '1_beranda'" :class="{'bg-blue-600 text-white': currentTab === '1_beranda', 'hover:bg-slate-800 hover:text-white': currentTab !== '1_beranda'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3">
+                <i class="fa-solid fa-house w-4 text-center"></i> Beranda Utama
+            </button>
+            <button @click="currentTab = '2_katalog'" :class="{'bg-blue-600 text-white': currentTab === '2_katalog', 'hover:bg-slate-800 hover:text-white': currentTab !== '2_katalog'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3">
+                <i class="fa-solid fa-layer-group w-4 text-center"></i> Katalog Layanan
+            </button>
+            <button @click="currentTab = '3_berita'" :class="{'bg-blue-600 text-white': currentTab === '3_berita', 'hover:bg-slate-800 hover:text-white': currentTab !== '3_berita'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3">
+                <i class="fa-solid fa-newspaper w-4 text-center"></i> Berita & Info
+            </button>
+            
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 px-3 mt-6">2. Authentication</div>
+            <button @click="currentTab = '4_login'" :class="{'bg-blue-600 text-white': currentTab === '4_login', 'hover:bg-slate-800 hover:text-white': currentTab !== '4_login'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3">
+                <i class="fa-solid fa-lock w-4 text-center"></i> Login & Register
+            </button>
+
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 px-3 mt-6">3. Student Portal</div>
+            <button @click="currentTab = '5_student_dash'" :class="{'bg-blue-600 text-white': currentTab === '5_student_dash', 'hover:bg-slate-800 hover:text-white': currentTab !== '5_student_dash'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3">
+                <i class="fa-solid fa-gauge-high w-4 text-center"></i> Dasbor Mahasiswa
+            </button>
+            <button @click="currentTab = '6_student_form'" :class="{'bg-blue-600 text-white': currentTab === '6_student_form', 'hover:bg-slate-800 hover:text-white': currentTab !== '6_student_form'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3">
+                <i class="fa-solid fa-file-signature w-4 text-center"></i> Form Pengajuan
+            </button>
+            <button @click="currentTab = '7_student_timeline'" :class="{'bg-blue-600 text-white': currentTab === '7_student_timeline', 'hover:bg-slate-800 hover:text-white': currentTab !== '7_student_timeline'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3">
+                <i class="fa-solid fa-timeline w-4 text-center"></i> Riwayat & Timeline
+            </button>
+
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 px-3 mt-6">4. Admin Portal</div>
+            <button @click="currentTab = '8_admin_dash'" :class="{'bg-blue-600 text-white': currentTab === '8_admin_dash', 'hover:bg-slate-800 hover:text-white': currentTab !== '8_admin_dash'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3">
+                <i class="fa-solid fa-chart-line w-4 text-center"></i> Dasbor Utama Staff
+            </button>
+            <button @click="currentTab = '9_admin_review'" :class="{'bg-blue-600 text-white': currentTab === '9_admin_review', 'hover:bg-slate-800 hover:text-white': currentTab !== '9_admin_review'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3">
+                <i class="fa-solid fa-list-check w-4 text-center"></i> Detail Review
+            </button>
+            <button @click="currentTab = '10_admin_template'" :class="{'bg-blue-600 text-white': currentTab === '10_admin_template', 'hover:bg-slate-800 hover:text-white': currentTab !== '10_admin_template'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3">
+                <i class="fa-solid fa-file-word w-4 text-center"></i> Manajemen Template
+            </button>
+
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2 px-3 mt-6">5. Signer Portal</div>
+            <button @click="currentTab = '11_signer'" :class="{'bg-blue-600 text-white': currentTab === '11_signer', 'hover:bg-slate-800 hover:text-white': currentTab !== '11_signer'}" class="w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-3 mb-8">
+                <i class="fa-solid fa-file-signature w-4 text-center"></i> Verifikasi Pejabat
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Viewport -->
+    <main class="flex-1 relative bg-slate-200 flex flex-col p-4 md:p-8 overflow-hidden">
+        
+        <!-- Mockup Device Frame -->
+        <div class="w-full h-full max-w-7xl mx-auto bg-white rounded-xl mockup-window flex flex-col overflow-hidden relative">
+            
+            <!-- MacOS style window bar -->
+            <div class="h-8 bg-slate-100 border-b border-slate-200 flex items-center px-4 shrink-0">
+                <div class="flex gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+                    <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                </div>
+                <div class="flex-1 text-center text-xs font-medium text-slate-400" x-text="'https://ult.fkip.unila.ac.id/' + currentTab.replace(/[0-9_]/g, '')"></div>
+            </div>
+
+            <!-- Content Area (Scrollable within the device frame) -->
+            <div class="flex-1 overflow-y-auto bg-slate-50 relative">
+
+                <!-- 1. PUBLIC: BERANDA -->
+                <div x-show="currentTab === '1_beranda'" class="min-h-full flex flex-col bg-white">
+                    <header class="glass-header sticky top-0 z-40 px-6 lg:px-12 h-20 flex items-center justify-between">
+                        <div class="flex items-center gap-3 cursor-pointer">
+                            <div class="w-10 h-10 rounded bg-blue-900 flex items-center justify-center text-white font-bold text-lg"><i class="fa-solid fa-building-columns"></i></div>
+                            <div>
+                                <h2 class="font-bold text-lg text-slate-800 leading-tight">ULT FKIP</h2>
+                                <p class="text-xs text-slate-500">Universitas Lampung</p>
+                            </div>
+                        </div>
+                        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                            <a href="#" class="text-blue-700 font-bold border-b-2 border-blue-700 py-1">Beranda</a>
+                            <a href="#" class="hover:text-blue-700 transition-colors">Katalog Layanan</a>
+                            <a href="#" class="hover:text-blue-700 transition-colors">Berita</a>
+                            <a href="#" class="hover:text-blue-700 transition-colors">FAQ</a>
+                        </nav>
+                        <div class="flex items-center gap-3">
+                            <button class="px-5 py-2 text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">Masuk</button>
+                        </div>
+                    </header>
+                    
+                    <main class="flex-1">
+                        <!-- Hero -->
+                        <div class="relative w-full h-[400px] bg-blue-900 flex items-center overflow-hidden">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-900/90 to-transparent"></div>
+                            
+                            <div class="relative z-10 px-6 lg:px-20 max-w-3xl text-white">
+                                <span class="px-3 py-1 bg-yellow-400 text-blue-900 text-xs font-bold rounded-full mb-4 inline-block">Layanan Digital Terpadu</span>
+                                <h1 class="text-4xl lg:text-5xl font-bold mb-4 leading-tight">Layanan Administrasi Akademik Dalam Genggaman.</h1>
+                                <p class="text-blue-100 mb-8 text-lg">Platform pengajuan dokumen dan surat resmi untuk mahasiswa, dosen, dan staf FKIP Universitas Lampung secara cepat dan transparan.</p>
+                                <div class="flex gap-4">
+                                    <button class="px-6 py-3 bg-white text-blue-900 font-bold rounded-lg shadow-lg hover:bg-slate-50 transition-colors flex items-center gap-2">Ajukan Sekarang <i class="fa-solid fa-arrow-right"></i></button>
+                                    <button class="px-6 py-3 bg-blue-800 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">Cek Status Dokumen</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Services Grid -->
+                        <div class="px-6 lg:px-20 py-16 bg-slate-50">
+                            <div class="text-center mb-12">
+                                <h2 class="text-2xl font-bold text-slate-800">Layanan Populer</h2>
+                                <p class="text-slate-500 mt-2">Permohonan yang paling sering diajukan bulan ini.</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                                <!-- Card 1 -->
+                                <div class="bg-white p-6 rounded-2xl soft-shadow card-hover border border-slate-100 cursor-pointer">
+                                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-file-contract"></i></div>
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Surat Keterangan Aktif Kuliah</h3>
+                                    <p class="text-sm text-slate-600 mb-4 line-clamp-2">Permohonan surat keterangan aktif untuk keperluan beasiswa, tunjangan gaji orang tua, dan instansi lain.</p>
+                                    <div class="flex items-center text-blue-700 font-semibold text-sm">Lihat Syarat <i class="fa-solid fa-chevron-right text-[10px] ml-1 mt-0.5"></i></div>
+                                </div>
+                                <!-- Card 2 -->
+                                <div class="bg-white p-6 rounded-2xl soft-shadow card-hover border border-slate-100 cursor-pointer">
+                                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-graduation-cap"></i></div>
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Penerbitan SK Pembimbing</h3>
+                                    <p class="text-sm text-slate-600 mb-4 line-clamp-2">Pengajuan Surat Keputusan pembimbing skripsi/tugas akhir untuk mahasiswa tingkat akhir.</p>
+                                    <div class="flex items-center text-blue-700 font-semibold text-sm">Lihat Syarat <i class="fa-solid fa-chevron-right text-[10px] ml-1 mt-0.5"></i></div>
+                                </div>
+                                <!-- Card 3 -->
+                                <div class="bg-white p-6 rounded-2xl soft-shadow card-hover border border-slate-100 cursor-pointer">
+                                    <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-building-user"></i></div>
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Izin Observasi / Penelitian</h3>
+                                    <p class="text-sm text-slate-600 mb-4 line-clamp-2">Pengajuan surat pengantar dari dekanat untuk keperluan observasi, pra-riset, atau penelitian ke sekolah.</p>
+                                    <div class="flex items-center text-blue-700 font-semibold text-sm">Lihat Syarat <i class="fa-solid fa-chevron-right text-[10px] ml-1 mt-0.5"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Footer -->
+                        <footer class="bg-slate-900 text-slate-400 py-10 px-6 lg:px-20 text-sm">
+                            <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center text-white"><i class="fa-solid fa-building-columns"></i></div>
+                                    <span class="font-semibold text-slate-200">FKIP Universitas Lampung</span>
+                                </div>
+                                <p>&copy; 2026 Unit Layanan Terpadu FKIP Unila. All rights reserved.</p>
+                            </div>
+                        </footer>
+                    </main>
+                </div>
+
+                <!-- 2. PUBLIC: KATALOG -->
+                <div x-show="currentTab === '2_katalog'" class="min-h-full flex flex-col bg-slate-50">
+                    <header class="bg-white shadow-sm sticky top-0 z-40 px-6 lg:px-12 h-16 flex items-center justify-between">
+                         <div class="flex items-center gap-2 font-bold text-slate-800"><i class="fa-solid fa-layer-group text-blue-700"></i> Katalog Layanan</div>
+                         <div class="w-64 relative">
+                             <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-sm"></i>
+                             <input type="text" placeholder="Cari layanan..." class="w-full pl-9 pr-4 py-1.5 bg-slate-100 border-none rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:bg-white transition-all">
+                         </div>
+                    </header>
+                    <main class="flex-1 p-6 lg:p-10 max-w-7xl mx-auto w-full">
+                        <div class="mb-8">
+                            <h1 class="text-3xl font-bold text-slate-800 mb-2">Jelajahi Katalog Layanan</h1>
+                            <p class="text-slate-500">Pilih jenis layanan administrasi yang Anda butuhkan, baca persyaratannya, lalu klik ajukan.</p>
+                        </div>
+                        
+                        <!-- Category Filter -->
+                        <div class="flex gap-2 mb-8 overflow-x-auto pb-2 hide-scrollbar">
+                            <button class="px-4 py-2 bg-blue-900 text-white rounded-full text-sm font-semibold whitespace-nowrap">Semua Layanan</button>
+                            <button class="px-4 py-2 bg-white text-slate-600 border border-slate-200 rounded-full text-sm font-medium hover:bg-slate-50 whitespace-nowrap">Akademik</button>
+                            <button class="px-4 py-2 bg-white text-slate-600 border border-slate-200 rounded-full text-sm font-medium hover:bg-slate-50 whitespace-nowrap">Kemahasiswaan</button>
+                            <button class="px-4 py-2 bg-white text-slate-600 border border-slate-200 rounded-full text-sm font-medium hover:bg-slate-50 whitespace-nowrap">Umum & Kepegawaian</button>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Card Template -->
+                            <div class="bg-white rounded-2xl border border-slate-200 p-6 soft-shadow hover:border-blue-300 transition-colors flex flex-col">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center text-lg"><i class="fa-solid fa-file-invoice"></i></div>
+                                    <span class="px-2.5 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-md">Buka</span>
+                                </div>
+                                <h3 class="font-bold text-lg text-slate-800 mb-2">Surat Pengantar Magang</h3>
+                                <p class="text-sm text-slate-500 mb-6 flex-1">Pengajuan surat pengantar ke instansi atau perusahaan untuk pelaksanaan Praktik Kerja Lapangan (PKL).</p>
+                                
+                                <div class="space-y-2 mb-6">
+                                    <p class="text-xs font-semibold text-slate-700">Persyaratan Wajib:</p>
+                                    <ul class="text-xs text-slate-500 space-y-1 ml-4 list-disc marker:text-slate-300">
+                                        <li>Scan KTM Asli</li>
+                                        <li>KRS Semester Berjalan</li>
+                                        <li>Surat Persetujuan Prodi</li>
+                                    </ul>
+                                </div>
+                                
+                                <button class="w-full py-2.5 border border-blue-600 text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors text-sm">Mulai Pengajuan</button>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="bg-white rounded-2xl border border-slate-200 p-6 soft-shadow hover:border-blue-300 transition-colors flex flex-col">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center text-lg"><i class="fa-solid fa-plane-departure"></i></div>
+                                    <span class="px-2.5 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-md">Buka</span>
+                                </div>
+                                <h3 class="font-bold text-lg text-slate-800 mb-2">Pengajuan Cuti Akademik</h3>
+                                <p class="text-sm text-slate-500 mb-6 flex-1">Permohonan resmi untuk berhenti studi sementara dengan alasan kesehatan, finansial, atau alasan mendesak lainnya.</p>
+                                
+                                <div class="space-y-2 mb-6">
+                                    <p class="text-xs font-semibold text-slate-700">Persyaratan Wajib:</p>
+                                    <ul class="text-xs text-slate-500 space-y-1 ml-4 list-disc marker:text-slate-300">
+                                        <li>Surat Bebas Perpustakaan</li>
+                                        <li>Bukti Pembayaran UKT Terakhir</li>
+                                        <li>Surat Persetujuan Orang Tua</li>
+                                    </ul>
+                                </div>
+                                
+                                <button class="w-full py-2.5 border border-blue-600 text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors text-sm">Mulai Pengajuan</button>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
+                <!-- 4. AUTH: LOGIN -->
+                <div x-show="currentTab === '4_login'" class="min-h-full flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center">
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-blue-900/80 backdrop-blur-sm"></div>
+                    
+                    <div class="relative z-10 w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden">
+                        <div class="h-2 bg-yellow-400 w-full"></div>
+                        <div class="p-8">
+                            <div class="flex flex-col items-center justify-center mb-8">
+                                <div class="w-14 h-14 rounded-full bg-blue-900 text-white flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-building-columns"></i></div>
+                                <h2 class="text-2xl font-bold text-slate-800 text-center">Masuk ke Portal</h2>
+                                <p class="text-sm text-slate-500 text-center mt-1">Gunakan akun SSO Unila Anda</p>
+                            </div>
+                            
+                            <form class="space-y-5">
+                                <div>
+                                    <label class="block text-sm font-semibold text-slate-700 mb-1">Email (SSO Unila)</label>
+                                    <div class="relative">
+                                        <i class="fa-solid fa-envelope absolute left-3 top-3 text-slate-400"></i>
+                                        <input type="email" placeholder="npm@students.unila.ac.id" class="w-full pl-10 pr-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between items-center mb-1">
+                                        <label class="block text-sm font-semibold text-slate-700">Password</label>
+                                        <a href="#" class="text-xs font-semibold text-blue-600 hover:text-blue-800">Lupa sandi?</a>
+                                    </div>
+                                    <div class="relative">
+                                        <i class="fa-solid fa-lock absolute left-3 top-3 text-slate-400"></i>
+                                        <input type="password" placeholder="••••••••" class="w-full pl-10 pr-4 py-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all">
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <input type="checkbox" id="remember" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-600">
+                                    <label for="remember" class="text-sm text-slate-600">Ingat sesi saya</label>
+                                </div>
+                                
+                                <button type="button" class="w-full py-3 bg-blue-900 text-white font-bold rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 transition-all flex justify-center items-center gap-2">
+                                    Login <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                                </button>
+                            </form>
+                            
+                            <div class="mt-8 text-center text-sm text-slate-500">
+                                Belum punya akun? <a href="#" class="font-bold text-blue-700 hover:underline">Hubungi admin fakultas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. STUDENT: DASHBOARD -->
+                <div x-show="currentTab === '5_student_dash'" class="min-h-full flex flex-col bg-slate-50">
+                    <!-- Topnav -->
+                    <header class="bg-white border-b border-slate-200 h-16 flex items-center justify-between px-6 shrink-0 sticky top-0 z-30">
+                        <div class="font-bold text-lg text-slate-800 flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-blue-700"></i> Portal Mahasiswa</div>
+                        <div class="flex items-center gap-4">
+                            <button class="relative text-slate-400 hover:text-slate-600 transition-colors">
+                                <i class="fa-solid fa-bell text-xl"></i>
+                                <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white text-[9px] font-bold text-white flex items-center justify-center">2</span>
+                            </button>
+                            <div class="flex items-center gap-3 pl-4 border-l border-slate-200 cursor-pointer">
+                                <div class="text-right hidden sm:block">
+                                    <div class="text-sm font-bold text-slate-700">Andricha Dea Mitra</div>
+                                    <div class="text-xs text-slate-500">2013023021</div>
+                                </div>
+                                <div class="w-9 h-9 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold border border-blue-200">AD</div>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <main class="flex-1 p-6 lg:p-8 flex flex-col lg:flex-row gap-6 max-w-7xl mx-auto w-full">
+                        <!-- Main Column -->
+                        <div class="flex-1 space-y-6">
+                            <!-- Welcome Banner -->
+                            <div class="bg-gradient-to-r from-blue-900 to-blue-700 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden flex items-center justify-between">
+                                <div class="absolute right-0 top-0 opacity-10 text-[10rem] -mt-10 -mr-10"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="relative z-10">
+                                    <h2 class="text-2xl font-bold mb-1">Halo, Andricha! 👋</h2>
+                                    <p class="text-blue-100 text-sm">Ada 1 dokumen permohonan Anda yang sedang diproses oleh tata usaha hari ini.</p>
+                                </div>
+                                <button class="relative z-10 shrink-0 px-5 py-2.5 bg-white text-blue-900 font-bold rounded-lg shadow-sm hover:bg-slate-50 transition-colors">
+                                    <i class="fa-solid fa-plus mr-2"></i> Buat Permohonan
+                                </button>
+                            </div>
+                            
+                            <!-- Activity Stream -->
+                            <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
+                                <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+                                    <h3 class="font-bold text-slate-800">Aktivitas Terbaru</h3>
+                                    <button class="text-sm text-blue-600 font-semibold hover:text-blue-800">Lihat Semua</button>
+                                </div>
+                                <div class="divide-y divide-slate-100">
+                                    <!-- Item 1 -->
+                                    <div class="p-6 hover:bg-slate-50 transition-colors flex gap-4 cursor-pointer">
+                                        <div class="w-10 h-10 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-spinner"></i></div>
+                                        <div class="flex-1">
+                                            <div class="flex justify-between items-start mb-1">
+                                                <h4 class="font-bold text-slate-800">Surat Pengantar Magang PKL</h4>
+                                                <span class="text-xs font-semibold text-slate-500">2 Jam yang lalu</span>
+                                            </div>
+                                            <p class="text-sm text-slate-600 mb-2">Permohonan sedang direview oleh loket ULT.</p>
+                                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-bold bg-amber-100 text-amber-700"><i class="fa-solid fa-clock"></i> Diproses Admin</span>
+                                        </div>
+                                    </div>
+                                    <!-- Item 2 -->
+                                    <div class="p-6 hover:bg-slate-50 transition-colors flex gap-4 cursor-pointer">
+                                        <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-check"></i></div>
+                                        <div class="flex-1">
+                                            <div class="flex justify-between items-start mb-1">
+                                                <h4 class="font-bold text-slate-800">Surat Keterangan Aktif Kuliah</h4>
+                                                <span class="text-xs font-semibold text-slate-500">12 Mei 2026</span>
+                                            </div>
+                                            <p class="text-sm text-slate-600 mb-2">Dokumen telah selesai dan ditandatangani. Siap untuk diunduh.</p>
+                                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-100 text-emerald-700"><i class="fa-solid fa-check-double"></i> Selesai</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Sidebar / Side Panel -->
+                        <div class="w-full lg:w-80 space-y-6 shrink-0">
+                            <!-- Stats Widget -->
+                            <div class="bg-white border border-slate-200 rounded-2xl shadow-sm p-6">
+                                <h3 class="font-bold text-slate-800 mb-4">Statistik Pengajuan</h3>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 text-center">
+                                        <div class="text-3xl font-black text-slate-700 mb-1">12</div>
+                                        <div class="text-xs font-semibold text-slate-500 uppercase">Total</div>
+                                    </div>
+                                    <div class="bg-emerald-50 rounded-xl p-4 border border-emerald-100 text-center">
+                                        <div class="text-3xl font-black text-emerald-600 mb-1">11</div>
+                                        <div class="text-xs font-semibold text-emerald-600 uppercase">Selesai</div>
+                                    </div>
+                                    <div class="bg-amber-50 rounded-xl p-4 border border-amber-100 text-center col-span-2">
+                                        <div class="text-xl font-black text-amber-600 mb-1">1</div>
+                                        <div class="text-xs font-semibold text-amber-600 uppercase">Sedang Diproses</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
+                <!-- 8. ADMIN: DASHBOARD -->
+                <div x-show="currentTab === '8_admin_dash'" class="min-h-full flex bg-slate-50">
+                    <!-- Vertical Sidebar -->
+                    <aside class="w-64 bg-slate-900 text-white flex flex-col shrink-0">
+                        <div class="p-6 flex items-center gap-3 border-b border-slate-800">
+                            <div class="w-8 h-8 rounded bg-blue-600 flex items-center justify-center font-bold shadow-lg"><i class="fa-solid fa-shield-halved"></i></div>
+                            <span class="font-bold text-lg tracking-tight">ULT Admin</span>
+                        </div>
+                        <nav class="flex-1 px-4 py-6 space-y-2 overflow-y-auto">
+                            <a href="#" class="flex items-center gap-3 px-4 py-2.5 bg-blue-800/50 text-blue-300 rounded-lg font-medium">
+                                <i class="fa-solid fa-chart-pie w-5"></i> Dashboard
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg font-medium transition-colors">
+                                <i class="fa-solid fa-inbox w-5"></i> Kotak Masuk <span class="ml-auto bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">5</span>
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg font-medium transition-colors">
+                                <i class="fa-solid fa-file-word w-5"></i> Template Dokumen
+                            </a>
+                            <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg font-medium transition-colors">
+                                <i class="fa-solid fa-users w-5"></i> Manajemen User
+                            </a>
+                        </nav>
+                        <div class="p-4 border-t border-slate-800">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-slate-700 border border-slate-600"></div>
+                                <div>
+                                    <div class="text-sm font-bold text-white">Staff Admin</div>
+                                    <div class="text-xs text-slate-400">Loket 1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    <!-- Content -->
+                    <main class="flex-1 flex flex-col min-w-0">
+                        <!-- Top Header -->
+                        <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8 shrink-0">
+                            <h1 class="font-bold text-lg text-slate-800">Overview Operasional</h1>
+                            <div class="flex items-center gap-4">
+                                <button class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <button class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-bell"></i></button>
+                            </div>
+                        </header>
+                        
+                        <div class="flex-1 p-8 overflow-y-auto">
+                            <!-- KPI Cards -->
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                                <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center text-xl"><i class="fa-solid fa-file-import"></i></div>
+                                    <div>
+                                        <p class="text-xs font-semibold text-slate-500 uppercase">Masuk Hari Ini</p>
+                                        <h3 class="text-2xl font-black text-slate-800">24</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-xl"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                                    <div>
+                                        <p class="text-xs font-semibold text-slate-500 uppercase">Menunggu Review</p>
+                                        <h3 class="text-2xl font-black text-slate-800">5</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center text-xl"><i class="fa-solid fa-pen-nib"></i></div>
+                                    <div>
+                                        <p class="text-xs font-semibold text-slate-500 uppercase">Proses TTD Pejabat</p>
+                                        <h3 class="text-2xl font-black text-slate-800">12</h3>
+                                    </div>
+                                </div>
+                                <div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl"><i class="fa-solid fa-check-double"></i></div>
+                                    <div>
+                                        <p class="text-xs font-semibold text-slate-500 uppercase">Selesai (Bulan Ini)</p>
+                                        <h3 class="text-2xl font-black text-slate-800">189</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Table Queue -->
+                            <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                                <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50/50">
+                                    <h2 class="font-bold text-slate-800">Antrian Menunggu Review (Gatekeeper)</h2>
+                                    <button class="text-sm text-blue-600 font-semibold border border-blue-200 bg-white px-3 py-1.5 rounded-lg hover:bg-blue-50">Filter</button>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left border-collapse">
+                                        <thead>
+                                            <tr class="bg-slate-50 text-xs text-slate-500 uppercase tracking-wider border-b border-slate-200">
+                                                <th class="px-6 py-3 font-semibold">TID</th>
+                                                <th class="px-6 py-3 font-semibold">Pemohon</th>
+                                                <th class="px-6 py-3 font-semibold">Layanan</th>
+                                                <th class="px-6 py-3 font-semibold">Waktu Pengajuan</th>
+                                                <th class="px-6 py-3 font-semibold text-right">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-slate-100 text-sm">
+                                            <tr class="hover:bg-slate-50">
+                                                <td class="px-6 py-4 font-mono text-slate-500">REQ-8902</td>
+                                                <td class="px-6 py-4">
+                                                    <div class="font-bold text-slate-800">Budi Santoso</div>
+                                                    <div class="text-xs text-slate-500">2113023001 • Pendidikan Fisika</div>
+                                                </td>
+                                                <td class="px-6 py-4 font-medium text-slate-700">Surat Pengantar Magang</td>
+                                                <td class="px-6 py-4 text-slate-500">Hari ini, 09:15 AM</td>
+                                                <td class="px-6 py-4 text-right">
+                                                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 shadow-sm text-xs">Review</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50">
+                                                <td class="px-6 py-4 font-mono text-slate-500">REQ-8901</td>
+                                                <td class="px-6 py-4">
+                                                    <div class="font-bold text-slate-800">Siti Aminah</div>
+                                                    <div class="text-xs text-slate-500">2013023022 • Pendidikan Kimia</div>
+                                                </td>
+                                                <td class="px-6 py-4 font-medium text-slate-700">Surat Izin Penelitian</td>
+                                                <td class="px-6 py-4 text-slate-500">Hari ini, 08:30 AM</td>
+                                                <td class="px-6 py-4 text-right">
+                                                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 shadow-sm text-xs">Review</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                
+                <!-- If you click other tabs, just show placeholder for the demo -->
+                <div x-show="!['1_beranda', '2_katalog', '4_login', '5_student_dash', '8_admin_dash'].includes(currentTab)" class="min-h-full flex items-center justify-center flex-col text-slate-400 p-10 text-center">
+                    <i class="fa-regular fa-file-code text-6xl mb-4 text-slate-300"></i>
+                    <h2 class="text-xl font-bold text-slate-600 mb-2">Desain Tersedia di Kode Sumber</h2>
+                    <p class="max-w-md">11 Halaman ini telah diinisiasi. Untuk menjaga keringkasan file demo ini, 5 halaman utama telah dirender secara penuh. Halaman lainnya mengikuti sistem desain dan komponen (_Design System_) yang sama secara konsisten.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
+"""
+
+with open(r'c:\laragon\www\ult-fkip-unila\docs\skripsi\rancangan_diagram\preview_11_hifi.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("HTML artifact created.")

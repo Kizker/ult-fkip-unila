@@ -1,0 +1,54 @@
+﻿@startuml
+skinparam activity {
+  BackgroundColor #F8FBFF
+  BorderColor #2B4C7E
+  ArrowColor #2B4C7E
+  DiamondBackgroundColor #EAF2FF
+}
+
+start
+:Mahasiswa submit permohonan + lampiran;
+:Status = DIAJUKAN;
+
+:Admin Jurusan/Staf ULT verifikasi awal;
+if (Gate valid?) then (Ya)
+else (Tidak)
+  :Status = DITOLAK_ADMIN;
+  stop
+endif
+
+repeat
+  if (Perlu nomor surat?) then (Ya)
+    :Input nomor surat;
+    :Status = NOMOR_SURAT_FILLED;
+  endif
+
+  :Start signing;
+  :Status = IN_SIGNING;
+
+  if (Keputusan signer?) then (APPROVE SEMUA)
+    :Status = READY_FOR_FINAL;
+    break
+  elseif (REVISI)
+    :Status = PERLU_PERBAIKAN;
+    :Mahasiswa revisi data/lampiran;
+    :Kembali ke verifikasi gate;
+  else (TOLAK)
+    :Status = DITOLAK / DITOLAK_ADMIN;
+    stop
+  endif
+repeat while (Perlu iterasi ulang?) is (Ya)
+
+:Staff Final assembly preview;
+:Staff Final finalize output;
+:Status = COMPLETED/SELESAI;
+
+if (Layanan butuh legalisir?) then (Ya)
+  :Status = MENUNGGU_LEGALISIR;
+  :Petugas legalisir proses selesai;
+  :Status = COMPLETED/SELESAI;
+endif
+
+:Mahasiswa unduh output private;
+stop
+@enduml

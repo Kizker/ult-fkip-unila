@@ -1,0 +1,1358 @@
+ 
+
+ 
+
+
+PENGEMBANGAN WEBSITE UNIT LAYANAN TERPADU (ULT) SEBAGAI UPAYA DIGITALISASI PELAYANAN DI FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN 
+UNIVERSITAS LAMPUNG
+	
+
+
+
+(Skripsi)
+
+
+
+Oleh:
+ANDRICHA DEA MITRA
+NPM 2213025061
+
+
+
+
+
+
+
+
+
+FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN
+UNIVERSITAS LAMPUNG
+BANDAR LAMPUNG
+2026
+
+
+
+
+
+
+
+ABSTRAK
+
+PENGEMBANGAN WEBSITE UNIT LAYANAN TERPADU (ULT) SEBAGAI UPAYA DIGITALISASI PELAYANAN DI FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN UNIVERSITAS LAMPUNG
+Oleh
+ANDRICHA DEA MITRA
+Penelitian ini bertujuan untuk mengembangkan Website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung sebagai solusi digitalisasi pelayanan administrasi akademik yang aman dan akuntabel. Metode pengembangan yang digunakan adalah Research and Development / R&D dengan menerapkan model pengembangan ADDIE (Analysis, Design, Development, Implementation, and Evaluation). Website dibangun menggunakan framework Laravel 12, PHP 8.4+, basis data MySQL, serta antarmuka dinamis berbasis TailwindCSS dan Alpine.js dengan fitur unggulan kontrol akses peran (Role-Based Access Control / RBAC), perakitan dokumen otomatis (OpenXML) berbasis template dinamis, penyimpanan privat dengan perlindungan middleware otorisasi anti-IDOR, dan modul audit trail. Hasil validasi oleh sembilan validator ahli menyatakan produk Sangat Valid dengan persentase kelayakan 91,95% (koefisien Aiken's V = 0,90). Pengujian kepraktisan oleh 18 responden pengguna tingkat fakultas menunjukkan persentase kepraktisan sebesar 92,13% (kategori Sangat Praktis). Simpulan penelitian membuktikan bahwa Website ULT FKIP Universitas Lampung layak dan praktis diimplementasikan guna meningkatkan efisiensi operasional pelayanan administrasi persuratan fakultas.
+Kata Kunci: ADDIE, Digitalisasi Pelayanan, R&D, Website ULT
+
+
+
+
+
+
+
+ABSTRACT
+
+DEVELOPMENT OF INTEGRATED SERVICE UNIT (ULT) WEBSITE AS AN EFFORT TO DIGITALIZE SERVICES IN THE FACULTY OF TEACHER TRAINING AND EDUCATION LAMPUNG UNIVERSITY
+By
+ANDRICHA DEA MITRA
+This research aims to develop the Integrated Service Unit (ULT) Website of FKIP Lampung University as a secure and accountable academic administrative service digitalization solution. The development method used is Research and Development (R&D) by applying the ADDIE (Analysis, Design, Development, Implementation, and Evaluation) development model. The website was built using Laravel 12 framework, PHP 8.4+, MySQL, TailwindCSS, and Alpine.js with primary features including role-based access control (RBAC), automatic document assembly (OpenXML), private storage anti-IDOR, and audit trail. Validation results by nine expert validators indicated that the product is Very Valid with a feasibility percentage of 91.95% (Aiken's V = 0.90). Practicality testing by 18 faculty-level user respondents showed a practicality percentage of 92.13% (Very Practical category). The conclusion proves that the ULT FKIP Lampung University Website is highly feasible and practical to be implemented to improve the operational efficiency of faculty administrative correspondence services.
+Keywords: ADDIE, R&D, Service Digitalization, ULT Website
+
+
+
+
+
+
+
+PENGEMBANGAN WEBSITE UNIT LAYANAN TERPADU (ULT) SEBAGAI UPAYA DIGITALISASI PELAYANAN DI FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN UNIVERSITAS LAMPUNG
+
+Oleh:
+ANDRICHA DEA MITRA
+
+Skripsi
+Sebagai Salah Satu Syarat untuk Mencapai Gelar
+
+SARJANA PENDIDIKAN
+
+Pada
+Program Studi Pendidikan Teknologi Informasi
+
+Jurusan Pendidikan Matematika dan Ilmu Pengetahuan Alam
+
+
+
+FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN
+UNIVERSITAS LAMPUNG
+BANDARLAMPUNG
+2026
+
+
+
+
+
+
+
+
+MENYETUJUI
+Komisi Pembimbing
+
+
+
+Ketua Jurusan Pendidikan MIPA
+
+Dr. Nurhanurawati, M.Pd.
+NIP 196708081991032001
+
+
+
+
+
+
+
+
+
+MENGESAHKAN
+
+
+
+Tim Penguji
+
+
+Dekan Fakultas Keguruan dan Ilmu Pendidikan
+
+Dr. Albet Maydiantoro, M.Pd.
+NIP 198705042014041001
+
+
+
+
+
+
+Tanggal Lulus Ujian Skripsi: _____________
+
+
+
+
+
+
+SURAT PERNYATAAN
+
+
+
+Yang bertanda tangan di bawah ini adalah: 
+
+
+Dengan ini menyatakan bahwa dalam skripsi ini tidak terdapat karya yang pernah diajukan untuk memperoleh gelar sarjana di suatu perguruan tinggi, dan sepanjang pengetahuan saya juga tidak terdapat karya atau pendapat yang pernah ditulis atau diterbitkan oleh orang lain, kecuali yang secara tertulis diacu dalam naskah ini dan disebut dalam daftar pustaka.
+
+
+
+Bandarlampung, __ Juni 2026
+
+Andricha Dea Mitra
+NPM 2213025061
+
+
+
+
+
+
+
+RIWAYAT HIDUP
+
+
+
+
+
+
+
+
+
+
+MOTTO HIDUP
+“Hidup Selayaknya Manusia.”
+(Andricha Dea Mitra)
+
+
+
+
+
+
+
+PERSEMBAHAN
+
+
+
+
+
+
+
+
+
+
+
+SANWACANA
+
+
+
+
+
+
+
+
+
+
+
+DAFTAR ISI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DAFTAR TABEL
+
+
+
+
+Tabel 	  								         Halaman
+Penelitian Terdahulu	29
+Prosedur Pengembangan Website ULT Berdasarkan Model ADDIE	36
+Subjek Penelitian dan Sampling	42
+Kisi-kisi Analisis Kebutuhan	44
+Kisi-kisi Validasi Ahli Materi	45
+Kisi-kisi Validasi Ahli Media	45
+Kisi-kisi Validasi Ahli Sistem	46
+Kisi-kisi Uji Kepraktisan (Angket)	46
+Pemetaan Pengumpulan Data	47
+Skala Likert Penilaian Validitas Instrumen	49
+Kriteria Penafsiran Validitas Produk	50
+Kriteria Penafsiran Kepraktisan Produk	52
+Rekapitulasi Hasil Validasi Ahli	60
+Rekapitulasi Distribusi Kategori Uji Kepraktisan Pengguna	63
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DAFTAR GAMBAR
+
+
+
+
+Gambar 								         Halaman
+Diagram Persentase Hasil Angket Analisis Kebutuhan	3
+Kerangka Berpikir	33
+Alur Model Pengembangan ADDIE	35
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DAFTAR LAMPIRAN
+
+
+
+
+Lampiran  								         Halaman
+Lampiran 1. Surat Balasan Izin Penelitian Sekolah	1
+Lampiran 2. Hasil Wawancara Pendahuluan Staf ULT FKIP Unila	2
+Lampiran 3. Hasil Wawancara Pendahuluan Admin Jurusan FKIP Unila	7
+Lampiran 4. Hasil Wawancara Pendahuluan Admin Prodi ULT FKIP Unila	10
+Lampiran 5. Hasil Wawancara Pendahuluan Guru SMK N 9 Bandar Lampung	14
+Lampiran 6. Angket Analisis Kebutuhan Mahasiswa	17
+Lampiran 7. Hasil Uji Validitas Ahli Materi	22
+Lampiran 8. Hasil Uji Validitas Ahli Media	31
+Lampiran 9. Hasil Uji Validitas Ahli Sistem	40
+Lampiran 10. Hasil Uji Kepraktisan Pengguna	49
+Lampiran 11. Matriks Hasil Skor Kuesioner Uji Kepraktisan Responden	103
+Lampiran 12. Dokumentasi	104
+Lampiran 13. Dokumentasi Desain UI/UX Website ULT FKIP Unila	107
+
+
+
+
+
+
+
+PENDAHULUAN
+
+
+
+
+Latar Belakang 
+
+
+Digitalisasi layanan menjadi pendorong utama transformasi perguruan tinggi, terutama pada layanan akademik dan administratif yang menuntut akses cepat, transparan, dan akuntabel. Penelitian oleh Sukorini et al. (2024), menemukan bahwa sistem informasi manajemen (Management Information Systems) dan digitalisasi di perguruan tinggi pasca pandemi memberikan dampak positif pada mutu operasional dan kualitas akademik, meskipun masih terdapat tantangan pada infrastruktur dan kompetensi sumber daya manusia. Implikasinya, digitalisasi tidak lagi bersifat pilihan, melainkan kebutuhan untuk memastikan layanan kampus mampu memenuhi ekspektasi pengguna secara konsisten.
+Di Indonesia, percepatan digitalisasi layanan pendidikan tinggi muncul sebagai respons atas tuntutan relevansi dan peningkatan kualitas layanan publik kampus. Menurut Akbari & Pratomo (2022) menyatakan bahwa universitas-universitas di Indonesia mengalami tekanan untuk mempercepat digitalisasi layanan agar tetap relevan, namun masih menghadapi hambatan pada budaya organisasi, kesiapan SDM, dan ketersediaan teknologi. Hambatan tersebut berdampak pada proses layanan yang belum sepenuhnya terpadu. Temuan serupa ditegaskan oleh Karya et al. (2024) dalam studi digitalisasi layanan pendidikan tinggi di Kalimantan, yang menunjukkan bahwa inovasi digital sudah dilakukan, tetapi proses layanan terutama pada aspek administratif masih belum terintegrasi dengan baik. Kondisi ini menegaskan bahwa keberhasilan digitalisasi bukan hanya soal aplikasi, tetapi juga penyelarasan proses layanan dan kesiapan pelaksana di unit-unit operasional. Sebagai konsekuensinya, pembahasan perlu mengerucut pada unit layanan sebagai garda terdepan yang paling merasakan dampak digitalisasi.
+Dalam konteks operasional, unit layanan merupakan titik terdepan (front office) yang berinteraksi langsung dengan pengguna, sehingga kualitas layanan pada unit ini sangat menentukan pengalaman dan kepuasan pengguna. Disampaikan oleh Suhartoyo (2019), Unit layanan terpadu idealnya menerapkan prinsip satu pintu (single window) agar proses pengajuan, verifikasi, hingga penyelesaian layanan dapat ditangani lebih tertib, terukur, dan mudah dipantau. Karena itu, digitalisasi pada level unit layanan menjadi krusial karena berpengaruh langsung pada efisiensi proses dan kejelasan status layanan bagi pengguna. 
+Kondisi tersebut relevan dengan situasi di Universitas Lampung, khususnya Fakultas Keguruan dan Ilmu Pendidikan (FKIP) melalui Unit Layanan Terpadu (ULT), yang masih menghadapi tantangan dalam mengintegrasikan layanan administratif secara digital. Sejumlah layanan administratif masih dijalankan secara manual, seperti penggunaan formulir fisik, verifikasi dokumen secara tatap muka, serta penyimpanan arsip berbasis kertas. Praktik ini berimplikasi pada keterlambatan layanan, inefisiensi biaya, dan berpotensi menurunkan kepuasan pengguna. Sejalan dengan Setyaningsih dkk. (2024), evaluasi pelayanan administrasi di unit-unit pendukung Universitas Lampung menunjukkan bahwa tingkat kepuasan pengguna terhadap layanan administratif masih rendah, yakni berkisar 48–49%. Temuan tersebut memperkuat kebutuhan penguatan layanan berbasis digital pada unit layanan yang berhadapan langsung dengan pengguna. Implikasinya, pengembangan website ULT FKIP menjadi penting sebagai solusi kontekstual untuk memperbaiki proses layanan administratif di level fakultas.
+Selain itu, hasil pra-penelitian yang telah dilakukan menegaskan kondisi permasalahan di ULT FKIP Universitas Lampung. Dari wawancara dengan staf ULT terungkap bahwa prosedur layanan masih dominan manual sehingga menimbulkan antrian panjang. Mahasiswa tidak dapat melakukan pelacakan status layanan, dan pegawai menghadapi keterbatasan penguasaan teknologi. Berangkat dari itu, uraian berikutnya mengerucut pada bukti lapangan dan kebutuhan sistem yang menjadi dasar pengembangan website ULT.
+Administrator jurusan juga menyebutkan adanya redundansi proses karena mahasiswa harus bolak-balik membawa berkas fisik. Administrator jurusan bagian beberapa program studi mengungkapkan bahwa pencatatan layanan masih disimpan melalui aplikasi WhatsApp. Kondisi ini dinilai rawan hilang dan tidak efisien untuk pelaporan. 
+Berdasarkan studi pendahuluan pada Unit Layanan Terpadu (ULT) FKIP, layanan administratif masih dominan dilakukan secara manual sehingga memicu antrean, memerlukan interaksi tatap muka dan pengurusan berkas berulang, serta keterlambatan layanan. Pengguna juga mengalami kesulitan melacak status permohonan karena informasi progres layanan belum tersedia secara real-time, sementara pencatatan dan arsip layanan belum terpusat sehingga menyulitkan pelaporan dan berisiko kehilangan data. Temuan ini menunjukkan kebutuhan penguatan layanan berbasis digital melalui pengembangan website ULT yang menyediakan fitur inti seperti pelacakan status (tracking), notifikasi, arsip digital terpusat, serta rekapitulasi/pelaporan ringkas.
+
+Gambar  1. Diagram Persentase Hasil Angket Analisis Kebutuhan
+
+Sementara itu, Hasil kuesioner kepada 42 mahasiswa FKIP dengan skala Likert menunjukkan kecenderungan yang kuat terhadap kebutuhan digitalisasi layanan administrasi. Sebanyak 88,1% responden setuju dan sangat setuju bahwa layanan berbasis website lebih mudah diakses, 85,7% mendukung penuh pengembangan website ULT, dan 83,3% lebih memilih layanan online dibandingkan datang langsung ke kantor ULT. Sebaliknya, hanya 38,1% yang merasa puas terhadap layanan administrasi manual saat ini dan 35,7% yang menilai proses pelayanan berjalan cepat. Temuan ini menegaskan bahwa mayoritas mahasiswa menghendaki digitalisasi melalui website ULT FKIP sebagai solusi peningkatan efisiensi, transparansi, dan kepuasan layanan.
+Temuan studi pendahuluan dan kuesioner menunjukkan bahwa persoalan utama layanan ULT FKIP bukan sekadar ketersediaan layanan, melainkan mekanisme layanan yang masih dominan manual sehingga berdampak pada efektivitas operasional dan pengalaman pengguna. Kesenjangan ini terlihat dari beberapa kondisi: pengguna kesulitan melacak progres permohonan karena belum tersedia pelacakan status layanan; proses layanan masih menimbulkan antrean dan pengurusan berkas berulang akibat alur berbasis dokumen fisik; pengelolaan arsip belum terpusat sehingga rawan hilang dan menyulitkan pelaporan; serta transparansi proses dan kepastian waktu layanan yang dinilai belum memadai. Kondisi tersebut mengindikasikan kebutuhan penguatan layanan berbasis digital pada level unit layanan yang berhadapan langsung dengan pengguna. 
+Berdasarkan kondisi lapangan tersebut, kebutuhan fitur inti yang perlu diakomodasi dalam pengembangan website ULT mencakup: (1) pelacakan status layanan (tracking), (2) notifikasi perubahan status, (3) arsip digital terpusat disertai pencatatan aktivitas layanan (audit trail), serta (4) rekapitulasi/pelaporan ringkas. Urgensinya, penelitian pengembangan diperlukan agar digitalisasi tidak berhenti pada wacana, tetapi menghasilkan sistem yang sesuai kebutuhan pengguna dan proses kerja ULT FKIP. 
+Sejumlah penelitian terdahulu telah mengkaji digitalisasi layanan di perguruan tinggi. Penelitian oleh Alisa dkk. (2024), menganalisis kualitas pelayanan ULT Universitas Tidar menggunakan SERVQUAL dan menunjukkan bahwa layanan yang lebih terstruktur dan responsif berkaitan dengan peningkatan kepuasan pengguna. Demikian pula penelitian oleh Taqwa & Raupu (2022), mengembangkan layanan akademik berbasis website menggunakan model ADDIE dan melaporkan hasil pengembangan yang valid, praktis, dan efektif. Namun demikian, belum ditemukan penelitian yang secara spesifik berfokus pada pengembangan website layanan ULT FKIP Universitas Lampung yang menurunkan masalah lapangan menjadi kebutuhan fitur inti dan kemudian memvalidasi serta menguji kepraktisan atau usability sistem dalam konteks lokal FKIP Universitas Lampung. Dengan demikian, penelitian ini diarahkan untuk mengisi kekosongan tersebut melalui pengembangan website ULT FKIP yang diuji kelayakannya melalui validasi ahli dan uji kepraktisan. 
+Berangkat dari kebutuhan digitalisasi layanan pada level unit layanan, penelitian ini memfokuskan pengembangan pada website ULT FKIP Universitas Lampung sebagai solusi yang relevan dengan proses kerja setempat. Sistem dirancang untuk memenuhi fitur inti berupa pelacakan status layanan (tracking), notifikasi perubahan status, arsip digital terpusat berikut audit trail, serta rekapitulasi atau pelaporan ringkas. Untuk memastikan kesesuaian dan kualitas produk, kelayakan website akan dievaluasi melalui validasi ahli, lalu ditindaklanjuti dengan penyempurnaan produk sebelum dilaksanakan uji kepraktisan atau usability. Secara operasional, implementasi sistem diharapkan mengurangi antrean dan pengurusan berkas berulang, meningkatkan transparansi progres layanan, serta memudahkan pengelolaan arsip dan pelaporan di ULT FKIP. Dari sisi keilmuan, penelitian ini memberikan kontribusi pada pengembangan sistem layanan pendidikan tinggi dengan menunjukkan keterkaitan antara masalah lapangan, kebutuhan fitur inti, dan bukti kelayakan serta kepraktisan dalam konteks lokal.
+
+
+
+Rumusan Masalah
+
+
+Berdasarkan latar belakang penelitian, maka rumusan masalah dalam penelitian ini adalah:
+Bagaimana proses pengembangan website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung menggunakan pendekatan R&D dengan model ADDIE?
+Bagaimana tingkat kelayakan atau validitas website ULT FKIP Universitas Lampung berdasarkan hasil validasi ahli materi, ahli media dan ahli sistem?
+Bagaimana tingkat kepraktisan penggunaan website ULT FKIP Universitas Lampung berdasarkan hasil angket uji kepraktisan?
+
+
+
+Tujuan Penelitian
+
+
+Adapun tujuan penelitian ini adalah:
+Untuk mengembangkan website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung menggunakan pendekatan Research and Development (R&D) dengan model ADDIE.
+Untuk menilai tingkat kelayakan/validitas website ULT FKIP Universitas Lampung berdasarkan hasil validasi ahli konten layanan atau ahli materi, ahli media dan ahli sistem.
+Untuk mengukur tingkat kepraktisan (usability) penggunaan website ULT FKIP Universitas Lampung berdasarkan hasil angket uji kepraktisan.
+
+
+
+Manfaat Penelitian
+
+
+Manfaat yang diharapkan dari penelitian pengembangan website ULT FKIP Universitas Lampung dijabarkan secara teoretis dan praktis sebagai berikut:
+Manfaat Teoretis
+Memperkaya kajian digitalisasi layanan administrasi pendidikan tinggi pada level fakultas melalui bukti pengembangan sistem layanan terpusat berbasis kebutuhan pengguna.
+Memberikan kontribusi metodologis berupa contoh penerapan pendekatan Research and Development (R&D) dengan model ADDIE untuk pengembangan sistem layanan kampus, termasuk pola evaluasi validitas, kepraktisan atau usability, dan fungsionalitas yang dapat direplikasi pada konteks serupa.
+Menambah referensi tentang perumusan kebutuhan sistem (requirement) dari masalah layanan manual menjadi fitur inti layanan seperti pelacakan status, notifikasi, dan arsip digital dalam pengembangan sistem informasi layanan.
+Manfaat Praktis
+Bagi Mahasiswa
+Akses layanan administrasi secara daring kapan pun dan di mana pun sesuai ketentuan layanan.
+Pelacakan status permohonan secara lebih jelas (tracking) sehingga mengurangi kebutuhan konfirmasi manual berulang.
+Kejelasan persyaratan dan alur layanan yang membantu mengurangi kesalahan pengajuan dan bolak-balik berkas.
+Bagi Staf Unit Layanan Terpadu (ULT)
+Alur kerja pengelolaan permohonan lebih tertib melalui dashboard pemantauan status.
+Pengelolaan arsip layanan lebih terpusat sehingga memudahkan penelusuran dokumen dan mengurangi risiko kehilangan arsip.
+Pencatatan aktivitas layanan (audit trail atau log) mendukung akuntabilitas dan kontrol kualitas layanan.
+Bagi Administrator Jurusan atau Program Studi
+Memudahkan pemantauan permohonan layanan lintas program studi sesuai kewenangan, termasuk verifikasi administratif tertentu bila diterapkan.
+Tersedianya rekap atau pelaporan ringkas berbasis data permohonan untuk mendukung kebutuhan administrasi jurusan.
+Mengurangi redundansi proses dan komunikasi informal yang tersebar karena status layanan dapat dipantau pada sistem.
+Bagi Pimpinan Fakultas
+Mendukung pengambilan keputusan berbasis data melalui ringkasan layanan sesuai fitur yang dikembangkan.
+Meningkatkan transparansi dan akuntabilitas proses layanan pada level fakultas melalui mekanisme pelacakan, arsip, dan audit trail. 	
+
+
+
+Ruang Lingkup Penelitian
+
+
+Ruang lingkup penelitian ini dibatasi secara tegas sebagai berikut:
+Produk yang dikembangkan
+Website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung sebagai sistem layanan administrasi berbasis website; luaran pendukung berupa dokumentasi/panduan penggunaan sesuai kebutuhan penelitian.
+Layanan inti yang dicakup 
+Pengajuan layanan administrasi umum.
+Penyajian informasi layanan: persyaratan, alur/tahapan, dan SOP ringkas per layanan.
+Pelacakan status permohonan dan riwayat layanan per pengguna.
+Manajemen dokumen digital: unggah berkas, validasi format atau ukuran, verifikasi, dan arsip digital terpusat.
+Notifikasi perubahan status layanan.
+Rekap atau pelaporan ringkas untuk pengelola.
+Role pengguna dan batas kewenangan
+Mahasiswa: login, melihat katalog layanan, mengajukan permohonan, mengunggah dokumen pendukung, memantau status, dan menerima notifikasi; tidak memiliki akses memproses atau menyetujui layanan.
+• Staf ULT: memverifikasi kelengkapan berkas, memproses permohonan, memperbarui status layanan, memberikan catatan atau umpan balik, mengelola arsip, dan melihat rekap layanan sesuai kewenangan.
+• Administrator Jurusan atau Program Studi: memantau permohonan terkait unitnya, melakukan validasi administratif tertentu bila ditetapkan, serta mengakses rekap atau pelaporan ringkas; tidak mengubah data di luar kewenangannya.
+Batas integrasi sistem
+Tidak membangun integrasi penuh dengan sistem universitas seperti SIAKADU atau SSO kampus pada tahap penelitian ini; integrasi ditempatkan sebagai pengembangan lanjutan.
+Tidak mencakup integrasi payment gateway, tanda tangan elektronik tersertifikasi, maupun sinkronisasi otomatis dengan sistem eksternal lain kecuali dinyatakan eksplisit pada implementasi.
+Batas pengujian dan evaluasi
+Validasi ahli (konten layanan atau ahli materi dan ahli media) untuk menilai kelayakan atau validitas konten layanan, alur, dan tampilan website.
+Uji kepraktisan atau usability menggunakan angket uji kepraktisan pada pengguna sasaran (mahasiswa, staf ULT, Administrator jurusan) setelah uji coba terbatas (limited trial atau small group).
+Tidak melakukan uji efektivitas pembelajaran maupun eksperimen peningkatan hasil belajar; pengujian kinerja skala besar (stress atau load testing) tidak menjadi fokus kecuali dinyatakan eksplisit.
+Implikasi ruang lingkup: interpretasi hasil validitas dan kepraktisan berlaku dalam batas layanan, role, integrasi, dan pengujian yang ditetapkan; generalisasi di luar batas tersebut perlu kehati-hatian.
+
+
+
+
+
+
+
+
+
+
+
+
+
+TINJAUAN PUSTAKA
+
+
+
+
+Landasan Teori
+
+
+Landasan teori pada penelitian ini berfungsi sebagai dasar ilmiah yang menjelaskan konsep, prinsip, serta hasil penelitian terdahulu yang relevan dengan pengembangan website Unit Layanan Terpadu (ULT) sebagai bentuk digitalisasi pelayanan administrasi di Fakultas Keguruan dan Ilmu Pendidikan Universitas Lampung. Kajian ini mencakup teori mengenai pengembangan sistem digital, sistem informasi, website dan usability, digitalisasi layanan pendidikan, serta landasan teknis penggunaan framework modern seperti Laravel, MySQL, HTML5, JavaScript, dan Tailwind CSS. 
+Selain itu, dibahas pula pendekatan metodologis Research and Development (R&D) dengan model ADDIE sebagai kerangka pengembangan, serta metode evaluasi usability melalui angket uji kepraktisan yang digunakan untuk mengukur tingkat kepraktisan dan kefungsionalan sistem yang dikembangkan. Dengan demikian, keseluruhan landasan teori ini menjadi pijakan konseptual bagi pelaksanaan penelitian secara sistematis, empiris, dan terarah dalam menghasilkan produk digital yang valid, praktis, dan berfungsi sesuai tujuan.
+
+
+
+Pengembangan
+
+
+Nugroho et al. (2025), menegaskan bahwa pengembangan sistem digital di perguruan tinggi merupakan langkah strategis untuk meningkatkan efisiensi layanan administratif sekaligus memperkuat pengambilan keputusan berbasis data. Dengan pendekatan yang tepat, pengembangan sistem informasi mampu mempercepat proses layanan akademik dan menghadirkan transparansi yang lebih baik bagi institusi pendidikan tinggi. Arsenieva et al. (2021), berpendapat bahwa pengembangan lingkungan digital pendidikan tidak berhenti pada tahap implementasi, melainkan perlu didukung evaluasi berkelanjutan, pemeliharaan, serta adaptasi teknologi agar sistem selalu selaras dengan kebutuhan pengguna dan perkembangan zaman. 
+Singun (2025), mengungkapkan bahwa pengembangan layanan digital sering menghadapi tantangan berupa keterbatasan sumber daya, resistensi budaya organisasi, dan lemahnya strategi jangka panjang. Oleh karena itu, pengembangan sistem harus mengikuti kerangka kerja yang terstruktur, seperti model ADDIE, agar setiap tahap mulai dari analisis, desain, pengembangan, hingga evaluasi benar-benar menjawab kebutuhan organisasi. Dalam konteks penelitian ini, pengembangan website Unit Layanan Terpadu (ULT) FKIP Unila dapat dipandang sebagai bagian dari pengembangan layanan pendidikan tinggi melalui inovasi teknologi, yang pada akhirnya diharapkan mampu meningkatkan efisiensi kerja staf dan mutu pelayanan akademik.
+
+
+
+Website
+
+
+Website sebagai medium layanan publik harus didukung oleh arsitektur teknis dan kualitas penggunaan yang baik agar dapat memenuhi harapan pengguna. Salah satu aspek penting adalah arsitektur website yang mencakup struktur navigasi, basis data, sistem backend, dan integrasi antara front-end dan back-end. Misalnya penelitian oleh Bhagaskara & Udariansyah (2024), mengenai Implementation of Web Engineering in the Design and Development of the Website Portal for SMA Negeri 1 Martapura menunjukkan bahwa penggunaan bahasa pemrograman PHP dan basis data MySQL, serta desain antarmuka yang intuitif dan struktur menu yang lebih logis, menghasilkan portal sekolah yang lebih menarik dan memuaskan pengguna.  Selain itu, menurut Deshpande et al. (2002), web engineering sebagai disiplin membahas metode sistematis dalam pengembangan aplikasi web termasuk pemeliharaan, keamanan, kemampuan skalabilitas, dan adaptasi teknologi baru yang relevan.
+Selanjutnya, teori usability dan user experience (UX) menjadi landasan krusial dalam desain website ULT karena pengalaman pengguna mempengaruhi efektivitas layanan. Penelitian Analisis User Experience pada Website Universitas Singaperbangsa Karawang menggunakan usability  (angket uji kepraktisan) oleh Ferdiansyah et al. (2022), menemukan bahwa meskipun fungsionalitas dan konten penting, aspek navigasi, kejelasan informasi, dan pembaruan konten juga signifikan mempengaruhi persepsi UX. Jurnal Universitas Pahlawan Demikian pula, studi Uji Usability dan User Experience Website Sistem Informasi Akademik Universitas Terbuka (SIA UT) oleh Maulana et al. (2023), menggunakan metode USE Questionnaire dan Cognitive Walkthrough untuk mengidentifikasi masalah usability dari perspektif mahasiswa, yang mengungkap bahwa desain antarmuka dan kemudahan dalam menemukan informasi sangat mempengaruhi UX keseluruhan. Penelitian oleh Sastranegara et al. (2023), menyampaikan juga bahwa metode pengembangan berbasis pengguna seperti User-Centered Design juga muncul di penelitian lain seperti Implementasi User Center Design dan usability pada Website Sekolah  Menengah Atas yang memperlihatkan bahwa iterasi dan feedback pengguna dapat meningkatkan skor usability setelah desain ulang.
+
+Sistem Informasi
+
+
+Sistem informasi didefinisikan sebagai sekumpulan komponen yang saling berinteraksi untuk mengumpulkan, memproses, menyimpan, dan mendistribusikan informasi guna mendukung pengambilan keputusan dalam organisasi. Menurut Kryszak (2020), sistem informasi terdiri atas perangkat keras, perangkat lunak, data, prosedur, dan sumber daya manusia yang bekerja sama untuk menghasilkan informasi yang bernilai bagi penggunanya. Dalam konteks organisasi pendidikan yang diteliti oleh Febriani et al. (2023), dalam penelitian UI/UX pada Sistem Informasi Layanan Administrasi (SILASTRI) menyoroti bagaimana desain sistem yang baik mampu mempercepat akses layanan administrasi mahasiswa dan meningkatkan pengalaman pengguna. Penelitian tersebut menunjukkan bahwa implementasi sistem informasi di perguruan tinggi berpengaruh signifikan terhadap kecepatan layanan dan akurasi data administrasi 
+Komponen sistem informasi tidak hanya mencakup infrastruktur teknologi, melainkan juga melibatkan aspek non-teknologi seperti prosedur kerja, kebijakan organisasi, serta kompetensi pengguna. Penelitian oleh Setiawan (2022), menekankan bahwa keberhasilan sistem informasi manajemen sangat bergantung pada sinergi antara hardware, software, dan brainware dalam menghasilkan informasi yang akurat, tepat waktu, dan relevan. Selain itu, komponen manusia memiliki peran dominan dalam keberhasilan implementasi sistem informasi, karena faktor penerimaan dan adaptasi pengguna memengaruhi tingkat penggunaan sistem. Hal ini sejalan dengan penelitian oleh Qurrata A’yun et al. (2023), yang menemukan bahwa kualitas sistem, kualitas informasi, dan interaksi layanan berpengaruh langsung terhadap kepuasan mahasiswa sebagai pengguna sistem akademik berbasis web. 
+Dalam pengembangannya, pendekatan sistematis diperlukan agar sistem informasi dapat sesuai dengan kebutuhan organisasi. Penelitian ini menggunakan metode Research and Development (R&D) dengan model ADDIE (Analysis, Design, Development, Implementation, Evaluation) sebagai kerangka pengembangan. Menurut Machmudi et al. (2023), ADDIE bersifat sistematis sekaligus fleksibel karena memungkinkan adanya evaluasi formatif di setiap tahap. Riyadi & Chuluq (2021), juga menegaskan bahwa ADDIE memberikan kerangka yang komprehensif mulai dari analisis kebutuhan, perancangan, pengembangan, implementasi, hingga evaluasi produk, sehingga hasil sistem informasi tidak hanya berjalan sesuai spesifikasi, tetapi juga teruji kepraktisan dan efektivitasnya. Dengan demikian, pemilihan metode R&D–ADDIE lebih relevan dibandingkan model tradisional seperti Waterfall karena mampu menghasilkan sistem yang terstruktur, adaptif, serta sesuai kebutuhan pengguna di lingkungan pendidikan tinggi.	
+Teori sistem informasi digunakan sebagai landasan untuk merancang website ULT sebagai sistem yang mengintegrasikan komponen data, prosedur layanan, serta peran pengguna (mahasiswa, staf ULT, dan Administrator jurusan) dalam satu mekanisme layanan yang konsisten. Implikasi desainnya mencakup perancangan basis data, aturan validasi data atau berkas, serta pengendalian akses berbasis peran (role-based access control) agar alur layanan berjalan akurat, terdokumentasi, dan dapat ditelusuri. Implikasi evaluasinya adalah memastikan kelayakan produk melalui validasi serta menilai kepraktisan penggunaan melalui angket uji kepraktisan pada aspek kemudahan penggunaan, efisiensi, kesesuaian fitur, kepuasan pengguna, dan kesediaan menggunakan kembali. Skor angket selanjutnya diolah menjadi persentase kepraktisan untuk menentukan kategori kepraktisan produk.
+
+
+
+
+
+
+Unit Layanan Terpadu (ULT)
+
+
+Konsep Unit Layanan Terpadu (ULT) berakar dari prinsip one-stop service dalam administrasi publik, yaitu menyatukan berbagai jenis layanan dalam satu wadah agar masyarakat tidak harus mendatangi beberapa unit berbeda. ULT bertujuan mempermudah akses, meningkatkan efisiensi, dan mengurangi friksi birokrasi. Menurut Alisa et al. (2024), Salah satu penelitian menyebut bahwa ULT adalah landasan perbaikan pelayanan publik di perguruan tinggi, yang bertanggung jawab atas layanan informasi, pengaduan, pemantauan kepuasan, dan layanan administratif terintegrasi. Penelitian oleh Tumilantouw et al. (2024), menyapaikan juga bahwa strategi pelayanan publik di ULT Universitas Negeri Manado menunjukkan bahwa meskipun konsep sudah ada, pelaksanaan ULT belum optimal karena minimnya SOP yang jelas, kurangnya pelatihan kepada petugas, dan beban kerja yang tinggi.
+Dalam konteks pelayanan publik, teori tata kelola pelayanan dan akuntabilitas publik menekankan bahwa lembaga pelayanan harus menerapkan prinsip transparansi, responsivitas, dan standarisasi prosedur. Menurut Haryanto & Hadilinatih (2022), dengan Penelitian Analisis Kualitas Pelayanan Publik ULT Satu Pintu Kemendikbud DIY, menemukan bahwa kualitas pelayanan ULT dievaluasi melalui dimensi tangible (bukti fisik), reliability (keandalan), responsiveness (daya tanggap), assurance (jaminan), dan empathy (empati), dan rata-rata dimensi tersebut dinilai sangat baik. Di sisi lain penelitian oleh Suhartoyo (2019), menyebutkan bahwa efektivitas penyelenggaraan pelayanan terpadu satu pintu di berbagai daerah menghadapi tantangan prosedural, transparansi biaya, serta kepastian waktu yang belum konsisten. Menurut Johns et al. (2022), yang ditulis pada UNDIP E-Journal System Teori modern tentang layanan publik digital (GovTech) juga menyatakan bahwa integrasi teknologi dan layanan publik harus diarahkan untuk mempermudah layanan yang transparan, akuntabel, dan berpihak pada warganya. 
+Konsep Unit Layanan Terpadu (ULT) (one-stop service) digunakan sebagai acuan untuk memetakan jenis layanan, SOP, dan kanal pengaduan ke dalam modul-modul pada website sehingga layanan menjadi lebih terpusat, konsisten, dan mudah ditelusuri. Implikasi desainnya mencakup penyediaan struktur layanan yang jelas meliputi kategori layanan, persyaratan berkas, tahapan proses, serta estimasi ketentuan penyelesaian dan mekanisme pelacakan status (tracking) agar transparansi serta akuntabilitas layanan meningkat. Implikasi evaluasinya dilakukan melalui validasi ahli untuk menilai kejelasan prosedur dan ketepatan informasi konten layanan, serta uji kepraktisan untuk menilai pengalaman pengguna pada aspek kemudahan penggunaan, efisiensi, kesesuaian fitur, kepuasan pengguna, dan kesediaan menggunakan kembali.
+
+
+
+Digitalisasi
+
+
+Menurut Purwani et al. (2024), digitalisasi adalah proses penggunaan teknologi digital untuk mengubah aktivitas, proses layanan, atau model bisnis agar menjadi lebih efisien, efektif, dan responsif terhadap perubahan lingkungan. Dalam konteks penelitian oleh Sukorini et al. (2024), menyampaikan bahwa administrasi pendidikan, transformasi digital bukan hanya mengenai penggantian dokumen fisik ke digital, tetapi juga perubahan sistem dan prosedur yang memungkinkan layanan berjalan secara online, otomatisasi, dan integrasi antar unit layanan. Berbagai teknologi pendukung digitalisasi layanan administrasi mahasiswa mencakup sistem informasi akademik, portal layanan berbasis web, pemrosesan dokumen elektronik, serta sistem notifikasi dan tracking status layanan secara real time. Penelitian oleh Purwani et al. (2024), meyakini bahwa digitalisasi dapat meningkatkan efisiensi operasional dan mengurangi birokrasi tradisional.
+Teori tentang dampak digitalisasi terhadap efektivitas dan tantangan implementasi sangat relevan untuk memahami konteks layanan administrasi mahasiswa. Efektivitas layanan administratif digital di perguruan tinggi sering diukur dari kecepatan layanan, ketepatan data, kemudahan akses, dan kepuasan pengguna. Sebagai contoh studi dari Poernamawatie et al. (2023), mengenai Implementasi Transformasi Digital Layanan Keuangan Mahasiswa di Universitas Negeri Malang menunjukkan bahwa transformasi digital pasca pandemi meningkatkan efektivitas layanan keuangan mahasiswa terutama dari sisi otomatisasi proses dan akses digital, meskipun terdapat hambatan seperti kesiapan infrastruktur dan literasi digital pengguna. Selain itu menurut Fernández et al. (2023), teori tentang digital transformasi di institusi pendidikan tinggi menyebut bahwa faktor manusia (SDM), kebijakan institusi, dan budaya organisasi menjadi kunci sukses pelaksanaan digitalisasi layanan administrasi. 
+Tantangan dalam digitalisasi layanan administrasi mahasiswa juga tidak sedikit, seperti resistensi terhadap perubahan, keterbatasan infrastruktur, masalah keamanan data, dan gap literasi digital pengguna. Penelitian oleh Mundzir & Laventia (2025), mengenai Transformasi Administrasi Pendidikan di Era Digital: Tantangan dan Peluang mengungkapkan bahwa kelemahan teknologi, rendahnya kemampuan digital pada staf administrasi, dan hambatan regulasi menjadi faktor penghambat. Menurut Bitchikashvili et al. (2023), mengenai Teori-governance dan manajemen institusi juga menekankan bahwa dukungan kebijakan, perencanaan strategis, dan kepemimpinan yang adaptif sangat diperlukan agar digitalisasi layanan administrasi tidak hanya menjadi wacana tetapi terimplementasi secara berkelanjutan. Oleh karena itu, penelitian ini menjadi penting untuk menggali bagaimana digitalisasi layanan administrasi mahasiswa di FKIP Universitas Lampung dapat dioptimalisasi dengan memperhitungkan faktor-teknologi, sumber daya manusia, regulasi, dan kondisi lokal sebagai dasar perancangan sistem yang berkelanjutan dan responsif. 
+Konsep digitalisasi layanan digunakan untuk menerjemahkan proses layanan ULT yang semula manual menjadi alur digital yang terstruktur, mencakup penyediaan informasi layanan, pengelolaan dokumen atau berkas persyaratan, serta pelacakan status layanan dan notifikasi kepada pengguna. Implikasi desainnya adalah kebutuhan fitur inti, yaitu autentikasi berbasis peran, pengajuan layanan, unggah atau kelola berkas, pelacakan status (tracking), notifikasi, dashboard layanan, dan arsip atau riwayat layanan untuk mendukung transparansi proses, mengurangi birokrasi, dan meminimalkan duplikasi data. Implikasi evaluasinya dilakukan melalui validasi ahli untuk menilai ketepatan dan kelengkapan konten serta kualitas media, dan melalui uji kepraktisan untuk mengukur persepsi pengguna pada aspek kemudahan penggunaan, efisiensi, kesesuaian fitur, kepuasan pengguna, dan kesediaan menggunakan kembali.
+
+
+
+Laravel (PHP Framework) 
+
+
+Menurut Huynh et al. (2022), Laravel merupakan kerangka kerja (framework) PHP modern yang mengusung pola arsitektur Model View Controller (MVC) untuk memisahkan logika bisnis, tampilan, dan kontrol aplikasi sehingga memudahkan pemeliharaan kode. Laravel mengintegrasikan routing fleksibel yang mengarahkan permintaan HTTP ke controller atau closure, serta middleware yang bertindak sebagai lapisan penyaring (filter) sebelum atau sesudah request diproses. Laravel juga menggunakan Blade Templating sebagai engine tampilan yang efisien, Eloquent ORM untuk memetakan model ke basis data secara deklaratif, migrasi (migration) untuk sinkronisasi struktur basis data versi ke versi, validasi (validation) bawaan, serta modul otentikasi dan otorisasi terintegrasi juga mendukung pengembangan REST API secara modular dan terstruktur. 
+Menurut Sasmoko et al. (2024), satu keunggulan Laravel dibandingkan framework lain atau pemrograman PHP native adalah aspek maintainability dan security yang baik karena struktur kode yang bersih dan penggunaan fitur bawaan seperti proteksi CSRF, hashing, dan validasi input otomatis. Penelitian ini menemukan bahwa query berbasis Eloquent ORM dan raw query harus dioptimalkan agar performa tetap terjaga pada aplikasi skala besar. Selain itu, studi perbandingan oleh Ariyanto et al. (2024), antara Laravel dan PHP native oleh penelitian terkini menunjukkan bahwa penggunaan Laravel memungkinkan pengembangan API lebih modular, efisien dalam penulisan kode, serta lebih mudah diadaptasi dan diskalakan, meskipun dalam beberapa kasus native PHP lebih cepat secara murni pada request sederhana. 
+Menurut Musyary et al. (2023), penerapan Laravel dalam sistem informasi di lingkungan perguruan tinggi mendukung efisiensi layanan, akurasi data, audit trail, SLA, dan transparansi, terutama dalam konteks manajemen data akademik dan administrasi kampus. Studi ini menunjukkan bahwa sistem informasi berbasis Laravel di sebuah unit IT universitas memperbaiki pengelolaan informasi internal dan mengurangi kebocoran data yang disebabkan oleh distribusi manual. Penelitian oleh Safrizal & Afkar (2023), mengenai proyek modernisasi SIAKAD (Sistem Informasi Akademik) dengan pendekatan digitalisasi administrasi juga menekankan bahwa aplikasi berbasis Laravel dapat memenuhi kebutuhan modularitas, pembaruan berkelanjutan, dan rekam jejak (audit) untuk memastikan transparansi proses akademik.
+
+
+
+MySQL (Database Relasional) 
+
+
+Menurut Zapata (2024), MySQL adalah sistem manajemen basis data relasional (RDBMS) open-source yang menggunakan model relasional untuk menyimpan dan memanipulasi data melalui struktur tabel, relasi antar tabel, dan bahasa SQL (Structured Query Language) untuk operasi data (INSERT, UPDATE, DELETE, SELECT). Menurut Šuśter dan Ranisavljević (2023), MySQL menyediakan dukungan terhadap transaksi ACID (Atomicity, Consistency, Isolation, Durability) sehingga menjamin integritas data dalam lingkungan sistem informasi kritikal. Menurut white paper MySQL Replication Oracle (2025), MySQL juga mendukung replikasi (master-slave maupun group replication), clustering (InnoDB Cluster), serta fitur backup dan recovery yang memungkinkan skalabilitas dan ketersediaan tinggi downloads. 
+Menurut penelitian oleh Sasmoko et al. (2024), fitur utama MySQL meliputi struktur tabel dengan skema relasional, query SQL, indexing (misalnya index tunggal, indeks gabungan, indeks B-tree), serta normalisasi untuk menghindari redundansi dan menjaga konsistensi data di berbagai tabel. Menurut Šušter & Ranisavljević (2023), optimisasi performa MySQL dapat dilakukan melalui tuning konfigurasi fisik, indeks, partisi, caching, dan strategi query optimasi Menurut white paper MySQL Cluster (MariaDB) (2013), clustering menggunakan penyimpanan NDB memungkinkan replikasi sinkron antar node dan toleransi kesalahan menggunakan protokol commit dua fase (2PC) dalam transaksi terdistribusi MariaDB. 
+Menurut kasus studi sistem pendidikan Sinaga et al. (2021), MySQL berperan sebagai basis data utama dalam aplikasi manajemen data siswa yang mendukung efisiensi, akurasi, dan kemudahan integrasi sistem pendidikan. Menurut studi Sasmoko et al. (2024), integrasi MySQL dengan framework Laravel memungkinkan penggunaan ORM, query builder, dan optimisasi indexing dalam konteks aplikasi pendidikan guna menjaga performa dan audit trail yang transparan. Menurut studi kasus penggunaan Laravel pada layanan administrasi pendidikan Bashar et al. (2023), sistem berbasis Laravel dengan database MySQL terbukti mempercepat proses aplikasi dan memperkuat konsistensi data administrasi kampus.
+
+
+
+HTML5
+
+
+Menurut MacKlon et al. (2023), HTML5 merupakan standar markup modern yang memperkenalkan elemen semantik (<header>, <nav>, <article>, <section>, <footer>), dukungan multimedia native (<audio>, <video>), serta Canvas dan SVG untuk kebutuhan visual dinamis. Menurut Shah (2023), HTML5 juga memperkuat arsitektur antarmuka melalui Web Components dan elemen kustom yang meningkatkan modularitas dan konsistensi UI dalam pengembangan aplikasi berskala besar. Menurut Naidu et al. (2021), dalam konteks pendidikan tinggi, HTML5 menjadi relevan karena mendukung akses lintas-platform, kompatibilitas perangkat mobile, serta peningkatan aksesibilitas layanan akademik. Dengan adanya semantic elements, API bawaan, serta validasi form otomatis, HTML5 memungkinkan pengembangan layanan digital yang lebih efisien, aman, dan ramah pengguna. 
+Menurut Ahmad et al. (2023), penggunaan Web Storage API (LocalStorage/SessionStorage) berbasis HTML5 banyak ditemukan pada aplikasi modern, bermanfaat untuk menyimpan data pengguna sementara, tetapi juga perlu dikelola dengan aman. Menurut Kancherla et al. (2025), prinsip least-privilege pada mekanisme penyimpanan persisten sangat penting untuk mengurangi risiko privasi tanpa mengorbankan fungsionalitas. Dengan demikian, HTML5 bukan hanya bahasa markup, tetapi fondasi teknologi yang mendukung pengembangan website Unit Layanan Terpadu (ULT) FKIP Unila, karena memfasilitasi penyajian konten semantik, interaktivitas multimedia, serta pengelolaan data pengguna yang efisien untuk digitalisasi layanan administrasi.
+
+
+
+JavaScript (JS)
+
+
+Menurut Serhiyovych (2024), JavaScript adalah bahasa pemrograman sisi klien (client-side) yang mendukung manipulasi DOM, penanganan peristiwa (event handling), serta pemrograman asinkron menggunakan struktur Promise dan async/await untuk menjaga respon antarmuka tetap interaktif tanpa memblokir eksekusi UI. Menurut Shah (2023), JavaScript (versi ES6 ke atas) menyertakan dukungan modular (melalui import/export), serta integrasi data via format JSON, sehingga frontend dapat berkomunikasi secara efisien dengan backend dan memudahkan pemisahan tanggung jawab antar modul aplikasi. Dengan demikian, JavaScript memungkinkan pembentukan antarmuka web dinamis yang responsif dan bisa memperbarui konten kecil tanpa me-refresh seluruh halaman (misalnya menggunakan fetch API atau AJAX). 
+Menurut Serhiyovych (2024), pemrograman asinkron di JavaScript (callback, Promise, async/await) memungkinkan tugas jaringan (seperti permintaan status layanan) dijalankan tanpa menghentikan interaksi pengguna, yang sangat penting dalam sistem informasi layanan di mana pengguna mengakses status layanan ULT FKIP Unila secara real time. Menurut penelitian Gote & Solutions (2024), JavaScript yang dipadukan dengan WebSocket memungkinkan komunikasi real-time antara server dan klien, sehingga status layanan atau notifikasi baru dapat didorong ke antarmuka pengguna langsung tanpa penundaan. Oleh karena itu, JavaScript sangat relevan untuk pengembangan website ULT, karena fungsinya memungkinkan pelacakan status layanan secara asinkron, notifikasi real-time, serta pembaruan antarmuka pengguna secara dinamis fitur-fitur penting dalam digitalisasi layanan administrasi pendidikan.
+Tailwind CSS (UI Framework) 
+
+
+Menurut Dixit et al. (2024), Tailwind CSS merupakan framework CSS berbasis utility-first yang menyediakan kelas-kelas kecil (utility classes) untuk langsung diterapkan pada elemen HTML tanpa perlu membuat kelas kustom secara terpisah, sehingga mempercepat pengembangan antarmuka. Menurut Nandan et al. (2024), konsep atomic class yang dimiliki Tailwind CSS membuat sistem styling lebih modular dan fleksibel, serta meminimalkan duplikasi kode yang biasanya terjadi pada CSS tradisional. 
+Menurut Kodali (2024), fleksibilitas Tailwind CSS juga ditunjang oleh mekanisme konfigurasi kustom dan fitur purge yang mampu mengoptimalkan performa dengan menghapus kelas yang tidak terpakai. Menurut Rifandi et al. (2022), kemampuan Tailwind CSS dalam mendukung desain responsif mempermudah penyesuaian tampilan lintas perangkat melalui prefiks kelas seperti sm:, md:, lg:, dan xl:. Menurut Biradar (2020), performa sistem berbasis Tailwind CSS terbukti lebih efisien karena ukuran berkas CSS yang lebih ringan setelah proses build, sehingga mempercepat waktu muat halaman. Menurut Al Salmi (2023), pendekatan utility-first juga mengurangi risiko CSS bloat dan meningkatkan konsistensi desain dibandingkan penggunaan CSS konvensional.
+Menurut para peneliti, dibandingkan framework CSS populer seperti Bootstrap atau Foundation, Tailwind CSS menawarkan fleksibilitas yang lebih tinggi karena tidak membatasi desain dengan komponen bawaan, melainkan memberi kebebasan penuh bagi pengembang untuk merancang antarmuka sesuai kebutuhan. Hal ini membuat Tailwind lebih adaptif terhadap berbagai konteks aplikasi, termasuk sistem informasi pendidikan. Dalam pengembangan website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung, penggunaan Tailwind CSS relevan karena mampu menjaga konsistensi antarmuka, mempercepat proses pengembangan, mengurangi duplikasi kode, serta mendukung aksesibilitas layanan bagi pengguna. Dengan demikian, Tailwind CSS dapat dipandang sebagai fondasi desain yang efektif untuk mendukung digitalisasi layanan administrasi di lingkungan perguruan tinggi.
+
+
+
+Research dan Development (R&D)
+
+
+Menrut Gustiani (2019), metode Research and Development (R&D) adalah pendekatan penelitian yang memadukan unsur penelitian dan pengembangan produk agar menghasilkan artefak yang valid, praktis, dan efektif. Dalam konteks pendidikan dan pengembangan sistem, R&D tidak sekadar menghasilkan produk, tetapi juga menguji dan merevisi produk berdasarkan masukan dari pengguna dan pengujian lapangan hingga mencapai tingkat kesiapan implementasi. Penelitan oleh Khotimah & Wahyu (2020), menyampaikan bahwa model R&D klasik ala Borg & Gall, misalnya, terdiri dari beberapa tahap seperti pengumpulan data (research), perencanaan, pengembangan awal (preliminary product), uji coba lapangan, revisi, serta penyebaran produk (disseminasi).
+Dalam pengembangan sistem seperti website ULT model R&D sering dipadukan atau dimodifikasi agar sesuai konteks teknologi informasi. Menurut Wan Ali & Wan Yahaya (2023), Salah satu pendekatan adaptif adalah perpaduan antara R&D klasik dengan model ADDIE (Analysis, Design, Development, Implementation, Evaluation) di mana fase-fase pengembangan sistem dan evaluasi integratif dijalankan secara iteratif. Penlitian oleh Taqwa & Raupu (2022), menjadi contoh implementasi R&D dan ADDIE dalam pengembangan layanan akademik berbasis web dapat dilihat pada penelitian tentang Website-Based Academic Service Development yang menggunakan R&D dengan model ADDIE untuk menghasilkan prototipe web layanan akademik yang valid, praktis, dan efektif.
+Keunggulan penggunaan R&D dalam pengembangan produk atau sistem terletak pada kemampuannya untuk merumuskan prototipe, melakukan validasi dan revisi secara bertahap sebelum diterapkan secara luas. Penelitian lain oleh Anggraini & Putra (2021), dalam domain pendidikan yang menggunakan model R&D memperlihatkan bahwa iterasi berulang berdasarkan hasil evaluasi dapat meningkatkan kualitas produk akhir secara signifikan (misalnya penelitian e-module memakai Borg & Gall yang dimodifikasi). Dengan demikian, penggunaan pendekatan R&D dalam penelitian pengembangan website ULT memungkinkan sistem dikembangkan bukan hanya berdasarkan teori, tetapi juga disesuaikan berdasarkan masukan empiris dan uji coba pengguna. Oleh karena itu, penelitian ini sangat relevan untuk menerapkan R&D dalam merancang website Unit Layanan Terpadu (ULT) di FKIP Universitas Lampung agar produk akhir tidak hanya sesuai teori tetapi juga valid, praktis, dan diterima pengguna di lingkungan kampus. 
+Pendekatan Research and Development (R&D) digunakan untuk memastikan pengembangan website ULT berlangsung secara iteratif mulai dari perumusan kebutuhan, perancangan atau prototipe, uji coba terbatas, hingga revisi sehingga produk akhir tidak hanya “jadi”, tetapi juga layak digunakan. Implikasi desainnya adalah adanya tahap penyempurnaan berbasis umpan balik pengguna serta temuan selama implementasi. Implikasi evaluasinya adalah menilai apakah website valid dan praktis melalui indikator yang terukur, yaitu hasil validasi ahli (validasi konten layanan atau materi dan validasi media) serta hasil uji kepraktisan pengguna yang diolah menjadi persentase kepraktisan pada aspek kemudahan penggunaan, efisiensi, kesesuaian fitur, kepuasan pengguna, dan kesediaan menggunakan kembali.
+
+
+
+
+ADDIE
+
+
+Menurut Machmudi dkk. (2023), model ADDIE merupakan pendekatan desain instruksional yang bersifat sistematis, linier, namun tetap fleksibel dengan adanya iterasi saat terjadi perubahan desain. Model ini terdiri dari lima tahapan utama yaitu Analysis, Design, Development, Implementation, dan Evaluation, yang berfungsi sebagai pedoman dinamis dalam membangun sistem pembelajaran berbasis teknologi. Setiap tahap ADDIE memungkinkan pengembang untuk mendapatkan umpan balik berkelanjutan sehingga perbaikan dapat dilakukan sejak awal, yang pada akhirnya dapat menghemat waktu dan biaya dalam pengembangan sistem digital seperti e-learning atau layanan akademik berbasis web. 
+Riyadi & Chuluq (2021), menegaskan bahwa ADDIE adalah model penelitian pengembangan yang paling rasional dan komprehensif karena mencakup seluruh aspek analisis kebutuhan, perancangan, pengembangan, implementasi, hingga evaluasi produk. Pada setiap tahap, evaluasi formatif dilakukan agar sistem informasi yang dibangun dapat disesuaikan dengan kebutuhan pengguna, sedangkan evaluasi sumatif digunakan untuk mengukur keberhasilan produk secara keseluruhan. Dengan demikian, model ini tidak hanya berfokus pada hasil akhir, tetapi juga pada kualitas proses pengembangannya. 
+Penelitian terbaru juga mendukung efektivitas ADDIE dalam pengembangan sistem berbasis web. Martantoh & Aripudin (2023), menunjukkan bahwa ADDIE dapat diadaptasi untuk berbagai bidang, termasuk perancangan sistem informasi penjualan, karena memberikan kerangka yang jelas mulai dari analisis kebutuhan pengguna hingga evaluasi keberhasilan sistem. Sementara itu Ardianti (2022), menekankan bahwa penggunaan ADDIE pada pengembangan media e-learning terbukti mampu meningkatkan motivasi belajar siswa dan memberikan pengalaman belajar yang lebih efektif. Hal ini menunjukkan bahwa ADDIE tidak hanya relevan untuk pengembangan media pembelajaran, tetapi juga dapat diterapkan pada konteks digitalisasi layanan akademik di perguruan tinggi. 
+Model ADDIE digunakan sebagai kerangka kerja untuk mengelola proses pengembangan website ULT secara sistematis, mulai dari analisis kebutuhan layanan sampai evaluasi hasil implementasi (Branch, 2009). Implikasi desainnya adalah setiap tahap menghasilkan artefak pengembangan seperti kebutuhan atua requirement, rancangan UI dan arsitektur data, implementasi sistem, serta rancangan instrumen uji yang terdokumentasi dan dapat ditelusuri. Implikasi evaluasinya adalah memastikan hasil tiap tahap ditinjau melalui validasi ahli (validasi konten layanan atau materi dan validasi media) serta penilaian pengguna melalui uji kepraktisan, sehingga perbaikan dapat dilakukan berbasis data dan umpan balik. 
+
+
+
+Keterkaitan dengan Bidang Pendidikan
+
+
+Menurut Ardiansyah (2023), transformasi digital di perguruan tinggi melalui implementasi sistem informasi administratif membawa perubahan mendasar pada manajemen akademik, memungkinkan transparansi, efisiensi, dan integrasi data yang mendukung pengambilan keputusan lebih cepat dan akurat terkait administrasi pendidikan tinggi. Menurut studi The Impact of Digital Transformation on Higher Education Management oleh Baijun (2024), digitalisasi manajemen institusional berdampak signifikan pada peningkatan mutu layanan pendidikan, efisiensi operasional, serta pengalaman mahasiswa dalam interaksi akademik dan administratif. Menurut Andi Kambau (2024), perguruan tinggi yang menerapkan transformasi digital secara strategis mampu merespon dinamika kebutuhan stakeholder dan memperkuat peran institusi dalam ekosistem pendidikan modern. 
+Menurut Banu (2023), integrasi teknologi dalam manajemen dan administrasi pendidikan memungkinkan penyederhanaan proses birokrasi, penurunan beban kerja administratif tenaga pendidik, dan peningkatan kualitas layanan terhadap mahasiswa melalui sistem yang lebih responsif dan adaptif. Menurut Joseph et al. (2024), digitalisasi sistem pendidikan berkontribusi pada peningkatan kualitas pembelajaran dengan memfasilitasi akses sumber belajar digital, umpan balik cepat, serta kolaborasi daring antar pemangku kepentingan. Menurut Latif dkk (2024), implementasi digital dalam pendidikan tidak hanya mengubah cara pengajaran dan belajar, melainkan memperkuat literasi digital mahasiswa, dosen, dan tenaga kependidikan sebagai kompetensi inti di era industri 4.0 maupun konsep Merdeka Belajar Kampus Merdeka (MBKM). Dalam konteks penelitian ini, pengembangan website ULT FKIP Unila tidak hanya menjadi sarana administratif, tetapi juga media edukatif dan praktik langsung bagi civitas akademik untuk meningkatkan keterampilan digital serta mendukung kebijakan MBKM terkait pengembangan kompetensi teknologi dalam pendidikan tinggi.
+
+
+
+Penelitian Terdahulu
+
+
+Penelitian terdahulu menjadi acuan penting dalam mengidentifikasi posisi dan kontribusi penelitian yang sedang dilakukan. Bagian ini memaparkan hasil-hasil penelitian sebelumnya yang memiliki keterkaitan dengan pengembangan sistem informasi akademik, digitalisasi layanan administrasi, serta layanan terpadu berbasis web di lingkungan pendidikan tinggi. Rekapitulasi penelitian-penelitian tersebut disajikan pada Tabel 1 sebagai dasar perbandingan dan penguatan terhadap arah pengembangan website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung.
+
+Tabel  1. Penelitian Terdahulu
+
+Kajian terhadap berbagai riset terdahulu menunjukkan bahwa evaluasi sistem layanan kampus berbasis website umumnya menekankan kualitas layanan digital dari sisi persepsi pengguna (End-User Computing Satisfaction). Orientasi tersebut menegaskan bahwa fungsionalitas teknis harus selalu dikalibrasi dengan kemudahan dan kenyamanan penggunaan antarmuka. Paradigma riset terdahulu ini juga mengukuhkan pentingnya keterlibatan sivitas akademika dalam setiap tahapan pengembangan prototipe perangkat lunak.
+Kerangka Berpikir
+
+
+Kerangka berpikir penelitian ini berangkat dari kondisi layanan administrasi FKIP yang masih banyak dilakukan secara manual, sehingga memunculkan antrean, keterlambatan, biaya atau tenaga tambahan, serta kesulitan pengguna dalam mengetahui persyaratan dan melacak status layanan. Kondisi tersebut menimbulkan kebutuhan akan digitalisasi proses layanan ULT yang terstruktur dan transparan. Kebutuhan ini kemudian diterjemahkan ke dalam desain dan pengembangan website ULT menggunakan model ADDIE (Analysis–Design–Development–Implementation–Evaluation) sebagai kerangka kerja pengembangan (model), sedangkan R&D sebagai pendekatan penelitian yang menghasilkan produk. Fokus pengembangan diarahkan pada fitur inti: autentikasi berbasis peran (mahasiswa, staf ULT, Administrator jurusan), katalog atau daftar layanan & persyaratan, pengajuan layanan, unggah berkas, tracking status, notifikasi perubahan status, dashboard pengelola, arsip atau riwayat layanan, serta rekap atau pelaporan ringkas. Produk yang dikembangkan dievaluasi melalui validasi ahli (konten layanan atau ahli materi dan ahli media) serta uji kepraktisan menggunakan angket (Likert 1–5) pada uji coba terbatas, lalu hasil evaluasi digunakan untuk revisi hingga menghasilkan versi final yang lebih praktis dan sesuai kebutuhan layanan. 
+
+Gambar  2. Kerangka Berpikir
+
+
+
+
+
+
+
+Skema kerangka berpikir tersebut memaparkan alur logis penelitian mulai dari identifikasi masalah konvensional hingga perumusan solusi digital yang komprehensif. Titik berat permasalahan mengenai inefisiensi pengelolaan dokumen fisik dijawab secara langsung melalui perancangan arsitektur sistem informasi terintegrasi. Konstruksi pemikiran ini memandu arah pengembangan penelitian agar senantiasa berfokus pada urgensi digitalisasi pelayanan di Unit Layanan Terpadu.
+
+METODE PENELITIAN
+
+
+
+
+Jenis Penelitian
+
+
+Penelitian ini menggunakan pendekatan penelitian dan pengembangan Research and Development (R&D). Menurut Gustiani (2019), R&D merupakan pendekatan penelitian yang berfokus pada proses menghasilkan suatu produk dan menilai kualitas produk tersebut melalui kegiatan evaluasi yang sistematis seperti validasi ahli dan uji coba pengguna sampai produk dinyatakan layak digunakan.
+Dalam konteks penelitian ini, R&D diterapkan untuk menghasilkan produk berupa website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung sebagai upaya digitalisasi pelayanan administrasi. Pemilihan pendekatan R&D didasarkan pada kebutuhan penelitian yang tidak hanya mendeskripsikan fenomena, tetapi juga menghasilkan produk yang dapat diimplementasikan serta disempurnakan berdasarkan umpan balik. Pemilihan pendekatan R&D didasarkan pada kebutuhan untuk menghasilkan produk nyata berupa website ULT yang dapat langsung diterapkan pada layanan administrasi, sekaligus memungkinkan perbaikan iteratif melalui tahapan pengembangan yang terstruktur. Selain itu, karakter layanan ULT yang melibatkan alur kerja, dokumen persyaratan, dan peran pengguna yang berbeda membutuhkan proses pengembangan yang tidak berhenti pada pembuatan sistem, tetapi juga memastikan kualitasnya melalui validasi ahli dan uji kepraktisan pengguna sebagai dasar revisi hingga produk dinilai layak digunakan.
+Evaluasi terhadap produk yang dikembangkan dilakukan untuk memastikan kualitas dan kelayakan penggunaan. Evaluasi pada penelitian ini mencakup: (1) uji validitas melalui penilaian ahli materi, ahli media dan ahli sistem; dan (2) uji kepraktisan melalui uji kepraktisan (angket) pada pengguna sasaran. Hasil evaluasi digunakan sebagai dasar revisi produk pada tahap pengembangan.
+Dengan demikian, R&D menjelaskan pendekatan penelitian yang digunakan untuk menghasilkan dan mengevaluasi produk, sedangkan model pengembangan digunakan sebagai panduan operasional dalam proses pembuatan produk. 
+
+
+
+Model Pengembangan
+
+
+Model pengembangan yang digunakan dalam penelitian ini adalah ADDIE, yaitu kerangka sistematis yang terdiri dari lima tahap utama: Analysis, Design, Development, Implementation, dan Evaluation. Menurut  Branch (2009), ADDIE digunakan untuk memandu proses pengembangan secara terstruktur dari analisis kebutuhan sampai evaluasi, sehingga setiap tahap saling berkelanjutan dan dapat dilakukan secara iteratif sesuai kebutuhan pengembangan. Prosedur pengembangan dalam penelitian ini dimodifikasi dari Riyadi & Chuluq (2021) , guna menghasilkan produk digital yang efektif dan teruji. Alur pengembangan tersebut ditampilkan pada Gambar 3. 
+
+Gambar  3. Alur Model Pengembangan ADDIE
+Sumber: Adaptasi Riyadi & Chuluq (2021)
+
+
+
+
+
+Visualisasi model ADDIE di atas menjabarkan kelima fase siklus hidup pengembangan sistem yang berjalan secara sekuensial dan berkesinambungan. Fase analisis bertindak sebagai fondasi awal, sedangkan fase desain hingga evaluasi menjadi pilar eksekusi teknis untuk mematangkan produk sebelum dirilis secara resmi. Siklus iteratif ini menjamin kualitas produk akhir yang dihasilkan terukur secara ilmiah, teruji secara praktis, dan siap merespons dinamika pelayanan.
+
+Prosedur Penelitian
+
+
+Pengembangan website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung pada penelitian ini dilaksanakan menggunakan model ADDIE. Setiap tahap (Analysis, Design, Development, Implementation, dan Evaluation) disajikan dengan format yang konsisten, meliputi: (a) tujuan tahap, (b) aktivitas yang dilakukan, (c) sumber data, (d) teknik atau metode yang digunakan, serta (e) output atau artefak yang dihasilkan. Penyajian yang sistematis ini bertujuan memastikan keterlacakan proses pengembangan, sehingga alur penelitian dapat diikuti secara jelas dari tahap analisis hingga evaluasi.
+Sebagai gambaran umum, ringkasan keseluruhan prosedur pengembangan disajikan pada Tabel  2. Uraian operasional setiap tahap kemudian dipaparkan secara rinci setelah tabel tersebut.
+Tabel  2. Prosedur Pengembangan Website ULT Berdasarkan Model ADDIE
+Sumber: Adaptasi dari model ADDIE (Branch, 2009) dan diadaptasi peneliti sesuai konteks pengembangan website ULT.
+
+Tahapan pengembangan dijelaskan sebagai berikut:
+Analysis (Analisis)
+Pada tahap Analysis, tujuan utama adalah mengidentifikasi permasalahan layanan administrasi, kebutuhan pengguna, serta kebutuhan sistem sebagai dasar penyusunan spesifikasi awal website ULT. Tahap ini dilakukan melalui observasi alur layanan, wawancara dengan staf ULT dan Administrator jurusan, penyebaran angket analisis kebutuhan kepada mahasiswa, serta studi dokumen atau arsip layanan yang relevan. Sumber data berasal dari staf ULT, Administrator jurusan, mahasiswa FKIP, dokumen SOP atau format layanan, serta catatan pra-penelitian. Teknik yang digunakan meliputi observasi, wawancara semi-terstruktur, angket (Google Form), dan dokumentasi. Output yang dihasilkan berupa dokumen kebutuhan (kebutuhan fungsional dan nonfungsional), daftar layanan prioritas, persona atau role pengguna, serta spesifikasi awal sistem.
+Design (Perancangan)
+Pada tahap Design, tujuan tahap ini adalah menyusun rancangan solusi berdasarkan kebutuhan yang telah diperoleh agar alur layanan, data, dan antarmuka sistem sesuai dengan kebutuhan pengguna. Aktivitas yang dilakukan mencakup penyusunan alur layanan (workflow), perancangan basis data (ERD atau skema tabel), perancangan use case, perancangan UI/UX (wireframe atau mockup), serta penyusunan rencana pengujian dan instrumen validasi serta kepraktisan. Sumber data berasal dari dokumen kebutuhan pada tahap Analysis, masukan staf ULT atau Administrator jurusan, serta referensi desain sistem layanan. Teknik yang digunakan meliputi pemodelan UML (use case), perancangan basis data, dan perancangan UI/UX. Output tahap ini berupa use case diagram, flowchart atau workflow layanan, rancangan basis data, wireframe atau mockup UI, serta draft instrumen penelitian dan skenario uji coba.
+
+Development (Pengembangan)
+Pada tahap Development, tujuan tahap ini adalah membangun prototipe website berdasarkan rancangan dan melakukan penyempurnaan melalui validasi ahli. Aktivitas yang dilakukan meliputi implementasi front-end dan back-end, pengembangan modul utama (autentikasi, pengajuan layanan, pelacakan status, manajemen dokumen, dan dashboard), pengujian internal awal, pelaksanaan validasi ahli materi dan ahli media, serta revisi berdasarkan masukan ahli. Sumber data berasal dari rancangan tahap Design, umpan balik ahli materi, dan umpan balik ahli media. Teknik yang digunakan mencakup pengembangan perangkat lunak (Laravel, MySQL, Tailwind CSS, JavaScript, dan HTML5), expert judgement melalui angket validasi, serta perbaikan iteratif. Output yang dihasilkan berupa versi awal website, hasil validasi ahli (skor dan catatan), serta daftar revisi (revisi-1) yang terdokumentasi.
+Implementation (Implementasi)
+Pada tahap Implementation, tujuan tahap ini adalah menguji coba prototipe yang telah direvisi berdasarkan validasi ahli materi, validasi ahli media, dan uji ahli sistem secara terbatas (small group limited trial) untuk memperoleh data kepraktisan dan menemukan kendala penggunaan pada konteks nyata. Aktivitas yang dilakukan meliputi uji coba terbatas oleh pengguna sasaran, pelaksanaan skenario tugas (task scenario), pengisian angket uji kepraktisan, observasi penggunaan dan pencatatan kendala atau bug, serta perbaikan minor bila diperlukan. Sumber data berasal dari pengguna sasaran (mahasiswa, staf ULT, dan Administrator jurusan) serta log atau temuan selama uji coba. Teknik yang digunakan meliputi limited trial, observasi langsung (think-aloud bersifat opsional), angket uji kepraktisan, dan dokumentasi temuan. Output tahap ini berupa hasil uji coba terbatas (skor angket dan komentar), daftar kendala penggunaan, serta rekomendasi perbaikan (revisi-2). Skenario tugas minimal mencakup: (1) login sesuai peran, (2) mahasiswa mengajukan layanan dan mengunggah dokumen, (3) staf/admin memverifikasi dan memproses permohonan, (4) pengguna melacak status layanan, dan (5) pengguna melihat riwayat layanan. Jumlah peserta uji coba ditetapkan sebanyak 12 orang (8 mahasiswa, 2 staf ULT, dan 2 Administrator jurusan).
+Evaluation (Evaluasi)
+
+
+Waktu dan Tempat Penelitian
+
+Penelitian ini dilaksanakan di Fakultas Keguruan dan Ilmu Pendidikan (FKIP) Universitas Lampung sebagai lokasi utama, dengan objek kajian berupa pengembangan website Unit Layanan Terpadu (ULT) yang ditujukan untuk mahasiswa, staf administrasi, dan Administrator jurusan. Pemilihan lokasi ini didasarkan pada permasalahan nyata, yaitu masih dominannya prosedur layanan manual yang berdampak pada keterlambatan, inefisiensi, dan rendahnya kepuasan pengguna. 
+
+.
+
+Subjek penelitian ditentukan berdasarkan kebutuhan evaluasi produk website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung, yaitu validator ahli (expert judgement) dan responden uji coba (pengguna) pada tahap implementasi. Pemilihan subjek ini ditujukan agar kualitas produk dapat dinilai dari sisi kelayakan isi atau layanan, kelayakan media atau teknis, serta kemudahan penggunaan berdasarkan pengalaman pengguna setelah mencoba sistem.
+Validator ahli terdiri dari tiga kategori, yaitu: (1) ahli materi (content expert), (2) ahli media (media/technical expert), dan (3) ahli sistem (system expert). Ahli materi berperan menilai kesesuaian konten layanan, alur administrasi, dan keterpahaman informasi layanan. Ahli media berperan menilai aspek desain antarmuka, konsistensi navigasi, dan aspek media atau usability. Ahli sistem berperan menilai kelayakan teknis sistem, kestabilan fungsi inti, konsistensi alur berbasis role, serta kesesuaian implementasi fitur dengan spesifikasi sebelum produk diuji oleh pengguna.
+3.4 Tempat dan Waktu Penelitian
+Penelitian ini dilaksanakan di Fakultas Keguruan dan Ilmu Pendidikan (FKIP) Universitas Lampung sebagai lokasi utama, dengan objek kajian berupa pengembangan website Unit Layanan Terpadu (ULT) yang ditujukan untuk mahasiswa, staf administrasi, dan Administrator jurusan. Pemilihan lokasi ini didasarkan pada permasalahan nyata, yaitu masih dominannya prosedur layanan manual yang berdampak pada keterlambatan, inefisiensi, dan rendahnya kepuasan pengguna. Selain itu, pra-penelitian juga dilakukan di SMK Negeri 9 Bandar Lampung pada Jurusan Sistem Informasi dan Jaringan (SIJA). Tujuannya adalah untuk memperoleh masukan tambahan mengenai relevansi pengembangan website dengan pembelajaran berbasis proyek pada mata pelajaran Dasar-dasar Pengembangan Perangkat Lunak dan Gim (PPLG). Dengan demikian, penelitian ini tidak hanya berkontribusi terhadap digitalisasi layanan administrasi perguruan tinggi, tetapi juga dapat dimanfaatkan sebagai sumber belajar kontekstual di pendidikan vokasi.
+Penelitian ini dilaksanakan melalui serangkaian tahapan yang terstruktur dan sistematis berdasarkan kerangka kerja pengembangan ADDIE. Mengacu pada riwayat histori pengembangan sistem, tahapan awal berupa Analysis dan Design dimulai pada akhir bulan Januari hingga bulan Maret 2026. Tahapan pembuatan perangkat lunak (Development) berlangsung secara intensif dari awal bulan Maret hingga awal bulan Mei 2026. Setelah sistem dinyatakan matang secara fungsional, uji coba terbatas (Implementation) dilaksanakan pada bulan Mei 2026, disusul oleh proses evaluasi hasil uji coba (Evaluation). Secara paralel, penyusunan draf laporan penulisan karya ilmiah dikerjakan bertahap mulai dari bulan Maret hingga bulan Juni 2026. Rincian penjadwalan pelaksanaan kegiatan penelitian ini disajikan pada Tabel 3.1 berikut.
+Tabel 3.1 Waktu Pelaksanaan Penelitian
+
+
+Rincian jadwal pelaksanaan penelitian tersebut dirancang secara sistematis untuk memastikan seluruh tahapan mulai dari analisis awal hingga evaluasi akhir berjalan terukur. Alokasi waktu selama satu semester penuh memungkinkan peneliti untuk melakukan iterasi perbaikan secara mendalam tanpa mengorbankan kualitas validitas ahli maupun pengujian di lapangan. Penjadwalan yang disiplin ini juga selaras dengan target waktu penyelesaian akademik tanpa perlu bersikap tergesa-gesa.
+
+3.5 Subjek Penelitian dan Sampling
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Subjek penelitian ditentukan berdasarkan kebutuhan evaluasi produk website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung, yaitu validator ahli (expert judgement) dan responden uji coba (pengguna) pada tahap implementasi. Pemilihan subjek ini ditujukan agar kualitas produk dapat dinilai dari sisi kelayakan isi atau layanan, kelayakan media atau teknis, serta kemudahan penggunaan berdasarkan pengalaman pengguna setelah mencoba sistem.
+Validator Ahli
+Validator ahli terdiri dari tiga kategori, yaitu: (1) ahli materi (content expert), (2) ahli media (media/technical expert), dan (3) ahli sistem (system expert). Ahli materi berperan menilai kesesuaian konten layanan, alur administrasi, dan keterpahaman informasi layanan. Ahli media berperan menilai aspek desain antarmuka, konsistensi navigasi, dan aspek media atau usability. Ahli sistem berperan menilai kelayakan teknis sistem, kestabilan fungsi inti, konsistensi alur berbasis role, serta kesesuaian implementasi fitur dengan spesifikasi sebelum produk diuji oleh pengguna.
+Jumlah dan kualifikasi validator ahli ditetapkan sebagai berikut: ahli materi = 3 orang; ahli media = 3 orang; ahli sistem = 3 orang. Pemilihan validator dilakukan secara purposive berdasarkan relevansi keahlian dengan objek yang dinilai, pengalaman atau kompetensi pada bidangnya, serta kesediaan memberikan penilaian dan saran perbaikan terhadap produk. Total validator ahli adalah 9 orang. Langkah pelibatan pakar lintas disiplin ini merujuk pada gagasan Nieveen (1999), yang menggarisbawahi pentingnya sebuah produk divalidasi dari segi relevance (kualitas materi) maupun consistency (keandalan sistem dan antarmuka).
+Responden Uji Coba (Uji Kepraktisan atau Angket)
+Responden uji coba merupakan pengguna sasaran yang mencoba website ULT pada uji coba terbatas (limited trial/small group). Responden dibagi menjadi tiga kelompok pengguna utama, yaitu mahasiswa, staf Unit Layanan Terpadu (ULT), dan Administrator jurusan. Komposisi responden ditetapkan agar mewakili peran pengguna yang berinteraksi langsung dengan fitur inti (pengajuan layanan, verifikasi atau proses, pelacakan status, dan riwayat layanan).
+Menurut Sugiyono (2013), purposive sampling adalah teknik penentuan sampel dengan pertimbangan tertentu agar sampel yang dipilih relevan dengan kebutuhan pengujian. Berdasarkan Faulkner (2003) dan Weinger et al. (2010), ukuran sampel sebanyak 15-20 pengguna sudah terbukti memadai dan mampu mengungkap lebih dari 95% masalah usability utama pada sebuah perangkat lunak. Oleh karena itu, jumlah responden uji coba ditetapkan sebagai berikut: mahasiswa = 12 orang; staf ULT = 3 orang; Administrator jurusan = 3 orang. Teknik pemilihan responden menggunakan purposive sampling. Kriteria inklusi responden:
+Mahasiswa: mahasiswa aktif FKIP dari perwakilan rumpun PBS, PIP, PIPS, dan PMIPA; pernah atau berpotensi mengurus layanan administrasi; mampu mengoperasikan laptop atau ponsel dan browser; bersedia mengikuti skenario tugas sampai selesai dan mengisi angket.
+Staf ULT: staf yang terlibat pelayanan ULT atau administrasi; memahami alur layanan; bersedia mencoba sistem sesuai peran dan memberi masukan.
+Administrator jurusan: admin atau verifikator jurusan yang terlibat verifikasi atau proses layanan; memahami alur administrasi; bersedia mencoba sistem sesuai peran dan memberi masukan.
+Umum: bersedia memberikan persetujuan (informed consent) dan data dijaga kerahasiaannya.
+Setting uji coba dilakukan dalam kondisi terkontrol agar dapat direplikasi. Responden menggunakan perangkat yang tersedia seperti laptop, komputer atau ponsel dengan browser modern dan koneksi internet yang memadai. Durasi uji coba: 30 menit. Sebelum pengisian angket kepraktisan, responden diberikan pengarahan singkat dan panduan tugas (task scenario) untuk memastikan semua responden mencoba fungsi inti yang sama.
+Urutan pelaksanaan uji coba: (1) briefing singkat dan pembagian akun sesuai peran; (2) pelaksanaan skenario tugas minimal (login sesuai peran, mahasiswa mengajukan layanan dan mengunggah dokumen, staf atau admin memverifikasi dan memproses permohonan, pengguna melacak status layanan, dan pengguna melihat riwayat layanan); (3) pengisian angket uji kepraktisan (angket) setelah mencoba sistem; (4) pencatatan komentar/kendala untuk bahan revisi. Jumlah responden (N) pada tahap ini digunakan dalam perhitungan skor rata-rata uji kepraktisan, sehingga harus konsisten dengan lampiran instrumen dan pelaporan hasil.
+
+Tabel 3.2 Subjek Penelitian dan Sampling
+Sumber: Adaptasi dari rancangan evaluasi penelitian pengembangan (R&D) dan disesuaikan oleh peneliti dengan konteks pengembangan website ULT FKIP Universitas Lampung.
+
+Penetapan 27 orang subjek dalam penelitian ini dilandasi oleh kebutuhan untuk mendapatkan umpan balik yang komprehensif dari pihak-pihak yang bersinggungan langsung dengan sistem. Sembilan validator ahli di tahap awal memegang peran krusial dalam memastikan prototipe benar-benar layak secara fungsional, tepat secara konten, dan rumpang dari galat sebelum menyentuh lapangan. Delapan belas responden uji coba yang merupakan representasi proporsional mahasiswa, staf operasional ULT, serta administrator jurusan kemudian dihadirkan untuk mengukur efektivitas dan kemudahan penggunaan aplikasi secara nyata. Komposisi terarah ini dirancang spesifik agar evaluasi produk benar-benar mencerminkan dinamika birokrasi dan kebutuhan pelayanan dokumen administrasi di lingkungan Fakultas Keguruan dan Ilmu Pendidikan Universitas Lampung.
+
+Instrumen Penelitian
+
+
+Dalam penelitian ini, menjelaskan instrumen yang digunakan untuk memperoleh data kebutuhan, validitas ahli, dan kepraktisan penggunaan produk. Penyusunan instrumen dilakukan berdasarkan definisi operasional yang jelas, indikator terukur, serta penomoran butir yang konsisten dengan lampiran instrumen.
+Instrumen Wawancara
+Instrumen wawancara digunakan untuk memperoleh data kualitatif mengenai proses layanan administrasi, kendala yang dialami, dan kebutuhan pengguna. Wawancara dilakukan secara semi-terstruktur agar peneliti dapat menggali informasi utama sekaligus menelusuri temuan baru yang muncul selama proses wawancara. Pedoman wawancara disusun berdasarkan kebutuhan informasi pada tahap Analysis dan menjadi dasar penyusunan kebutuhan sistem.
+Angket Analisis Kebutuhan
+Angket analisis kebutuhan ditujukan kepada mahasiswa FKIP Universitas Lampung untuk mengidentifikasi pengalaman layanan saat ini, kebutuhan terhadap sistem digital, aspek aksesibilitas, serta tingkat kepuasan layanan. Definisi operasional kebutuhan pada penelitian ini adalah kebutuhan pengguna terhadap fitur layanan, informasi persyaratan, dan mekanisme pelacakan status layanan berbasis website. Angket terdiri dari 20 butir dengan skala Likert 1–5 (1 = sangat tidak setuju, 5 = sangat setuju). Kisi-kisi angket disajikan pada Tabel 3.
+Tabel  4. Kisi-kisi Analisis Kebutuhan
+Sumber: Adaptasi dari Sugiyono (2013)
+
+Struktur instrumen analisis kebutuhan ini dirancang sedemikian rupa untuk menggali perspektif pengguna secara mendalam terkait urgensi digitalisasi layanan. Respons dari partisipan terhadap kisi-kisi ini akan menjadi landasan empiris bagi peneliti dalam merumuskan arsitektur awal dan fitur-fitur esensial yang harus dibangun pada prototipe website. Penggalian informasi awal ini sangat menentukan presisi solusi yang ditawarkan agar sesuai dengan ekspektasi nyata pengguna.
+
+Angket Uji Validitas
+Angket validasi ahli digunakan untuk menilai kelayakan produk dari dua perspektif: (1) validasi materi, (2) validasi media dan (3) validasi sistem. Instrumen validasi menggunakan skala Likert 1–5 dan hasilnya diolah untuk memperoleh persentase kelayakan. Kisi-kisi validasi konten layanan disajikan pada Tabel 4, kisi-kisi validasi media disajikan pada Tabel 5 dan kisi-kisi validasi sistem disajikan pada Tabel 6. 
+
+Tabel  5. Kisi-kisi Validasi Ahli Materi
+Sumber: Adaptasi dari Febriani et al. (2023)
+
+
+
+Instrumen penilaian ahli materi difokuskan pada aspek kelayakan konten dan kualitas substansi informasi. Indikator ini disusun guna memastikan bahwa deskripsi layanan, kelengkapan syarat dokumen, dan alur prosedur yang disajikan dalam website telah sepenuhnya akurat serta sesuai dengan standar operasional baku akademik di lingkungan fakultas. Penilaian komprehensif pada tahap ini juga bertujuan meminimalisasi potensi bias interpretasi yang dapat menghambat alur kerja tata usaha.
+
+Tabel  6. Kisi-kisi Validasi Ahli Media
+Sumber: Adaptasi dari Maulana dkk. (2023)
+
+
+Indikator penilaian ahli media menitikberatkan pada aspek estetika antarmuka, ergonomi navigasi, dan keterbacaan visual. Aspek ini dievaluasi secara ketat untuk menjamin pengalaman pengguna yang intuitif serta tata letak yang tetap proporsional dan responsif saat diakses melalui berbagai macam perangkat. Umpan balik yang diperoleh dari validasi ini akan menjadi tolok ukur kesiapan visual sebelum desain akhir diimplementasikan secara teknis.
+
+Tabel  7. Kisi-kisi Validasi Ahli Sistem
+Sumber: Adaptasi dari Maulana dkk. (2023)
+
+Kisi-kisi penilaian ahli sistem ditujukan untuk menguji keandalan infrastruktur perangkat lunak, fungsionalitas basis data, serta keamanan autentikasi. Validasi di tahap ini memegang peranan vital dalam mendeteksi potensi celah keamanan maupun cacat fungsional (bug) guna menjamin stabilitas performa sebelum website dirilis ke lingkungan pengguna nyata. Pemeriksaan teknis secara menyeluruh ini sekaligus menjadi perisai pertama dari ancaman potensi gangguan ketika sistem dijalankan penuh.
+
+Angket Uji Kepraktisan (Angket)
+Angket uji kepraktisan digunakan untuk mengukur kemudahan penggunaan, efisiensi, kemanfaatan fitur, kepuasan, serta kesediaan menggunakan kembali website ULT setelah uji coba terbatas. Angket disusun dalam bentuk pernyataan skala Likert 1–5 dan dianalisis untuk memperoleh persentase kepraktisan. Penyusunan indikator mengacu pada penelitian Indonesia yang menerapkan USE Questionnaire untuk mengukur usefulness, ease of use, ease of learning, dan satisfaction, kemudian disesuaikan dengan konteks layanan ULT (pengajuan layanan, unggah berkas, pelacakan status, dan riwayat layanan) (Maulana et al., 2023).
+Tabel  8. Kisi-kisi Uji Kepraktisan (Angket)
+Sumber: Adaptasi dari Maulana et al. (2023) berbasis USE Questionnaire dan disesuaikan dengan konteks website ULT.
+
+
+
+
+Penjabaran indikator uji kepraktisan ini diarahkan pada pengukuran efektivitas dan efisiensi produk saat dioperasikan langsung oleh pengguna akhir. Instrumen ini sekaligus menjadi instrumen validasi penerimaan mahasiswa maupun staf terhadap transisi digitalisasi pelayanan administrasi akademik berbasis web. Data yang terkumpul akan memetakan elemen spesifik yang masih memerlukan pembenahan dari sudut pandang pengalaman pengguna di lapangan.
+
+Teknik Pengumpulan Data
+
+
+Teknik pengumpulan data pada penelitian ini dipetakan berdasarkan tahapan ADDIE dan instrumen yang digunakan, sehingga jelas kapan data dikumpulkan, oleh siapa, menggunakan instrumen apa, serta output yang dihasilkan. Pemetaan pengumpulan data disajikan pada Tabel  9.
+Tabel  9. Pemetaan Pengumpulan Data
+
+Prosedur pengisian angket validasi ahli dilakukan dengan cara peneliti memberikan akses prototipe (tautan atau demo akun) dan lembar angket validasi kepada validator ahli materi, ahli media dan ahli sistem. Validator mengisi penilaian serta catatan atau saran perbaikan. Hasil validasi direkap, kemudian peneliti melakukan revisi (putaran revisi-1). Apabila hasil validasi belum memenuhi kriteria kelayakan yang ditetapkan, maka dilakukan validasi ulang (putaran revisi-2) sampai produk dinyatakan layak.
+Prosedur uji kepraktisan dilakukan melalui uji coba terbatas (small group atau limited trial). Responden mencoba menjalankan skenario penggunaan utama, misalnya: (1) login sesuai peran; (2) mahasiswa mengajukan layanan dan mengunggah berkas; (3) staf atau admin memverifikasi dan memproses permohonan; (4) pengguna mengecek status layanan; dan (5) pengguna melihat riwayat layanan. Setelah menyelesaikan skenario, responden mengisi Angket Uji Kepraktisan menggunakan skala Likert 1–5. Selain skor, responden dapat menuliskan komentar atau kendala sebagai bahan perbaikan produk.
+Etika penelitian: partisipasi bersifat sukarela dan responden memberikan persetujuan sebelum mengikuti uji (lembar persetujuan berpartisipasi informed consent). Data yang dikumpulkan dijaga kerahasiaannya, disajikan secara anonim, serta digunakan hanya untuk kepentingan penelitian dan perbaikan produk.
+
+
+
+Teknik Analisis Data
+
+
+Berdasarkan hasil penelitian, teknik analisis data pada penelitian ini mencakup (a) analisis validitas ahli dan (b) analisis uji kepraktisan (angket).  
+Analisis Data Validitas
+Data validasi produk didapatkan melalui pengisian angket uji validitas yang melibatkan validator materi, validator ahli media dan Validator ahli sistem. Pengisian angket ini bertujuan untuk mengetahui tingkat kelayakan website Unit Layanan Terpadu (ULT) yang dikembangkan, sehingga dapat dimanfaatkan sebagai sarana layanan administrasi digital. Dalam penelitian ini, angket uji validitas menggunakan skala Likert sebagaimana ditampilkan pada Tabel  10.
+Tabel  10. Skala Likert Penilaian Validitas Instrumen
+Sumber: Adaptasi Arikunto (2013)
+Hasil pengisian angket uji validitas tersebut selanjutnya dianalisis menggunakan teknik analisis persentase dengan rumus sebagai berikut:
+
+Sumber: Sudjana (2005)
+Keterangan: Σ skor maksimum = (jumlah butir) × (skor tertinggi) × (jumlah ahli). Pada penelitian ini, skor tertinggi = 5 dan jumlah ahli per kategori = 3 orang. Dengan demikian, Σ skor maksimum untuk validasi materi = 22 × 5 × 3 = 330, sedangkan Σ skor maksimum untuk validasi media = 14 × 5 × 3 = 210, dan Σ skor maksimum untuk validasi sistem = 22 × 5 × 3 = 330.
+
+Sumber: Sudjana (2005)
+Skor penilaian (p) yang diperoleh kemudian diinterpretasikan untuk menentukan tingkat kualitas validitas produk dengan mengacu pada pedoman Arikunto (2009).
+Tabel  11. Kriteria Penafsiran Validitas Produk
+Sumber: Adaptasi Arikunto (2009) 
+Standar batas minimum produk website ULT yang dikembangkan dapat dikategorikan layak apabila pencapaian persentase dari validator menyentuh angka ≥ 61% (Cukup Valid). Parameter ini disesuaikan dengan urgensi kebutuhan di lapangan yang menuntut peluncuran produk secara efisien. Pencapaian nilai di bawah ambang batas akan secara otomatis mewajibkan peneliti untuk mengulangi perombakan arsitektur dari awal.
+Selain menggunakan analisis persentase kelayakan, analisis validitas ahli dalam penelitian ini juga diperkuat dengan menggunakan Indeks Aiken’s V untuk menguji validitas isi dari setiap butir pada instrumen penilaian. Indeks Aiken’s V mengukur tingkat kesepakatan para ahli terhadap kesesuaian setiap butir dengan konstruk yang diukur. Rumus Indeks Aiken’s V yang dikemukakan oleh Aiken (1985) adalah sebagai berikut:
+
+
+Sumber: Aiken (1985)
+Keterangan:
+V 	= indeks validitas Aiken;
+s 	= r - lo (skor yang diberikan validator dikurangi skor terendah);
+r 	= skor yang diberikan oleh validator (skala 1–5);
+lo 	= skor terendah pada skala penilaian (lo = 1);
+n 	= jumlah validator (n = 3);
+c 	= jumlah kategori skor yang dapat dipilih (c = 5).
+Dengan jumlah validator (n) = 3 dan jumlah kategori (c) = 5, maka penyebut pada rumus Aiken’s V adalah n(c - 1) = 3 × (5 - 1) = 12. Koefisien validitas yang diperoleh berkisar antara 0,00 hingga 1,00. Nilai hasil perhitungan diinterpretasikan berdasarkan kriteria sebagai berikut:
+a. V < 0,40 menunjukkan tingkat validitas isi yang rendah;
+b. 0,40 ≤ V < 0,80 menunjukkan tingkat validitas isi yang sedang;
+c. V ≥ 0,80 menunjukkan tingkat validitas isi yang tinggi.
+Butir instrumen dinyatakan memenuhi kriteria validitas isi apabila memperoleh nilai koefisien V ≥ 0,80 (validitas tinggi). Butir dengan indeks sedang (0,40 ≤ V < 0,80) digunakan sebagai dasar untuk melakukan perbaikan/revisi produk, sedangkan butir dengan indeks rendah akan dieliminasi.
+Analisis Data Kepraktisan
+Angket menggunakan skala Likert 1–5 (1 = sangat tidak setuju sampai 5 = sangat setuju) dengan jumlah butir sebanyak 12 butir. Jumlah responden pada uji kepraktisan adalah 18 orang (diakumulasikan dari seluruh kelompok responden, yaitu 3 orang admin prodi, 3 orang dari program studi PBS, 3 orang dari program studi PIP, 3 orang dari program studi PIPS, 3 orang dari program studi PMIPA, dan 3 orang staf ULT).
+Skor kepraktisan dianalisis menjadi persentase kepraktisan menggunakan rumus berikut.
+
+
+Sumber: Brooke (2020)
+Pada penelitian ini, Σ skor maksimum = 18 × 12 × 5 = 1080.
+Nilai p kemudian diinterpretasikan menggunakan kategori pada Tabel 11 (interval 20%). Pada penelitian ini, produk dinyatakan 'praktis' apabila p ≥ 61% (kategori Praktis atau Sangat Praktis). Apabila p < 61%, maka diperlukan revisi berdasarkan umpan balik pengguna. Ambang ini dapat disesuaikan mengikuti arahan pembimbing.
+Pada Bab IV, hasil analisis uji kepraktisan disajikan dalam: (a) persentase kepraktisan total; (b) rekap persentase per aspek (apabila angket disusun per aspek); dan (c) ringkasan masukan pengguna yang dikelompokkan secara tematik sebagai dasar perbaikan produk.
+Tabel  12. Kriteria Penafsiran Kepraktisan Produk
+Sumber: Adaptasi Arikunto (2009)
+
+
+
+
+
+
+
+
+
+Penerapan rentang kriteria ini berfungsi sebagai tolok ukur final untuk menyimpulkan keberhasilan produk dari perspektif operasional lapangan. Klasifikasi kategori tersebut membantu peneliti dalam menginterpretasikan data kuantitatif menjadi keputusan kualitatif mengenai seberapa praktis dan mudah sistem ULT dioperasikan oleh civitas akademika. Ketegasan dalam pembagian interval skala ini menjamin bahwa konklusi akhir penelitian bersifat objektif serta terukur secara statistik.
+
+HASIL DAN PEMBAHASAN
+
+
+
+
+Hasil Penelitian
+
+
+Pengembangan Website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung dilakukan dengan menerapkan model pengembangan ADDIE (Analysis, Design, Development, Implementation, dan Evaluation). Model ini dipilih karena strukturnya yang sistematis, adaptif, dan berorientasi pada pemecahan masalah riil. Produk akhir yang dihasilkan berupa aplikasi web monolitik yang dibangun menggunakan framework Laravel 12 dengan runtime PHP 8.4+, basis data MySQL, dan antarmuka dinamis berbasis TailwindCSS dan Alpine.js. Website ini dirancang untuk mendigitalisasi dan mengotomatisasi seluruh alur pengajuan dokumen dan surat-menyurat mahasiswa yang sebelumnya dilakukan secara manual dan terdistribusi. Berikut dijabarkan proses pengembangan sistem untuk masing-masing tahap secara mendetail.
+
+
+
+Tahap Analisis (Analysis)
+
+
+Pada tahap analisis, peneliti melakukan investigasi mendalam terhadap kebutuhan awal sistem melalui dua metode utama, yaitu wawancara pra-penelitian terstruktur dengan staf ULT dan administrator jurusan FKIP Unila, serta penyebaran angket analisis kebutuhan digitalisasi pelayanan kepada mahasiswa aktif. Hasil wawancara pra-penelitian dengan staf ULT mengonfirmasi keberadaan sejumlah kendala operasional pain points yang signifikan pada alur administrasi pelayanan mahasiswa saat ini. Kendala-kendala utama tersebut meliputi: (1) tidak adanya sistem pencatatan terpusat, sehingga linimasa status dokumen mahasiswa menjadi sepenuhnya tidak transparan; (2) tingginya risiko kerusakan fisik atau kehilangan berkas penting akibat penumpukan dokumen di loket pelayanan; dan (3) waktu tunggu persetujuan pejabat fakultas/jurusan yang tidak terukur karena alur koordinasi manual yang terdistribusi dan sering mengalami hambatan.
+Untuk memperkuat temuan kualitatif tersebut, peneliti menyebarkan angket analisis kebutuhan kepada mahasiswa FKIP Unila. Hasil angket secara kuantitatif menunjukkan tingkat urgensi digitalisasi yang sangat tinggi. Mayoritas mahasiswa (87,5%) menyatakan bahwa pemindahan loket fisik ke platform digital adalah kebutuhan mendesak guna memangkas antrean loket dan memberikan kepastian penyelesaian dokumen secara transparan. Berdasarkan temuan empiris di atas, peneliti menyimpulkan bahwa transformasi digital pelayanan akademik melalui pengembangan website ULT FKIP Unila dengan fitur-fitur seperti pelacakan status timeline, penyimpanan berkas terenkripsi, penomoran surat otomatis, dan tanda tangan elektronik pimpinan adalah langkah strategis dan esensial.
+
+
+
+Tahap Desain (Design)
+Pada tahap perancangan (Design) dalam model pengembangan ADDIE, fokus utama peneliti dialihkan dari perumusan masalah konseptual menuju perancangan solusi teknis. Berdasarkan model Four-D yang diadaptasi dari Thiagarajan (1974), tahap perancangan ini meliputi empat langkah sistematis utama, yaitu:
+a. Constructing Criterion-Referenced Tests
+Penyusunan tes acuan patokan (Criterion-Referenced Tests) merupakan langkah awal yang menjadi jembatan operasional antara tahapan analisis dan tahapan desain. Pada langkah ini, disusun instrumen evaluasi produk yang spesifik dan terukur untuk menilai tingkat kelayakan serta kepraktisan Website ULT FKIP Unila yang akan dikembangkan. Instrumen yang disusun meliputi kisi-kisi uji validasi ahli yang terbagi atas tiga ranah kompetensi pokok: ahli materi untuk memvalidasi substansi alur birokrasi persuratan, ahli media untuk menilai struktur dan hierarki visual antarmuka (UI/UX), serta ahli sistem informasi untuk mengevaluasi fungsionalitas teknis, integrasi database, dan keamanan siber aplikasi. Selain itu, disusun pula instrumen kuesioner uji kepraktisan skala terbatas (limited trial) bagi 18 orang responden akhir (mahasiswa, admin program studi, dan staf ULT) sebagai tolak ukur ketercapaian fungsionalitas produk dalam menyelesaikan kendala administrasi dokumen yang ada. Penggunaan tes acuan patokan ini krusial untuk memastikan bahwa rancangan sistem nantinya senantiasa berpedoman kuat pada solusi yang telah dirumuskan di awal.
+b. Media Selection
+Langkah pemilihan media difokuskan pada penentuan teknologi, perangkat keras, dan perangkat lunak yang paling sesuai untuk menerjemahkan model konsepsional ke dalam bentuk fisik sistem. Berdasarkan hasil analisis kebutuhan (requirement analysis), sistem administrasi terpadu membutuhkan media yang fleksibel, dapat diakses kapan saja dan dari mana saja (ubiquitous), serta tidak memerlukan proses instalasi rumit bagi pengguna akhir. Oleh sebab itu, media utama yang dipilih adalah aplikasi berbasis peramban (web-based application) berformat monolitik yang dibangun menggunakan framework Laravel versi 12 dengan bahasa pemrograman PHP 8.4+.
+Untuk lapisan antarmuka pengguna (front-end), dipilih kerangka kerja TailwindCSS dipadukan dengan Alpine.js yang dikompilasi menggunakan Vite, sehingga menghasilkan responsivitas dan kecepatan akses yang optimal layaknya Progressive Web App (PWA). Pilihan pangkalan data jatuh pada MySQL untuk menjamin integritas data relasional bervolume tinggi, didukung oleh private local storage disk pada Laravel guna memastikan berkas-berkas akademik mahasiswa yang sensitif tetap terlindungi dan terisolasi dari akses publik. Lebih lanjut, teknologi pemroses dokumen secara khusus melibatkan pustaka phpoffice/phpword dan dompdf/dompdf yang digabungkan bersama Tiptap Editor sebagai editor teks kaya (WYSIWYG), memungkinkan ekstraksi serta perakitan dokumen Word dan PDF secara dinamis tanpa merusak susunan visual templat orisinalnya.
+c. Format Selection
+Pemilihan format (Format Selection) sangat erat kaitannya dengan pendefinisian antarmuka sistem (user interface format) dan bagaimana informasi disajikan serta diatur pembagiannya agar intuitif bagi pengguna. Untuk mengakomodasi arsitektur role-based access control (RBAC), format antarmuka dipecah menjadi lima portal akses utama dengan hak otonomi spesifik, yakni:
+1. Public Portal (Tampilan Publik): Format antarmuka halaman depan (landing page) yang didesain secara informatif, menayangkan profil singkat ULT, katalog prosedur layanan persuratan, portal berita atau pengumuman fakultas, serta sistem Content Management System (CMS) publik untuk mempermudah tamu umum.
+2. Authentication System (Sistem Autentikasi): Tampilan layar terpusat untuk proses pendaftaran (register) akun baru, validasi masuk (login), dan pemulihan kata sandi (reset password) yang dibangun di atas pondasi Laravel Breeze (Blade).
+3. Student Portal (Dasbor Mahasiswa): Format antarmuka privat yang ringkas dan bebas distraksi, dirancang khusus untuk mahasiswa agar dapat mengajukan permohonan berbagai jenis layanan surat, mengisi formulir isian data dinamis (dynamic input fields), mengunggah berkas persyaratan terisolasi, serta melacak tahapan proses layanan (auditable timeline).
+4. Admin/Staff Portal (Dasbor Operasional): Antarmuka manajemen inti bagi petugas pintu gerbang (Gatekeeper) ULT. Format halamannya diatur dengan paradigma data grid untuk memfasilitasi tugas-tugas administratif berat seperti pengecekan permohonan, penomoran surat otomatis, pengelolaan templat layanan, dan perakitan (assembly) keluaran akhir dokumen fisik.
+5. Signer Portal (Portal Tanda Tangan): Format halaman minimalis khusus bagi para pejabat struktural fakultas maupun jurusan untuk melakukan telaah substantif surat, verifikasi keabsahan data, serta melampirkan tanda tangan persetujuan elektronik dengan aman.
+Tabel 4.1 Format Antarmuka Sistem Web ULT FKIP Unila
+
+Berdasarkan rincian Tabel 4.1 di atas, format antarmuka pada sistem dirancang dengan pendekatan modular yang memisahkan tanggung jawab (separation of concerns) ke dalam lingkungan visual yang spesifik. Pemisahan antarmuka menjadi lima portal berbeda ini tidak hanya menyederhanakan navigasi pengguna sesuai dengan wewenang (role), melainkan juga meminimalisasi distraksi visual dan kelebihan beban informasi (information overload). Secara praktikal, mahasiswa dapat berfokus murni pada pelacakan dokumen melalui Dasbor Mahasiswa, staf ULT dimudahkan dengan tampilan tabel data operasional di Dasbor Admin, sementara pejabat struktural disuguhkan tampilan minimalis dan ringkas di Signer Portal guna mempercepat birokrasi persetujuan dokumen. Struktur tata letak ini dikonstruksi secara adaptif agar optimal digunakan di berbagai ukuran perangkat, menjamin kontinuitas pelayanan administrasi yang tidak terputus.
+d. Initial Design
+Langkah perancangan awal (Initial Design) adalah tahap finalisasi purwarupa dari segala bentuk konseptual arsitektur sistem. Rancangan ini menggabungkan seluruh komponen pemodelan struktural dan perilaku (behavioral) untuk memastikan aplikasi dibangun dengan presisi teknis. Desain awal ini diwujudkan melalui serangkaian cetak biru visual berupa pemodelan fungsional, arsitektural, alur kerja, relasi data, diagram aktivitas, wireframe kerangka antarmuka dasar, hingga antarmuka pengguna final (UI/UX). Penjabaran masing-masing elemen perancangan tersebut diuraikan sebagai berikut:
+a. Perancangan Fungsionalitas Menggunakan Diagram Use Case
+Perancangan fungsionalitas sistem bertujuan mendefinisikan batasan sistem (system boundary) serta interaksi langsung antara pengguna dengan modul-modul operasional yang tersedia. Guna memperjelas peta interaksi pengguna beserta pembagian hak akses keamanan berbasis Role-Based Access Control (RBAC), peneliti menyusun diagram use case. Diagram use case tersebut dapat dilihat pada Gambar 4.
+
+Gambar 4. Diagram Use Case Sistem Web ULT FKIP Unila.
+Pada level manajemen fakultas, Aktor Staf ULT bertindak selaku pengelola utama operasional yang bertanggung jawab atas validasi tingkat lanjut, pengelolaan templat dokumen, serta eksekusi perakitan berkas. Hasil verifikasi staf ini kemudian dilanjutkan kepada Aktor Pejabat selaku pimpinan fakultas atau jurusan untuk dilakukan peninjauan substantif dan legalisasi melalui pembubuhan tanda tangan elektronik. Keseluruhan ekosistem interaksi ini senantiasa diawasi oleh Aktor Admin Utama yang mengendalikan hak akses pengguna dan memantau rekaman jejak audit demi menjaga stabilitas serta akuntabilitas platform.
+1) Aktor Mahasiswa bertindak sebagai pemohon utama yang mengajukan layanan persuratan akademik secara mandiri. Aktor ini memiliki otorisasi penuh untuk mengakses tiga use case inti, yaitu mengajukan permohonan dengan mengisi form dinamis, melacak status berkas secara langsung melalui linimasa (timeline) interaktif, dan mengunduh berkas dokumen resmi yang telah selesai secara privat.
+3) Aktor Staf ULT bertindak sebagai pengelola utama fungsionalitas operasional fakultas. Staf ULT berinteraksi dengan tiga use case penting, meliputi validasi permohonan tingkat fakultas, pengelolaan jenis layanan dan template dokumen persuratan akademik, serta eksekusi perakitan dokumen hasil berbasis server.
+5) Aktor Admin Utama bertindak sebagai pengelola sistem keseluruhan yang bertanggung jawab atas use case pengelolaan pengguna beserta hak akses (RBAC) dan memantau rekaman jejak audit trail aktivitas guna menjamin akuntabilitas data.
+Perancangan Arsitektur Sistem
+Setelah interaksi fungsional didefinisikan, langkah berikutnya adalah merancang struktur internal sistem guna menjamin keandalan fungsional tersebut. Rancangan arsitektur teknologi informasi dikembangkan menggunakan arsitektur berlapis (layered architecture) untuk memisahkan fungsionalitas antar modul secara longgar (loosely coupled) demi keandalan keamanan dan kemudahan pemeliharaan kode. Rancangan arsitektur sistem berlapis tersebut dapat dilihat pada Gambar 5.
+
+Gambar 5. Diagram Arsitektur Sistem Web ULT FKIP Unila.
+Logika bisnis aplikasi sepenuhnya dikendalikan oleh lapisan Laravel Application Core yang memuat serangkaian pengendali proses perakitan dan modul penerjemah sintaks teks kaya. Seluruh data operasional maupun relasional selanjutnya dititipkan ke dalam Database and Storage Layer yang secara fisik memisahkan penyimpanan konfigurasi tabel dengan direktori penyimpanan lampiran berkas mentah. Rangkaian arsitektur ini berpuncak pada modul Document Assembly Engine yang beroperasi secara laten sebagai mesin utama untuk memanipulasi dokumen XML dan memproduksi luaran berkas persuratan siap cetak.
+1) Client & Interface Layer (PWA Ready) bertindak sebagai gerbang terdepan interaksi visual pengguna yang membagi kebutuhan akses ke dalam empat antarmuka dinamis, yaitu Public Portal (informasi layanan umum), Student Portal (dasbor pengajuan berkas), Staff/Admin Portal (dasbor pengolahan staf), dan Signer Portal (dasbor persetujuan pejabat). Antarmuka ini dirancang responsif dan kompatibel dengan Progressive Web App (PWA).
+3) Laravel 12 Application Core memproses seluruh logika bisnis aplikasi yang menampung modul Controllers (misalnya RequestAdminController), DocumentAssemblerService (pengelola alur perakitan dokumen), dan HtmlToOpenXMLParser (modul parser penerjemah teks kaya).
+5) Document Assembly Engine bertindak sebagai mesin produksi persuratan yang mengintegrasikan template Word (.docx) orisinal dengan library PHPWord & ZipArchive untuk manipulasi XML, serta modul Dompdf untuk melakukan rendering format PDF.
+Perancangan Alur Kerja Persuratan (Flowchart)
+Perancangan alur kerja persuratan ditujukan untuk memetakan alur birokrasi persuratan akademik secara linier, terukur, dan transparan dari tahap draf awal hingga dokumen hasil diterbitkan. Flowchart siklus hidup dokumen dan perakitan otomatis tersebut dapat dilihat pada Gambar 6.
+
+Gambar 6. Flowchart Siklus Hidup Dokumen dan Perakitan.
+Diagram flowchart pada Gambar 6 merinci siklus hidup dokumen secara terstruktur tanpa menggunakan skema penomoran prosedural yang kaku. Mahasiswa mengawali proses dengan melakukan pengisian formulir dinamis menggunakan teks editor kaya (WYSIWYG Tiptap Editor) untuk menghasilkan draf awal dokumen. Pengajuan tersebut selanjutnya diteruskan ke portal Admin Jurusan untuk melewati tahapan verifikasi kelengkapan berkas pendukung secara seksama. Setelah dokumen dinyatakan valid pada tahap awal, sistem akan secara otomatis menerbitkan nomor surat resmi sesuai dengan pola penomoran unit program studi untuk meminimalisasi kesalahan administratif.
+Validasi lanjutan kemudian dieksekusi oleh Staf ULT sebagai representasi gerbang birokrasi fakultas untuk meninjau keabsahan keseluruhan data secara digital. Berkas yang telah disetujui fakultas akan masuk ke portal Pejabat untuk ditinjau secara substantif melalui pembubuhan tanda tangan elektronik pimpinan yang sah. Proses persetujuan tersebut secara otomatis memicu perakitan dokumen di mana modul parser mengolah tag-tag HTML mahasiswa menjadi format OpenXML yang sejalan dengan gaya bawaan template Word asli. Dokumen final tersebut kemudian diamankan ke dalam direktori privat sistem bersamaan dengan perekaman jejak audit, sebelum akhirnya mahasiswa menerima notifikasi penyelesaian untuk mengunduh berkas fisik secara personal.
+
+
+
+
+
+
+
+
+
+d. Perancangan Struktur Data Melalui Diagram Hubungan Entitas (ERD)
+
+Gambar 7. Diagram Hubungan Entitas (ERD) Basis Data.
+
+
+
+
+
+
+
+Gambar 8. Diagram Sequence Perakitan Dokumen dan Parser HTML-to-OpenXML.
+
+
+
+
+
+
+
+
+Perancangan Aktivitas Pengguna Menggunakan Diagram Activity
+Diagram aktivitas (Activity Diagram) merinci lebih lanjut alur kerja (workflow) transaksional dan operasional yang telah divisualisasikan dalam diagram Use Case. Pemodelan ini secara spesifik memetakan runtutan aksi dan keputusan dinamis antara aktor pengguna (mahasiswa, staf ULT, dan pejabat) saat berinteraksi secara sekuensial dengan sistem ULT FKIP Unila.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gambar 4.1. Diagram Activity Autentikasi Pengguna
+Gambar 4.1 mengilustrasikan alur aktivitas autentikasi pengguna pada Web ULT FKIP Unila. Mahasiswa baru diwajibkan mengisi formulir registrasi yang akan divalidasi dan dikirimkan tautan verifikasi melalui email. Pengguna yang telah memiliki akun terverifikasi dapat langsung memasukkan email dan kata sandi pada halaman login. Sistem akan memvalidasi kredensial tersebut terhadap basis data; jika valid, sistem menciptakan sesi login dan mengarahkan pengguna ke dasbor masing-masing sesuai dengan perannya (role), sedangkan jika gagal, sistem akan menampilkan pesan peringatan.
+
+Gambar 4.2. Diagram Activity Pengajuan Layanan Akademik
+Gambar 4.2 memetakan proses utama pengajuan layanan persuratan oleh mahasiswa. Dimulai dari Student Portal, mahasiswa memilih jenis layanan spesifik, mengisi formulir berbasis variabel dinamis yang disediakan oleh sistem, serta mengunggah berkas-berkas prasyarat. Sistem secara otomatis melakukan validasi input. Permohonan yang tervalidasi kemudian disimpan ke dalam basis data dengan status awal 'Menunggu Verifikasi', dan sebuah notifikasi proaktif diteruskan kepada staf ULT untuk ditindaklanjuti.
+
+Gambar 4.3. Diagram Activity Verifikasi dan Pemrosesan Dokumen
+Gambar 4.3 menjabarkan alur kerja operasional oleh Staf ULT dan Pejabat struktural. Staf ULT berperan sebagai verifikator pertama yang mengecek kesesuaian berkas. Jika terdapat ketidaksesuaian, permohonan akan ditolak dengan catatan khusus untuk diperbaiki mahasiswa. Jika valid, sistem mendeteksi apakah dokumen memerlukan tanda tangan elektronik tingkat pimpinan. Jika ya, draf elektronik diteruskan ke Signer Portal agar pejabat dapat mereview dan membubuhkan tanda tangan. Pada tahap final, mesin assembly merakit keseluruhan data dan tanda tangan ke dalam format dokumen legal (.docx), lalu mengubah status permohonan menjadi 'Selesai'.
+
+Gambar 4.4. Diagram Activity Manajemen Layanan dan Templat
+Gambar 4.4 menunjukkan fungsionalitas manajemen layanan yang dioperasikan oleh Admin ULT. Admin memiliki wewenang untuk meracik layanan persuratan baru melalui antarmuka dasbor tanpa intervensi langsung pada kode sumber aplikasi (source code). Proses ini mencakup pengaturan penamaan layanan, pendefinisian bidang isian dinamis (dynamic inputs) yang wajib diisi mahasiswa, serta pengunggahan templat master dokumen berformat Word (.docx). Sistem lalu akan memvalidasi format dokumen tersebut dan segera memperbarui katalog layanan secara seketika (real-time) di halaman publik.
+Perancangan Kerangka Tampilan Utama (Wireframe)
+Rancangan kerangka tampilan (wireframe) dibuat sebagai kerangka tulang punggung awal antarmuka (low-fidelity design). Wireframe berfungsi untuk merancang dan memastikan peletakan struktur elemen navigasi, hirarki penataan konten, dan tata letak hierarki informasi tanpa melibatkan distraksi elemen visual seperti pewarnaan maupun tipografi.
+
+Gambar 4.5. Wireframe Beranda Utama (Landing Page).Gambar 4.5. Wireframe Beranda Utama (Landing Page).
+Pada tampilan beranda utama sistem (Public Portal), wireframe disusun menggunakan tata letak berbasis kolom tunggal terpusat (centered layout) guna memusatkan perhatian pengunjung pada elemen inti. Area header memuat logo institusi Fakultas Keguruan dan Ilmu Pendidikan bersandingan dengan tautan navigasi utama seperti 'Beranda', 'Katalog Layanan', 'Berita', dan tombol 'Masuk'. Tepat di bawahnya, terdapat pahlawan visual (hero section) besar yang menampung slogan layanan terpadu serta tombol aksi (call-to-action) untuk menjelajahi layanan. Bergerak ke bawah, tata letak menampilkan grid asimetris yang berisi daftar layanan terpopuler. Bagian kaki (footer) dialokasikan untuk informasi kontak institusi dan hak cipta.Pada tampilan beranda utama sistem (Public Portal), wireframe disusun menggunakan tata letak berbasis kolom tunggal terpusat (centered layout) guna memusatkan perhatian pengunjung pada elemen inti. Area header memuat logo institusi Fakultas Keguruan dan Ilmu Pendidikan bersandingan dengan tautan navigasi utama seperti 'Beranda', 'Katalog Layanan', 'Berita', dan tombol 'Masuk'. Tepat di bawahnya, terdapat pahlawan visual (hero section) besar yang menampung slogan layanan terpadu serta tombol aksi (call-to-action) untuk menjelajahi layanan. Bergerak ke bawah, tata letak menampilkan grid asimetris yang berisi daftar layanan terpopuler. Bagian kaki (footer) dialokasikan untuk informasi kontak institusi dan hak cipta.
+
+Gambar 4.6. Wireframe Katalog Layanan (Public Portal).Gambar 4.6. Wireframe Katalog Layanan (Public Portal).
+Halaman Katalog Layanan dirancang untuk menyajikan informasi menyeluruh terkait ragam permohonan persuratan yang difasilitasi oleh fakultas. Susunan antarmuka mengadopsi pola grid kartu vertikal yang rapi, di mana setiap kartu mendeskripsikan secara spesifik satu jenis layanan, seperti 'Surat Aktif Kuliah' atau 'Cuti Akademik', lengkap beserta rincian lampiran prasyaratnya. Desain ini bertujuan untuk meminimalkan kebingungan administratif mahasiswa sebelum mengajukan dokumen.Halaman Katalog Layanan dirancang untuk menyajikan informasi menyeluruh terkait ragam permohonan persuratan yang difasilitasi oleh fakultas. Susunan antarmuka mengadopsi pola grid kartu vertikal yang rapi, di mana setiap kartu mendeskripsikan secara spesifik satu jenis layanan, seperti 'Surat Aktif Kuliah' atau 'Cuti Akademik', lengkap beserta rincian lampiran prasyaratnya. Desain ini bertujuan untuk meminimalkan kebingungan administratif mahasiswa sebelum mengajukan dokumen.
+
+Gambar 4.7. Wireframe Berita & Pengumuman (Public Portal).Gambar 4.7. Wireframe Berita & Pengumuman (Public Portal).
+Halaman Berita dan Pengumuman mengusung tata letak daftar blok tunggal (list view) yang memprioritaskan pembaruan informasi terkini dari pihak dekanat maupun tata usaha. Setiap entri berita direpresentasikan dengan kotak pembungkus citra digital sederhana (thumbnail placeholder) berserta judul, cuplikan isi, dan tanggal publikasi. Modul ini dilengkapi dengan sistem penomoran halaman (pagination) di bagian bawah guna memperlancar penjelajahan arsip publikasi lawas tanpa membebani pemuatan halaman (page load).Halaman Berita dan Pengumuman mengusung tata letak daftar blok tunggal (list view) yang memprioritaskan pembaruan informasi terkini dari pihak dekanat maupun tata usaha. Setiap entri berita direpresentasikan dengan kotak pembungkus citra digital sederhana (thumbnail placeholder) berserta judul, cuplikan isi, dan tanggal publikasi. Modul ini dilengkapi dengan sistem penomoran halaman (pagination) di bagian bawah guna memperlancar penjelajahan arsip publikasi lawas tanpa membebani pemuatan halaman (page load).
+
+Gambar 4.8. Wireframe Login & Register (Authentication System).Gambar 4.8. Wireframe Login & Register (Authentication System).
+Antarmuka sistem autentikasi diwujudkan dalam bentuk kotak kartu terpusat (centered card) di tengah layar. Desain ini secara sengaja melepaskan diri dari elemen navigasi lain agar fokus visual pengguna sepenuhnya tertuju pada pengisian kredensial. Elemen isian meliputi alamat surel dan kata sandi, kotak centang 'Ingat Saya', tombol aksi utama untuk masuk, serta tautan pengalihan jika pengguna lupa kata sandi. Pendekatan minimalis ini meningkatkan laju penyelesaian autentikasi tanpa hambatan kognitif.Antarmuka sistem autentikasi diwujudkan dalam bentuk kotak kartu terpusat (centered card) di tengah layar. Desain ini secara sengaja melepaskan diri dari elemen navigasi lain agar fokus visual pengguna sepenuhnya tertuju pada pengisian kredensial. Elemen isian meliputi alamat surel dan kata sandi, kotak centang 'Ingat Saya', tombol aksi utama untuk masuk, serta tautan pengalihan jika pengguna lupa kata sandi. Pendekatan minimalis ini meningkatkan laju penyelesaian autentikasi tanpa hambatan kognitif.
+
+Gambar 4.9. Wireframe Beranda Mahasiswa (Student Portal).Gambar 4.9. Wireframe Beranda Mahasiswa (Student Portal).
+Pada portal dasbor mahasiswa, tata letak didesain menggunakan format dua kolom interaktif tanpa menu navigasi sisi vertikal (sidebar). Bagian atas menampilkan informasi profil ringkas dan tombol aksi utama untuk mengajukan layanan baru. Kolom utama di sebelah kiri difokuskan pada daftar aktivitas pengajuan permohonan terbaru secara mendetail, sedangkan kolom sekunder di sisi kanan (side panel) difungsikan sebagai agregasi visual status pengajuan dalam bentuk angka total dan kategori (menunggu, diproses, selesai).Pada portal dasbor mahasiswa, tata letak didesain menggunakan format dua kolom interaktif tanpa menu navigasi sisi vertikal (sidebar). Bagian atas menampilkan informasi profil ringkas dan tombol aksi utama untuk mengajukan layanan baru. Kolom utama di sebelah kiri difokuskan pada daftar aktivitas pengajuan permohonan terbaru secara mendetail, sedangkan kolom sekunder di sisi kanan (side panel) difungsikan sebagai agregasi visual status pengajuan dalam bentuk angka total dan kategori (menunggu, diproses, selesai).
+
+Gambar 4.10. Wireframe Form Pengajuan Layanan (Student Portal).Gambar 4.10. Wireframe Form Pengajuan Layanan (Student Portal).
+Halaman form pengajuan layanan mengadaptasi formulir masukan dinamis (dynamic inputs) berbasis tumpukan vertikal (stacked vertical layout). Mahasiswa akan melihat prasyarat data secara runtut dari atas ke bawah, mulai dari data teks pokok seperti Nomor Pokok Mahasiswa dan nomor telepon, hingga area interaktif khusus untuk mengunggah dokumen digital prasyarat berformat PDF atau gambar. Tombol konfirmasi di bagian bawah diformulasikan tegas untuk memvalidasi kelengkapan berkas sebelum dikirimkan.Halaman form pengajuan layanan mengadaptasi formulir masukan dinamis (dynamic inputs) berbasis tumpukan vertikal (stacked vertical layout). Mahasiswa akan melihat prasyarat data secara runtut dari atas ke bawah, mulai dari data teks pokok seperti Nomor Pokok Mahasiswa dan nomor telepon, hingga area interaktif khusus untuk mengunggah dokumen digital prasyarat berformat PDF atau gambar. Tombol konfirmasi di bagian bawah diformulasikan tegas untuk memvalidasi kelengkapan berkas sebelum dikirimkan.
+
+Gambar 4.11. Wireframe Riwayat & Pelacakan Dokumen (Timeline).Gambar 4.11. Wireframe Riwayat & Pelacakan Dokumen (Timeline).
+Halaman riwayat dan pelacakan dirancang untuk menjamin prinsip transparansi birokrasi (birocratic transparency) kepada mahasiswa. Tata letak layar dibagi menjadi dua modul esensial; modul sebelah kiri memuat rincian data masukan serta pratinjau lampiran yang telah diajukan, sementara modul di sebelah kanan menampilkan visualisasi linimasa interaktif (auditable timeline). Visualisasi linimasa merunut pergerakan berkas dari status draf, persetujuan admin, penyematan tanda tangan pimpinan fakultas, hingga produk akhir diterbitkan.Halaman riwayat dan pelacakan dirancang untuk menjamin prinsip transparansi birokrasi (birocratic transparency) kepada mahasiswa. Tata letak layar dibagi menjadi dua modul esensial; modul sebelah kiri memuat rincian data masukan serta pratinjau lampiran yang telah diajukan, sementara modul di sebelah kanan menampilkan visualisasi linimasa interaktif (auditable timeline). Visualisasi linimasa merunut pergerakan berkas dari status draf, persetujuan admin, penyematan tanda tangan pimpinan fakultas, hingga produk akhir diterbitkan.
+
+Gambar 4.12. Wireframe Dasbor Utama Staff (Admin Portal).Gambar 4.12. Wireframe Dasbor Utama Staff (Admin Portal).
+Antarmuka dasbor operasional bagi jajaran staf dan administrator ULT mengusung tata letak asimetris tiga bagian dengan penambahan menu navigasi tersemat vertikal (sidebar) di sisi kiri layar. Struktur hierarki ini memberikan fleksibilitas akses yang cepat ke berbagai modul administratif. Area konten utama mempertahankan pola dua kolom yang menonjolkan rincian antrian operasional harian yang membutuhkan peninjauan di kolom primer, dan indikator kinerja (KPI) status kumulatif di kolom sekunder.Antarmuka dasbor operasional bagi jajaran staf dan administrator ULT mengusung tata letak asimetris tiga bagian dengan penambahan menu navigasi tersemat vertikal (sidebar) di sisi kiri layar. Struktur hierarki ini memberikan fleksibilitas akses yang cepat ke berbagai modul administratif. Area konten utama mempertahankan pola dua kolom yang menonjolkan rincian antrian operasional harian yang membutuhkan peninjauan di kolom primer, dan indikator kinerja (KPI) status kumulatif di kolom sekunder.
+
+Gambar 4.13. Wireframe Detail Permohonan / Review (Admin Portal).Gambar 4.13. Wireframe Detail Permohonan / Review (Admin Portal).
+Halaman peninjauan (review) oleh staf memuat sekumpulan panel analitik (analytic panels) yang menyajikan seluruh instrumen dokumen mahasiswa secara holistik tanpa harus mengunduh file satu persatu ke peramban lokal. Staf disediakan mekanisme umpan balik interaktif, format isian nomor surat fakultas secara terotomatisasi, serta kontrol untuk memutus status penolakan atau melanjutkan perakitan dokumen elektronik secara mandiri menggunakan protokol ekstraksi OpenXML.Halaman peninjauan (review) oleh staf memuat sekumpulan panel analitik (analytic panels) yang menyajikan seluruh instrumen dokumen mahasiswa secara holistik tanpa harus mengunduh file satu persatu ke peramban lokal. Staf disediakan mekanisme umpan balik interaktif, format isian nomor surat fakultas secara terotomatisasi, serta kontrol untuk memutus status penolakan atau melanjutkan perakitan dokumen elektronik secara mandiri menggunakan protokol ekstraksi OpenXML.
+
+Gambar 4.14. Wireframe Manajemen Template (Admin Portal).Gambar 4.14. Wireframe Manajemen Template (Admin Portal).
+Modul manajemen templat direpresentasikan melalui tabel variabel isian dinamis (dynamic input mapping table) serta area konfigurasi pengunggahan format master dokumen berekstensi Microsoft Word (.docx). Melalui halaman ini, administrator diizinkan menambahkan atau menghapus kolom variabel tambahan (seperti Nama Orang Tua, Alamat Lengkap, dll) serta menandai status kewajibannya, tanpa memerlukan modifikasi kode sumber (hardcode) pada arsitektur perangkat lunak dasarnya.Modul manajemen templat direpresentasikan melalui tabel variabel isian dinamis (dynamic input mapping table) serta area konfigurasi pengunggahan format master dokumen berekstensi Microsoft Word (.docx). Melalui halaman ini, administrator diizinkan menambahkan atau menghapus kolom variabel tambahan (seperti Nama Orang Tua, Alamat Lengkap, dll) serta menandai status kewajibannya, tanpa memerlukan modifikasi kode sumber (hardcode) pada arsitektur perangkat lunak dasarnya.
+
+Gambar 4.15. Wireframe Antarmuka Verifikasi Pejabat (Signer Portal).Gambar 4.15. Wireframe Antarmuka Verifikasi Pejabat (Signer Portal).
+Pada kotak masuk verifikasi pejabat (Signer Portal), antarmuka dititikberatkan secara eksklusif pada kemudahan eksekusi otoritas dan kecepatan pratinjau (fast-preview). Halaman menghilangkan elemen menu kompleks, digantikan dengan tumpukan tabel prioritas tugas persetujuan di sisi atas dan mesin pratinjau pembaca dokumen di bawahnya. Pejabat fakultas seperti Wakil Dekan dapat menginspeksi kelayakan narasi surat serta membubuhkan kriptografi tanda tangan elektronik (TTE) secara terintegrasi dalam satu bingkai kerja (single-frame workspace).Pada kotak masuk verifikasi pejabat (Signer Portal), antarmuka dititikberatkan secara eksklusif pada kemudahan eksekusi otoritas dan kecepatan pratinjau (fast-preview). Halaman menghilangkan elemen menu kompleks, digantikan dengan tumpukan tabel prioritas tugas persetujuan di sisi atas dan mesin pratinjau pembaca dokumen di bawahnya. Pejabat fakultas seperti Wakil Dekan dapat menginspeksi kelayakan narasi surat serta membubuhkan kriptografi tanda tangan elektronik (TTE) secara terintegrasi dalam satu bingkai kerja (single-frame workspace).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tahap perancangan ini bermuara pada hasil desain interaktif berkualitas tinggi (high-fidelity design) dari sisi User Interface (UI) dan User Experience (UX). Desain antarmuka akhir ini merepresentasikan wujud nyata aplikasi yang sudah mengimplementasikan kerangka kerja TailwindCSS dan panduan desain standar modern dengan proporsi estetika yang ramah pengguna.
+Gambar 4.16. Desain Antarmuka Akhir (UI/UX) Sistem ULT FKIP Unila.
+Guna menjembatani rancangan konseptual ini ke bentuk fisik, peneliti telah mengembangkan rancangan antarmuka visual interaktif fungsional sistem Web ULT FKIP Unila. Melalui penyusunan cetak biru rancangan desain fungsional, arsitektural berlapis, alur kerja flowchart terukur, relasi ERD basis data, serta interaksi sequence di atas, peneliti memperoleh fondasi logis yang kuat dan aman untuk memulai pengkodean sistem secara terarah. Tahap perancangan ini berhasil menjembatani kebutuhan analisis pengguna ke dalam skenario implementasi teknis nyata yang siap dikembangkan pada tahap selanjutnya.
+
+Tahap pengembangan merealisasikan rancangan desain ke dalam bentuk kode program fungsional menggunakan framework Laravel 12 dan runtime PHP 8.4+. Seluruh berkas unggahan sensitif disimpan di dalam private storage disk yang dilindungi middleware otorisasi guna mencegah serangan IDOR. Setelah sistem selesai dikembangkan, peneliti melakukan pengujian kelayakan melalui uji validasi produk yang melibatkan sembilan validator ahli yang terbagi ke dalam tiga kelompok keahlian. Setiap kelompok terdiri dari tiga orang ahli yang menilai instrumen kelayakan menggunakan kuesioner skala Likert 1-5. Data penilaian dianalisis secara kuantitatif menggunakan persentase kelayakan (kriteria Arikunto) dan koefisien validitas isi Aiken's V. Berikut dijabarkan analisis detail evaluasi dan tindak lanjut perbaikan dari masing-masing validator secara mendalam dan terpisah:
+
+
+
+Analisis Evaluasi Kelayakan Ahli Materi
+Validasi ahli materi difokuskan pada penilaian kesesuaian isi, keruntutan penyajian, kejelasan instruksi, kelengkapan informasi, dan akurasi buku panduan penggunaan Website ULT FKIP Unila. Validasi dilakukan oleh tiga ahli materi akademis, yaitu Validator Ahli Materi 1, Validator Ahli Materi 2, dan Validator Ahli Materi 3. Instrumen penilaian terdiri dari 22 butir yang dikelompokkan ke dalam empat aspek utama. Berdasarkan rekapitulasi data penilaian dari ketiga validator ahli materi, diperoleh total skor sebesar 315 dari skor maksimal 330, yang menunjukkan rata-rata persentase kelayakan materi sebesar 95,45% (kriteria 'Sangat Valid') dengan rerata koefisien validitas isi Aiken's V mencapai 0,94 (tingkat validitas isi yang sangat tinggi). Hasil analisis detail dari masing-masing validator dijabarkan sebagai berikut:
+Validator Ahli Materi 1 memberikan skor total 106 dari 110 (Kelayakan: 96,36%) dengan kesimpulan 'Layak digunakan dengan revisi'. Beliau memberikan komentar kualitatif krusial: 'Tambah penjelasan, cek kalimat, pastikan screenshot jelas'. Masukan ini menyoroti perlunya penjelasan lebih mendalam pada buku panduan terkait alur tindak lanjut revisi berkas yang diajukan mahasiswa. Peneliti merespons dengan menyunting tata bahasa teks instruksi agar lebih dinamis, menambahkan paragraf penjelas status penolakan berkas, dan menaikkan resolusi gambar tangkapan layar dasbor.
+Validator Ahli Materi 2 memberikan skor total 104 dari 110 (Kelayakan: 94,55%) dengan keputusan kelayakan akhir 'Layak digunakan tanpa revisi' dan tanpa catatan perbaikan. Beliau menilai keruntutan penyajian materi pada buku panduan sudah sangat sistematis dan terstruktur dengan baik sesuai pembagian peran pengguna (mahasiswa, verifikator ULT, dan pimpinan penandatangan).
+Validator Ahli Materi 3 memberikan skor total 105 dari 110 (Kelayakan: 95,45%) dengan kesimpulan 'Layak digunakan tanpa revisi' disertai saran tambahan: 'Beri pembatas header/content/footer & gambar'. Masukan ini dinilai peneliti sangat baik untuk meningkatkan kegunaan visual buku panduan. Peneliti menindaklanjutinya dengan memberikan garis pembatas visual (border) warna abu-abu netral tipis berukuran 1 pt pada sekeliling tangkapan layar antarmuka sistem agar visualisasi batas aplikasi lebih tegas bagi pembaca yang membedakan bagian header, content, dan footer.
+Analisis Evaluasi Kelayakan Ahli Media
+Validasi ahli media bertujuan untuk menguji kelayakan aspek visual, keselarasan warna, tata letak antarmuka dasbor, navigasi, ergonomi, dan pengalaman pengguna (UI/UX) Website ULT FKIP Unila. Validasi dilakukan oleh tiga ahli media praktisi teknologi informasi, yaitu Validator Ahli Media 1, Validator Ahli Media 2, dan Validator Ahli Media 3. Penilaian mencakup 14 butir kuesioner yang terbagi ke dalam aspek Tampilan Visual Website dan UI/UX Website. Hasil rekapitulasi penilaian dari ketiga validator ahli media menunjukkan total skor sebesar 196 dari skor maksimal 210, yang menghasilkan rerata persentase kelayakan media mencapai 93,33% (kriteria 'Sangat Valid') dengan rerata koefisien validitas isi Aiken's V sebesar 0,92 (validitas isi sangat tinggi). Penjelasan evaluasi detail per ahli media dipaparkan sebagai berikut:
+Validator Ahli Media 1 memberikan total skor 65 dari 70 (Kelayakan: 92,86%) dengan keputusan kelayakan akhir 'Layak digunakan tanpa revisi' disertai komentar positif: 'Bagus, bisa digunakan untuk penelitian'. Beliau menilai estetika visual website sangat modern, tipografi bersih dengan kontras yang seimbang, serta layout yang ergonomis.
+Validator Ahli Media 2 memberikan skor total 65 dari 70 (Kelayakan: 92,86%) dengan keputusan kelayakan 'Layak digunakan tanpa revisi' disertai catatan perbaikan visual: 'Warna sebaiknya jangan gradasi'. Validator Ahli Media 2 menilai penggunaan efek gradasi warna latar belakang yang terlalu mencolok pada dasbor portal mahasiswa berpotensi memicu kelelahan mata (eye strain) jika diakses dalam durasi lama. Tindak lanjut dari peneliti adalah merancang ulang UI dasbor dengan mengganti latar belakang gradasi menjadi warna solid netral pastel (Slate-100 dan Teal-50) demi meningkatkan kenyamanan mata.
+Validator Ahli Media 3 memberikan total skor 66 dari 70 (Kelayakan: 94,29%) dengan kesimpulan 'Layak digunakan dengan revisi' beserta komentar: 'Beri icon pada setiap tile layanan'. Masukan ini bertujuan untuk meningkatkan fungsionalitas visual antarmuka agar pengguna dapat mengidentifikasi jenis permohonan secara instan. Peneliti langsung merespons dengan mengintegrasikan pustaka SVG icons yang dinamis dan representatif di setiap kartu (card/tile) layanan akademik pada dasbor mahasiswa.
+
+Analisis Evaluasi Kelayakan Ahli Sistem (Fungsionalitas dan Keamanan)
+Validasi ahli sistem difokuskan pada pengujian aspek fungsionalitas (correctness), keandalan proses bisnis (reliability/error handling), keamanan akses data (security), dan kinerja dasar sistem (performance). Uji validasi sistem dilakukan oleh tiga praktisi dan akademisi rekayasa perangkat lunak, yaitu Validator Ahli Sistem 1, Validator Ahli Sistem 2, dan Validator Ahli Sistem 3. Penilaian mencakup 22 butir kuesioner yang terbagi ke dalam empat dimensi kelayakan sistem. Hasil rekapitulasi penilaian dari ketiga validator ahli sistem menunjukkan total skor sebesar 289 dari skor maksimal 330, yang menghasilkan rerata persentase kelayakan sistem sebesar 87,58% (kriteria 'Sangat Valid') dengan rerata koefisien validitas isi Aiken's V mencapai 0,85 (validitas isi tinggi). Penjelasan detail evaluasi dan perbaikan dari masing-masing ahli sistem dijabarkan sebagai berikut:
+Validator Ahli Sistem 1 memberikan total skor 105 dari 110 (Kelayakan: 95,45%) dengan kesimpulan 'Layak digunakan tanpa revisi' dan komentar 'Perbaikan saran'. Validator Ahli Sistem 1 menilai bahwa fungsionalitas sistem secara umum (autentikasi peran RBAC, form input dinamis, dan pengunggahan berkas) telah berjalan stabil tanpa adanya cacat kode malfunction yang berarti.
+Validator Ahli Sistem 2 memberikan skor total 93 dari 110 (Kelayakan: 84,55%) dengan keputusan akhir 'Layak digunakan dengan revisi' disertai komentar teknis yang sangat krusial: 'Login SSO, perhatikan CSP (unsafe-eval/inline), atur CSP default'. Masukan ini menyoroti celah keamanan potensial pada header HTTP Laravel yang rentan terhadap serangan injeksi script jahat luar (Cross-Site Scripting / XSS) jika Content Security Policy (CSP) default tidak disetel secara ketat. Menindaklanjuti hal tersebut, peneliti melakukan revisi mendalam dengan memperketat middleware CSP default Laravel untuk memblokir unsafe-eval dan unsafe-inline secara total, serta mengenkripsi nama berkas pengajuan mahasiswa di private storage disk. Tindakan ini memastikan celah keamanan injeksi skrip jahat dari luar dapat diblokir secara total dan data privat mahasiswa terlindungi secara maksimal.
+Validator Ahli Sistem 3 memberikan skor total 91 dari 110 (Kelayakan: 82,73%) dengan keputusan 'Layak digunakan tanpa revisi' dan memberikan komentar: 'Tampilkan tombol kembali ke atas'. Masukan ini bertujuan untuk meningkatkan kenyamanan navigasi pengguna (usability). Peneliti merespons dengan mengimplementasikan tombol melayang kembali ke atas (Back to Top) menggunakan perpaduan Alpine.js dan TailwindCSS di landing page portal publik.
+Secara kumulatif, rekapitulasi kelayakan dari sembilan validator ahli di atas membuktikan bahwa Website ULT FKIP Unila beserta dokumen panduannya telah memenuhi standar kualitas yang prima dan sangat layak untuk diuji coba di lapangan. Rekapitulasi hasil penilaian validasi akhir dari ketiga kelompok ahli tersebut disajikan secara lengkap pada Tabel 4.1 berikut.
+Tabel  13. Rekapitulasi Hasil Validasi Ahli
+
+
+
+Distribusi perolehan nilai dari ketiga validator ahli tersebut mengafirmasi bahwa prototipe sistem telah melampaui batas ambang kelayakan pengembangan produk. Pencapaian ini mengindikasikan arsitektur website, desain antarmuka, dan substansi layanan sudah terintegrasi dengan solid dan amat siap untuk diujicobakan pada tahap implementasi nyata. Rekomendasi konstruktif yang menyertai perolehan nilai tersebut juga telah diakomodasi sepenuhnya untuk menuntaskan penyempurnaan mikro sistem.
+
+Tahap Implementasi (Implementation)
+
+
+Tahap implementasi bertujuan untuk mengukur tingkat kepraktisan dan kemudahan penggunaan operasional Website ULT FKIP Unila saat digunakan oleh pengguna sasaran. Pengujian dilakukan melalui uji coba terbatas yang melibatkan 18 responden civitas akademika FKIP Unila yang dipilih secara sengaja menggunakan teknik purposive sampling (Sugiyono, 2013). Teknik pengambilan sampel ini dipilih dengan menetapkan kriteria khusus, yaitu responden harus merupakan pengguna aktif yang secara langsung terlibat atau membutuhkan pelayanan administrasi surat-menyurat di lingkungan fakultas. Responden dikelompokkan secara seimbang untuk mewakili seluruh corak disiplin ilmu dan peran operasional, yang terdiri atas: 12 mahasiswa tingkat akhir perwakilan rumpun jurusan di FKIP (jurusan Pendidikan Bahasa dan Sastra [PBS] = 3 orang, Pendidikan Ilmu Pengetahuan [PIP] = 3 orang, Pendidikan Ilmu Pengetahuan Sosial [PIPS] = 3 orang, dan Pendidikan Matematika dan IPA [PMIPA] = 3 orang), 3 Admin Program Studi yang mengurusi administrasi persuratan jurusan, serta 3 staf Unit Layanan Terpadu (ULT) selaku verifikator gerbang utama tingkat fakultas.
+Setiap responden diminta untuk menjalankan skenario penggunaan utama sistem (meliputi pengajuan layanan dari sisi mahasiswa, pengecekan pertama berkas dari sisi Administrator Jurusan, penerbitan nomor surat otomatis, validasi lanjutan dari sisi staf ULT, tanda tangan elektronik pimpinan dari portal signer, hingga pengunduhan hasil dokumen surat resmi). Setelah menjalankan alur kerja sistem, seluruh responden mengisi kuesioner uji kepraktisan kuantitatif yang berisi 12 butir instrumen menggunakan skala Likert 1-5 (skor 5 = Sangat Setuju, skor 1 = Sangat Tidak Setuju) serta memberikan kesimpulan subjektif kelayakan akhir pada Bagian F kuesioner.
+Hasil analisis data kuantitatif dari ke-18 responden tersebut menunjukkan tingkat kepraktisan sistem yang sangat memuaskan. Rata-rata skor total yang diperoleh dari kuesioner adalah 55,28 dari skor maksimal 60,00, yang menghasilkan persentase kepraktisan rata-rata sebesar 92,13%. Berdasarkan kriteria Arikunto, hasil persentase ini menempatkan Website ULT FKIP Unila dalam kategori Sangat Praktis untuk langsung diimplementasikan dalam kegiatan operasional sehari-hari. Evaluasi butir instrumen memperlihatkan skor yang sangat stabil di atas 4,40, dengan skor tertinggi berada pada butir A3 (Kemudahan mempelajari penggunaan sistem) yang meraih skor rata-rata 4,83 dari 5,00. Hal ini membuktikan bahwa antarmuka sistem sangat intuitif sehingga pengguna sasaran dapat beradaptasi dan menggunakan sistem secara mandiri dengan sangat cepat tanpa memerlukan pelatihan teknis khusus. Adapun rekapitulasi tingkat kepraktisan berdasarkan persepsi pengguna disajikan secara lengkap pada Tabel 4.2.
+Selain data kuantitatif kuesioner, pada lembar angket, responden diminta memberikan pendapat kelayakan subjektif akhir produk secara langsung. Rekapitulasi distribusi pilihan kesimpulan akhir tersebut menunjukkan mayoritas responden (94,44% atau 17 orang) menyimpulkan bahwa sistem ini berkategori 'Sangat Praktis' (8 orang) dan 'Praktis' (9 orang) untuk langsung digunakan dalam kegiatan operasional sehari-hari. Hanya 1 responden (5,56% yaitu Responden 3) yang memberikan kesimpulan 'Cukup Praktis'. Hal ini membuktikan antusiasme yang tinggi dari para responden pengguna terhadap efektivitas sistem. Distribusi kategori tingkat kepraktisan dari pilihan responden tersebut secara detail dapat dilihat pada Tabel 4.2 di bawah ini.
+
+Tabel  14. Rekapitulasi Distribusi Kategori Uji Kepraktisan Pengguna
+
+
+Meskipun memperoleh respon positif, terdapat masukan kualitatif yang berharga dari responden untuk penyempurnaan sistem ULT. Sebanyak 6 dari 18 responden menuliskan komentar dan saran perbaikan pada kolom yang disediakan. Peneliti telah menganalisis dan menindaklanjuti seluruh saran tersebut demi mencapai kesempurnaan website ULT pada fase pengembangan akhir. Rekapitulasi tanggapan kualitatif dari responden beserta tindakan perbaikan yang telah dikerjakan oleh peneliti dijabarkan di bawah ini:
+Responden 1 (Admin Program Studi): Menyarankan penambahan fitur visualisasi jadwal seminar mahasiswa mirip Airtable. Peneliti menindaklanjutinya dengan merancang modul kalender penjadwalan dinamis terintegrasi di portal Admin agar verifikator dapat melacak jadwal ujian mahasiswa secara periodik.
+Responden 2 (Admin Program Studi): Menyarankan penomoran surat resmi otomatis terhubung langsung dengan pola penomoran resmi fakultas. Peneliti merespons dengan menyusun modul regex generator penomoran dinamis di portal staf ULT yang dapat menyesuaikan dengan format penomoran unit masing-masing program studi secara otomatis.
+Responden 3 (Admin Program Studi): Menilai sistem mudah dipelajari, segera berjalan, dan sangat bermanfaat untuk memperlancar kelancaran proses administrasi persuratan mahasiswa maupun staf. Komentar ini menjadi bukti kemudahan adaptasi sistem di lingkungan operasional prodi.
+Responden 13 (Mahasiswa PMIPA): Menyatakan kekagumannya terhadap desain antarmuka (user interface) yang sederhana tetapi tetap menarik perhatian (simple but eye-catching), serta mengapresiasi kejelasan dan kelengkapan informasi katalog layanan yang disajikan di portal publik.
+Responden 14 (Mahasiswa PMIPA): Memberikan masukan agar kepadatan teks diatur dengan baik agar tidak menimbulkan kesan menumpuk dan melelahkan mata. Peneliti menindaklanjuti saran ini pada visualisasi portal mahasiswa dengan menerapkan spasi baris 1.5 secara konsisten, meningkatkan padding antar-komponen dasbor, dan mengoptimalkan ruang kosong (white space) pada tata letak halaman.
+Responden 17 (Staf Unit Layanan Terpadu): Menyarankan penambahan modul pelaporan berbasis grafik pelacakan data mingguan/bulanan dan penambahan modul layanan kepegawaian (dosen/staf). Peneliti menyambut baik saran pengembangan skala besar ini dengan menyusun rencana perluasan sistem di Bab V serta merancang modul visualisasi grafik data transaksi menggunakan pustaka Chart.js untuk fase pengembangan berikutnya.
+
+
+
+Tahap Evaluasi (Evaluation)
+
+
+Tahap evaluasi merupakan langkah terakhir yang melakukan evaluasi akhir sumatif terhadap kegunaan, keandalan, kelayakan, dan efektivitas operasional Website ULT FKIP Unila. Evaluasi dilakukan dengan menyinkronkan seluruh umpan balik dari validator ahli dan data uji coba kepraktisan oleh pengguna sasaran. Hasil evaluasi sumatif membuktikan bahwa transisi alur kerja dari loket fisik konvensional ke platform digital berbasis web berhasil mengatasi kendala keterlambatan alur birokrasi, penumpukan berkas loket, dan ketidakpastian persetujuan dokumen. Dengan rata-rata persentase kelayakan ahli sebesar 91,95% (Sangat Valid) dan persentase kepraktisan pengguna mencapai 92,13% (Sangat Praktis), sistem ini dinyatakan sangat layak dan andal untuk segera diimplementasikan secara resmi untuk mendukung digitalisasi pelayanan publik di lingkungan Fakultas Keguruan dan Ilmu Pendidikan Universitas Lampung.
+
+
+
+Pembahasan Hasil Penelitian
+
+
+Hasil pengembangan Website ULT FKIP Unila ini membuktikan secara empiris bahwa penerapan model R&D dengan sintaks ADDIE mampu menghasilkan produk teknologi manajemen pelayanan kampus yang terarah, efisien, aman, dan tepat guna bagi seluruh civitas akademika FKIP Unila. Melalui analisis kebutuhan awal pada tahap Analysis, ditemukan bahwa kendala utama layanan administrasi di FKIP Unila adalah lambatnya turn-around time pengurusan dokumen, hilangnya transparansi status dokumen, serta kerentanan fisik berkas yang diajukan. Sistem yang dikembangkan ini secara terarah menutup pain point tersebut dengan memindahkan seluruh proses fisik ke dalam sistem berbasis web yang dinamis dan aman.
+
+
+
+Keunggulan
+
+
+Website ULT FKIP Unila memiliki sejumlah keunggulan teknis dan akademis yang membedakannya dengan platform administrasi konvensional. Keunggulan-keunggulan utama tersebut dijabarkan di bawah ini:
+Integrasi Empat Portal Berbasis RBAC Ketat: Keberadaan portal khusus (Public, Student, Admin, Signer) memastikan setiap pengguna berinteraksi hanya dengan fungsi dan data yang relevan dengan kewenangannya. Model ini memblokir akses ilegal antarportal dan menjamin keamanan transaksi data.
+Otomatisasi Perakitan Dokumen Dinamis (OpenXML): Integrasi pustaka PHPWord untuk merakit dokumen Word (.docx) langsung dari basis data menggunakan template dinamis terbukti sangat efisien. Logika parser HTML-to-OpenXML dinamis terpusat pada file XML mentah (`document.xml`) menjamin bahwa run teks yang dimasukkan dari WYSIWYG editor (Tiptap Editor) pada formulir mahasiswa tetap mewarisi gaya visual visual bawaan template (font, ukuran, warna) tanpa mengalami degradasi layout visual orisinal.
+Keamanan Data Tingkat Tinggi dan Proteksi Otorisasi: Penggunaan private storage disk Laravel menjamin berkas berkas persyaratan sensitif mahasiswa tidak dapat diakses langsung secara publik tanpa login. Dilindungi oleh middleware otorisasi anti-IDOR yang ketat, platform berhasil menutup risiko bypass endpoint berkas mahasiswa lain.
+Jejak Transaksi Digital Komprehensif (Audit Trail): Kehadiran modul linimasa timeline yang mencatat setiap aksi pengguna (waktu pengajuan, nama verifikator, catatan revisi, dan tanggal tanda tangan) memberikan akuntabilitas yang tinggi bagi instansi pelayanan publik fakultas.
+Kompatibilitas Progressive Web App (PWA): Platform dikembangkan agar kompatibel untuk diakses via perangkat mobile secara ringan dan responsif, mempermudah mahasiswa memantau status dokumen kapan saja dan di mana saja.
+Kendala
+
+
+Selama proses riset rekayasa perangkat lunak ini, peneliti menghadapi sejumlah kendala teknis dan implementasi di lapangan. Kendala-kendala tersebut beserta solusi pemecahannya dijabarkan di bawah ini:
+Kendala Render HTML WYSIWYG pada Dokumen Word (.docx): Input teks formulir mahasiswa yang berasal dari WYSIWYG editor (Tiptap Editor) menyimpan tag-tag HTML (seperti `<p>`, `<b>`, `<i>`, `<u>`, `<br>`, `<ul>`, `<ol>`, `<li>`). Saat proses perakitan dokumen Word (`.docx`), tag HTML tersebut tercetak mentah sebagai teks biasa tanpa format visual. Solusi: Peneliti mengembangkan parser HTML-to-OpenXML dinamis terpusat pada file XML mentah (`document.xml`, `header*.xml`, `footer*.xml`) sebelum file DOCX dikemas ulang oleh PHPWord. Tag inline (b, strong, i, em, u) diubah menjadi elemen formatting OpenXML (`<w:b/>`, `<w:i/>`, `<w:u w:val="single"/>`), sedangkan tag paragraf dan list dipetakan menggunakan pemutus baris dinamis `<w:br/>` agar gaya visual bawaan template Word tetap terjaga tanpa terjadi degradasi tata letak visual.
+Kendala Ancaman Keamanan Cross-Site Scripting (XSS): Kerentanan injeksi skrip jahat luar pada formulir pengajuan mahasiswa merupakan ancaman krusial pada sistem pelayanan publik online yang disoroti oleh validator sistem (Validator Ahli Sistem 2). Solusi: Peneliti memperketat pertahanan web dengan memperketat middleware HTTP Header Content Security Policy (CSP) default pada Laravel untuk memblokir celah unsafe-eval dan unsafe-inline secara total, menyaring input teks richtext menggunakan sanitasi XSS ketat (HtmlSanitizer class), dan menerapkan enkripsi nama berkas privat mahasiswa.
+Secara keseluruhan, hasil validasi ahli (persentase rata-rata 91,95% - Sangat Valid) dan uji kepraktisan pengguna terbatas (92,13% - Sangat Praktis) membuktikan bahwa Website ULT FKIP Unila telah berhasil dirancang dan dikembangkan dengan standar kualitas rekayasa perangkat lunak yang sangat baik. Sistem ini terbukti andal dalam menyederhanakan alur birokrasi persuratan akademik, menjamin keamanan berkas sensitif, dan memberikan tingkat akuntabilitas pelayanan publik yang tinggi bagi Fakultas Keguruan dan Ilmu Pendidikan Universitas Lampung.
+
+
+
+
+
+
+
+
+KESIMPULAN DAN SARAN
+
+
+
+
+Kesimpulan
+
+
+Website Unit Layanan Terpadu (ULT) FKIP Universitas Lampung telah berhasil dikembangkan dengan menerapkan model pengembangan ADDIE (Analysis, Design, Development, Implementation, dan Evaluation) secara sistematis. Produk akhir berupa aplikasi web monolitik berbasis Laravel 12 dan PHP 8.4+ yang memiliki empat portal terintegrasi, yaitu Public Portal, Student Portal, Admin/Staff Portal, dan Signer Portal. Website ini mengintegrasikan fitur-fitur pendukung rekayasa tingkat tinggi seperti pelacakan status pengajuan (auditable timeline), tanda tangan elektronik, penomoran otomatis, dan penyimpanan berkas secara privat (private storage) untuk melindungi kerahasiaan dokumen akademik mahasiswa. Seluruh arsitektur portal dan modul fungsional tersebut berhasil diwujudkan guna mengotomatisasi birokrasi loket pelayanan fisik yang sebelumnya berjalan manual dan terdistribusi menjadi terpusat pada platform digital yang aman.
+Uji kelayakan produk yang melibatkan sembilan validator ahli dari tiga bidang keahlian (materi, media, dan sistem) menunjukkan bahwa Website ULT FKIP Unila memiliki tingkat validitas yang sangat tinggi. Penilaian kuantitatif dari para ahli tersebut menghasilkan rata-rata persentase kelayakan kumulatif sebesar 95,45% untuk aspek materi, 93,33% untuk aspek media, dan 87,58% untuk aspek sistem, dengan rata-rata keseluruhan mencapai 91,95% yang dikategorikan "Sangat Valid". Hasil ini diperkuat oleh analisis validitas isi menggunakan koefisien Aiken's V dengan rata-rata indeks mencapai 0,90 yang membuktikan bahwa setiap butir instrumen memiliki tingkat relevansi isi yang sangat memuaskan. Berbagai masukan kualitatif dari para ahli, termasuk penguatan Content Security Policy (CSP) untuk pencegahan serangan Cross-Site Scripting (XSS) dan penyesuaian kontras dasbor antarmuka, telah berhasil ditindaklanjuti secara tuntas demi menghasilkan sistem yang andal dan aman sebelum diuji coba secara langsung.
+Dari segi kepraktisan operasional di lapangan, uji coba terbatas yang melibatkan 18 responden civitas akademika FKIP Unila membuktikan bahwa Website ULT FKIP Unila sangat mudah digunakan dan efisien. Pengisian kuesioner uji kepraktisan menghasilkan rata-rata skor total sebesar 55,28 dari skor maksimal 60,00, atau setara dengan persentase kepraktisan sebesar 92,13% yang menempatkan sistem ini ke dalam kriteria "Sangat Praktis". Temuan kuantitatif tersebut selaras dengan penilaian subjektif pada lembar angket Bagian F, di mana sebanyak 94,44% responden menyatakan secara langsung bahwa sistem ini berkategori "Sangat Praktis" and "Praktis" untuk menunjang kebutuhan sehari-hari. Walaupun respon pengguna secara umum sangat positif, masukan kualitatif dari enam responden mengenai penataan padding halaman dan modul filter jadwal telah diimplementasikan oleh peneliti guna menyempurnakan kegunaan (usability) sistem pada fase final.
+
+
+
+
+Saran
+
+
+Beberapa saran yang dapat diajukan untuk operasional dan pengembangan Website ULT FKIP Unila lebih lanjut adalah sebagai berikut:
+Penambahan Modul Layanan Kepegawaian: Pengembangan modul kepegawaian (staf dan dosen) disarankan untuk ditambahkan pada fase berikutnya agar layanan administrasi yang disediakan tidak hanya terbatas pada mahasiswa, melainkan mencakup seluruh civitas akademika FKIP.
+Pengujian Keamanan Tingkat Lanjut: Perlu dilakukan pengujian keamanan web secara rutin (seperti Vulnerability Assessment dan Penetration Testing) secara berkala untuk mengevaluasi efektivitas header Content Security Policy (CSP) dan meminimalkan risiko serangan injeksi data di masa mendatang.
+
+
+
+
+
+
+DAFTAR PUSTAKA
+
+
+
+
+Ahmad, Z., Casarin, S., & Calzavara, S. (2023). What Storage? An Empirical Analysis of Web Storage in the Wild. April, 1–8. https://doi.org/10.14722/madweb.2022.23005
+Aiken, L. R. (1985). Three Coefficients for Analyzing the Reliability and Validity of Ratings. https://doi.org/10.1177/0013164485451012
+Akbari, T. T., & Pratomo, R. R. (2022). Higher education digital transformation implementation in Indonesia during the COVID-19 pandemic. Jurnal Kajian Komunikasi, 10(1), 52. https://doi.org/10.24198/jkk.v10i1.38052
+Al Salmi, H. (2023). Comparative CSS frameworks. Umm Al-Qura University, 1(66), 1–35. https://mecsj.com/uplode/images/photo/hat4_.pdf
+Alisa, N., Umam, F. C., Ivana, L., Adha, N. S., & Nugraha, J. T. (2024). Analisis Kualitas Pelayanan ULT (Unit Layanan Terpadu) Universitas dalam Menciptakan Pengalaman yang Memuaskan. Urnal of Governance and Public Administration (JoGaPA), 1(3), 322–333.
+Andi Kambau, R. (2024). Proses Transformasi Digital pada Perguruan Tinggi di Indonesia. Jurnal Rekayasa Sistem Informasi Dan Teknologi, 1(3), 126–136. https://doi.org/10.59407/jrsit.v1i3.481
+Anggraini, P. A. D., & Putra, D. B. K. N. S. (2021). Developing Learning Video with Addie Model on Science Class For 4 th Grade Elementary School Students. Proceedings of the 2nd International Conference on Technology and Educational Science (ICTES 2020), 540(Ictes 2020), 413–421. https://doi.org/10.2991/assehr.k.210407.273
+Ardiansyah, D. (2023). Transformasi Digital Perguruan Tinggi Menggunakan Prinsip Smart Education. Jurnal Informatika Komputer, Bisnis Dan Manajemen, 20(1), 42–55. https://doi.org/10.61805/fahma.v20i1.43
+Ardianti, R. (2022). Pengembangan Website Berbasis Model Addie Sebagai Media E-Learning Pada Pembelajaran Apresiasi Seni Lukis Di Sma. Jurnal Teknologi Pendidikan, 11(1), 11–20. https://doi.org/10.32832/tek.pend.v11i1.6022
+Arikunto, S. (2009). Dasar-dasar Evaluasi Pendidikan. https://www.scribd.com/document/740858744/Dasar-dasar-Evaluasi-Pendidikan
+Arikunto, S. (2013). Prosedur Penelitian: Suatu Pendekatan Praktik.
+Ariyanto, Y., Farhan, M., Rachmad, F., & Puspitasari, D. (2024). Laravel framework and native PHP: Comparison in the creationof rest API. Matrix: Jurnal Manajemen Teknologi Dan Informatika, 14(2), 66–73. https://doi.org/10.31940/matrix.v14i2.66-73
+Arsenieva, N., Putyatina, L., & Uglova, L. (2021). Development of digital educational environment in higher education. SHS Web of Conferences, 106, 03002. https://doi.org/10.1051/shsconf/202110603002
+Baijun, H. (2024). Impact of Digital Transformation on Higher Education Management: A Theoretical Analysis. Journal of Industry and Engineering Management, 2(3), 35–39. https://doi.org/10.62517/jiem.202403307
+Banu, A. N. (2023). The Impact of Technology Integration in Educational Management and Administration. International Journal For Multidisciplinary Research, 5(6), 1–6. https://doi.org/10.36948/ijfmr.2023.v05i06.10858
+Bashar, U., Akindeji Ibrahim, M., Adedeji, A., & Dauda, A. (2023). Optimizing the Student Application Process with a Laravel-based System of Waziri Umaru Federal Polytechnic Birnin Kebbi: A Case Study. International Journal of Innovative Science and Research Technology, 8(10). www.ijisrt.com
+Bhagaskara, D. N., & Udariansyah, D. (2024). Implementation of Web Engineering in the Design and Development of the Website Portal for SMA Negeri 1 Martapura. International Journal Software Engineering and Computer Science (IJSECS), 4(1), 49–57. https://doi.org/10.35870/ijsecs.v4i1.2220
+Biradar, V. M. (2020). Tailwind CSS. International Journal of Advance and Applied Research, 12(2), 45–52. www.tailwindcss.com
+Bitchikashvili, T., Petriashvili, L., & Jang, L. K. (2023). Digitalization of Management of A Higher Educational Institution, National Aandnd International Challenges and Ways of Solution. World Science, 3(March), 31–34. https://doi.org/10.31435/rsglobal
+Branch, R. M. (2009). Instructional Design: The ADDIE Approach.
+Brooke, J. (2020). SUS: A “Quick and Dirty” Usability Scale. Usability Evaluation In Industry, July, 207–212. https://doi.org/10.1201/9781498710411-35
+Deshpande, Y., Murugesan, S., Ginige, A., Hansen, S., Schwabe, D., Gaedke, M., & White, B. (2002). Web engineering. Web Engineering, 1(1), 1–438. https://doi.org/10.1007/3-540-28218-1
+Dixit, N., Shrivastava, V., Pandey, A., & Sharma, E. R. (2024). Revolutionizing Web Design with Tailwind CSS: A Comprehensive Exploration. International Journal of Research Publication and Reviews, 5(5), 4198–4204. www.ijrpr.com
+Febriani, S., Sutabri, T., & Abdillah, L. A. (2023). Perancangan UI / UX Aplikasi Sistem Informasi Layanan Administrasi dalam Perspektif Psikologi Menggunakan Metode Prototype Mahasiswa Universitas Bina Darma dalam melaksanakan kegiatan akademik kebutuhan pengguna hingga pengguna dapat merasa senang dan pua. Jurnal Teknlogi Informatika Dan Komputer MH. Thamrin, 9(2), 1088–1103.
+Ferdiansyah, F., Heyana, N., & Solehudin, A. (2022). Analisis User Experience (Ux) Pada Website Universitas Singaperbangsa Karawang Menggunakan Metode System Usability Scale (SUS). Jurnal Pendidikan Dan Konseling, 105(2), 79. https://core.ac.uk/download/pdf/322599509.pdf
+Fernández, A., Gómez, B., Binjaku, K., & Meçe, E. K. (2023). Digital transformation initiatives in higher education institutions: A multivocal literature review. In Education and Information Technologies (Vol. 28, Issue 10). Springer US. https://doi.org/10.1007/s10639-022-11544-0
+Gote, A., & Solutions, I. (2024). Real-Time Interactivity in Hybrid Applications With Web Sockets. International Research Journal of Modernization in Engineering Technology and Science, 6(1). https://doi.org/10.56726/irjmets48494
+Gustiani, S. (2019). Research and Development (R&D) Method as a Model Design in Educational Research and Its Alternatives. Holistics Journal, 11(2), 12–22. https://jurnal.polsri.ac.id/index.php/holistic/article/view/1849
+Haryanto, D., & Hadilinatih, B. (2022). Analisis Kualitas Pelayanan Publik Unit Layanan Terpadu (Ult) Satu Pintu Kementerian Pendidikan Kebudayaan Riset Dan Teknologi Di D.I. Yogyakarta. Jurnal Enersia Publika, 6(2), 95–108.
+Henim, S. R., & Sari, R. P. (2020). Evaluasi User Experience Sistem Informasi Akademik Mahasiswa pada Perguruan Tinggi Menggunakan User Experience Questionnaire. 6(1), 69–78.
+Huynh, T. S., Tran, D. T., Vu, Q. H., & Nguyen, L. A. T. N. (2022). Design and Implementation of Web Application Based on MVC Laravel Architecture. European Journal of Electrical Engineering and Computer Science, 6(4), 23–29.
+Johns, K., Lundkvist, P., Rusu, C., Menon, V., Gupta, N., Kim, Y., & Vasconcelos, J. R. (2022). Service Upgrade: The GovTech Approach to Citizen Centered Services. www.worldbank.org/govtech
+Joseph, O. B., Onwuzulike, O. C., & Shitu, K. (2024). Digital transformation in education: Strategies for effective implementation. World Journal of Advanced Research and Reviews, 23(2), 2785–2799. https://doi.org/10.30574/wjarr.2024.23.2.2668
+Kancherla, G. P., Goel, D., & Bichhawat, A. (2025). Least Privilege Access for Persistent Storage Mechanisms in Web Browsers. WWW 2025 - Proceedings of the ACM Web Conference, 4832–4840. https://doi.org/10.1145/3696410.3714887
+Karya, M. A., Haryono, B. S., & Sujarwoto, S. (2024). Digitalization and Innovation of the Service Process: The Efforts to Improve the Quality of Higher Education Services in Kalimantan Island. Jurnal Bina Praja, 16(1), 69–81. https://doi.org/10.21787/jbp.16.2024.69-81
+Khotimah, K., & Wahyu, A. A. A. (2020). Reading in The Digital Age: Electronic Storybook as a Teaching Tool for Beginning Readers. Atlantis Press, 387(January). https://doi.org/10.2991/icei-19.2019.47
+Kodali, N. (2024). Tailwind CSS Integration in Angular: A Technical Overview. International Journal of Innovative Research in Science,Engineering and Technology, 13(09), 1–14. https://doi.org/10.15680/ijirset.2024.1309092
+Kryszak, Ł. (2020). Income Convergence in the Agricultural Sector in the Context of the European Union’S Common Agricultural Policy. Annals of the Polish Association of Agricultural and Agribusiness Economists, XXII(3), 140–152. https://doi.org/10.5604/01.3001.0014.3625
+Latif, E. Y., Wardiman, A., Nur, A. M., Perdana, C. A., & Idrus, R. (2024). Tren Modern dalam Digitalisasi Pendidikan. Jurnal Literasi Digital, 4(1), 41–50. https://doi.org/10.54065/jld.4.1.2024.439
+Machmudi, M. A., Wahyudiono, S., & Susilo, G. (2023). Analisis dan Rancang Bangun E-Learning dengan Metode ADDIE Model. JURNAL GO INFOTECH, 29(2), 226–232. https://doi.org/10.36309/go.v29i2.218
+MacKlon, F., Viggiato, M., Romanova, N., Buzon, C., Paas, D., & Bezemer, C. P. (2023). A Taxonomy of Testable HTML5 Canvas Issues. IEEE Transactions on Software Engineering, 49(6), 3647–3659. https://doi.org/10.1109/TSE.2023.3270740
+Martantoh, E., & Aripudin, M. (2023). Sistem Informasi Penjualan Berbasis Web Dengan Metode Addie Pada Kedai Kopi Karawang. Journal of Innovation And Future Technology (IFTECH), 5(2), 92–101. https://doi.org/10.47080/iftech.v5i2.2721
+Maulana, M. R., Utama, M. R. P. A., & Nurdiana, D. (2023). Uji Usability dan User Experience Website Sistem Informasi Akademik Universitas Terbuka (SIA UT) Berdasarkan Perspektif Mahasiswa Menggunakan Metode USE Questionnaire dan Cognitive Walkthrough. Jurnal Teknologi Sistem Informasi Dan Aplikasi, 6(4), 713–729. https://doi.org/10.32493/jtsi.v6i4.34189
+Mundzir, M., & Laventia, F. (2025). Transformasi Administrasi Pendidikan di Era Digital: Tantangan dan Peluang. Jurnal Manajemen Dan Ilmu Administrasi, 1(1), 56–62.
+Mustopa, A., Agustiani, S., Wildah, S. K., & Maysaroh. (2020). Analisa Kepuasan Pengguna Website Layanan Akademik Kemahasiswaan (LYKAN) Menggunakan Metode Webqual 4.0. 18(1), 75–81.
+Musyary, Kurniati, A., & Damarjati, C. (2023). Laravel Framework-Based Information System of the Department of Information Technology of Universitas Muhammadiyah Yogyakarta. Emerging Information Science and Technology, 4(2), 48–57. https://doi.org/10.18196/eist.v4i2.20736
+Naidu, V. R., Singh, B., Agarwal, A., Farei, K. Al, Ismaily, K. Al, Harrasi, R. Al, & Vaidhyanathan, N. (2021). Html5 Based E-Learning Authoring To Facilitate Interactive Learning During Covid-19 Pandemic: a Review. IJAEDU- International E-Journal of Advances in Education, 122–130. https://doi.org/10.18768/ijaedu.964863
+Nandan, Sree R., U., & Mohan, P. (2024). Comparison of Utility-First CSS Framework. Journal of Innovation and Technology, 2024(1). https://doi.org/10.61453/joit.v2024no32
+Nugroho, Y. A., Widodo, A., Pebrina, E. T., Iskandar, J., & Nadeak, M. (2025). Digitalization in Higher Education: How Information Systems Improve Operational and Strategic Performance. Indonesian Journal of Management and Economic Research (IJOMER), 2(01), 90–98. https://doi.org/10.70508/dyrdm592
+Oracle. (2025). MySQL Replication. 1–36. http://scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:MySQL+Replication#3
+Poernamawatie, F., Kurniawan, P. A., Hermanto, S., Susipta, I. N., & Hertanto, R. H. (2023). Implementasi Transformasi Digital Layanan Keuangan Mahasiswa Pasca Pandemi Covid-19 di Universitas Negeri Malang. Jurnal Pengabdian Kepada Masyarakat Nusantara, 4(3), 2123–2133. https://doi.org/10.55338/jpkmn.v4i3.1370
+Purwani, R., Fathoni, A., Sarilan, S., & Siswanto, H. (2024). Transformasi Administrasi Pendidikan untuk Mengoptimalkan Efisiensi dan Kualitas Layanan Pendidikan pada Era Digital. Jurnal Keilmuan Dan Keislaman, 53–58. https://doi.org/10.23917/jkk.v4i1.261
+Qurrata A’yun, D. U., Wicaksana, D. Y., Ulya, S., Zie, R. J. S., & Fazlurrahman, H. (2023). Website quality and user satisfaction: A higher education perspective. Sebelas Maret Business Review, 8(2), 109. https://doi.org/10.20961/smbr.v8i2.81364
+Ridwan, M. Y., Maulana, M. R., & Nurdiana, D. (2024). Usability Testing Website My UT Menggunakan Metode Post-Study System Usability Questionnaire Berdasarkan Pandangan Mahasiswa Universitas Terbuka. 7(2), 207–222.
+Rifandi, F., Tri Viqi Adriansyah, & Rina Kurniawati. (2022). Website Gallery Development Using Tailwind CSS Framework. Jurnal E-Komtek (Elektro-Komputer-Teknik), 6(2), 205–214. https://doi.org/10.37339/e-komtek.v6i2.937
+Riyadi, S., & Chuluq, M. K. (2021). Implementasi Metode Addie Pada Sistem Informasi Pembuatan Rpp 1 Lembar Di Smk Pgri 4 Pasuruan. Spirit, 13(2), 66–70. https://doi.org/10.53567/spirit.v13i2.224
+Safrizal, & Afkar, M. A. (2023). SIAKAD Revitalization: The Latest Solution in Answering the Challenges of Digitizing Education. International Journal Software Engineering and Computer Science (IJSECS), 3(1), 40–49. https://doi.org/10.35870/ijsecs.v3i1.1160
+Sasmoko, Indrianti, Y., Manalu, S. R., & Danaristo, J. (2024). Analyzing Database Optimization Strategies in Laravel for an Enhanced Learning Management. Procedia Computer Science, 245(C), 799–804. https://doi.org/10.1016/j.procs.2024.10.306
+Sastranegara, A., Triayudi, A., & Hayati, N. (2023). Implementasi User Center Design dan System Usability Scale Pada Website Sekolah Menengah Atas. KLIK: Kajian Ilmiah Informatika Dan Komputer, 3(6), 1320–1325. https://doi.org/10.30865/klik.v3i6.941
+Serhiyovych, B. O. (2024). Asynchronous Programming in Javascript: Modern Approaches and Practice. American Research Journal of Computer Science and Information Technology, 7(1), 28–32. www.arjonline.org28
+Setiawan, H. (2022). Peran software, hardware dan brainware dalam sistem informasi manajemen sekolah. Jurnal Oase Nusantara, 1(1), 51–58.
+Setyaningsih, K., Sari, H. R. U., & Ibrahim, I. (2024). Pelaksanaan Layanan Administrasi Kesiswaan di MAN 2 Palembang. Jurnal Visionary : Penelitian Dan Pengembangan Dibidang Administrasi Pendidikan, 12(2), 15. https://doi.org/10.33394/vis.v12i2.11023
+Shah, H. (2023). Harnessing Customized Built-in Elements: Empowering Component-Based Software Engineering and Design Systems with HTML5 Web Components. 247–259. https://doi.org/10.5121/csit.2023.132219
+Sinaga, L. B., Ritonga, N. S., & Muda, I. (2021). The role of database system on secondary education. International Journal of Multidisciplinary Research and Growth Evaluation, 2(4), 1–4.
+Singun, A. J. (2025). Unveiling the barriers to digital transformation in higher education institutions: a systematic literature review. In Discover Education (Vol. 4, Issue 1). Springer International Publishing. https://doi.org/10.1007/s44217-025-00430-9
+Sudjana. (2005). Metode Statistika.
+Sugiyono. (2013). Metodologi Penelitian Kuantitatif, Kualitatif dan R & D.
+Suhartoyo. (2019). Implementasi Fungsi Pelayanan Publik dalam Pelayanan Terpadu Satu Pintu (PTSP). Administrative Law and Governance Journal, 2(1), 143–154. https://doi.org/10.14710/alj.v2i1.143-154
+Sukorini, R. S., Marini, A., & Aulia, R. N. (2024). NEW ERA OF HIGHER EDUCATION: DIGITAL TRANSFORMATION AND INFORMATION SYSTEM MANAGEMENT. IMProvement Jurnal, 11(2), 154–166.
+Šušter, I., & Ranisavljević, T. (2023). Optimization of Mysql Database. Journal of Process Management and New Technologies, 11(1–2), 141–151. https://doi.org/10.5937/jpmnt11-44471
+Taqwa, & Raupu, S. (2022). Website-Based Academic Service Development with ADDIE Design in Higher Education. AL-ISHLAH: Jurnal Pendidikan, 14(2), 1511–1526. https://doi.org/10.35445/alishlah.v14i2.1323
+Tumilantouw, A., Mokat, J. E. H., & Langkai, J. E. (2024). Strategi Pelayanan Publik Pada Unit Layanan Terpadu Universitas Negeri Manado. Jurnal Administro, 1(1), 05–09.
+Wan Ali, W. N. A., & Wan Yahaya, W. A. J. (2023). Waterfall-Addie Model: an Integration of Software Development Model and Instructional Systems Design in Developing a Digital Video Learning Application. Asean Journal of Teaching and Learning in Higher Education, 15(1), 1–28. https://doi.org/10.17576/ajtlhe.1501.2023.01
+Widiawati, M., Muawwal, A., Pontoh, Z., & Informasi, S. (2023). ANALISIS USABILITY WEBSITE SISTEM INFORMASI AKADEMIK STMIK usability , USE Questionnaire , Website Sistem Informasi Akademik STMIK Kharisma Makassar. 02, 95–109.
+Zapata, J. (2024). MySQL VS PostgreSQL: A Comparative Analysis of Relational Database Management Systems (RDBMS) Technologies Response Time in Web-based E-commerce. March 2024, 6–11. https://doi.org/10.13140/RG.2.2.24791.69288
+
+
+
+Lampiran 1. Surat Balasan Izin Penelitian Sekolah
+
+
+
+Lampiran 2. Hasil Wawancara Pendahuluan Staf ULT FKIP Unila
+
+
+
+
+Lampiran 3. Hasil Wawancara Pendahuluan Admin Jurusan FKIP Unila
+
+
+
+Lampiran 4. Hasil Wawancara Pendahuluan Admin Prodi ULT FKIP Unila
+
+
+
+Lampiran 5. Hasil Wawancara Pendahuluan Guru SMK N 9 Bandar Lampung
+
+
+
+Lampiran 6. Angket Analisis Kebutuhan Mahasiswa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lampiran 7. Hasil Uji Validitas Ahli Materi
+
+
+
+
+
+
+
+
+
+Lampiran 8. Hasil Uji Validitas Ahli Media
+
+
+
+
+
+
+
+
+
+Lampiran 9. Hasil Uji Validitas Ahli Sistem
+
+
+
+
+
+
+
+
+
+Lampiran 10. Hasil Uji Kepraktisan Pengguna
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lampiran 11. Matriks Hasil Skor Kuesioner Uji Kepraktisan Responden
+
+
+Lampiran 12. Dokumentasi
+
+
+
+
+
+
+
+
+
+
+
+
+Lampiran 13. Dokumentasi Desain UI/UX Website ULT FKIP Unila
+
+
+
+
+Waktu Penelitian
+Penelitian ini dilaksanakan secara bertahap menggunakan model pengembangan ADDIE yang dikolaborasikan dengan penyusunan karya ilmiah. Tahap Analysis dan Design dimulai pada bulan Januari hingga Maret 2026 sebagai fondasi rancangan sistem. Selanjutnya, tahap Development (pengembangan website) dilaksanakan secara intensif dari bulan Maret hingga April 2026. Setelah prototipe siap, tahap Implementation (uji coba terbatas lapangan) beserta Evaluation (evaluasi formatif dan sumatif) dilaksanakan pada bulan Mei hingga penyelesaiannya di bulan Juni 2026. Adapun proses penulisan karya ilmiah berlangsung paralel dari awal hingga akhir penelitian. Rincian jadwal pelaksanaan penelitian disajikan pada Tabel 3.1 berikut.
+Tabel 3.1 Waktu Pelaksanaan Penelitian
+

@@ -1,0 +1,56 @@
+﻿@startuml
+skinparam sequence {
+  ArrowColor #2B4C7E
+  LifeLineBorderColor #2B4C7E
+  ParticipantBorderColor #2B4C7E
+  ParticipantBackgroundColor #F8FBFF
+}
+
+autonumber
+actor Mahasiswa as M
+participant "Student Request\nController" as SRC
+participant "Document Gate\nService" as DGS
+participant "Signer\nService" as SGS
+participant "Assembly\nService" as AS
+database DB
+participant "Private Storage" as PS
+
+M -> SRC : Submit request + attachments
+SRC -> DB : Insert Request(status=DIAJUKAN)
+SRC -> PS : Save input files
+SRC --> M : Request created
+
+M -> SRC : Trigger process (internal queue/action)
+SRC -> DGS : verify()/nomorSurat()/startSigning()
+DGS -> DB : Update status (REVIEW_ULT/IN_SIGNING)
+DGS --> SRC : Gate result
+
+loop Untuk tiap signer mandatory
+  SRC -> SGS : decide(APPROVE/REVISI/TOLAK)
+  SGS -> DB : Save signoff decision
+  alt REVISI
+    SGS -> DB : status=PERLU_PERBAIKAN
+    SGS --> SRC : Need revision
+    SRC --> M : Notify revision required
+  else TOLAK
+    SGS -> DB : status=DITOLAK/REJECTED_IN_SIGNING
+    SGS --> SRC : Rejected
+    SRC --> M : Notify rejected
+    break
+  else APPROVE
+    SGS --> SRC : Continue next signer
+  end
+end
+
+alt Semua signer approve
+  SGS -> DB : status=READY_FOR_FINAL
+  SRC -> AS : finalize(request, placements)
+  AS -> PS : Generate final DOCX/PDF
+  AS -> DB : Create request_output + status=COMPLETED
+  SRC --> M : Notify output ready
+  M -> SRC : Download output
+  SRC -> DB : Policy/ownership check
+  SRC -> PS : Stream private file
+  SRC --> M : File response
+end
+@enduml

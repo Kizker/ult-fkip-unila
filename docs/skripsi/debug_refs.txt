@@ -1,0 +1,75 @@
+JOURNAL: Ahmad, Z., Casarin, S., dan Calzavara, S. 2023. What Storage? An Empirical Analysis of Web Storage in the Wild. Network and Distributed System Security (NDSS) 1-8
+JOURNAL: Aiken, L. R. 1985. Three Coefficients for Analyzing the Reliability and Validity of Ratings. Educational and Psychological Measurement 45(1) 131-142
+JOURNAL: Akbari, T. T., dan Pratomo, R. R. 2022. Higher education digital transformation implementation in Indonesia during the COVID-19 pandemic. Jurnal Kajian Komunikasi 10(1), 52., 52-65
+JOURNAL: Al Salmi, H. 2023. Comparative CSS frameworks. Umm Al-Qura University 1(66), 1–35.
+JOURNAL: Alisa, N., Umam, F. C., Ivana, L., Adha, N. S., dan Nugraha, J. T. 2024. Analisis Kualitas Pelayanan ULT (Unit Layanan Terpadu) Universitas dalam Menciptakan Pengalaman yang Memuaskan. Journal of Governance and Public Administration (JoGaPA) , Urnal of Governance and Public Administration (JoGaPA) 1(3), 322–333.
+JOURNAL: Andi Kambau, R. 2024. Proses Transformasi Digital pada Perguruan Tinggi di Indonesia. Jurnal Rekayasa Sistem Informasi Dan Teknologi 1(3), 126–136.
+JOURNAL: Anggraini, P. A. D., dan Putra, D. B. K. N. S. 2021. Developing Learning Video with Addie Model on Science Class For 4 th Grade Elementary School Students. Proceedings of the 2nd International Conference on Technology and Educational Science (ICTES 2020) 540(Ictes 2020), 413–421.
+JOURNAL: Ardiansyah, D. 2023. Transformasi Digital Perguruan Tinggi Menggunakan Prinsip Smart Education. Jurnal Informatika Komputer, Bisnis Dan Manajemen 20(1), 42–55.
+JOURNAL: Ardianti, R. 2022. Pengembangan Website Berbasis Model Addie Sebagai Media E-Learning Pada Pembelajaran Apresiasi Seni Lukis Di Sma. Jurnal Teknologi Pendidikan 11(1), 11–20.
+BOOK: Arikunto, S. 2009. Dasar-dasar Evaluasi Pendidikan. Bumi Aksara, Jakarta. 310 hlm
+BOOK: Arikunto, S. 2013. Prosedur Penelitian: Suatu Pendekatan Praktik. Rineka Cipta, Jakarta. 413 hlm
+JOURNAL: Ariyanto, Y., Farhan, M., Rachmad, F., dan Puspitasari, D. 2024. Laravel framework and native PHP: Comparison in the creationof rest API. Matrix: Jurnal Manajemen Teknologi Dan Informatika 14(2), 66–73.
+JOURNAL: Arsenieva, N., Putyatina, L., dan Uglova, L. 2021. Development of digital educational environment in higher education. SHS Web of Conferences 106, 03002.
+JOURNAL: Baijun, H. 2024. Impact of Digital Transformation on Higher Education Management: A Theoretical Analysis. Journal of Industry and Engineering Management 2(3), 35–39.
+JOURNAL: Banu, A. N. 2023. The Impact of Technology Integration in Educational Management and Administration. International Journal For Multidisciplinary Research 5(6), 1–6.
+JOURNAL: Bashar, U., Akindeji Ibrahim, M., Adedeji, A., dan Dauda, A. 2023. Optimizing the Student Application Process with a Laravel-based System of Waziri Umaru Federal Polytechnic Birnin Kebbi: A Case Study. International Journal of Innovative Science and Research Technology 8(10).
+JOURNAL: Bhagaskara, D. N., dan Udariansyah, D. 2024. Implementation of Web Engineering in the Design and Development of the Website Portal for SMA Negeri 1 Martapura. International Journal Software Engineering and Computer Science (IJSECS) 4(1), 49–57.
+JOURNAL: Biradar, V. M. 2020. Tailwind CSS. International Journal of Advance and Applied Research 12(2), 45–52.
+JOURNAL: Bitchikashvili, T., Petriashvili, L., dan Jang, L. K. 2023. Digitalization of Management of A Higher Educational Institution, National Aandnd International Challenges and Ways of Solution. World Science 3(March), 31–34.
+BOOK: Branch, R. M. 2009. Instructional Design: The ADDIE Approach. Springer, Boston. 175 hlm
+JOURNAL: Brooke, J. 2020. SUS: A “Quick and Dirty” Usability Scale. Usability Evaluation In Industry, July 207–212.
+JOURNAL: Deshpande, Y., Murugesan, S., Ginige, A., Hansen, S., Schwabe, D., Gaedke, M., dan White, B. 2002. Web engineering. Web Engineering 1(1) 1-438
+JOURNAL: Dixit, N., Shrivastava, V., Pandey, A., dan Sharma, E. R. 2024. Revolutionizing Web Design with Tailwind CSS: A Comprehensive Exploration. International Journal of Research Publication and Reviews 5(5), 4198–4204.
+JOURNAL: Febriani, S., Sutabri, T., dan Abdillah, L. A. 2023. Perancangan UI / UX Aplikasi Sistem Informasi Layanan Administrasi dalam Perspektif Psikologi Menggunakan Metode Prototype Mahasiswa Universitas Bina Darma dalam melaksanakan kegiatan akademik kebutuhan pengguna hingga pengguna dapat merasa senang dan pua. Jurnal Teknlogi Informatika Dan Komputer MH. Thamrin 9(2), 1088–1103.
+JOURNAL: Ferdiansyah, F., Heyana, N., dan Solehudin, A. 2022. Analisis User Experience (Ux) Pada Website Universitas Singaperbangsa Karawang Menggunakan Metode System Usability Scale (SUS). Jurnal Pendidikan Dan Konseling 105(2), 79.
+BOOK: Fernández, A., Gómez, B., Binjaku, K., dan Meçe, E. K. 2023. Digital transformation initiatives in higher education institutions: A multivocal literature review. In Education and Information Technologies (Vol. 28, Issue 10). Springer US.
+JOURNAL: Gote, A., dan Solutions, I. 2024. Real-Time Interactivity in Hybrid Applications With Web Sockets. International Research Journal of Modernization in Engineering Technology and Science 6(1).
+JOURNAL: Gustiani, S. 2019. Research and Development (R&D) Method as a Model Design in Educational Research and Its Alternatives. Holistics Journal 11(2), 12–22.
+JOURNAL: Haryanto, D., dan Hadilinatih, B. 2022. Analisis Kualitas Pelayanan Publik Unit Layanan Terpadu (Ult) Satu Pintu Kementerian Pendidikan Kebudayaan Riset Dan Teknologi Di D.I. Yogyakarta. Jurnal Enersia Publika 6(2), 95–108.
+JOURNAL: Henim, S. R., dan Sari, R. P. 2020. Evaluasi User Experience Sistem Informasi Akademik Mahasiswa pada Perguruan Tinggi Menggunakan User Experience Questionnaire. Jurnal Komputer Terapan 6(1), 69–78.
+JOURNAL: Huynh, T. S., Tran, D. T., Vu, Q. H., dan Nguyen, L. A. T. N. 2022. Design and Implementation of Web Application Based on MVC Laravel Architecture. European Journal of Electrical Engineering and Computer Science 6(4), 23–29.
+BOOK: Johns, K., Lundkvist, P., Rusu, C., Menon, V., Gupta, N., Kim, Y., dan Vasconcelos, J. R. 2022. Service Upgrade: The GovTech Approach to Citizen Centered Services. World Bank Group, Washington, DC. 150 hlm
+JOURNAL: Joseph, O. B., Onwuzulike, O. C., dan Shitu, K. 2024. Digital transformation in education: Strategies for effective implementation. World Journal of Advanced Research and Reviews 23(2), 2785–2799.
+JOURNAL: Kancherla, G. P., Goel, D., dan Bichhawat, A. 2025. Least Privilege Access for Persistent Storage Mechanisms in Web Browsers. WWW 2025 - Proceedings of the ACM Web Conference 4832–4840.
+JOURNAL: Karya, M. A., Haryono, B. S., dan Sujarwoto, S. 2024. Digitalization and Innovation of the Service Process: The Efforts to Improve the Quality of Higher Education Services in Kalimantan Island. Jurnal Bina Praja 16(1), 69–81.
+JOURNAL: Khotimah, K., dan Wahyu, A. A. A. 2020. Reading in The Digital Age: Electronic Storybook as a Teaching Tool for Beginning Readers. Atlantis Press 387(January).
+JOURNAL: Kodali, N. 2024. Tailwind CSS Integration in Angular: A Technical Overview. International Journal of Innovative Research in Science,Engineering and Technology 13(09), 1–14.
+JOURNAL: Kryszak, Ł. 2020. Income Convergence in the Agricultural Sector in the Context of the European Union’S Common Agricultural Policy. Annals of the Polish Association of Agricultural and Agribusiness Economists, XXII(3) 140–152.
+JOURNAL: Latif, E. Y., Wardiman, A., Nur, A. M., Perdana, C. A., dan Idrus, R. 2024. Tren Modern dalam Digitalisasi Pendidikan. Jurnal Literasi Digital 4(1), 41–50.
+JOURNAL: Machmudi, M. A., Wahyudiono, S., dan Susilo, G. 2023. Analisis dan Rancang Bangun E-Learning dengan Metode ADDIE Model. JURNAL GO INFOTECH 29(2), 226–232.
+JOURNAL: MacKlon, F., Viggiato, M., Romanova, N., Buzon, C., Paas, D., dan Bezemer, C. P. 2023. A Taxonomy of Testable HTML5 Canvas Issues. IEEE Transactions on Software Engineering 49(6), 3647–3659.
+JOURNAL: Martantoh, E., dan Aripudin, M. 2023. Sistem Informasi Penjualan Berbasis Web Dengan Metode Addie Pada Kedai Kopi Karawang. Journal of Innovation And Future Technology (IFTECH) 5(2), 92–101.
+JOURNAL: Maulana, M. R., Utama, M. R. P. A., dan Nurdiana, D. 2023. Uji Usability dan User Experience Website Sistem Informasi Akademik Universitas Terbuka (SIA UT) Berdasarkan Perspektif Mahasiswa Menggunakan Metode USE Questionnaire dan Cognitive Walkthrough. Jurnal Teknologi Sistem Informasi Dan Aplikasi 6(4), 713–729.
+JOURNAL: Mundzir, M., dan Laventia, F. 2025. Transformasi Administrasi Pendidikan di Era Digital: Tantangan dan Peluang. Jurnal Manajemen Dan Ilmu Administrasi 1(1), 56–62.
+JOURNAL: Mustopa, A., Agustiani, S., Wildah, S. K., dan Maysaroh. 2020. Analisa Kepuasan Pengguna Website Layanan Akademik Kemahasiswaan (LYKAN) Menggunakan Metode Webqual 4.0. Jurnal Ilmiah Informatika Komputer 18(1), 75–81.
+JOURNAL: Musyary, Kurniati, A., dan Damarjati, C. 2023. Laravel Framework-Based Information System of the Department of Information Technology of Universitas Muhammadiyah Yogyakarta. Emerging Information Science and Technology 4(2), 48–57.
+JOURNAL: Naidu, V. R., Singh, B., Agarwal, A., Farei, K. Al, Ismaily, K. Al, Harrasi, R. Al, dan Vaidhyanathan, N. 2021. Html5 Based E-Learning Authoring To Facilitate Interactive Learning During Covid-19 Pandemic: a Review. IJAEDU- International E-Journal of Advances in Education 122–130.
+JOURNAL: Nandan, Sree R., U., dan Mohan, P. 2024. Comparison of Utility-First CSS Framework. Journal of Innovation and Technology 2024(1).
+JOURNAL: Nugroho, Y. A., Widodo, A., Pebrina, E. T., Iskandar, J., dan Nadeak, M. 2025. Digitalization in Higher Education: How Information Systems Improve Operational and Strategic Performance. Indonesian Journal of Management and Economic Research (IJOMER) 2(01), 90–98.
+JOURNAL: Oracle. 2025. MySQL Replication. 1–36. 
+JOURNAL: Poernamawatie, F., Kurniawan, P. A., Hermanto, S., Susipta, I. N., dan Hertanto, R. H. 2023. Implementasi Transformasi Digital Layanan Keuangan Mahasiswa Pasca Pandemi Covid-19 di Universitas Negeri Malang. Jurnal Pengabdian Kepada Masyarakat Nusantara 4(3), 2123–2133.
+JOURNAL: Purwani, R., Fathoni, A., Sarilan, S., dan Siswanto, H. 2024. Transformasi Administrasi Pendidikan untuk Mengoptimalkan Efisiensi dan Kualitas Layanan Pendidikan pada Era Digital. Jurnal Keilmuan Dan Keislaman 53–58.
+JOURNAL: Qurrata A’yun, D. U., Wicaksana, D. Y., Ulya, S., Zie, R. J. S., dan Fazlurrahman, H. 2023. Website quality and user satisfaction: A higher education perspective. Sebelas Maret Business Review 8(2), 109.
+JOURNAL: Ridwan, M. Y., Maulana, M. R., dan Nurdiana, D. 2024. Usability Testing Website My UT Menggunakan Metode Post-Study System Usability Questionnaire Berdasarkan Pandangan Mahasiswa Universitas Terbuka. Jurnal Sistem Informasi 7(2), 207–222.
+JOURNAL: Rifandi, F., Tri Viqi Adriansyah, dan Rina Kurniawati. 2022. Website Gallery Development Using Tailwind CSS Framework. Jurnal E-Komtek (Elektro-Komputer-Teknik) 6(2), 205–214.
+JOURNAL: Riyadi, S., dan Chuluq, M. K. 2021. Implementasi Metode Addie Pada Sistem Informasi Pembuatan Rpp 1 Lembar Di Smk Pgri 4 Pasuruan. Spirit 13(2), 66–70.
+JOURNAL: Safrizal, dan Afkar, M. A. 2023. SIAKAD Revitalization: The Latest Solution in Answering the Challenges of Digitizing Education. International Journal Software Engineering and Computer Science (IJSECS) 3(1), 40–49.
+JOURNAL: Sasmoko, Indrianti, Y., Manalu, S. R., dan Danaristo, J. 2024. Analyzing Database Optimization Strategies in Laravel for an Enhanced Learning Management. Procedia Computer Science 245(C), 799–804.
+JOURNAL: Sastranegara, A., Triayudi, A., dan Hayati, N. 2023. Implementasi User Center Design dan System Usability Scale Pada Website Sekolah Menengah Atas. KLIK: Kajian Ilmiah Informatika Dan Komputer 3(6), 1320–1325.
+JOURNAL: Serhiyovych, B. O. 2024. Asynchronous Programming in Javascript: Modern Approaches and Practice. American Research Journal of Computer Science and Information Technology 7(1), 28–32.
+JOURNAL: Setiawan, H. 2022. Peran software, hardware dan brainware dalam sistem informasi manajemen sekolah. Jurnal Oase Nusantara 1(1), 51–58.
+JOURNAL: Setyaningsih, K., Sari, H. R. U., dan Ibrahim, I. 2024. Pelaksanaan Layanan Administrasi Kesiswaan di MAN 2 Palembang. Jurnal Visionary : Penelitian Dan Pengembangan Dibidang Administrasi Pendidikan 12(2), 15.
+JOURNAL: Shah, H. 2023. Harnessing Customized Built-in Elements: Empowering Component-Based Software Engineering and Design Systems with HTML5 Web Components. 247–259. 
+JOURNAL: Sinaga, L. B., Ritonga, N. S., dan Muda, I. 2021. The role of database system on secondary education. International Journal of Multidisciplinary Research and Growth Evaluation 2(4), 1–4.
+BOOK: Singun, A. J. 2025. Unveiling the barriers to digital transformation in higher education institutions: a systematic literature review. In Discover Education (Vol. 4, Issue 1). Springer International Publishing.
+BOOK: Sudjana. 2005. Metode Statistika. Tarsito, Bandung. 508 hlm
+BOOK: Sugiyono. 2013. Metodologi Penelitian Kuantitatif, Kualitatif dan R & D. Alfabeta, Bandung. 334 hlm
+JOURNAL: Suhartoyo. 2019. Implementasi Fungsi Pelayanan Publik dalam Pelayanan Terpadu Satu Pintu (PTSP). Administrative Law and Governance Journal 2(1), 143–154.
+JOURNAL: Sukorini, R. S., Marini, A., dan Aulia, R. N. 2024. NEW ERA OF HIGHER EDUCATION: DIGITAL TRANSFORMATION AND INFORMATION SYSTEM MANAGEMENT. IMProvement Jurnal 11(2), 154–166.
+JOURNAL: Taqwa, dan Raupu, S. 2022. Website-Based Academic Service Development with ADDIE Design in Higher Education. AL-ISHLAH: Jurnal Pendidikan 14(2), 1511–1526.
+JOURNAL: Tumilantouw, A., Mokat, J. E. H., dan Langkai, J. E. 2024. Strategi Pelayanan Publik Pada Unit Layanan Terpadu Universitas Negeri Manado. Jurnal Administro 1(1), 05–09.
+JOURNAL: Wan Ali, W. N. A., dan Wan Yahaya, W. A. J. 2023. Waterfall-Addie Model: an Integration of Software Development Model and Instructional Systems Design in Developing a Digital Video Learning Application. Asean Journal of Teaching and Learning in Higher Education 15(1), 1–28.
+JOURNAL: Widiawati, M., Muawwal, A., Pontoh, Z., dan Informasi, S. 2023. ANALISIS USABILITY WEBSITE SISTEM INFORMASI AKADEMIK STMIK usability , USE Questionnaire , Website Sistem Informasi Akademik STMIK Kharisma Makassar. Jurnal Informatika 2 95-109
+JOURNAL: Zapata, J. 2024. MySQL VS PostgreSQL: A Comparative Analysis of Relational Database Management Systems (RDBMS) Technologies Response Time in Web-based E-commerce. March 2024 6–11.
+JOURNAL: Šušter, I., dan Ranisavljević, T. 2023. Optimization of Mysql Database. Journal of Process Management and New Technologies 11(1–2), 141–151.
