@@ -30,3 +30,5 @@ yarn-error.log
 .codex_last_deploy_pkg
 CON
 *_unpacked*
+/bootstrap/cache/*.php
+/bootstrap/cache/*.tmp
