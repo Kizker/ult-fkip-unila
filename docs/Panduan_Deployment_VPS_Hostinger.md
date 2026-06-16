@@ -83,7 +83,7 @@ nano .env
 ```env
 APP_NAME="Web ULT FKIP Unila"
 APP_ENV=production
-APP_KEY=base64:1suGHpYGdMlPxREV4G3GgLU9JSPKS3fymSZxGFGnqaI=
+APP_KEY="[GENERATE_NEW_KEY_DI_VPS_NANTI]"
 APP_DEBUG=false
 APP_URL=https://ult-fkip-unila.site
 APP_TIMEZONE=Asia/Jakarta
@@ -106,7 +106,7 @@ DB_HOST=db
 DB_PORT=3306
 DB_DATABASE=ult_fkip
 DB_USERNAME=admin_ult
-DB_PASSWORD=":E)@@-:lGsxF)L)I"
+DB_PASSWORD="[GANTI_PASSWORD_DB_ANDA]"
 DB_CHARSET=utf8mb4
 DB_COLLATION=utf8mb4_unicode_ci
 
