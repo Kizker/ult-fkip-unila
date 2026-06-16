@@ -2188,7 +2188,7 @@ body {
 html,
 body {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 [x-cloak] {
@@ -2241,7 +2241,6 @@ canvas {
 @layer components {
   .page-public-site {
     @apply min-h-screen text-fg;
-    overflow-x: clip;
   }
 
   .dark .page-public-site {
