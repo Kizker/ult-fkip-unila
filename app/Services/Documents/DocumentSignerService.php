@@ -79,7 +79,7 @@ class DocumentSignerService
                 : (bool) ($currentSigner?->requires_signature_upload ?? false);
             if ($decision === 'APPROVE' && $requiresSignatureUpload) {
                 if (!$signatureFile) {
-                    throw new \Symfony\Component\HttpKernel\Exception\HttpException(422, 'signature_file wajib untuk APPROVE.');
+                    throw \Illuminate\Validation\ValidationException::withMessages(['signature_file' => 'Signature file wajib diunggah untuk keputusan APPROVE.']);
                 }
 
                 $types = $isCertificateRequest
@@ -89,15 +89,15 @@ class DocumentSignerService
                     ? self::CERT_SIGNATURE_MAX_KB
                     : (int) ($currentSigner?->signature_max_size_kb ?: 0);
                 if ($maxKb <= 0 || empty($types)) {
-                    throw new \Symfony\Component\HttpKernel\Exception\HttpException(422, 'Konfigurasi signature signer tidak valid.');
+                    throw \Illuminate\Validation\ValidationException::withMessages(['signature_file' => 'Konfigurasi signature signer tidak valid.']);
                 }
 
                 $mime = $signatureFile->getMimeType() ?: '';
                 if (!in_array($mime, $types, true)) {
-                    throw new \Symfony\Component\HttpKernel\Exception\HttpException(422, 'MIME signature_file tidak diizinkan.');
+                    throw \Illuminate\Validation\ValidationException::withMessages(['signature_file' => 'Format file signature tidak diizinkan.']);
                 }
                 if (($signatureFile->getSize() ?: 0) > ($maxKb * 1024)) {
-                    throw new \Symfony\Component\HttpKernel\Exception\HttpException(422, 'Ukuran signature_file melebihi batas.');
+                    throw \Illuminate\Validation\ValidationException::withMessages(['signature_file' => 'Ukuran file signature melebihi batas maksimal ' . $maxKb . ' KB.']);
                 }
 
                 $disk = config('ult.private_disk');
