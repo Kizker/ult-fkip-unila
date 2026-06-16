@@ -1,0 +1,203 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>Panduan Deployment</title><style>body{font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto;} pre{background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto;} code{font-family: Consolas, monospace;} h1, h2, h3{color: #333;}</style></head><body><h1>Panduan Deployment Laravel Docker ke VPS Hostinger</h1>
+<p><strong>Projek:</strong> Web ULT FKIP Unila
+<strong>Versi:</strong> 1.0 (Berdasarkan Konfigurasi Docker)</p>
+<p>Panduan ini disusun untuk memberikan instruksi <em>step-by-step</em> dari awal hingga akhir dalam mendistribusikan projek Laravel Anda menggunakan infrastruktur Docker pada VPS Hostinger (<code>72.62.127.119</code>).</p>
+<hr />
+<h2>🛑 PERHATIAN PENTING: Pembaruan Konfigurasi Lokal</h2>
+<p>Sebelum kita mulai mengeksekusi <em>deployment</em> di VPS, saya telah <strong>memperbarui</strong> <code>Dockerfile</code> dan <code>docker-compose.yml</code> Anda secara otomatis di komputer lokal ini untuk menyertakan:</p>
+<ol>
+<li><strong>LibreOffice</strong> (dibutuhkan oleh variabel <code>ULT_SOFFICE_PATH=/usr/bin/soffice</code> untuk pembuatan PDF).</li>
+<li><strong>Ekstensi PHP penting</strong> (<code>pdo_mysql</code>, <code>zip</code>, dll) agar <code>php artisan migrate</code> bisa berjalan.</li>
+<li><strong>Integrasi <code>.env</code> otomatis</strong> pada file <code>docker-compose.yml</code> agar kredensial database di Docker sinkron dengan variabel environment Anda.</li>
+</ol>
+<p><strong>JALANKAN PERINTAH INI DI TERMINAL LOKAL ANDA SEKARANG</strong> untuk menyimpan perubahan tersebut ke GitHub:</p>
+<pre><code class="language-bash">git add Dockerfile docker-compose.yml
+git commit -m &quot;fix: Update Dockerfile dengan LibreOffice dan ekstensi PHP, sinkronasi env MariaDB&quot;
+git push origin main
+</code></pre>
+<hr />
+<h2>Fasa 1: Persediaan di VPS Hostinger</h2>
+<h3>1. SSH Login ke VPS</h3>
+<p>Buka Terminal/PowerShell/PuTTY, lalu login ke server Hostinger Anda:</p>
+<pre><code class="language-bash">ssh root@72.62.127.119
+</code></pre>
+<p><em>(Masukkan password VPS Anda saat diminta)</em></p>
+<h3>2. Kemaskini Peladen &amp; Pasang Docker</h3>
+<p>Setelah berhasil login, jalankan perintah (salin-tempel) berikut ini sekaligus untuk memasang mesin Docker di Ubuntu Anda:</p>
+<pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt upgrade -y
+
+# Pasang sijil yang diperlukan
+sudo apt install -y ca-certificates curl gnupg
+
+# Tambah GPG key rasmi Docker
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Tetapkan repositori Docker
+echo \
+  &quot;deb [arch=&quot;$(dpkg --print-architecture)&quot; signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  &quot;$(. /etc/os-release &amp;&amp; echo &quot;$VERSION_CODENAME&quot;)&quot; stable&quot; | \
+  sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+
+# Pasang Docker dan Docker Compose
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+# Beri kebenaran agar Docker boleh dijalankan tanpa 'sudo'
+sudo usermod -aG docker $USER
+</code></pre>
+<h3>3. Klon Projek dari GitHub</h3>
+<p>Siapkan direktori server Anda dan tarik repositori GitHub projek ULT:</p>
+<pre><code class="language-bash">mkdir -p /var/www/fastuser/data/www/ult-fkip-unila.site
+cd /var/www/fastuser/data/www/ult-fkip-unila.site
+git clone https://github.com/Kizker/ult-fkip-unila.git .
+</code></pre>
+<p><em>(Catatan: Penggunaan titik <code>.</code> di akhir perintah clone berfungsi agar file langsung diekstrak di dalam folder tersebut tanpa membuat folder baru <code>ult-fkip-unila</code> di dalamnya).</em></p>
+<hr />
+<h2>Fasa 2: Tetapan Environment (<code>.env</code>)</h2>
+<p>Kita harus membuat file konfigurasi <code>.env</code> dengan kredensial yang telah disepakati untuk <em>production</em>.</p>
+<ol>
+<li>Buat file baru bernama <code>.env</code>:</li>
+</ol>
+<pre><code class="language-bash">nano .env
+</code></pre>
+<ol start="2">
+<li>Salin teks berikut seluruhnya dan tempel <em>(paste)</em> ke dalam jendela Nano Anda:</li>
+</ol>
+<pre><code class="language-env">APP_NAME=&quot;Web ULT FKIP Unila&quot;
+APP_ENV=production
+APP_KEY=base64:1suGHpYGdMlPxREV4G3GgLU9JSPKS3fymSZxGFGnqaI=
+APP_DEBUG=false
+APP_URL=https://ult-fkip-unila.site
+APP_TIMEZONE=Asia/Jakarta
+
+APP_LOCALE=id
+APP_FALLBACK_LOCALE=id
+APP_FAKER_LOCALE=id_ID
+
+APP_MAINTENANCE_DRIVER=file
+APP_MAINTENANCE_STORE=database
+
+LOG_CHANNEL=stack
+LOG_STACK=daily
+LOG_LEVEL=warning
+LOG_DAILY_DAYS=14
+
+# Database Config (Telah Disesuaikan untuk Docker)
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=ult_fkip
+DB_USERNAME=admin_ult
+DB_PASSWORD=&quot;:E)@@-:lGsxF)L)I&quot;
+DB_CHARSET=utf8mb4
+DB_COLLATION=utf8mb4_unicode_ci
+
+# Cache/Session/Queue via Database
+CACHE_STORE=database
+SESSION_DRIVER=database
+QUEUE_CONNECTION=database
+
+SESSION_LIFETIME=120
+SESSION_EXPIRE_ON_CLOSE=false
+SESSION_ENCRYPT=false
+SESSION_PATH=/
+SESSION_DOMAIN=.ult-fkip-unila.site
+SESSION_SECURE_COOKIE=true
+SESSION_HTTP_ONLY=true
+SESSION_SAME_SITE=lax
+SESSION_PARTITIONED_COOKIE=false
+
+# Email SMTP Config
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=ultfkipunila@gmail.com
+MAIL_PASSWORD=&quot;[GANTI_DENGAN_PASSWORD_EMAIL_ANDA]&quot;
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=&quot;ultfkipunila@gmail.com&quot;
+MAIL_FROM_NAME=&quot;ULT FKIP Unila&quot;
+
+# Google OAuth
+GOOGLE_CLIENT_ID=&quot;[GANTI_DENGAN_GOOGLE_CLIENT_ID_ANDA]&quot;
+GOOGLE_CLIENT_SECRET=&quot;[GANTI_DENGAN_GOOGLE_CLIENT_SECRET_ANDA]&quot;
+GOOGLE_REDIRECT_URI=https://ult-fkip-unila.site/auth/google/callback
+GOOGLE_STATELESS=true
+
+# Recaptcha
+RECAPTCHA_ENABLED=false
+RECAPTCHA_SITE_KEY=
+RECAPTCHA_SECRET_KEY=
+
+# Storage Config
+FILESYSTEM_DISK=local
+PRIVATE_FILESYSTEM_DISK=private
+PUBLIC_DISK_ROOT=public
+FILESYSTEM_CLOUD=s3
+
+S3_ACCESS_KEY_ID=
+S3_SECRET_ACCESS_KEY=
+S3_DEFAULT_REGION=ap-southeast-1
+S3_BUCKET=
+S3_URL=
+S3_ENDPOINT=
+S3_USE_PATH_STYLE_ENDPOINT=false
+
+# ULT configs (LibreOffice dsb)
+ULT_LEGALIZATION_BASE_URL=https://ult-fkip-unila.site
+ULT_DOC_NUMBER_FORMAT_KEY=default
+ULT_SOFFICE_PATH=/usr/bin/soffice
+ULT_PREVIEW_AS_PDF=false
+
+# Deploy metadata (reference)
+DEPLOY_DOMAIN=ult-fkip-unila.site
+DEPLOY_VPS_HOST=srv1450038.hstgr.cloud
+DEPLOY_VPS_IP=72.62.127.119
+</code></pre>
+<ol start="3">
+<li>Simpan dengan menekan tombol <strong><code>Ctrl + X</code></strong>, lalu ketik <strong><code>Y</code></strong>, dan tekan <strong><code>Enter</code></strong>.</li>
+</ol>
+<hr />
+<h2>Fasa 3: Eksekusi dan Konfigurasi Kontena</h2>
+<p>Kini semua pengaturan telah siap, mari kita jalankan server.</p>
+<h3>1. Bina dan Jalankan Docker</h3>
+<p>Menjalankan <em>image</em> Docker. Proses ini akan mengunduh MariaDB, Nginx, PHP, LibreOffice, dan akan memakan waktu beberapa menit.</p>
+<pre><code class="language-bash">docker compose up -d --build
+</code></pre>
+<h3>2. Masuk ke dalam Kontena Laravel</h3>
+<p>Setelah Docker menyala (<code>done</code>), kita harus masuk ke dalam kontena aplikasi PHP:</p>
+<pre><code class="language-bash">docker exec -it laravel_app sh
+</code></pre>
+<h3>3. Eksekusi Arahan Pra-Peluncuran (Composer &amp; Artisan)</h3>
+<p>Di dalam layar kontena <code>laravel_app</code>, jalankan blok ini berurutan:</p>
+<pre><code class="language-bash"># 1. Unduh library vendor PHP
+composer install --no-dev --optimize-autoloader --no-interaction
+
+# 2. Sinkronkan Storage (Public)
+php artisan storage:link
+
+# 3. Migrasi Database dan Seed
+php artisan migrate --force
+# (Tambahkan 'php artisan db:seed --force' jika Anda butuh Dummy Data)
+</code></pre>
+<h3>4. Selaraskan Hak Akses (Permissions)</h3>
+<p>Berikan izin ke Nginx dan PHP agar bisa membaca dan menulis file penyimpanan dokumen:</p>
+<pre><code class="language-bash">chown -R www-data:www-data storage bootstrap/cache
+chmod -R 775 storage bootstrap/cache
+</code></pre>
+<h3>5. Optimasi Kinerja Aplikasi</h3>
+<p>Pembersihan memori agar Laravel berjalan sangat cepat di Production:</p>
+<pre><code class="language-bash">php artisan optimize:clear
+php artisan optimize
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+</code></pre>
+<h3>6. Selesai!</h3>
+<p>Ketik <code>exit</code> dan tekan Enter untuk keluar dari mode kontena.</p>
+<pre><code class="language-bash">exit
+</code></pre>
+<hr />
+<p>Sistem kini telah sedia. Anda dapat langsung mengaksesnya melalui domain yang dituju (<code>https://ult-fkip-unila.site</code> - pastikan domain sudah di-point ke IP VPS dan SSL terpasang, misal via reverse proxy Nginx host) atau melalui IP Public VPS.</p>
+</body></html>

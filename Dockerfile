@@ -1,7 +1,19 @@
 FROM php:8.2-fpm
 
-# Memasang package yang diperlukan
-RUN apt-get update && apt-get install -y git curl zip unzip
+# Memasang package yang diperlukan (termasuk LibreOffice untuk export dokumen)
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    zip \
+    unzip \
+    libreoffice \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev \
+    libzip-dev
+
+# Memasang ekstensi PHP yang dibutuhkan Laravel
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
 
 # Memasang Composer
 COPY --from=composer:2.2 /usr/bin/composer /usr/bin/composer
