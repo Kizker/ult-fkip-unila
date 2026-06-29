@@ -10,12 +10,12 @@ return [
         // CSP: minimal; tune as needed for analytics/CDN
         'content_security_policy' => implode('; ', [
             "default-src 'self'",
-            "img-src 'self' data: blob:",
-            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+            "img-src 'self' data: blob: https://img.youtube.com",
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com" . (env('APP_ENV') === 'local' ? " http://localhost:5173 http://127.0.0.1:5173" : ""),
             "font-src 'self' https://fonts.gstatic.com data:",
             // Alpine.js CSP-friendly build avoids unsafe-eval
-            "script-src 'self' 'unsafe-inline'",
-            "connect-src 'self'",
+            "script-src 'self' 'unsafe-inline'" . (env('APP_ENV') === 'local' ? " http://localhost:5173 http://127.0.0.1:5173" : ""),
+            "connect-src 'self'" . (env('APP_ENV') === 'local' ? " http://localhost:5173 http://127.0.0.1:5173 ws://localhost:5173 ws://127.0.0.1:5173" : ""),
             // Needed for embedded video (e.g., YouTube) inside rich text editor.
             "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com",
             "frame-ancestors 'none'",

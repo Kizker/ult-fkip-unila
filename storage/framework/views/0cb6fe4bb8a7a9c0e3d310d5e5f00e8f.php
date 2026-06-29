@@ -40,7 +40,6 @@ unset($__defined_vars, $__key, $__value); ?>
             'items' => [
                 ['label' => 'Dashboard', 'route' => 'admin.dashboard', 'can_any' => $requestOpsPerms],
                 ['label' => 'Permohonan', 'route' => 'admin.requests.index', 'can_any' => $requestOpsPerms],
-                ['label' => 'Pelaporan', 'route' => 'admin.reports.index', 'can_any' => $requestOpsPerms],
                 ['label' => 'Kritik dan Saran', 'route' => 'admin.feedback.index', 'can' => 'feedbacks.manage'],
                 ['label' => 'Signer Inbox', 'route' => 'signer.requests.inbox', 'can' => 'doc_signoffs.decide'],
             ],

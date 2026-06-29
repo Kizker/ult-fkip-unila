@@ -227,7 +227,170 @@
             @endif
         </section>
 
-        <section class="section ult-announcements" id="homeAnnouncements" aria-labelledby="ann-title">
+        <!-- Quick-Access Grid: Panduan & Layanan Terpopuler -->
+        <section class="ult-quick-access" id="ultQuickAccess" aria-label="{{ $isEn ? 'Quick access' : 'Akses cepat' }}">
+            <div class="ult-quick-access__grid">
+
+                <!-- Kolom Kiri: Panduan & Tutorial -->
+                <div class="ult-panduan-section" id="homePanduan">
+                    <div class="ult-section-header">
+                        <div class="ult-section-header__copy">
+                            <h2 class="ult-section-header__title">{{ $isEn ? 'User Guides & Tutorials' : 'Panduan & Tutorial' }}</h2>
+                            <p class="ult-section-header__subtitle">{{ $isEn ? 'Important guides and video tutorials to help you navigate the system.' : 'Buku panduan dan video tutorial untuk memudahkan pengajuan layanan Anda.' }}</p>
+                        </div>
+                        <a class="section-link" href="{{ route('user_guides.index') }}">{{ $isEn ? 'All guides' : 'Semua panduan' }} &rarr;</a>
+                    </div>
+
+                    <!-- Buku Panduan -->
+                    @php
+                        $bookTitle = '';
+                        $bookDesc = '';
+                        $bookUrl = route('user_guides.index');
+                        if ($guideBook ?? false) {
+                            $bookTitle = $isEn ? ($guideBook->title_en ?? $guideBook->title_id) : $guideBook->title_id;
+                            $bookDesc = $isEn ? ($guideBook->summary_en ?? $guideBook->summary_id) : $guideBook->summary_id;
+                            $bookUrl = route('user_guides.show', $guideBook);
+                        }
+                        $bookTitle = filled($bookTitle) ? $bookTitle : ($isEn ? 'ULT FKIP Unila User Guide' : 'Panduan Penggunaan ULT FKIP Unila');
+                        $bookDesc = filled($bookDesc) ? $bookDesc : ($isEn ? 'Complete PDF guide covering service request steps, document tracking, and final output download.' : 'Dokumen PDF lengkap berisi langkah-langkah pengajuan layanan, pelacakan dokumen, hingga pengunduhan hasil akhir.');
+                    @endphp
+                    <a href="{{ $bookUrl }}" class="ult-guide-book-card ult-reveal" aria-label="{{ $bookTitle }}">
+                        <div class="ult-guide-book-card__label">{{ $isEn ? 'Guide Book' : 'Buku Panduan' }}</div>
+                        <h3 class="ult-guide-book-card__title">{{ $bookTitle }}</h3>
+                        <p class="ult-guide-book-card__desc">{{ $bookDesc }}</p>
+                        <span class="ult-guide-book-card__cta">{{ $isEn ? 'Open Guide' : 'Buka Panduan' }} <iconify-icon icon="heroicons:arrow-right" width="14"></iconify-icon></span>
+                    </a>
+
+                    <!-- Video Tutorials -->
+                    <div class="ult-video-grid">
+                        @forelse($guideVideos ?? [] as $video)
+                            @php
+                                $vidTitle = $isEn ? ($video->title_en ?? $video->title_id) : $video->title_id;
+                                $vidThumb = null;
+                                $ytId = null;
+                                // Extract YouTube thumbnail
+                                if ($video->isVideo()) {
+                                    $ytId = null;
+                                    $vUrl = trim((string) ($video->video_url ?? ''));
+                                    if ($vUrl !== '') {
+                                        $vParts = parse_url($vUrl);
+                                        $vHost = strtolower($vParts['host'] ?? '');
+                                        $vPath = trim($vParts['path'] ?? '', '/');
+                                        if (in_array($vHost, ['youtu.be', 'www.youtu.be'])) {
+                                            $ytId = preg_match('/^[A-Za-z0-9_-]{11}$/', $vPath) ? $vPath : null;
+                                        } elseif (in_array($vHost, ['youtube.com', 'www.youtube.com', 'm.youtube.com'])) {
+                                            if ($vPath === 'watch') {
+                                                parse_str($vParts['query'] ?? '', $vQ);
+                                                $ytId = preg_match('/^[A-Za-z0-9_-]{11}$/', $vQ['v'] ?? '') ? $vQ['v'] : null;
+                                            } elseif (str_starts_with($vPath, 'embed/')) {
+                                                $c = substr($vPath, 6);
+                                                $ytId = preg_match('/^[A-Za-z0-9_-]{11}$/', $c) ? $c : null;
+                                            } elseif (str_starts_with($vPath, 'shorts/')) {
+                                                $c = substr($vPath, 7);
+                                                $ytId = preg_match('/^[A-Za-z0-9_-]{11}$/', $c) ? $c : null;
+                                            }
+                                        }
+                                    }
+                                    $vidThumb = $ytId ? "https://img.youtube.com/vi/{$ytId}/mqdefault.jpg" : null;
+                                }
+                                $vidLink = ($video->isVideo() && $video->videoWatchUrl()) ? $video->videoWatchUrl() : route('user_guides.index');
+                            @endphp
+                            <a href="{{ $vidLink }}" class="ult-video-card ult-reveal"
+                               @if($video->isVideo() && $video->videoWatchUrl()) target="_blank" rel="noopener noreferrer" @endif
+                               aria-label="{{ $vidTitle }}">
+                                <div class="ult-video-card__thumb">
+                                    @if($vidThumb)
+                                        <img src="{{ $vidThumb }}" alt="{{ $vidTitle }}" loading="lazy">
+                                    @endif
+                                    <div class="ult-video-card__play">
+                                        <div class="ult-video-card__play-icon">
+                                            <iconify-icon icon="heroicons:play-solid"></iconify-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ult-video-card__info">
+                                    <h4 class="ult-video-card__title" title="{{ $vidTitle }}">{{ $vidTitle }}</h4>
+                                    <p class="ult-video-card__meta">Video Tutorial</p>
+                                </div>
+                            </a>
+                        @empty
+                            {{-- Mock data fallback --}}
+                            @php
+                                $mockVideos = [
+                                    $isEn ? 'How to Submit a Service Request' : 'Cara Mengajukan Permohonan Layanan',
+                                    $isEn ? 'How to Track Service Status' : 'Cara Melacak Status Layanan',
+                                    $isEn ? 'How to Download Completed Documents' : 'Cara Mengunduh Dokumen Selesai',
+                                ];
+                            @endphp
+                            @foreach($mockVideos as $mockTitle)
+                                <a href="{{ route('user_guides.index') }}" class="ult-video-card ult-reveal" aria-label="{{ $mockTitle }}">
+                                    <div class="ult-video-card__thumb">
+                                        <div class="ult-video-card__play">
+                                            <div class="ult-video-card__play-icon">
+                                                <iconify-icon icon="heroicons:play-solid"></iconify-icon>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ult-video-card__info">
+                                        <h4 class="ult-video-card__title">{{ $mockTitle }}</h4>
+                                        <p class="ult-video-card__meta">Video Tutorial</p>
+                                    </div>
+                                </a>
+                            @endforeach
+                        @endforelse
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Layanan Terpopuler (Sidebar) -->
+                <div class="ult-popular-services-section" id="homeServices">
+                    <div class="ult-popular-panel">
+                        <div class="ult-popular-panel__header">
+                            <h2 class="ult-popular-panel__title">{{ $servicesTitle }}</h2>
+                            <p class="ult-popular-panel__subtitle">{{ $isEn ? 'Quick access to our most requested services.' : 'Akses cepat ke layanan yang paling sering digunakan.' }}</p>
+                        </div>
+
+                        <div class="ult-popular-list" role="list">
+                            @forelse ($services as $service)
+                                @php
+                                    $svcTitle = $isEn ? ($service->title_en ?? $service->title_id) : $service->title_id;
+                                    $svcCategory = $isEn
+                                        ? ($service->category?->name_en ?? $service->category?->name_id)
+                                        : $service->category?->name_id;
+                                    $svcCategory = $svcCategory ?: ($isEn ? 'General' : 'Umum');
+                                @endphp
+                                <a href="{{ route('services.show', $service) }}"
+                                   class="ult-popular-item ult-reveal"
+                                   role="listitem"
+                                   aria-label="{{ $svcTitle }}">
+                                    <div class="ult-popular-item__body">
+                                        <div class="ult-popular-item__category">{{ $svcCategory }}</div>
+                                        <h3 class="ult-popular-item__name" title="{{ $svcTitle }}">{{ $svcTitle }}</h3>
+                                    </div>
+                                    <div class="ult-popular-item__arrow">
+                                        <iconify-icon icon="heroicons:chevron-right-20-solid"></iconify-icon>
+                                    </div>
+                                </a>
+                            @empty
+                                <div class="ult-popular-empty">
+                                    <iconify-icon icon="heroicons:inbox" style="font-size:2rem;opacity:.5;margin-bottom:6px;display:block"></iconify-icon>
+                                    <span>{{ $isEn ? 'No services available at the moment.' : 'Belum ada layanan yang tersedia.' }}</span>
+                                </div>
+                            @endforelse
+                        </div>
+
+                        <div class="ult-popular-panel__footer">
+                            <a href="{{ route('services.index') }}" class="ult-popular-panel__viewall ult-popular-panel__viewall--solid">
+                                {{ $isEn ? 'Explore All Services' : 'Lihat Semua Layanan' }}
+                                <iconify-icon icon="heroicons:arrow-right-20-solid"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section ult-announcements" id="homeAnnouncements" aria-labelledby="ann-title" style="padding-top: 2rem;">
             <div class="section-head ult-head">
                 <div class="section-heading">
                     <h2 id="ann-title" class="section-title">{{ $annTitle }}</h2>
@@ -296,71 +459,7 @@
             </div>
         </section>
 
-        <section class="section ult-services" id="homeServices" aria-labelledby="services-title">
-            <div class="section-head ult-head">
-                <div class="section-heading">
-                    <h2 id="services-title" class="section-title">{{ $servicesTitle }}</h2>
-                    <p class="section-subtitle">{{ $servicesSubtitle }}</p>
-                </div>
-                <a class="section-link"
-                    href="{{ route('services.index') }}">{{ $isEn ? 'All services' : 'Semua layanan' }} &rarr;</a>
-            </div>
 
-            <div class="ult-service-marquee" data-service-marquee>
-                @forelse ($serviceRows as $rowIndex => $rowItems)
-                    @php
-                        $rowDuration = max(18, $rowItems->count() * 7);
-                    @endphp
-
-                    <div class="ult-service-row {{ $rowIndex % 2 === 1 ? 'is-reverse' : '' }}">
-                        <div class="ult-service-track" style="--ult-service-marquee-duration: {{ $rowDuration }}s;">
-                            @foreach ($rowItems->concat($rowItems) as $service)
-                                @php
-                                    $serviceTitle = $isEn ? $service->title_en ?? $service->title_id : $service->title_id;
-                                    $serviceSummary = $isEn ? $service->summary_en ?? $service->summary_id : $service->summary_id;
-                                    $serviceSummary = filled($serviceSummary)
-                                        ? $serviceSummary
-                                        : ($isEn
-                                            ? 'Official digital service for academic administration.'
-                                            : 'Layanan digital resmi untuk kebutuhan administrasi akademik.');
-
-                                    $serviceCategory = $isEn
-                                        ? $service->category?->name_en ?? $service->category?->name_id
-                                        : $service->category?->name_id;
-                                    $serviceCategory = $serviceCategory ?: ($isEn ? 'General service' : 'Layanan umum');
-
-                                    $serviceFormat = $service->usesRequestPptxSource() ? 'PPTX' : 'DOCX';
-                                @endphp
-
-                                <a href="{{ route('services.show', $service) }}"
-                                    class="ult-service-ticker-card ult-reveal"
-                                    aria-label="{{ $serviceTitle }}">
-                                    <div class="ult-service-ticker-card__content">
-                                        <div class="ult-service-ticker-card__topline">
-                                            <span class="ult-service-ticker-card__chip">
-                                                <iconify-icon icon="heroicons:folder-solid"></iconify-icon>
-                                                {{ $serviceCategory }}
-                                            </span>
-                                            <span class="ult-service-ticker-card__format">
-                                                <iconify-icon icon="heroicons:document-text-solid"></iconify-icon>
-                                                {{ $serviceFormat }}
-                                            </span>
-                                        </div>
-                                        <h3 class="ult-service-ticker-card__title">{{ $serviceTitle }}</h3>
-                                        <p class="ult-service-ticker-card__meta">
-                                            {{ \Illuminate\Support\Str::limit($serviceSummary, 92, '...') }}</p>
-                                    </div>
-                                </a>
-                            @endforeach
-                        </div>
-                    </div>
-                @empty
-                    <div class="empty">
-                        {{ $isEn ? 'No services are available at the moment.' : 'Belum ada layanan yang tersedia saat ini.' }}
-                    </div>
-                @endforelse
-            </div>
-        </section>
 
         <section class="section ult-blogs" id="homeBlogs" aria-labelledby="blog-title">
             <div class="section-head ult-head">

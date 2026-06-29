@@ -6,9 +6,13 @@ export default defineConfig({
     laravel({
       input: [
         'resources/css/app.css',
-        'resources/js/app.js'
+        'resources/js/app.js',
+        'resources/js/dashboard-charts.js'
       ],
       refresh: true,
     }),
   ],
+  server: {
+    host: '127.0.0.1',
+  },
 });

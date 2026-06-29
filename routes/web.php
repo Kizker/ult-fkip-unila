@@ -184,6 +184,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
         ->middleware('permission:requests.view_any|requests.view_unit|requests.review_ult|services.manage|cms.manage|site_settings.manage|document_numbers.manage_formats|users.manage|audit_logs.view|academics.manage|doc_services.manage|doc_services.publish|doc_templates.upload|doc_placeholders.manage|doc_signers.manage|doc_requests.gate|doc_requests.assemble|feedbacks.manage')
         ->group(function () {
             Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+            Route::get('/dashboard/chart-data', [AdminDashboardController::class, 'chartData'])->name('dashboard.chart_data');
+            Route::get('/dashboard/export/{format}', [AdminDashboardController::class, 'export'])
+                ->whereIn('format', ['csv', 'excel', 'pdf'])
+                ->name('dashboard.export');
 
             Route::get('/permohonan', [\App\Http\Controllers\Admin\RequestAdminController::class, 'index'])->name('requests.index');
             Route::get('/permohonan/{request}', [\App\Http\Controllers\Admin\RequestAdminController::class, 'show'])->name('requests.show');
@@ -216,10 +220,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
                 ->middleware(['permission:feedbacks.manage', 'throttle:status-change'])
                 ->name('feedback.update');
 
-            // Laporan
-            Route::get('/pelaporan', [\App\Http\Controllers\Admin\ReportController::class, 'index'])
-                ->middleware('permission:requests.view_any')
-                ->name('reports.index');
+            // Laporan (digabungkan ke dashboard v2)
 
             // Document module: gate actions (ADMIN_JURUSAN)
             Route::post('/permohonan/{request}/gate/verify', [DocumentRequestGateController::class, 'verify'])

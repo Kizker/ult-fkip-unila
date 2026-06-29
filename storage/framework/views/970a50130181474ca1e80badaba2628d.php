@@ -225,7 +225,171 @@
             <?php endif; ?>
         </section>
 
-        <section class="section ult-announcements" id="homeAnnouncements" aria-labelledby="ann-title">
+        <!-- Quick-Access Grid: Panduan & Layanan Terpopuler -->
+        <section class="ult-quick-access" id="ultQuickAccess" aria-label="<?php echo e($isEn ? 'Quick access' : 'Akses cepat'); ?>">
+            <div class="ult-quick-access__grid">
+
+                <!-- Kolom Kiri: Panduan & Tutorial -->
+                <div class="ult-panduan-section" id="homePanduan">
+                    <div class="ult-section-header">
+                        <div class="ult-section-header__copy">
+                            <h2 class="ult-section-header__title"><?php echo e($isEn ? 'User Guides & Tutorials' : 'Panduan & Tutorial'); ?></h2>
+                            <p class="ult-section-header__subtitle"><?php echo e($isEn ? 'Important guides and video tutorials to help you navigate the system.' : 'Buku panduan dan video tutorial untuk memudahkan pengajuan layanan Anda.'); ?></p>
+                        </div>
+                        <a class="section-link" href="<?php echo e(route('user_guides.index')); ?>"><?php echo e($isEn ? 'All guides' : 'Semua panduan'); ?> &rarr;</a>
+                    </div>
+
+                    <!-- Buku Panduan -->
+                    <?php
+                        $bookTitle = '';
+                        $bookDesc = '';
+                        $bookUrl = route('user_guides.index');
+                        if ($guideBook ?? false) {
+                            $bookTitle = $isEn ? ($guideBook->title_en ?? $guideBook->title_id) : $guideBook->title_id;
+                            $bookDesc = $isEn ? ($guideBook->summary_en ?? $guideBook->summary_id) : $guideBook->summary_id;
+                            $bookUrl = route('user_guides.show', $guideBook);
+                        }
+                        $bookTitle = filled($bookTitle) ? $bookTitle : ($isEn ? 'ULT FKIP Unila User Guide' : 'Panduan Penggunaan ULT FKIP Unila');
+                        $bookDesc = filled($bookDesc) ? $bookDesc : ($isEn ? 'Complete PDF guide covering service request steps, document tracking, and final output download.' : 'Dokumen PDF lengkap berisi langkah-langkah pengajuan layanan, pelacakan dokumen, hingga pengunduhan hasil akhir.');
+                    ?>
+                    <a href="<?php echo e($bookUrl); ?>" class="ult-guide-book-card ult-reveal" aria-label="<?php echo e($bookTitle); ?>">
+                        <div class="ult-guide-book-card__label"><?php echo e($isEn ? 'Guide Book' : 'Buku Panduan'); ?></div>
+                        <h3 class="ult-guide-book-card__title"><?php echo e($bookTitle); ?></h3>
+                        <p class="ult-guide-book-card__desc"><?php echo e($bookDesc); ?></p>
+                        <span class="ult-guide-book-card__cta"><?php echo e($isEn ? 'Open Guide' : 'Buka Panduan'); ?> <iconify-icon icon="heroicons:arrow-right" width="14"></iconify-icon></span>
+                    </a>
+
+                    <!-- Video Tutorials -->
+                    <div class="ult-video-grid">
+                        <?php $__empty_1 = true; $__currentLoopData = $guideVideos ?? []; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $video): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                            <?php
+                                $vidTitle = $isEn ? ($video->title_en ?? $video->title_id) : $video->title_id;
+                                $vidThumb = null;
+                                $ytId = null;
+                                // Extract YouTube thumbnail
+                                if ($video->isVideo()) {
+                                    $ytId = null;
+                                    $vUrl = trim((string) ($video->video_url ?? ''));
+                                    if ($vUrl !== '') {
+                                        $vParts = parse_url($vUrl);
+                                        $vHost = strtolower($vParts['host'] ?? '');
+                                        $vPath = trim($vParts['path'] ?? '', '/');
+                                        if (in_array($vHost, ['youtu.be', 'www.youtu.be'])) {
+                                            $ytId = preg_match('/^[A-Za-z0-9_-]{11}$/', $vPath) ? $vPath : null;
+                                        } elseif (in_array($vHost, ['youtube.com', 'www.youtube.com', 'm.youtube.com'])) {
+                                            if ($vPath === 'watch') {
+                                                parse_str($vParts['query'] ?? '', $vQ);
+                                                $ytId = preg_match('/^[A-Za-z0-9_-]{11}$/', $vQ['v'] ?? '') ? $vQ['v'] : null;
+                                            } elseif (str_starts_with($vPath, 'embed/')) {
+                                                $c = substr($vPath, 6);
+                                                $ytId = preg_match('/^[A-Za-z0-9_-]{11}$/', $c) ? $c : null;
+                                            } elseif (str_starts_with($vPath, 'shorts/')) {
+                                                $c = substr($vPath, 7);
+                                                $ytId = preg_match('/^[A-Za-z0-9_-]{11}$/', $c) ? $c : null;
+                                            }
+                                        }
+                                    }
+                                    $vidThumb = $ytId ? "https://img.youtube.com/vi/{$ytId}/mqdefault.jpg" : null;
+                                }
+                                $vidLink = ($video->isVideo() && $video->videoWatchUrl()) ? $video->videoWatchUrl() : route('user_guides.index');
+                            ?>
+                            <a href="<?php echo e($vidLink); ?>" class="ult-video-card ult-reveal"
+                               <?php if($video->isVideo() && $video->videoWatchUrl()): ?> target="_blank" rel="noopener noreferrer" <?php endif; ?>
+                               aria-label="<?php echo e($vidTitle); ?>">
+                                <div class="ult-video-card__thumb">
+                                    <?php if($vidThumb): ?>
+                                        <img src="<?php echo e($vidThumb); ?>" alt="<?php echo e($vidTitle); ?>" loading="lazy">
+                                    <?php endif; ?>
+                                    <div class="ult-video-card__play">
+                                        <div class="ult-video-card__play-icon">
+                                            <iconify-icon icon="heroicons:play-solid"></iconify-icon>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ult-video-card__info">
+                                    <h4 class="ult-video-card__title" title="<?php echo e($vidTitle); ?>"><?php echo e($vidTitle); ?></h4>
+                                    <p class="ult-video-card__meta">Video Tutorial</p>
+                                </div>
+                            </a>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                            
+                            <?php
+                                $mockVideos = [
+                                    $isEn ? 'How to Submit a Service Request' : 'Cara Mengajukan Permohonan Layanan',
+                                    $isEn ? 'How to Track Service Status' : 'Cara Melacak Status Layanan',
+                                    $isEn ? 'How to Download Completed Documents' : 'Cara Mengunduh Dokumen Selesai',
+                                ];
+                            ?>
+                            <?php $__currentLoopData = $mockVideos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $mockTitle): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <a href="<?php echo e(route('user_guides.index')); ?>" class="ult-video-card ult-reveal" aria-label="<?php echo e($mockTitle); ?>">
+                                    <div class="ult-video-card__thumb">
+                                        <div class="ult-video-card__play">
+                                            <div class="ult-video-card__play-icon">
+                                                <iconify-icon icon="heroicons:play-solid"></iconify-icon>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ult-video-card__info">
+                                        <h4 class="ult-video-card__title"><?php echo e($mockTitle); ?></h4>
+                                        <p class="ult-video-card__meta">Video Tutorial</p>
+                                    </div>
+                                </a>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Layanan Terpopuler (Sidebar) -->
+                <div class="ult-popular-services-section" id="homeServices">
+                    <div class="ult-popular-panel">
+                        <div class="ult-popular-panel__header">
+                            <h2 class="ult-popular-panel__title"><?php echo e($servicesTitle); ?></h2>
+                            <p class="ult-popular-panel__subtitle"><?php echo e($isEn ? 'Quick access to our most requested services.' : 'Akses cepat ke layanan yang paling sering digunakan.'); ?></p>
+                        </div>
+
+                        <div class="ult-popular-list" role="list">
+                            <?php $__empty_1 = true; $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
+                                <?php
+                                    $svcTitle = $isEn ? ($service->title_en ?? $service->title_id) : $service->title_id;
+                                    $svcCategory = $isEn
+                                        ? ($service->category?->name_en ?? $service->category?->name_id)
+                                        : $service->category?->name_id;
+                                    $svcCategory = $svcCategory ?: ($isEn ? 'General' : 'Umum');
+                                ?>
+                                <a href="<?php echo e(route('services.show', $service)); ?>"
+                                   class="ult-popular-item ult-reveal"
+                                   role="listitem"
+                                   aria-label="<?php echo e($svcTitle); ?>">
+                                    <div class="ult-popular-item__body">
+                                        <div class="ult-popular-item__category"><?php echo e($svcCategory); ?></div>
+                                        <h3 class="ult-popular-item__name" title="<?php echo e($svcTitle); ?>"><?php echo e($svcTitle); ?></h3>
+                                    </div>
+                                    <div class="ult-popular-item__arrow">
+                                        <iconify-icon icon="heroicons:chevron-right-20-solid"></iconify-icon>
+                                    </div>
+                                </a>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
+                                <div class="ult-popular-empty">
+                                    <iconify-icon icon="heroicons:inbox" style="font-size:2rem;opacity:.5;margin-bottom:6px;display:block"></iconify-icon>
+                                    <span><?php echo e($isEn ? 'No services available at the moment.' : 'Belum ada layanan yang tersedia.'); ?></span>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="ult-popular-panel__footer">
+                            <a href="<?php echo e(route('services.index')); ?>" class="ult-popular-panel__viewall ult-popular-panel__viewall--solid">
+                                <?php echo e($isEn ? 'Explore All Services' : 'Lihat Semua Layanan'); ?>
+
+                                <iconify-icon icon="heroicons:arrow-right-20-solid"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section ult-announcements" id="homeAnnouncements" aria-labelledby="ann-title" style="padding-top: 2rem;">
             <div class="section-head ult-head">
                 <div class="section-heading">
                     <h2 id="ann-title" class="section-title"><?php echo e($annTitle); ?></h2>
@@ -296,74 +460,7 @@
             </div>
         </section>
 
-        <section class="section ult-services" id="homeServices" aria-labelledby="services-title">
-            <div class="section-head ult-head">
-                <div class="section-heading">
-                    <h2 id="services-title" class="section-title"><?php echo e($servicesTitle); ?></h2>
-                    <p class="section-subtitle"><?php echo e($servicesSubtitle); ?></p>
-                </div>
-                <a class="section-link"
-                    href="<?php echo e(route('services.index')); ?>"><?php echo e($isEn ? 'All services' : 'Semua layanan'); ?> &rarr;</a>
-            </div>
 
-            <div class="ult-service-marquee" data-service-marquee>
-                <?php $__empty_1 = true; $__currentLoopData = $serviceRows; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $rowIndex => $rowItems): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
-                    <?php
-                        $rowDuration = max(18, $rowItems->count() * 7);
-                    ?>
-
-                    <div class="ult-service-row <?php echo e($rowIndex % 2 === 1 ? 'is-reverse' : ''); ?>">
-                        <div class="ult-service-track" style="--ult-service-marquee-duration: <?php echo e($rowDuration); ?>s;">
-                            <?php $__currentLoopData = $rowItems->concat($rowItems); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $service): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <?php
-                                    $serviceTitle = $isEn ? $service->title_en ?? $service->title_id : $service->title_id;
-                                    $serviceSummary = $isEn ? $service->summary_en ?? $service->summary_id : $service->summary_id;
-                                    $serviceSummary = filled($serviceSummary)
-                                        ? $serviceSummary
-                                        : ($isEn
-                                            ? 'Official digital service for academic administration.'
-                                            : 'Layanan digital resmi untuk kebutuhan administrasi akademik.');
-
-                                    $serviceCategory = $isEn
-                                        ? $service->category?->name_en ?? $service->category?->name_id
-                                        : $service->category?->name_id;
-                                    $serviceCategory = $serviceCategory ?: ($isEn ? 'General service' : 'Layanan umum');
-
-                                    $serviceFormat = $service->usesRequestPptxSource() ? 'PPTX' : 'DOCX';
-                                ?>
-
-                                <a href="<?php echo e(route('services.show', $service)); ?>"
-                                    class="ult-service-ticker-card ult-reveal"
-                                    aria-label="<?php echo e($serviceTitle); ?>">
-                                    <div class="ult-service-ticker-card__content">
-                                        <div class="ult-service-ticker-card__topline">
-                                            <span class="ult-service-ticker-card__chip">
-                                                <iconify-icon icon="heroicons:folder-solid"></iconify-icon>
-                                                <?php echo e($serviceCategory); ?>
-
-                                            </span>
-                                            <span class="ult-service-ticker-card__format">
-                                                <iconify-icon icon="heroicons:document-text-solid"></iconify-icon>
-                                                <?php echo e($serviceFormat); ?>
-
-                                            </span>
-                                        </div>
-                                        <h3 class="ult-service-ticker-card__title"><?php echo e($serviceTitle); ?></h3>
-                                        <p class="ult-service-ticker-card__meta">
-                                            <?php echo e(\Illuminate\Support\Str::limit($serviceSummary, 92, '...')); ?></p>
-                                    </div>
-                                </a>
-                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        </div>
-                    </div>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
-                    <div class="empty">
-                        <?php echo e($isEn ? 'No services are available at the moment.' : 'Belum ada layanan yang tersedia saat ini.'); ?>
-
-                    </div>
-                <?php endif; ?>
-            </div>
-        </section>
 
         <section class="section ult-blogs" id="homeBlogs" aria-labelledby="blog-title">
             <div class="section-head ult-head">

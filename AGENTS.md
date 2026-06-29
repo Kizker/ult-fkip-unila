@@ -102,6 +102,11 @@ Kami telah memindai direktori proyek dan dokumen di komputer pengguna. File-file
    - Menghasilkan file `C:\laragon\www\ult-fkip-unila\docs\skripsi\hasil_update\001_Skripsi_Andricha Dea Mitra_Format_Clean.docx` (bersih dan rapi).
    - Menghasilkan file `C:\laragon\www\ult-fkip-unila\docs\skripsi\hasil_update\001_Skripsi_Andricha Dea Mitra_Format_Highlighted.docx` (setiap paragraf, kalimat, atau data baru ditandai stabilo kuning).
 
+### C. Aturan Ketat Eksekusi Perubahan (Strict Rules)
+1. **Analisis Sebelum Eksekusi**: Jangan melakukan perubahan apa pun sebelum memahami secara penuh instruksi pengguna.
+2. **Eksekusi Sesuai Permintaan**: Jangan melakukan perubahan apa pun jika tidak diminta secara eksplisit oleh pengguna.
+3. **Pelestarian Format Manual**: Jika pengguna telah melakukan perubahan format penulisan secara manual, format tersebut **WAJIB disimpan, diingat, dan dipertahankan**. Dilarang merusak, mengubah, atau menimpa format kepenulisan (formatting, margin, font, indentasi, alignment, spacing, dll.) yang sudah disesuaikan secara manual oleh pengguna pada pekerjaan-pekerjaan selanjutnya.
+
 ## 8. Hasil Deep Dive Panduan Penulisan Karya Ilmiah Unila 2020
 
 Berdasarkan analisis menyeluruh terhadap file `Panduan-Penulisan-Karya-Ilmiah-2020 (1).pdf`, berikut aturan layout dan formatting resmi yang harus diimplementasikan:
@@ -155,7 +160,7 @@ Berdasarkan analisis menyeluruh terhadap file `Panduan-Penulisan-Karya-Ilmiah-20
 
 ## 9. Laporan Audit Refinement & Formatting Skripsi (Mei 2026)
 
-Berdasarkan komparasi detail antara draf hasil format sebelumnya dengan file baseline orisinal `docs/skripsi/update skripsi terakhir-seminar proposal/001_Skripsi_Andricha Dea Mitra.docx`, berikut hasil audit dan rencana aksi perbaikan:
+Berdasarkan komparasi detail antara draf hasil format sebelumnya dengan file baseline orisinal `docs\skripsi\update skripsi terakhir-seminar proposal\001_Skripsi_Andricha Dea Mitra.docx`, berikut hasil audit dan rencana aksi perbaikan:
 
 ### A. Kesalahan Teridentifikasi & Solusi Layout
 1. **Penyimpangan Alignment (Rata Kiri Berlebih):**
@@ -186,10 +191,6 @@ Berdasarkan komparasi detail antara draf hasil format sebelumnya dengan file bas
   3. `03_diagram_flowchart_dokumen.jpg` (Gambar 6)
   4. `04_diagram_erd_database.jpg` (Gambar 7)
   5. `05_diagram_sequence_parser.jpg` (Gambar 8)
-
-
-
-
 
 ## 10. Rencana Aksi & Pemetaan ADDIE Bab IV (Mei 2026)
 
@@ -273,15 +274,13 @@ Berdasarkan Step 1 SOP, telah dilakukan pemetaan konten draf Bab IV ke dalam str
   3. **Diagram Activity Verifikasi dan Pemrosesan Dokumen**: Memetakan birokrasi verifikasi staf, hingga turunnya TTD Elektronik di *Signer Portal* yang men- *trigger* mesin *assembly* (penggabungan dokumen) sistem.
   4. **Diagram Activity Manajemen Layanan dan Templat**: Menjabarkan kemudahan fitur Admin dalam mengubah nama layanan, formulir variabel *dynamic input*, dan master `.docx` secara seketika (*real-time*).
 
-
-
-
-
 ## 17. Penulisan Tahap Development (Bab 4)
 - **Eksekusi Penulisan**: Telah ditambahkan subbab **3. Tahap Pengembangan (Development)** ke dalam file dokumen Word Clean dan Highlighted yang berisi penjabaran hasil implementasi antarmuka, Expert Appraisal, dan Developmental Testing.
 - **Eksekusi Penyisipan Gambar**: Ke-11 placeholder gambar tampilan antarmuka kini telah **berhasil diganti secara otomatis** menggunakan *screenshot* web asli (lengkap dengan *caption* judul gambar di bawahnya) tanpa memerlukan input manual pengguna.
 - **Daftar Diagram yang Membutuhkan Input Manual**: Terdapat dua placeholder instruksi [INSERT DIAGRAM MS WORD DI SINI] dan [INSERT DIAGRAM MS WORD DI SINI BERDASARKAN TABEL DI ATAS] di bawah Tabel 4.x (Masukan dan Saran Validator) dan Tabel 4.y (Uji Kepraktisan). Pengguna diinstruksikan untuk membuat diagram statis MS Word secara manual di lokasi tersebut berdasarkan tabel data yang sudah dibuatkan.
-- **Status**: Eksekusi injeksi teks telah sukses dilakukan ke bagian akhir dokumen Word.## 18. Pemformatan Ulang Daftar Pustaka (Strict Rules)
+- **Status**: Eksekusi injeksi teks telah sukses dilakukan ke bagian akhir dokumen Word.
+
+## 18. Pemformatan Ulang Daftar Pustaka (Strict Rules)
 - **Analisis**: Diinstruksikan untuk melakukan pemformatan ulang secara ketat pada dokumen Daftar_Pustaka_Unila_2020.docx sesuai aturan terbaru.
 - **Rencana Kerja**:
   1. Menghapus garis bawah pada setiap hyperlink dan mengubah warna tautan menjadi hitam (#000000).
@@ -290,6 +289,7 @@ Berdasarkan Step 1 SOP, telah dilakukan pemetaan konten draf Bab IV ke dalam str
   4. Tetap mempertahankan format cetak miring eksklusif pada judul buku.
 - **Eksekusi**: Melakukan modifikasi pada script builder berbasis OpenXML (apply_real_dates.py) di *element run properties* (w:rPr), yaitu tag <w:color w:val="000000"/> dan <w:u w:val="none"/>. Logika pemisahan string menggunakan regex diterapkan secara akurat guna menangkap nama dan nomor volume jurnal tanpa menyertakan nomor halaman atau judul agar yang dicetak miring murni hanya jurnal dan volumenya.
 - **Hasil Akhir**: Daftar pustaka berhasil disusun ulang ke dalam file c:\laragon\www\ult-fkip-unila\docs\skripsi\Daftar_Pustaka_Unila_2020.docx dengan hasil yang presisi. Seluruh tautan tetap bersifat fungsional (dapat diklik) dengan warna tulisan hitam tanpa garis bawah.
+
 ## 19. Laporan Implementasi Perbaikan & Uji Coba E2E (Juni 2026)
 
 Berdasarkan hasil uji validitas dan uji kepraktisan (SOP Fase 1 & Fase 2), Agent telah melaksanakan seluruh *actionable items* secara menyeluruh pada repositori:
@@ -316,9 +316,56 @@ Berdasarkan hasil uji validitas dan uji kepraktisan (SOP Fase 1 & Fase 2), Agent
 - Menggunakan *Playwright* (skrip `tests/e2e/document_workflow.py`), Agent melakukan simulasi transaksi dan eksekusi komprehensif mulai dari titik 0 hingga final.
 - **Hasil Pengujian**: Test berjalan **100% SUKSES**. Alur permohonan berhasil melewati portal mahasiswa (pengajuan *file* via Tiptap editor), tinjauan birokrasi *Admin Jurusan*, verifikasi awalan staf ULT, injeksi tanda tangan Dekan (*Signer*), hingga perakitan *Word Document* akhir (*Assembly*). Tidak ditemukan *error* maupun anomali data di seluruh proses simulasi.
 
- 
- # #   1 7 .   P e r b a i k a n   B u g   D u p l i k a s i   d a n   P e n g u r u t a n   S t a t u s   K P I 
- -   * * A n a l i s i s   A w a l * * :   B u g   d u p l i k a s i   p a d a   D a s h b o a r d   A d m i n   d a n   D a s h b o a r d   M a h a s i s w a   t e r j a d i   k a r e n a   a d a   p e r b e d a a n   t i p e   s t r i n g   d i   b a c k e n d   ( c o n t o h :   \ S E L E S A I \   v s   \ C O M P L E T E D \ ,   s e r t a   \ I N _ S I G N I N G \   v s   \ R E A D Y _ F O R _ F I N A L \ )   y a n g   d i   d a t a b a s e   t e r s i m p a n   s e b a g a i   e n u m   b e r b e d a ,   n a m u n   p a d a   s a a t   d i t a m p i l k a n   k e   U I   d i k e l o m p o k k a n   m e n j a d i   s a t u   n a m a   ( s e p e r t i   \ P e n a n d a t a n g a n a n \   d a n   \ S e l e s a i \ ) .   H a l   i n i   m e n y e b a b k a n   \ G R O U P   B Y \   q u e r y   S Q L   m e m b e r i k a n   2   * r e c o r d *   d e n g a n   j u m l a h   y a n g   b e r b e d a .   S e l a i n   i t u ,   b e l u m   a d a   p e n g u r u t a n   m a n u a l   ( * c u s t o m   s o r t i n g * )   u n t u k   m e n g a t u r   w o r k f l o w   s t a t u s   s e s u a i   u r u t a n   l o g i s   y a n g   d i m i n t a   p e n g g u n a . 
- -   * * T i n d a k a n * * :   M e n e r a p k a n   g r o u p i n g   u l a n g   m e n g g u n a k a n   o p e r a s i   \  e d u c e \   d i   C o n t r o l l e r ,   m e n g u b a h   l o g i c   d i   \ A d m i n D a s h b o a r d C o n t r o l l e r . p h p \   d a n   \ S t u d e n t \ R e q u e s t C o n t r o l l e r . p h p \   d e n g a n   m e n a m b a h k a n   m e t o d e   m a p p i n g   s t a t u s   u n t u k   m e n g g a b u n g k a n   \ C O M P L E T E D \   m e n j a d i   \ S E L E S A I \ ,   d a n   \ R E A D Y _ F O R _ F I N A L \   m e n j a d i   \ I N _ S I G N I N G \ .   K e m u d i a n   d i u r u t k a n   d e n g a n   a r r a y   u r u t a n   * c u s t o m *   m e l a l u i   f u n g s i   \ u k s o r t ( ) \   s e s u a i   a l u r   w o r k f l o w   ( D i a j u k a n   - >   R e v i e w   U L T   - >   P e r l u   P e r b a i k a n   - >   P e n a n d a t a n g a n a n   - >   S e l e s a i   - >   D i t o l a k   A d m i n ) .   T e r a k h i r ,   m e m p e r b a i k i   t i p o g r a f i   d i   f i l e   \ s t a t u s - b a d g e . b l a d e . p h p \   m e n j a d i   \ P e n a n d a t a n g a n a n \   a g a r   s e s u a i   d e n g a n   p e r m i n t a a n . 
- -   * * K e n d a l a   &   S o l u s i * * :   K a r e n a   q u e r y   d e f a u l t   l a n g s u n g   m e m a k a i   m e t o d e   \ p l u c k ( ' c ' ,   ' c u r r e n t _ s t a t u s ' ) \ ,   d a t a   l a n g s u n g   t e r - r e n d e r   m e n t a h .   S o l u s i n y a ,   m a p p i n g   a r r a y   d a n   g r o u p i n g   d i l a k u k a n   d i   l e v e l   C o n t r o l l e r   P H P   s e b e l u m   d i - i n j e c t   k e   B l a d e   U I ,   k a r e n a   m o d i f i k a s i   d i   q u e r y   l e v e l   ( S Q L )   a k a n   j a u h   l e b i h   k o m p l e k s   d a n   t i d a k   s e j a l a n   d e n g a n   i m p l e m e n t a s i   e n u m   i n t e r n a l   s a a t   i n i .  
- 
+## 20. Restrukturisasi Tata Letak Halaman Utama (Portal Publik) — v2 Premium
+- **Analisis Awal**: Dirombak ulang tata letak *Quick-Access Grid* di bawah *Hero Banner* pada `home.blade.php`. Versi sebelumnya (v1) menggunakan utility Tailwind secara intensif (`grid-cols-12`, `col-span-8/4`, `x-card`, `x-button`) yang tidak terintegrasi dengan desain kustom homepage (CSS custom properties `--home-*`, glassmorphism, animasi). Versi baru (v2) sepenuhnya mengadopsi *design system* proyek.
+- **Perubahan CSS** (`resources/css/app.css`):
+  - Menambahkan ~710 baris CSS baru di blok `Homepage Quick-Access Grid` (sebelum blok *Public listing/detail pages*).
+  - Kelas BEM: `.ult-quick-access`, `.ult-panduan-section`, `.ult-guide-book-card`, `.ult-video-grid`, `.ult-video-card`, `.ult-popular-services-section`, `.ult-popular-panel`, `.ult-popular-item`.
+  - Semua komponen menggunakan `--home-primary`, `--home-secondary`, `--home-border`, `--home-text` CSS custom properties.
+  - Efek glassmorphism (`radial-gradient`, `inset box-shadow`, `backdrop-filter`) pada panel Panduan dan Layanan Terpopuler.
+  - Animasi sheen (`home-panel-sheen`) dan floating blob (`home-float`) pada kartu buku panduan dan panel sidebar.
+  - Dukungan penuh Dark Mode (`.dark` prefix) untuk seluruh komponen baru.
+  - Responsif: Grid 2 kolom (`1fr 380px`) pada desktop ≥1024px, stack 1 kolom pada mobile. Video grid 3 kolom pada desktop, 1 kolom pada mobile ≤639px.
+  - Sidebar layanan memiliki `position: sticky` dengan offset dari header.
+- **Perubahan Template** (`resources/views/public/home.blade.php`):
+  - Mengganti `<section class="section ult-layout-grid">` menjadi `<section class="ult-quick-access">` dengan struktur HTML semantik menggunakan kelas BEM kustom.
+  - Kartu buku panduan menggunakan `<a>` tag langsung (bukan `<x-card>`) agar terintegrasi dengan hover CSS dan sheen animation.
+  - Kartu video tutorial mengekstrak YouTube video ID secara dinamis untuk menampilkan thumbnail nyata (`img.youtube.com/vi/{id}/mqdefault.jpg`).
+  - Video yang memiliki URL YouTube membuka link di tab baru (`target="_blank"`).
+  - Layanan terpopuler menampilkan 6 item (naik dari 5) dengan ikon, kategori badge, dan animasi hover.
+  - Tombol "Lihat Semua Layanan" menggunakan kelas kustom `ult-popular-panel__viewall` (bukan `<x-button>`).
+  - Section Panduan & Layanan Terpopuler masing-masing memiliki *eyebrow badge* (`ult-section-header__eyebrow`) dengan ikon Heroicons.
+- **Data Integritas**: Controller `PublicController@home` tidak diubah — data `$guideBook`, `$guideVideos`, `$services` tetap digunakan sebagaimana adanya. Section Pengumuman Terbaru dan Blog Terbaru tetap utuh di bawah layout grid baru.
+- **Status**: Perubahan dieksekusi langsung. Vite build dijalankan untuk mengompilasi ulang CSS.
+
+## 21. Perbaikan Bug Duplikasi dan Pengurutan Status KPI
+- **Analisis Awal**: Bug duplikasi pada Dashboard Admin dan Dashboard Mahasiswa terjadi karena ada perbedaan tipe string di backend (contoh: `SELESAI` vs `COMPLETED`, serta `IN_SIGNING` vs `READY_FOR_FINAL`) yang di database tersimpan sebagai enum berbeda, namun pada saat ditampilkan ke UI dikelompokkan menjadi satu nama (seperti `Penandatanganan` dan `Selesai`). Hal ini menyebabkan `GROUP BY` query SQL memberikan 2 *record* dengan jumlah yang berbeda. Selain itu, belum ada pengurutan manual (*custom sorting*) untuk mengatur workflow status sesuai urutan logis yang diminta pengguna.
+- **Tindakan**: Menerapkan grouping ulang menggunakan operasi `reduce` di Controller, mengubah logic di `AdminDashboardController.php` dan `Student\RequestController.php` dengan menambahkan metode mapping status untuk menggabungkan `COMPLETED` menjadi `SELESAI`, dan `READY_FOR_FINAL` menjadi `IN_SIGNING`. Kemudian diurutkan dengan array urutan *custom* melalui fungsi `uksort()` sesuai alur workflow (Diajukan -> Review ULT -> Perlu Perbaikan -> Penandatanganan -> Selesai -> Ditolak Admin). Terakhir, memperbaiki tipografi di file `status-badge.blade.php` menjadi `Penandatanganan` agar sesuai dengan permintaan.
+- **Kendala & Solusi**: Karena query default langsung memakai metode `pluck('c', 'current_status')`, data langsung ter-render mentah. Solusinya, mapping array dan grouping dilakukan di level Controller PHP sebelum di-inject ke Blade UI, karena modifikasi di query level (SQL) akan jauh lebih kompleks dan tidak sejalan dengan implementasi enum internal saat ini.
+
+## 22. Restrukturisasi Tata Letak Layanan Terpopuler (Portal Publik)
+- **Analisis Awal**: Permintaan untuk mengubah daftar layanan terpopuler dari card terpisah menjadi list bersih (clean list) di dalam satu container putih besar, dan memastikan query hanya mengambil tepat 5 layanan.
+- **Tindakan (Controller)**: Memodifikasi `app/Http/Controllers/PublicController.php` dengan mengubah `limit(8)` menjadi `limit(5)` dan menyesuaikan logika fallback agar hanya me-return `take(5)`.
+- **Tindakan (View)**: Memodifikasi `resources/views/public/home.blade.php` pada bagian `ult-popular-list` dan `ult-popular-panel__footer` dengan mengganti class BEM spesifik komponen ke standard TailwindCSS utility classes agar terbentuk clean list vertikal dengan label ungu dan judul layanan bold, serta full-width button abu-abu terang sesuai lampiran gambar.
+- **Status**: Berhasil diimplementasikan langsung pada view dan logic backend.
+- **Refinement Visual**: Melakukan penyesuaian gaya tipografi (font-extrabold, tracking-widest) dan warna (slate-900, slate-800) pada judul panel, kategori layanan, dan tautan layanan agar selaras secara presisi dengan referensi gambar kedua yang meminta desain font gelap dan pekat tanpa warna ungu, serta mengubah gaya tombol 'Lihat Semua Layanan' menjadi border transparan sesuai gambar.
+
+## 23. Redesain UI "Layanan Terpopuler" — Outlined Box & Solid Purple Button (Juni 2026)
+- **Analisis Awal**: Permintaan untuk merombak tampilan list layanan di sidebar kanan (Layanan Terpopuler) pada halaman utama agar sesuai gambar referensi baru. Gambar menunjukkan desain "outlined box" per item layanan dengan border ungu muda, badge kategori berwarna ungu, dan tombol CTA solid ungu penuh di bawah.
+- **Constraint Kritis**: Tinggi card "Layanan Terpopuler" harus SELALU SEJAJAR dengan total tinggi konten kolom kiri ("Panduan & Tutorial").
+- **Tindakan (CSS - `resources/css/app.css`)**:
+  - Menghapus `align-self: start` dari `.ult-popular-services-section` pada breakpoint `≥1024px` agar grid `align-items: stretch` (default) bekerja untuk menyamakan tinggi kedua kolom.
+  - Menambahkan `display: flex; flex-direction: column` pada `.ult-popular-services-section` dan `flex: 1` pada `.ult-popular-panel` untuk mengisi penuh ruang vertikal.
+  - Menambahkan `flex: 1` pada `.ult-popular-list` agar list mengisi ruang tengah.
+  - Mengubah `margin-top` pada `.ult-popular-panel__footer` menjadi `margin-top: auto` untuk mendorong tombol CTA ke paling bawah card.
+  - Mengubah border item dari `rgba(var(--home-border), .72)` menjadi `rgba(var(--home-primary), .20)` — border ungu muda.
+  - Menambahkan style badge kategori: `background: rgba(var(--home-primary), .10)`, `padding: 2px 8px`, `border-radius: 6px`.
+  - Menambahkan modifier class baru `ult-popular-panel__viewall--solid` dengan `background: linear-gradient(135deg, rgb(var(--home-primary)), rgba(var(--home-primary), .88))`, `color: #fff`, `box-shadow` ungu, dan efek hover translateY + intensifikasi shadow. Mendukung dark mode.
+  - Menghapus CSS `.ult-popular-item__icon` yang tidak lagi digunakan.
+- **Tindakan (View - `resources/views/public/home.blade.php`)**:
+  - Menghapus semua Tailwind utility classes inline pada kolom kanan, digantikan oleh BEM classes yang sudah didefinisikan di CSS: `ult-popular-panel__header`, `ult-popular-panel__title`, `ult-popular-panel__subtitle`, `ult-popular-list`, `ult-popular-item`, `ult-popular-item__body`, `ult-popular-item__category`, `ult-popular-item__name`, `ult-popular-item__arrow`.
+  - Menghapus elemen ikon document (`heroicons:document-text`) dari setiap item layanan.
+  - Menambahkan ikon `heroicons:chevron-right-20-solid` sebagai panah navigasi di sisi kanan setiap item.
+  - Mengubah tombol CTA dari `bg-slate-900` inline ke class `ult-popular-panel__viewall--solid` (solid ungu).
+  - Mengubah ikon tombol CTA ke `heroicons:arrow-right-20-solid`.
+- **Status**: Berhasil diimplementasikan dan di-build dengan Vite.

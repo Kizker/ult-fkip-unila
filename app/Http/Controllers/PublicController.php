@@ -10,6 +10,7 @@ use App\Models\HeroBanner;
 use App\Models\Request as RequestItem;
 use App\Models\Service;
 use App\Models\SiteSetting;
+use App\Models\UserGuide;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -38,7 +39,7 @@ class PublicController extends Controller
             ->selectRaw('service_id, COUNT(*) as usage_total')
             ->groupBy('service_id')
             ->orderByDesc('usage_total')
-            ->limit(8)
+            ->limit(4)
             ->pluck('service_id');
 
         $services = collect();
@@ -50,8 +51,8 @@ class PublicController extends Controller
                 ->values();
         }
 
-        if ($services->count() < 6) {
-            $remaining = 6 - $services->count();
+        if ($services->count() < 4) {
+            $remaining = 4 - $services->count();
             $fallback = (clone $baseServices)
                 ->whereNotIn('id', $services->pluck('id')->all())
                 ->orderBy('title_id')
@@ -60,7 +61,7 @@ class PublicController extends Controller
             $services = $services->concat($fallback)->values();
         }
 
-        $services = $services->take(6)->values();
+        $services = $services->take(4)->values();
 
         $totalAnnouncements = CmsAnnouncement::query()
             ->where('is_published', true)
@@ -82,11 +83,31 @@ class PublicController extends Controller
             ->limit(4)
             ->get();
 
+        $privateDisk = (string) config('ult.private_disk', 'private');
+        $guideBook = UserGuide::visibleTo(request()->user())
+            ->where(function ($q) {
+                $q->where('content_type', UserGuide::CONTENT_TYPE_PDF)
+                  ->orWhereNull('content_type');
+            })
+            ->whereNotNull('stored_path')
+            ->latest('published_at')
+            ->limit(5)
+            ->get()
+            ->first(fn (UserGuide $g) => \Storage::disk($privateDisk)->exists((string) $g->stored_path));
+
+        $guideVideos = UserGuide::visibleTo(request()->user())
+            ->where('content_type', UserGuide::CONTENT_TYPE_VIDEO)
+            ->latest('published_at')
+            ->limit(3)
+            ->get();
+
         return view('public.home', compact(
             'heroSlides',
             'services',
             'ann',
             'blogs',
+            'guideBook',
+            'guideVideos',
             'totalServices',
             'totalAnnouncements',
             'totalBlogs'

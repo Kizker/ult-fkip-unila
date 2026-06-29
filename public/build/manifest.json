@@ -5,7 +5,7 @@
     "isDynamicEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app-DhwdpjvF.css",
+    "file": "assets/app-DvyztY5z.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -18,6 +18,12 @@
       "resources/js/tiptap-editor.js",
       "_index-Bw3-YJgB.js"
     ]
+  },
+  "resources/js/dashboard-charts.js": {
+    "file": "assets/dashboard-charts-lKV7zV9o.js",
+    "name": "dashboard-charts",
+    "src": "resources/js/dashboard-charts.js",
+    "isEntry": true
   },
   "resources/js/tiptap-editor.js": {
     "file": "assets/tiptap-editor-BEIQFI6w.js",
